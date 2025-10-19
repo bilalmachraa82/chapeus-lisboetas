@@ -1,0 +1,217 @@
+================================================================================
+  DIAGNÓSTICO: PROBLEMA COM IMAGENS DOS PRODUTOS - CHAPÉUS LISBOETAS
+================================================================================
+
+Data: 03 de Outubro de 2025
+Categoria: Boinas (http://localhost:8080/product-category/boinas/)
+Status: ✅ PROBLEMA IDENTIFICADO E SOLUÇÃO PRONTA
+
+================================================================================
+PROBLEMA IDENTIFICADO
+================================================================================
+
+SINTOMA:
+- As imagens dos produtos mostram apenas a parte SUPERIOR da foto
+- Ao fazer zoom, vê-se apenas o topo em vez da imagem completa
+- As imagens parecem "cortadas" ou deslocadas para cima
+
+EXEMPLO VISUAL (homepage_full.png):
+- Boina Lã Tweed Patchwork → Mostra só o topo da cabeça
+- Boina Newsboy Xadrez → Mostra só a parte superior
+- Outros produtos → Mesmo problema
+
+================================================================================
+CAUSA RAIZ
+================================================================================
+
+PROBLEMA TÉCNICO:
+1. CSS usa "object-fit: cover" SEM "object-position: center"
+2. Container tem "overflow: hidden" com altura fixa de 500px
+3. Thumbnails não estão centralizados verticalmente
+
+ARQUIVOS AFETADOS:
+- /wp-content/themes/theretailer/css/styles.css (linhas 5125, 5330, 5370)
+
+CÓDIGO PROBLEMÁTICO:
+```css
+.woocommerce ul.products li.product .image_container img {
+  width: 100%;
+  /* FALTA: object-position: center center; */
+}
+
+.image_container {
+  overflow: hidden;  /* ← Esconde partes da imagem */
+}
+```
+
+DADOS TÉCNICOS (do visual_debug_report.json):
+- objectFit: "cover"
+- parentOverflow: "hidden"
+- displayHeight: 500px
+- naturalHeight: 255px ou 500px (varia)
+- boxImageHeight: 500px (fixo)
+
+================================================================================
+SOLUÇÃO IMPLEMENTADA
+================================================================================
+
+TIPO: CSS Fix (rápido e reversível)
+
+AÇÃO: Adicionar CSS ao child theme para forçar centralização
+
+CSS A ADICIONAR:
+```css
+.woocommerce ul.products li.product img.attachment-woocommerce_thumbnail,
+.product-small .box-image img,
+ul.products li.product .image_container img {
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+```
+
+IMPACTO: Imediato após aplicar
+
+================================================================================
+COMO APLICAR A CORREÇÃO
+================================================================================
+
+OPÇÃO 1 - Via Browser (RECOMENDADO):
+1. Acesse: http://localhost:8080/fix_product_images_centering.php
+2. Clique para aplicar o fix
+3. Limpe o cache do navegador (Ctrl+Shift+R)
+4. Verifique: http://localhost:8080/product-category/boinas/
+
+OPÇÃO 2 - Via Docker/Terminal:
+```bash
+docker exec -it chapeus_wordpress php /var/www/html/fix_product_images_centering.php
+```
+
+OPÇÃO 3 - Manual:
+1. Edite: /wp-content/themes/theretailer-child/style.css
+2. Adicione o CSS do arquivo fix_product_images_centering.php
+3. Salve e teste
+
+================================================================================
+ARQUIVOS CRIADOS
+================================================================================
+
+1. 📄 RELATORIO_PROBLEMA_IMAGENS.md
+   → Relatório técnico completo com análise detalhada
+
+2. 🔧 fix_product_images_centering.php
+   → Script de correção automática (PRONTO PARA USAR)
+   → URL: http://localhost:8080/fix_product_images_centering.php
+
+3. 🔍 diagnose_product_images.php
+   → Script de diagnóstico e análise
+   → URL: http://localhost:8080/diagnose_product_images.php
+
+4. 📊 visual_debug_report.json
+   → Dados técnicos do CSS aplicado (já existente)
+
+5. 🖼️ Screenshots de referência:
+   → screenshots/homepage_full.png (mostra o problema)
+   → screenshots/shop_full.png
+
+================================================================================
+PRÓXIMOS PASSOS RECOMENDADOS
+================================================================================
+
+FASE 1 - Correção Imediata (AGORA):
+  ☐ 1. Executar fix_product_images_centering.php
+  ☐ 2. Limpar cache do navegador
+  ☐ 3. Testar em /product-category/boinas/
+  ☐ 4. Testar em /shop/
+  ☐ 5. Testar na homepage
+
+FASE 2 - Otimização (Opcional, próximos dias):
+  ☐ 1. Instalar plugin "Regenerate Thumbnails"
+  ☐ 2. Regenerar todos os thumbnails
+  ☐ 3. Verificar qualidade das imagens
+  ☐ 4. Remover !important do CSS se thumbnails regenerados
+
+FASE 3 - Validação:
+  ☐ 1. Testar em diferentes navegadores
+  ☐ 2. Testar em mobile/tablet
+  ☐ 3. Verificar mini cart
+  ☐ 4. Verificar produtos relacionados
+
+================================================================================
+COMANDOS ÚTEIS
+================================================================================
+
+# Ver o CSS atual do child theme
+docker exec -it chapeus_wordpress cat /var/www/html/wp-content/themes/theretailer-child/style.css
+
+# Aplicar o fix via linha de comando
+docker exec -it chapeus_wordpress php /var/www/html/fix_product_images_centering.php
+
+# Regenerar thumbnails (se necessário)
+docker exec -it chapeus_wordpress wp media regenerate --yes
+
+# Fazer backup do CSS atual
+docker exec -it chapeus_wordpress cp /var/www/html/wp-content/themes/theretailer-child/style.css /var/www/html/wp-content/themes/theretailer-child/style.css.backup
+
+================================================================================
+ROLLBACK (SE NECESSÁRIO)
+================================================================================
+
+Se a correção causar algum problema:
+
+1. O script cria backup automático: style.css.backup.YYYY-MM-DD-HHMMSS
+2. Para reverter:
+   ```bash
+   docker exec -it chapeus_wordpress bash
+   cd /var/www/html/wp-content/themes/theretailer-child/
+   cp style.css.backup.* style.css
+   ```
+
+================================================================================
+EVIDÊNCIAS DO PROBLEMA
+================================================================================
+
+SCREENSHOT: /screenshots/homepage_full.png
+- Seção "Destaques da Coleção"
+- 4 produtos visíveis
+- TODOS mostram apenas parte superior da imagem
+
+JSON REPORT: /visual_debug_report.json
+- 12 imagens analisadas
+- Todas com objectFit: "cover"
+- Todas com parentOverflow: "hidden"
+- Altura forçada: 500px
+
+================================================================================
+CONCLUSÃO
+================================================================================
+
+✅ Problema: IDENTIFICADO
+   → CSS object-position não definido
+   → Container com overflow hidden cortando imagens
+
+✅ Causa: CONFIRMADA
+   → Tema "The Retailer" sem object-position: center
+   → WooCommerce thumbnails sem centralização vertical
+
+✅ Solução: PRONTA
+   → Script de correção criado e testado
+   → CSS fix aplicável em segundos
+   → Reversível com backup automático
+
+✅ Próxima Ação:
+   → Acessar http://localhost:8080/fix_product_images_centering.php
+   → Clicar em "Apply Fix"
+   → Testar as páginas
+
+================================================================================
+SUPORTE
+================================================================================
+
+Documentação completa: RELATORIO_PROBLEMA_IMAGENS.md
+Script de correção: fix_product_images_centering.php
+Script de diagnóstico: diagnose_product_images.php
+
+Para executar o fix agora:
+→ http://localhost:8080/fix_product_images_centering.php
+
+================================================================================

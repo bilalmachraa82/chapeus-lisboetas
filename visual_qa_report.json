@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-10-01T21:46:46.132Z",
+  "site_url": "http://localhost:8080",
+  "stats": {
+    "pagesChecked": 2,
+    "productsWithImages": 0,
+    "productsWithoutImages": 0,
+    "brokenImages": 0
+  },
+  "issues": [
+    "Product page error: Waiting for selector `.product a` failed",
+    "Muitos nodes DOM (performance)"
+  ],
+  "screenshots": [
+    "/tmp/homepage_screenshot.png",
+    "/tmp/shop_screenshot.png",
+    "/tmp/product_screenshot.png"
+  ]
+}

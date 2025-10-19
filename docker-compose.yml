@@ -1,0 +1,60 @@
+services:
+  mysql:
+    image: mariadb:10.6
+    platform: linux/amd64
+    container_name: chapeus_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: lisboetas_web
+      MYSQL_USER: lisboetas
+      MYSQL_PASSWORD: 'e$$4rU9h8'
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backup/wp/wp-snapshots:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    networks:
+      - chapeus_network
+
+  wordpress:
+    image: wordpress:php7.4-apache
+    container_name: chapeus_wordpress
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_NAME: lisboetas_web
+      WORDPRESS_DB_USER: lisboetas
+      WORDPRESS_DB_PASSWORD: 'e$$4rU9h8'
+      WORDPRESS_DEBUG: 1
+    volumes:
+      - ./backup/wp:/var/www/html
+      - ./php-config.ini:/usr/local/etc/php/conf.d/custom.ini
+    ports:
+      - "8080:80"
+    networks:
+      - chapeus_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: chapeus_phpmyadmin
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "8081:80"
+    networks:
+      - chapeus_network
+
+volumes:
+  mysql_data:
+
+networks:
+  chapeus_network:
+    driver: bridge

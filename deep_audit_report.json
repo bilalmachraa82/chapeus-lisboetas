@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-10-01T22:27:48.903Z",
+  "total_issues": 0,
+  "issues": {
+    "missing_images": [],
+    "broken_images": [],
+    "empty_sections": [],
+    "styling_issues": [],
+    "layout_problems": []
+  },
+  "recommendations": [
+    "✅ Site está OK! Sem issues críticos."
+  ]
+}

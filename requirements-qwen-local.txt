@@ -1,0 +1,33 @@
+# Qwen-Image-Edit-2509 - Requirements Mac M4 (Apple Silicon)
+# Python 3.11+
+
+# PyTorch (Apple Silicon with MPS support)
+torch>=2.5.0
+torchvision>=0.20.0
+torchaudio>=2.5.0
+
+# Hugging Face Diffusers + Transformers
+diffusers>=0.30.0
+transformers>=4.45.0
+accelerate>=0.34.0
+
+# Image processing
+pillow>=10.0.0
+opencv-python>=4.9.0
+
+# Hugging Face Hub
+huggingface_hub>=0.25.0
+
+# Model loading
+safetensors>=0.4.0
+sentencepiece>=0.2.0
+protobuf>=4.25.0
+
+# Progress bars
+tqdm>=4.66.0
+
+# Optional: UI interativa
+gradio>=4.0.0
+
+# Optional: Instaloader
+instaloader>=4.10.0

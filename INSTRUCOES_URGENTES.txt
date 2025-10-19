@@ -1,0 +1,30 @@
+🚨 INSTAGRAM BLOQUEOU DOWNLOAD AUTOMÁTICO!
+
+SOLUÇÃO: VOCÊ PRECISA FAZER (2 MINUTOS):
+
+1. Abrir: https://www.instagram.com/chapeuslisboetas/
+
+2. Scroll até carregar TODAS as fotos (372)
+
+3. F12 > Console
+
+4. Colar código (está em GET_SHORTCODES_AGORA.md)
+
+5. Pressionar ENTER
+
+6. Vai copiar automaticamente!
+
+7. Colar em: shortcodes.txt (substituir as 12 linhas por ~372)
+
+8. Rodar: python3 download_from_shortcodes.py
+
+===================================================
+
+OU processar 12 existentes AGORA:
+  python3 seedream_batch_processing.py --limit 12
+  (Precisa token no .env)
+
+===================================================
+
+Ver detalhes completos:
+  cat GET_SHORTCODES_AGORA.md

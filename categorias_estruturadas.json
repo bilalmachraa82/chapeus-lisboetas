@@ -1,0 +1,45 @@
+{
+  "hierarchy": {
+    "Chapéus": {
+      "Homem": [
+        "Boinas",
+        "Fedora",
+        "Panama",
+        "Bucket Hat"
+      ],
+      "Mulher": [
+        "Capeline",
+        "Cloche",
+        "Boinas",
+        "Fedora"
+      ],
+      "Unisex": [
+        "Boinas",
+        "Fedora",
+        "Panama",
+        "Bucket Hat",
+        "Gorros"
+      ]
+    },
+    "Bonés": [
+      "Homem",
+      "Mulher",
+      "Unisex"
+    ],
+    "Acessórios": []
+  },
+  "stats": {
+    "unisex": 149,
+    "outros": 13,
+    "bone": 33,
+    "boné": 1,
+    "boina": 81,
+    "homem": 12,
+    "mulher": 19,
+    "bucket-hat": 29,
+    "capeline": 12,
+    "gorro": 3,
+    "chapeu-panama": 1,
+    "chapeu-fedora": 7
+  }
+}

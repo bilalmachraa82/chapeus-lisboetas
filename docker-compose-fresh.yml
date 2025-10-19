@@ -1,0 +1,97 @@
+version: '3.8'
+
+services:
+  # Database MySQL
+  db:
+    image: mysql:8.0
+    platform: linux/amd64
+    container_name: chapeus_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: chapeus_root_2024
+      MYSQL_DATABASE: chapeus_wordpress
+      MYSQL_USER: chapeus_user
+      MYSQL_PASSWORD: chapeus_pass_2024
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - chapeus_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  # WordPress
+  wordpress:
+    image: wordpress:latest
+    container_name: chapeus_wordpress
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: chapeus_wordpress
+      WORDPRESS_DB_USER: chapeus_user
+      WORDPRESS_DB_PASSWORD: chapeus_pass_2024
+      WORDPRESS_DEBUG: 1
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_HOME', 'http://localhost:8080');
+        define('WP_SITEURL', 'http://localhost:8080');
+        define('FS_METHOD', 'direct');
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./processed_images:/var/www/html/wp-content/uploads/produtos
+    ports:
+      - "8080:80"
+    networks:
+      - chapeus_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # WP-CLI (para automação)
+  wpcli:
+    image: wordpress:cli
+    container_name: chapeus_wpcli
+    depends_on:
+      wordpress:
+        condition: service_healthy
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./setup-scripts:/scripts
+    networks:
+      - chapeus_network
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: chapeus_wordpress
+      WORDPRESS_DB_USER: chapeus_user
+      WORDPRESS_DB_PASSWORD: chapeus_pass_2024
+    entrypoint: /bin/sh
+    command: -c "sleep 30 && sh /scripts/setup-wordpress.sh"
+
+  # phpMyAdmin (opcional - para debug)
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: chapeus_phpmyadmin
+    restart: always
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: chapeus_root_2024
+    ports:
+      - "8081:80"
+    networks:
+      - chapeus_network
+
+volumes:
+  db_data:
+  wordpress_data:
+
+networks:
+  chapeus_network:
+    driver: bridge

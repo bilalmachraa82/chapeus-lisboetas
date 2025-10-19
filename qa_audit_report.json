@@ -1,0 +1,12 @@
+{
+  "site_url": "http://localhost:8080",
+  "wordpress_health": "OK",
+  "products": {},
+  "images": {
+    "available": 180,
+    "uploaded": 1175,
+    "pending": -995
+  },
+  "issues": [],
+  "recommendations": []
+}

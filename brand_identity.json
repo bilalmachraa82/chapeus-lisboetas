@@ -1,0 +1,44 @@
+{
+  "colors": {
+    "primary": "#8B4513",
+    "secondary": "#D2691E",
+    "accent": "#CD853F",
+    "neutral_dark": "#3E2723",
+    "neutral_light": "#F5F5DC",
+    "background": "#FAFAF8",
+    "text_dark": "#2C1810",
+    "text_light": "#6D4C41"
+  },
+  "typography": {
+    "heading_font": "Playfair Display",
+    "body_font": "Lato",
+    "accent_font": "Montserrat",
+    "heading_weight": "700",
+    "body_weight": "400"
+  },
+  "brand_values": [
+    "Artesanal",
+    "Tradição Portuguesa",
+    "Qualidade",
+    "Elegância Atemporal",
+    "Feito à Mão",
+    "Desde 1950"
+  ],
+  "photography_style": {
+    "type": "Product-focused com lifestyle",
+    "lighting": "Natural, suave",
+    "background": "Neutro ou contextual",
+    "angle": "Frontal e 3/4",
+    "mood": "Elegante e acessível"
+  },
+  "target_audience": {
+    "primary": "Homens e mulheres 35-65 anos",
+    "secondary": "Jovens apreciadores de artesanato",
+    "psychographic": "Valorizam qualidade, tradição e estilo clássico"
+  },
+  "tone_of_voice": {
+    "style": "Acolhedor e conhecedor",
+    "language": "Português elegante mas acessível",
+    "personality": "Tradicional mas não antiquado"
+  }
+}
