@@ -92,6 +92,115 @@ python# Prioridade de sources:
 - Múltiplos ângulos por produto (quando disponível)
 - Vista frontal OBRIGATÓRIA como imagem principal
 
+### Cockpit Premium Google Sheets (implementado)
+
+- **Setup CLI**
+  - `python3 -m pip install --user gspread google-auth gspread-formatting`
+  - Definir variáveis antes de correr scripts (`export GOOGLE_SHEETS_ID=...` e, se necessário, `GOOGLE_SERVICE_ACCOUNT_FILE=config/google-service-account.json`).
+  - Executar `python3 scripts/beautify_google_sheet.py` para aplicar formatação, criar abas auxiliares e sincronizar dados locais (usa credenciais da service account já criada).
+
+- **Melhorias na aba `Catalogo`**
+  - Colunas reordenadas e cabeçalho com paleta da marca (#EECAC9 / #A8DADF) + tipografia Montserrat.
+  - `Preview` agora usa `IMAGE()` com thumb 120×120px; linhas formatadas com altura 140px.
+  - `Status` automático com lógica `OK / Sem foto / Sem preço / Rever link / Sem descrição` + cores condicionais (verde, âmbar, vermelho) para triagem rápida.
+  - Novas colunas: `Última atualização`, `Responsável`, `Notas internas` preparadas para Apps Script `onEdit` (timestamp + editor).
+  - Validação extra: `Destaque homepage?` (checkbox), `Prioridade` (1–5), filtros básicos ativos e congelamento das 3 primeiras colunas.
+
+- **Abas geradas automaticamente**
+  - `Dashboard`: cartões com KPIs (total, pendências, destaques), sparkline de cobertura fotográfica, links diretos para `Faltas`, resumos e guia. Fórmulas prontas para refletir os dados do sheet.
+  - `Faltas`: importa `relatorios/produtos_sem_imagem.csv`, preserva notas/URLs inseridas pelo cliente e mantém colunas “Nova URL/Foto” + “Notas”. Ideal para controlar correções.
+  - `Resumo Coleções` e `Resumo Tipos`: carregam `output_catalogo/catalogo_summary_sheet*.csv`, calculam percentagens/ranking e já vêm com filtros/formatos percentuais.
+- `Histórico`: cabeçalho protegido para receber logs `onEdit` (timestamp, autor, valor antigo/novo) — Apps Script segue como próximo passo.
+  - `Guia`: mini playbook com passos 1-2-3, lembrete para correr `sync_google_sheet.py` + `generate_wc_catalog.py` e apontadores de suporte.
+
+- **Estado atual (Out 2025)**
+  - Base inicial consolidada com **62 produtos** (preço preenchido + URL único) → `output_catalogo/catalogo_master_with_price.csv`.
+  - Excel limpo (`catalogo_original_full.csv`) e dump da aba `Catalogo` (`catalogo_google_sheet.csv`) disponíveis para auditoria.
+  - Relatórios de reconciliação gerados: `catalogo_comparison_detail.csv`, `catalogo_comparison_summary.csv`, `sheet_only_skus.csv` e `link_duplicate_summary.csv`.
+  - `beautify_google_sheet.py` corrido com sucesso — Dashboard/Faltas/Resumos/Guia atualizados com layout premium.
+
+- **Script `validate_and_enrich.py` (NOVO)**
+  - Lê o `catalogo_master_with_price.csv`, valida cada URL de fornecedor e faz scraping (descrição longa, composição, excertos).
+  - Output automático (ultima execução: 54 clean / 8 pendentes):
+    - `output_catalogo/catalogo_clean_ready.csv` (produtos prontos para import) → publicados na aba **Clean & Ready**.
+    - `output_catalogo/catalogo_pending.csv` (produtos com lacunas / falhas de scrape) → listados na aba **Pendentes** com observações (HTTP status, “descrição/composição não encontrada”, etc.).
+    - HTML bruto guardado em `output_catalogo/scrape_raw/` (debug/manual QA).
+  - Reexecutar sempre que novos produtos forem adicionados ao catálogo ou links forem corrigidos.
+
+  **Checklist Clean/Pending (cliente ou operação diária)**
+  1. Atualizar a aba `Catalogo` (preço + URL obrigatório).
+  2. Executar `python3 scripts/validate_and_enrich.py` → revê abas `Clean & Ready` / `Pendentes`.
+  3. Corrigir/validar manualmente os produtos marcados como pendentes (ou usar menu “Chapéus Premium → Enviar linha ...”).
+  4. Rerun `validate_and_enrich.py` até que todos os produtos pretendidos estejam em “Clean & Ready”.
+  5. Executar `python3 scripts/beautify_google_sheet.py` (dashboard actualizado) e `python3 scripts/sync_google_sheet.py` (actualiza `catalogo.json` + `catalogo_backup.json`).
+  6. Gerar CSV WooCommerce: `python3 scripts/generate_wc_catalog.py` → `output_catalogo/woocommerce_import.csv` (última execução: 96 produtos exportados; 18 sem imagens foram reportados no log).
+  7. Importar no site apenas os produtos validados com preço + URL (Clean & Ready) e guardar log em `catalogo_clean_ready.csv` + `woocommerce_import.csv`.
+
+
+- **Próximos passos (em curso)**
+  1. ✅ `validate_and_enrich.py` criado/executado — repetir sempre que existam novos produtos ou correções de link.
+  2. ✅ `beautify_google_sheet.py` ajustado (cards “Produtos validados / Pendentes”, progress = Clean & Ready ÷ total). Script executado com sleeps extra para evitar erro 429.
+     ✅ `sync_google_sheet.py` atualizado para concatenar notas de “Observações” e manter “Notas internas”; garantir que o catálogo local reflete as novas abas Clean/Pending. (Rever fluxos finais antes da próxima importação.)
+  3. Reescrever `apps_script/catalogo.gs` com menu “Chapéus Premium”, validações adicionais, tooltips premium e histórico detalhado.
+  4. Atualizar este guia com checklist final e instruções para o cliente completar os SKUs pendentes.
+
+- **Boas práticas aplicadas**
+  - Layout segue recomendações recentes do Google Workspace (“Edit & format a spreadsheet”, 2024) para uso de temas, filtros e sparklines.
+  - Estrutura pensada para workflows via CLI/MCP: todas as alterações são repetíveis com um único comando e mantêm compatibilidade com `sync_google_sheet.py` e o pipeline WooCommerce.
+  - Apps Script (`apps_script/catalogo.gs`) agora com menu “Chapéus Premium” reforçado:
+    - Reaplicar fórmulas e actualizar carimbos.
+    - Atalhos para abrir “Clean & Ready” / “Pendentes”.
+    - Ação rápida para enviar a linha seleccionada para as abas Clean/Pending (gera registo manual compatível com o output do scraper).
+
+### Apps Script (onEdit + menu)
+
+- Copiar o conteúdo de `apps_script/catalogo.gs` para o editor Apps Script da folha (`Extensões → Apps Script`).
+- Guardar e publicar; autorizar a execução na primeira edição.
+- Funcionalidades:
+  - `onEdit`: carimba “Última atualização” e “Responsável”, regista alterações na aba `Histórico` com valor antigo/novo e valida SKU duplicado + URLs inválidos.
+  - Aba `Faltas`: validação de URLs em “Nova URL/Foto” com destaque visual.
+  - Menu “Chapéus Premium”: opção para reaplicar fórmulas de preview/status ou forçar timestamp manual na linha selecionada.
+
+### Sincronização enriquecida (`scripts/sync_google_sheet.py`)
+
+- Se “Descrição longa” estiver vazia no sheet, o script tenta reutilizar dados já raspados (`catalogo.json`).
+- Na ausência de texto, aciona `catalog_scraper.scrape_product_page` para re-scrape do link do fornecedor, preenchendo automaticamente a descrição e anotando em “Notas internas”.
+- Cache de scraping em memória para evitar requisições duplicadas na mesma execução.
+- Log de avisos `print` caso a página falhe (HTTP 404, etc.), permitindo diagnóstico rápido no terminal.
+
+### MCP Chrome DevTools (para automação total via Codex)
+
+1. **Pré-requisitos**
+   - Node.js ≥ 18 (`node --version`).
+   - npm/npx atualizados (`npm install -g npm`).
+2. **Arrancar o servidor MCP**
+   ```bash
+   npx -y chrome-devtools-mcp@latest
+   ```
+   - Mantém esta janela aberta; o comando lança um Chrome controlável e imprime o endereço WebSocket (`ws://...`).
+3. **Partilhar acesso**
+   - Copia o URL/porta/token exibidos no terminal para que o Codex possa ligar-se e operar o browser.
+   - (Opcional) adiciona ao `~/.codex/config.json`:
+     ```json
+     {
+       "mcpServers": {
+         "chrome-devtools": {
+           "command": "npx",
+           "args": ["-y", "chrome-devtools-mcp@latest"]
+         }
+       }
+     }
+     ```
+4. **Manter sessão**
+   - Não fechar o terminal nem o Chrome enquanto a automação estiver em curso.
+   - Conceder manualmente quaisquer permissões (ex.: popups, login Google).
+
+> Próxima prompt sugerida (depois de iniciares o MCP e reiniciares o Codex):
+> 
+> ```
+> MCP chrome-devtools pronto em ws://localhost:PORT. Continua a automatizar Google Sheets + Apps Script.
+> ```
+
 🎨 DESIGN & EXPERIÊNCIA VISUAL
 Referências de Inspiração (Google Keep)
 yamlReferência 1 - Rothys.com:

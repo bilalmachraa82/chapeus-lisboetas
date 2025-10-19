@@ -98,7 +98,7 @@ def render_description(info_short: str, specs: Dict[str, str], scraped: List[Dic
             break
     if specs:
         spec_lines = "".join(
-            f"<li><strong>{html.escape(key.title())}</strong>: {html.escape(value)}</li>"
+            f"<li><strong>{html.escape(str(key).title())}</strong>: {html.escape(str(value))}</li>"
             for key, value in specs.items()
         )
         parts.append(f"<ul>{spec_lines}</ul>")
@@ -107,11 +107,11 @@ def render_description(info_short: str, specs: Dict[str, str], scraped: List[Dic
 
 def render_short_description(info_short: str, specs: Dict[str, str]) -> str:
     if info_short:
-        return html.escape(info_short)
+        return html.escape(str(info_short))
     if specs:
         # pick first key
         key, value = next(iter(specs.items()))
-        return html.escape(f"{key.title()}: {value}")
+        return html.escape(f"{str(key).title()}: {value}")
     return ""
 
 
@@ -150,6 +150,7 @@ def build_attribute_columns(specs: Dict[str, str]) -> Dict[str, str]:
         value = specs.get(spec_key)
         if not value:
             continue
+        value = str(value)
         columns[f"Attribute {idx} name"] = label
         normalized = value
         normalized = normalized.replace("\n", " | ")

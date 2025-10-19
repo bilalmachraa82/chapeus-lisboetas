@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "google-sheets": {
+      "command": "python3",
+      "args": ["scripts/sync_google_sheet.py"],
+      "env": {
+        "GOOGLE_SHEETS_ID": "1VJH9GojA5ErylSe13T2bfBCgoGRDQ3eZ",
+        "GOOGLE_SERVICE_ACCOUNT_FILE": "config/google-service-account.json",
+        "GOOGLE_SHEETS_TAB": "worksheet"
+      }
+    },
+    "beautify-google-sheet": {
+      "command": "python3",
+      "args": ["scripts/beautify_google_sheet.py"],
+      "env": {
+        "GOOGLE_SHEETS_ID": "1VJH9GojA5ErylSe13T2bfBCgoGRDQ3eZ",
+        "GOOGLE_SERVICE_ACCOUNT_FILE": "config/google-service-account.json",
+        "GOOGLE_SHEETS_TAB": "worksheet"
+      }
+    }
+  }
+}

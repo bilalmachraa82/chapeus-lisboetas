@@ -30,7 +30,7 @@ services:
       WORDPRESS_DB_PASSWORD: 'e$$4rU9h8'
       WORDPRESS_DEBUG: 1
     volumes:
-      - ./backup/wp:/var/www/html
+      - ./wordpress:/var/www/html
       - ./php-config.ini:/usr/local/etc/php/conf.d/custom.ini
     ports:
       - "8080:80"

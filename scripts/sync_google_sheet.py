@@ -4,8 +4,14 @@ from __future__ import annotations
 
 import json
 import os
+from functools import lru_cache
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional, Tuple
+
+try:
+    from scripts.catalog_scraper import scrape_product_page
+except ModuleNotFoundError:  # pragma: no cover - optional dependency
+    scrape_product_page = None  # type: ignore
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = BASE_DIR / "output_catalogo"
@@ -34,6 +40,7 @@ COLUMN_MAP = {
     "Prioridade": "priority",
     "Destaque homepage?": "featured",
     "Notas internas": "notes",
+    "Observações": "notes",  # abas Clean & Ready / Pendentes
 }
 
 REQUIRED_COLUMNS = ["SKU", "Nome", "Preço"]
@@ -87,6 +94,29 @@ def record_key(record: Dict) -> str:
     return str(record.get("supplier_code") or record.get("slug") or "").strip()
 
 
+def first_non_empty_description(scraped: List[Dict]) -> str:
+    for payload in scraped or []:
+        text = (payload or {}).get("description", "").strip()
+        if text:
+            return text
+    return ""
+
+
+@lru_cache(maxsize=128)
+def scrape_description(url: str) -> Tuple[Optional[Dict], Optional[str]]:
+    if not scrape_product_page:
+        return None, None
+    try:
+        payload = scrape_product_page(url)
+    except Exception as exc:  # pragma: no cover - network dependent
+        print(f"[WARN] Falha ao fazer scrape de {url}: {exc}")
+        return None, None
+
+    description = (payload or {}).get("description", "") or (payload or {}).get("body", "")
+    description = description.strip()
+    return payload, description or None
+
+
 def merge_sheet(rows: List[Dict], catalog: List[Dict]) -> List[Dict]:
     catalog_by_sku = {record_key(r): r for r in catalog}
     updated = []
@@ -112,11 +142,22 @@ def merge_sheet(rows: List[Dict], catalog: List[Dict]) -> List[Dict]:
             value = row.get(column)
             if isinstance(value, str):
                 value = value.strip()
-            if value in (None, ""):
+            if value in (None,""):
                 continue
 
             if target == "sku":
                 continue
+            elif target == "notes":
+                if column == "Observações":
+                    existing = str(base.get("notes", "") or "").strip()
+                    addition = str(value).strip()
+                    if addition:
+                        if existing and addition not in existing:
+                            base["notes"] = f"{existing}\n{addition}".strip()
+                        elif not existing:
+                            base["notes"] = addition
+                else:  # "Notas internas" substitui o valor principal
+                    base["notes"] = value
             elif target == "tags":
                 tags = [t.strip() for t in value.replace(";", ",").split(",") if t.strip()]
                 base["tags"] = tags
@@ -148,6 +189,28 @@ def merge_sheet(rows: List[Dict], catalog: List[Dict]) -> List[Dict]:
             base["price"] = float(str(base["price"]).replace(",", "."))
         except (TypeError, ValueError):
             pass
+        if not base.get("long_description"):
+            scraped_desc = first_non_empty_description(base.get("scraped", []))
+            if scraped_desc:
+                base["long_description"] = scraped_desc
+            else:
+                supplier_url = row.get("URL fornecedor") or base.get("supplier_url")
+                if supplier_url:
+                    payload, description = scrape_description(str(supplier_url).strip())
+                    if description:
+                        base.setdefault("scraped", [])
+                        if payload:
+                            payload["description"] = description
+                            base["scraped"].insert(0, payload)
+                        else:
+                            base["scraped"].insert(0, {"description": description})
+                        base["long_description"] = description
+                        base.setdefault("notes", "")
+                        note = base["notes"]
+                        auto_note = "Descrição longa preenchida automaticamente via scrape."
+                        if auto_note not in note:
+                            base["notes"] = f"{note}\n{auto_note}".strip()
+
         updated.append(base)
         catalog_by_sku[sku] = base
 
