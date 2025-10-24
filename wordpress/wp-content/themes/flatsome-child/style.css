@@ -1,16 +1,503 @@
 /*
 Theme Name: Flatsome Child
-Description: This is a child theme for Flatsome Theme
-Author: UX Themes
+Description: Custom refinements for Chapéus Lisboeta
+Author: UX Themes / Codex adjustments
 Template: flatsome
-Version: 3.0
+Version: 3.1
 */
 
-/*************** ADD CUSTOM CSS HERE.   ***************/
+/*************** BRAND PALETTE ****************/
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+:root {
+    --chap-primary: #8B4513;
+    --chap-secondary: #D2691E;
+    --chap-accent: #CD853F;
+    --chap-text: #2C1810;
+    --chap-background: #FAFAF8;
+
+    --primary-color: var(--chap-primary) !important;
+    --fs-color-primary: var(--chap-primary) !important;
+    --fs-color-secondary: var(--chap-secondary) !important;
+    --fs-color-success: var(--chap-accent) !important;
+    --fs-color-base: var(--chap-text) !important;
+    --fs-experimental-link-color: var(--chap-primary) !important;
+    --fs-experimental-link-color-hover: var(--chap-secondary) !important;
+    --wp--preset--color--primary: var(--chap-primary) !important;
+    --wp--preset--color--secondary: var(--chap-secondary) !important;
+    --wp--preset--color--success: var(--chap-accent) !important;
+}
+
+.has-primary-background-color,
+.has-primary-background-color:hover {
+    background-color: var(--chap-primary) !important;
+}
+
+.has-secondary-background-color,
+.has-secondary-background-color:hover {
+    background-color: var(--chap-secondary) !important;
+}
+
+.has-primary-color,
+.has-primary-color:visited {
+    color: var(--chap-primary) !important;
+}
+
+.has-secondary-color,
+.has-secondary-color:visited {
+    color: var(--chap-secondary) !important;
+}
+
+body,
+.woocommerce div.product .summary,
+.woocommerce div.product .woocommerce-tabs .panel {
+    color: var(--chap-text);
+    background-color: var(--chap-background);
+}
+
+a,
+a:visited {
+    color: var(--chap-primary);
+}
+
+a:hover,
+a:focus {
+    color: var(--chap-secondary);
+}
+
+.button:not(.is-outline),
+.woocommerce a.button,
+.woocommerce button.button {
+    background-color: var(--chap-primary);
+    border-color: var(--chap-primary);
+}
+
+.button:not(.is-outline):hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover {
+    background-color: var(--chap-secondary);
+    border-color: var(--chap-secondary);
+}
+
+.button.is-outline,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt {
+    color: var(--chap-primary);
+    border-color: var(--chap-primary);
+}
+
+.button.is-outline:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover {
+    color: #fff;
+    background-color: var(--chap-primary);
+}
+
+.header-wrapper,
+.header-main,
+.header-bg,
+.footer-wrapper,
+body,
+.off-canvas:not(.dark) {
+    background-color: var(--chap-background);
+}
+
+.header-main .nav>li>a,
+.header-main .nav>li>a:hover,
+.header-main .nav>li.active>a,
+.mobile-nav li>a {
+    color: var(--chap-text);
+}
+
+.top-bar,
+.header-top {
+    background-color: var(--chap-primary);
+    color: #fff;
+}
+
+.top-bar a,
+.top-bar a:visited,
+.header-top a,
+.header-top a:visited {
+    color: #fff;
+}
+
+.top-bar a:hover,
+.header-top a:hover {
+    color: var(--chap-accent);
+}
+
+.footer-secondary,
+.footer-primary {
+    background-color: var(--chap-primary);
+    color: #fff;
+}
+
+.footer-secondary a,
+.footer-primary a {
+    color: #fff;
+}
+
+.footer-secondary a:hover,
+.footer-primary a:hover {
+    color: var(--chap-accent);
+}
+
+/*************** TYPOGRAPHY ****************/
+
+body,
+.woocommerce div.product .summary,
+.woocommerce div.product .woocommerce-tabs .panel {
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.ux-banner h1,
+.ux-banner h2,
+.widget-title,
+.product-title {
+    font-family: "Playfair Display", "Times New Roman", serif;
+    color: var(--chap-text);
+}
+
+/*************** HERO CTA STRUCTURE ****************/
+
+.wp-block-buttons,
+.ux_banner .text-box .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.wp-block-buttons .wp-block-button,
+.ux_banner .text-box .buttons .button {
+    margin: 0;
+}
+
+.wp-block-buttons .wp-block-button__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/*************** PRODUCT GRID ALIGNMENT ****************/
+
+/* Improve spacing between product cards */
+.products.row {
+    row-gap: 30px !important;
+}
+
+.products.row > * {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+/* Force 1:1 aspect ratio for ALL product images */
+.product-small .box-image,
+.product-small .box-image img,
+.products .product-small .box-image,
+.products .product-small .box-image img {
+    aspect-ratio: 1 / 1 !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.product-small .box-image,
+.products .product-small .box-image {
+    position: relative !important;
+    overflow: hidden !important;
+    background: #f5f5f5 !important;
+    margin-bottom: 15px !important;
+}
+
+.product-small .box-image img,
+.products .product-small .box-image img {
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+/* Equalize product box heights */
+.products .product-small {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+.product-small .box-text {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    padding: 16px 10px !important;
+}
+
+.product-small .product-title {
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Rothys-style elegance - product cards */
+.product-small {
+    background: white !important;
+    border: 1px solid transparent !important;
+    border-radius: 4px !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+}
+
+.product-small:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15) !important;
+    border-color: #e0e0e0 !important;
+}
+
+.product-small .box-image img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.product-small:hover .box-image img {
+    transform: scale(1.08) !important;
+}
+
+.product-small .category.uppercase {
+    color: var(--chap-primary);
+    font-size: 11px !important;
+    letter-spacing: 0.05em !important;
+    margin-bottom: 8px !important;
+}
+
+/*************** HOMEPAGE FEATURED COLLECTIONS ****************/
+
+.featured-collections__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    align-items: stretch;
+}
+
+.featured-collections__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-collections__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+}
+
+.featured-collections__image img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 110px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.featured-collections__link a {
+    font-weight: 600;
+    color: var(--chap-primary);
+}
+
+.featured-collections__link a:hover {
+    color: var(--chap-secondary);
+}
+
+/* Store highlight cover */
+.store-highlight.wp-block-cover {
+    box-shadow: 0 20px 50px rgba(44, 24, 16, 0.25);
+    overflow: hidden;
+}
+
+.store-highlight .wp-block-cover__inner-container {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: left;
+    gap: 16px;
+}
+
+.store-highlight .wp-block-buttons {
+    gap: 12px;
+}
+
+.store-highlight-column {
+    display: flex;
+    align-items: stretch;
+}
+
+.store-section {
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
+}
+
+.store-section__columns {
+    align-items: stretch;
+}
+
+.store-section__info {
+    display: flex;
+    align-items: stretch;
+}
+
+.store-map-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.store-map-card__map iframe {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
 
 @media only screen and (max-width: 48em) {
-/*************** ADD MOBILE ONLY CSS HERE  ***************/
+    .featured-collections__grid {
+        gap: 20px;
+    }
 
+    .featured-collections__image img {
+        width: 180px;
+        height: 180px;
+    }
 
+    .store-highlight .wp-block-cover__inner-container {
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .store-map-card {
+        padding: 24px;
+    }
+}
+
+/*************** FOOTER IMPROVEMENTS ****************/
+
+.footer-wrapper {
+    background-color: var(--chap-primary) !important;
+}
+
+.footer-primary,
+.footer-secondary {
+    background-color: transparent !important;
+}
+
+.footer-primary .widget-title,
+.footer-secondary .widget-title {
+    color: #fff !important;
+    font-family: "Playfair Display", serif !important;
+    font-size: 18px !important;
+    margin-bottom: 16px !important;
+}
+
+.footer-primary ul li,
+.footer-secondary ul li {
+    margin-bottom: 8px !important;
+}
+
+.footer-primary a,
+.footer-secondary a {
+    color: rgba(255,255,255,0.9) !important;
+    transition: color 0.2s ease !important;
+}
+
+.footer-primary a:hover,
+.footer-secondary a:hover {
+    color: var(--chap-accent) !important;
+}
+
+.absolute-footer {
+    background-color: rgba(0,0,0,0.2) !important;
+    border-top: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.absolute-footer p {
+    color: rgba(255,255,255,0.8) !important;
+    font-size: 13px !important;
+}
+
+/*************** PAYMENT ICONS IMPROVEMENT ****************/
+
+.payment-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.payment-icons img {
+    height: 32px;
+    width: auto;
+    opacity: 0.9;
+    filter: grayscale(20%);
+    transition: all 0.3s ease;
+}
+
+.payment-icons img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: translateY(-2px);
+}
+
+/*************** NEWSLETTER IMPROVEMENTS ****************/
+
+.newsletter-form input[type="email"] {
+    border: 2px solid rgba(255,255,255,0.3) !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.newsletter-form input[type="email"]:focus {
+    border-color: rgba(255,255,255,0.6) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.1) !important;
+}
+
+.newsletter-form button:hover {
+    background: var(--chap-accent) !important;
+    color: var(--chap-text) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/*************** MOBILE ****************/
+
+@media only screen and (max-width: 48em) {
+    .wp-block-buttons,
+    .ux_banner .text-box .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .wp-block-buttons .wp-block-button .wp-block-button__link,
+    .ux_banner .text-box .buttons .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .payment-icons {
+        gap: 8px;
+    }
+
+    .payment-icons img {
+        height: 28px;
+    }
 }

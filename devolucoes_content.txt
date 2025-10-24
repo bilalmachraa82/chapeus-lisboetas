@@ -1,0 +1,34 @@
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"},"style":{"spacing":{"padding":{"top":"40px","bottom":"40px"}}}} -->
+<div class="wp-block-group" style="padding-top:40px;padding-bottom:40px"><!-- wp:heading {"level":1,"textColor":"primary"} -->
+<h1 class="wp-block-heading has-primary-color has-text-color">Devoluções &amp; Trocas</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Queremos que fique 100% satisfeito com o seu chapéu. Se precisar de devolver ou trocar, siga as orientações abaixo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Prazos</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tem 14 dias, após receção da encomenda, para solicitar troca ou devolução.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Condições</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>O artigo deve estar sem sinais de uso, com etiquetas e na embalagem original.</li><li>O reembolso é efetuado pelo mesmo método de pagamento após verificação do produto.</li><li>Os custos de devolução são suportados pelo cliente, exceto em defeito de fabrico.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Como iniciar o processo</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Envie-nos um email para <a href="mailto:apoio@chapeuslisboetas.com">apoio@chapeuslisboetas.com</a> indicando o número de encomenda, motivo e, se possível, fotografia do artigo. Responderemos com instruções e endereço de devolução.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->

@@ -1,0 +1,34 @@
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"},"style":{"spacing":{"padding":{"top":"40px","bottom":"40px"}}}} -->
+<div class="wp-block-group" style="padding-top:40px;padding-bottom:40px"><!-- wp:heading {"level":1,"textColor":"primary"} -->
+<h1 class="wp-block-heading has-primary-color has-text-color">Envios &amp; Entregas</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tratamos cada encomenda com o mesmo cuidado que dedicamos às visitas na loja física. Os nossos envios são registados, acompanhados e preparados para chegar em perfeitas condições.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Destinos e prazos</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Portugal Continental: entrega estimada entre 2 e 5 dias úteis após confirmação de pagamento.</li><li>Ilhas (Açores e Madeira): entrega até 7 dias úteis.</li><li>União Europeia: entregas até 10 dias úteis. Consultar-nos para envios internacionais adicionais.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Processamento e rastreio</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Encomendas processadas em 1 a 3 dias úteis após confirmação de pagamento.</li><li>Todos os envios são registados e incluem número de rastreio CTT Expresso.</li><li>A embalagem é reforçada para proteger abas, copas e fibras naturais.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Pagamentos e segurança</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Trabalhamos com a IfthenPay para pagamentos MB Way, Multibanco, cartões de crédito e transferência bancária. As referências são geradas automaticamente no checkout e todas as transações são processadas com encriptação SSL e conformidade PCI-DSS.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->

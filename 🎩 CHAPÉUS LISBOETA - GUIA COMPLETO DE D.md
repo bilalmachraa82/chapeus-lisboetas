@@ -49,6 +49,75 @@ Funcionalidades:
 
 ---
 
+## ✅ Atualização 2025-10-19
+
+- Tema Flatsome ativado e registado; logo oficial do Instagram (`assets/instagram_profile.jpg`) aplicado como logo e favicon.
+- Catálogo “Clean & Ready” importado (73 produtos publicados a partir de `woocommerce_import_localhost.csv`; 47 linhas duplicadas por SKU ignoradas).
+- Paleta oficial configurada: primário #8B4513, secundário #D2691E, accent #CD853F, textos #2C1810, fundo #FAFAF8.
+- Tipografia alinhada com `brand_identity.json`: Headings Playfair Display 700, Body Lato 400, Accents Montserrat 600, escalas responsivas 102%/100%.
+- Permalinks atualizados para `/%postname%/` e página Shop operacional (`https://museums-fda-optimum-male.trycloudflare.com/shop`).
+- Instagram sincronizado:
+  - Logo original (`assets/instagram_profile.jpg`) aplicado como logo/favico.
+  - Bio oficial: “🧢 Chapéus · 👜 Moda e Acessórios · 📍 Rua 1° de Dezembro, 85 · 📍 Praça da Figueira, 12 · 🇵🇹 Lisbon · 📦 Worldwide shipping · 👇🏻 Contate-nos via WhatsApp”.
+  - Estatísticas atuais (Out 2025): 553 seguidores, 336 seguindo, 372 publicações.
+  - Link WhatsApp configurado: https://wa.link/zl8thc.
+
+## ✅ QA Visual 2025-10-24
+
+- Fontes: `after_home.png`, `after_shop.png`, `after_category_inverno.png`, `homepage_after_fix2.png`, `homepage_featured_after.png`, `homepage_store_after.png` e `homepage_store_harmony.png` (Puppeteer/Chrome headless).
+- Hero Início agora utiliza paleta oficial (#8B4513 / #D2691E), botões lado a lado (desktop) e empilhados (mobile); flex aplicado via child theme sem inline overrides.
+- Grade de produtos com múltiplas colunas restauradas (Flatsome row `large-columns-3`), imagens 1:1 com `object-fit: cover` apenas por CSS leve.
+- Secção “Novidades na Loja Online” adicionada com `[products]` (6 últimos artigos), validada sem slider (`homepage_after_fix.png`).
+- Bloco “Visite-nos na Baixa de Lisboa” remodelado com cover de alto contraste, CTA dupla (“Agendar atendimento” + “Ver no mapa”) e imagem `img_05-32.jpg` em boa resolução.
+- Logo oficial (`instagram_profile.jpg`) visível no header e favicon/manifest mantidos.
+- Tradução EN continua pendente (não há switcher WPML) — manter flag na secção de Conteúdo.
+
+---
+
+## 🚧 Plano de Execução – Fase Final (Out 2025)
+
+### 1. Configuração WooCommerce & Operação
+- [x] **Localização & Moeda**: morada completa (Rua 1.º de Dezembro 85/87 · 1200-358 Lisboa), unidades em kg/cm, fuso `Europe/Lisbon`, moeda EUR.
+- [x] **Impostos**: classe padrão IVA 23 % ativa, criação da classe “Reduzido 13 %”, preços incluem IVA.
+- [x] **Portes & Logística**: zonas configuradas — “Portugal Continental” (CTT Expresso 5 €), “Açores e Madeira” (CTT Expresso 9 €) e “Levantamento na Loja” gratuito.
+- [ ] **Pagamentos**: falta integrar IfthenPay (MB Way/Multibanco) e Stripe/PayPal; atualmente ativos Transferência Bancária e Pagamento na Entrega.
+- [x] **Checkout & Conta**: guest checkout ativo, criação de conta opcional, campos NIF/opcionais, termos e política obrigatórios.
+- [x] **Emails transacionais**: header com logo, esquema de cores da marca, remetente `Chapéus Lisboetas <store@chapeuslisboetas.com>`, rodapé com contactos.
+- [ ] **Faturação & Documentos**: pendente integração com software de faturação e automação exportações.
+- [x] **Inventário**: gestão de stock WooCommerce ativa, SKUs importados, modo catálogos com 73 produtos visíveis.
+- [ ] **Ferramentas utilitárias**: falta configurar backups automatizados (UpdraftPlus), cron monitorizado e hardening REST.
+
+### 2. Conteúdo, Layout & Branding
+- [x] **Homepage definitiva**: hero reestruturado (botões alinhados), paleta aplicada e secções principais revisadas com base no QA 2025-10-24.
+- [x] **Loja / Categorias**: sidebar ativa com categorias, filtro de preço e atributo cor; breadcrumbs + grid nativa Flatsome.
+- [x] **Páginas institucionais**: Sobre nós, Contactos, Envios & Entregas, Devoluções & Trocas, Termos & Condições, Política de Privacidade, FAQ e Guia de Tamanhos com copy otimizado PT-PT.
+- [x] **Menus & Widgets**: menu principal recriado (Início, Loja com submenus, Serviços & Atelier, FAQ, Blog, Contactos) e rodapés reorganizados (Ajuda / Legal / Contactos). Shop sidebar configurada.
+- [ ] **Tradução EN**: publicar versão inglesa via WPML, ativar comutador e garantir strings WooCommerce traduzidas (inexistente no build atual).
+- [ ] **Media & Branding**: hero e grelha alinhados (QA 2025-10-24 ok); falta fechar seleção final de banners, manifesto PWA e check ALT tags globais.
+- [x] **Top Bar & Footer**: barra superior com mensagem logística + WhatsApp; social links atualizados; footer menus alinhados.
+
+- [x] **SEO Técnico**: Yoast SEO instalado/ativo com dados estruturados base, metas homepage e perfis sociais.
+- [ ] **Velocidade**: falta configurar solução de cache (WP Rocket ou alternativa) e CDN.
+- [ ] **Imagens**: pendente conversão WebP/AVIF e revisão de ALT tags.
+- [ ] **Structured Data / Analytics**: pendente integração GA4, Tag Manager, Meta Pixel e tracking WhatsApp.
+- [ ] **Copy & Keywords**: revisão global de headings/descriptions dos produtos ainda necessária.
+- [ ] **Blog/Conteúdo futuro**: calendário editorial por definir.
+
+- [ ] **Cookie Consent**: requer implementação de banner conforme RGPD (CookieYes ou semelhante).
+- [ ] **Acessibilidade**: auditoria contrastes, ARIA e foco ainda por efetuar.
+- [ ] **Suporte & Messaging**: integrar widget WhatsApp/chat e ligação Newsletter com ESP externo.
+- [ ] **Segurança**: instalar firewall, limitar tentativas login, reCAPTCHA, planear HTTPS definitivo.
+- [ ] **Backups & Monitorização**: configurar backups off-site e monitorização uptime/logs.
+
+### 5. QA & Go-Live
+- [x] Corrigir issues visuais reportadas em `screencapture-localhost-8080-2025-10-20-08_43_08.pdf` (botões hero sobrepostos, imagens de produto sem centragem uniforme).
+- [x] Reexecutar MCP Visual Feedback (ver `GUIA_MCP_VISUAL_FEEDBACK.md`) após correções e arquivar evidências aprovadas (`after_home.png`, `after_shop.png`, `after_category_inverno.png`).
+- [ ] Testes front-end (desktop/tablet/mobile), cross-browser.
+- [ ] Fluxo completo: consulta produto → adicionar ao carrinho → checkout c/ diferentes métodos → e-mail de confirmação.
+- [ ] Revisar traduções PT-PT (strings Flatsome/WooCommerce), remover conteúdo demo, apagar produtos/páginas obsoletos.
+- [ ] Documentação final (guia cliente, credenciais, fluxo atualização catálogo, rotinas backup).
+- [ ] Validar com cliente, agendar formação e handover.
+
 ## 📊 GESTÃO DE CATÁLOGO - ESPECIFICAÇÕES CRÍTICAS
 
 ### Fonte de Dados Principal
@@ -374,15 +443,17 @@ yamlTheme Options:
     - Widgets: Menus, Contactos, Newsletter, Social
     
   Colors:
-    - Primary: [Cliente definirá]
-    - Secondary: [Cliente definirá]
-    - Text: #333
-    - Background: #FFF
+    - Primary: #8B4513
+    - Secondary: #D2691E
+    - Accent: #CD853F
+    - Text: #2C1810
+    - Background: #FAFAF8
     
   Typography:
-    - Headings: [Cliente definirá]
-    - Body: Sans-serif legível
-    - Sizes: Responsive scaling
+    - Headings: Playfair Display 700
+    - Body: Lato 400
+    - Accent: Montserrat 600
+    - Sizes: Responsive scaling (desktop 102%, mobile 100)
 4. Menus & Navegação
 yamlMenu Principal (Header):
   - Início

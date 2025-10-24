@@ -1,0 +1,51 @@
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"},"style":{"spacing":{"padding":{"top":"40px","bottom":"40px"}}}} -->
+<div class="wp-block-group" style="padding-top:40px;padding-bottom:40px">
+<!-- wp:heading {"level":1,"textColor":"primary"} -->
+<h1 class="wp-block-heading has-primary-color has-text-color">Termos de Utilização</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Ao visitar www.chapeuslisboetas.com ou comprar na Chapéus Lisboetas, aceita os presentes termos. Recomendamos leitura cuidadosa destes pontos e das nossas políticas complementares.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Privacidade</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Consulte a <a href="/politica-de-privacidade/">Política de Privacidade</a> para compreender como recolhemos, utilizamos e protegemos os seus dados pessoais.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Risco de perda</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>O risco de perda e a titularidade dos artigos transferem-se para si no momento em que entregamos a encomenda ao transportador.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Informação de produtos</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Fazemos todos os esforços para garantir que descrições e imagens são fiéis. No entanto, poderá existir variação de cores e detalhes devido a iluminação, ecrãs ou atualizações de fornecedores. Se um produto não corresponder à descrição, poderá trocá-lo ou devolvê-lo, conforme a nossa política de devoluções.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Disponibilidade</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A disponibilidade dos produtos não é garantida até confirmação da encomenda. Caso um artigo esteja indisponível, será contactado por email para escolher alternativa ou receber reembolso.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Proteção de dados</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Pode, a qualquer momento, solicitar acesso, correção ou eliminação dos seus dados pessoais de acordo com a legislação europeia e nacional em vigor. Para exercer este direito, contacte-nos através de <a href="mailto:apoio@chapeuslisboetas.com">apoio@chapeuslisboetas.com</a>.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->

@@ -1,0 +1,70 @@
+<!-- wp:cover {"overlayColor":"primary","isDark":false,"minHeight":360,"contentPosition":"center center","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","right":"20px","left":"20px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-cover" style="padding-top:80px;padding-right:20px;padding-bottom:80px;padding-left:20px"><span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background"></span><div class="wp-block-cover__inner-container"><h1 class="wp-block-heading has-text-align-center has-white-color has-text-color" style="font-size:52px">Tradição lisboeta, qualidade intemporal</h1><p class="has-text-align-center has-white-color has-text-color" style="font-size:20px;max-width:720px;margin:20px auto 0 auto">Na Baixa de Lisboa desde 1993, continuamos a moldar cada chapéu com o mesmo cuidado artesanal e simpatia que conquistaram gerações de clientes.</p></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"920px"},"style":{"spacing":{"padding":{"top":"60px","bottom":"40px"}}}} -->
+<div class="wp-block-group" style="padding-top:60px;padding-bottom:40px"><!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Missão</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Preservar o encanto das lojas tradicionais lisboetas, oferecendo chapéus e acessórios que unem qualidade, elegância e preço justo. Seja na Baixa ou online, acolhemos cada cliente com proximidade, atenção ao detalhe e simpatia genuína.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Queremos partilhar a alma da cidade: o equilíbrio entre tradição e modernidade, entre o gesto artesanal e o espírito cosmopolita de Lisboa.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><p>Tradição lisboeta, qualidade intemporal, simpatia universal.</p><cite>Chapéus Lisboetas</cite></blockquote>
+<!-- /wp:quote --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"920px"},"style":{"spacing":{"padding":{"bottom":"40px"}}}} -->
+<div class="wp-block-group" style="padding-bottom:40px"><!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">História da Marca</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Em 1993 abrimos portas na Rua 1.º de Dezembro sob o nome Lisboeta, um espaço dedicado ao comércio tradicional e ao gosto por bem servir. A loja evoluiu de papelaria e tabacaria para perfumaria até encontrar a expressão definitiva na moda — e, em particular, no universo dos chapéus.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Nasceram assim os Chapéus Lisboetas: uma marca que preserva o atendimento à moda antiga e o combina com a diversidade de estilos, materiais e detalhes que definem Lisboa. Hoje somos referência para quem procura chapéus e acessórios com qualidade e preços justos, recebendo clientes de Portugal, Japão, Brasil, França e muitos outros países.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Mantemos o espírito de origem — paixão por bem receber, seleção cuidada de produtos e vontade de oferecer mais do que um chapéu: uma experiência com alma lisboeta.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"920px"},"style":{"spacing":{"padding":{"bottom":"60px"}}}} -->
+<div class="wp-block-group" style="padding-bottom:60px"><!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Visite-nos</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p><strong>Loja Chapéus Lisboetas</strong><br>Rua 1.º de Dezembro, nº 85<br>1200-358 Lisboa</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Horário</strong><br>Segunda a Sábado · 10h00 – 19h00</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://maps.app.goo.gl/" target="_blank" rel="noreferrer noopener">Ver no mapa</a></div>
+<!-- /wp:button --><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link has-secondary-background-color has-text-color has-white-color has-background" href="tel:+351961825185">Ligar para a loja</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p><strong>Experiência online</strong><br>Estamos a preparar a nova loja virtual para levar o encanto lisboeta a todas as partes do mundo. Inscreva-se na newsletter para saber quando lançarmos novas coleções e serviços.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->

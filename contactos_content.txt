@@ -1,0 +1,68 @@
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"},"style":{"spacing":{"padding":{"top":"40px","bottom":"40px"}}}} -->
+<div class="wp-block-group" style="padding-top:40px;padding-bottom:40px">
+<!-- wp:heading {"level":1,"textColor":"primary"} -->
+<h1 class="wp-block-heading has-primary-color has-text-color">Contactos</h1>
+<!-- /wp:heading -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Loja física</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Rua 1.º de Dezembro, nº 85<br>1200-358 Lisboa</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Telefone:</strong> <a href="tel:+351961825185">+351 961 825 185</a><br><strong>Email:</strong> <a href="mailto:apoio@chapeuslisboetas.com">apoio@chapeuslisboetas.com</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://maps.app.goo.gl/" target="_blank" rel="noreferrer noopener">Ver localização</a></div>
+<!-- /wp:button --><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link has-secondary-background-color has-text-color has-white-color has-background" href="https://wa.link/zl8thc" target="_blank" rel="noreferrer noopener">Falar no WhatsApp</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p><strong>Horário:</strong> Segunda a Sábado · 10h00 – 19h00</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:social-links {"iconColor":"primary","iconColorValue":"#8B4513","className":"is-style-logos-only"} -->
+<ul class="wp-block-social-links is-style-logos-only has-icon-color"><!-- wp:social-link {"url":"https://www.instagram.com/chapeuslisboetas/","service":"instagram"} /--></ul>
+<!-- /wp:social-links -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Dados da Empresa</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>Chapéus Lisboetas Unipessoal, Lda.</strong></li><li>NIF: 513 247 980</li><li>Sede: Rua 1.º de Dezembro, nº 85, 1200-358 Lisboa</li><li><a href="https://www.livroreclamacoes.pt" target="_blank" rel="noreferrer noopener">Livro de Reclamações eletrónico</a></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Pagamentos seguros</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Pagamentos processados pela IfthenPay:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Referência Multibanco gerada automaticamente no checkout</li><li>MB Way para pagamentos imediatos</li><li>Transações com encriptação SSL e conformidade PCI-DSS</li></ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->

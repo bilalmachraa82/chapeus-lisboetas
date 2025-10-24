@@ -1,0 +1,131 @@
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"},"style":{"spacing":{"padding":{"top":"40px","bottom":"40px"}}}} -->
+<div class="wp-block-group" style="padding-top:40px;padding-bottom:40px">
+<!-- wp:heading {"level":1,"textColor":"primary"} -->
+<h1 class="wp-block-heading has-primary-color has-text-color">Perguntas Frequentes</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Se não encontrar resposta aqui, fale connosco por <a href="mailto:apoio@chapeuslisboetas.com">apoio@chapeuslisboetas.com</a> ou WhatsApp.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}},"border":{"bottom":{"color":"#f0e7df","width":"1px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:16px;padding-bottom:16px;border-bottom-width:1px;border-bottom-color:#f0e7df">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Os chapéus são produzidos em Portugal?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Trabalhamos com parceiros portugueses sempre que possível, privilegiando tradição e qualidade artesanal. Complementamos com fabricantes internacionais escolhidos pelo conforto, estilo e durabilidade.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}},"border":{"bottom":{"color":"#f0e7df","width":"1px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:16px;padding-bottom:16px;border-bottom-width:1px;border-bottom-color:#f0e7df">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Posso experimentar os chapéus na loja?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Sim. Na loja física encontrará várias linhas, tamanhos e opções para prova com acompanhamento personalizado.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}},"border":{"bottom":{"color":"#f0e7df","width":"1px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:16px;padding-bottom:16px;border-bottom-width:1px;border-bottom-color:#f0e7df">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Fazem envios internacionais?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Enviamos para a União Europeia e, mediante consulta, para outros países. Contacte-nos para obter prazo e valor estimado.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}},"border":{"bottom":{"color":"#f0e7df","width":"1px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:16px;padding-bottom:16px;border-bottom-width:1px;border-bottom-color:#f0e7df">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Quais os métodos de pagamento disponíveis?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Aceitamos MB Way, Referências Multibanco, cartões de crédito e transferência bancária via IfthenPay. Todas as transações são protegidas por SSL.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}},"border":{"bottom":{"color":"#f0e7df","width":"1px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:16px;padding-bottom:16px;border-bottom-width:1px;border-bottom-color:#f0e7df">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Quanto tempo demoram os envios?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Normalmente 2 a 5 dias úteis em Portugal Continental. Ilhas e resto da Europa podem demorar até 10 dias úteis.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}},"border":{"bottom":{"color":"#f0e7df","width":"1px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:16px;padding-bottom:16px;border-bottom-width:1px;border-bottom-color:#f0e7df">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Posso trocar um chapéu que não serviu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Sim. Aceitamos trocas e devoluções até 14 dias, desde que o artigo esteja sem uso e na embalagem original.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}},"border":{"bottom":{"color":"#f0e7df","width":"1px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:16px;padding-bottom:16px;border-bottom-width:1px;border-bottom-color:#f0e7df">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Como descubro o meu tamanho?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Disponibilizamos um guia de tamanhos e ajudamos por email ou telefone. Se precisar, partilhe a medida da sua cabeça para recomendarmos o tamanho certo.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}},"border":{"bottom":{"color":"#f0e7df","width":"1px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:16px;padding-bottom:16px;border-bottom-width:1px;border-bottom-color:#f0e7df">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Os preços incluem IVA?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Sim, todos os preços apresentados incluem IVA à taxa legal em vigor.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}},"border":{"bottom":{"color":"#f0e7df","width":"1px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:16px;padding-bottom:16px;border-bottom-width:1px;border-bottom-color:#f0e7df">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Posso comprar por telefone ou email?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Claro. Aceitamos pedidos e reservas através do email apoio@chapeuslisboetas.com ou do telefone +351 961 825 185.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}},"border":{"bottom":{"color":"#f0e7df","width":"1px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:16px;padding-bottom:16px;border-bottom-width:1px;border-bottom-color:#f0e7df">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Têm loja física?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Sim. Estamos na Rua 1.º de Dezembro, nº 85, na Baixa de Lisboa.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->

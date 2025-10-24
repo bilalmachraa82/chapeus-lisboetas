@@ -1,0 +1,483 @@
+/* ===================================
+   CHAPÉUS LISBOETA - CUSTOM CSS PREMIUM
+   Versão: 2.0 YOLO MODE
+   Data: 21 Oct 2025
+   ================================ */
+
+/* ==================
+   1. BRAND IDENTITY COLORS
+   ================== */
+:root {
+    --cl-primary: #8B4513;        /* Saddle Brown - tradição lisboeta */
+    --cl-secondary: #D2691E;      /* Chocolate - calor e simpatia */
+    --cl-accent: #F5DEB3;         /* Wheat - elegância */
+    --cl-text: #2C2C2C;           /* Quase preto - leitura confortável */
+    --cl-text-light: #666666;     /* Cinza médio - texto secundário */
+    --cl-background: #FAFAF8;     /* Off-white - suavidade */
+    --cl-background-alt: #F5F5F3; /* Cinza claro - contraste suave */
+
+    /* Coleções */
+    --cl-inverno: #FAF5E9;        /* Bege quente */
+    --cl-verao: #FFF6EF;          /* Pêssego claro */
+    --cl-panama: #F4F4F4;         /* Cinza premium */
+
+    /* Spacing System (8pt grid) */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-2xl: 64px;
+    --spacing-3xl: 80px;
+
+    /* Typography */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Border */
+    --border-radius: 12px;
+    --border-radius-sm: 6px;
+    --border-radius-lg: 16px;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ==================
+   2. TYPOGRAPHY SYSTEM
+   ================== */
+body {
+    font-family: var(--font-body) !important;
+    color: var(--cl-text) !important;
+    line-height: 1.7 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.wp-block-heading {
+    font-family: var(--font-heading) !important;
+    font-weight: 700 !important;
+    color: var(--cl-text) !important;
+    letter-spacing: -0.02em !important;
+}
+
+h1, h1.wp-block-heading {
+    font-size: clamp(36px, 5vw, 56px) !important;
+    line-height: 1.1 !important;
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+h2, h2.wp-block-heading {
+    font-size: clamp(32px, 4vw, 42px) !important;
+    line-height: 1.2 !important;
+    margin-bottom: var(--spacing-xl) !important;
+}
+
+h3, h3.wp-block-heading {
+    font-size: clamp(22px, 3vw, 28px) !important;
+    line-height: 1.3 !important;
+    margin-bottom: var(--spacing-sm) !important;
+    font-weight: 600 !important;
+}
+
+p {
+    margin-bottom: var(--spacing-md) !important;
+    color: var(--cl-text) !important;
+}
+
+.has-small-font-size {
+    font-size: 14px !important;
+    color: var(--cl-text-light) !important;
+    line-height: 1.6 !important;
+}
+
+/* ==================
+   3. LAYOUT FIXES - COLEÇÕES EM DESTAQUE
+   ================== */
+
+/* Container principal */
+.wp-block-group.is-layout-constrained {
+    max-width: 1280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: var(--spacing-3xl) var(--spacing-md) !important;
+}
+
+/* Grid de coleções */
+.wp-block-columns {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--spacing-md) !important;
+    align-items: stretch !important;
+}
+
+.wp-block-column {
+    flex: 1 1 calc(33.333% - var(--spacing-md)) !important;
+    min-width: 280px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: white !important;
+    border-radius: var(--border-radius) !important;
+    padding: var(--spacing-lg) !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: all var(--transition-normal) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.wp-block-column:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+/* Imagens centralizadas */
+.wp-block-image {
+    margin: 0 auto var(--spacing-md) auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.wp-block-image.aligncenter {
+    text-align: center !important;
+}
+
+.wp-block-image img {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: var(--border-radius-sm) !important;
+    transition: transform var(--transition-normal) !important;
+}
+
+.wp-block-column:hover .wp-block-image img {
+    transform: scale(1.05) !important;
+}
+
+/* Links de coleção */
+.wp-block-column a {
+    color: var(--cl-primary) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    position: relative !important;
+    transition: color var(--transition-fast) !important;
+}
+
+.wp-block-column a:hover {
+    color: var(--cl-secondary) !important;
+}
+
+.wp-block-column a::after {
+    content: ' →' !important;
+    transition: transform var(--transition-fast) !important;
+    display: inline-block !important;
+}
+
+.wp-block-column a:hover::after {
+    transform: translateX(4px) !important;
+}
+
+/* ==================
+   4. BUTTONS SYSTEM
+   ================== */
+
+/* Container de botões - HORIZONTAL */
+.wp-block-buttons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--spacing-sm) !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: var(--spacing-lg) !important;
+}
+
+.wp-block-button {
+    margin: 0 !important;
+}
+
+/* Botão base */
+.wp-block-button__link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 14px 28px !important;
+    min-height: 48px !important; /* Touch-friendly */
+    font-family: var(--font-body) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    border-radius: var(--border-radius-sm) !important;
+    border: 2px solid transparent !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all var(--transition-normal) !important;
+    white-space: nowrap !important;
+}
+
+/* Botão primário */
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+    background-color: var(--cl-primary) !important;
+    color: white !important;
+    border-color: var(--cl-primary) !important;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+    background-color: var(--cl-secondary) !important;
+    border-color: var(--cl-secondary) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Botão outline */
+.wp-block-button.is-style-outline .wp-block-button__link {
+    background-color: transparent !important;
+    color: var(--cl-primary) !important;
+    border-color: var(--cl-primary) !important;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background-color: var(--cl-primary) !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Botão com cor secundária */
+.wp-block-button__link.has-secondary-background-color {
+    background-color: var(--cl-secondary) !important;
+    border-color: var(--cl-secondary) !important;
+}
+
+.wp-block-button__link.has-secondary-background-color:hover {
+    background-color: var(--cl-primary) !important;
+    border-color: var(--cl-primary) !important;
+}
+
+/* ==================
+   5. HERO SECTION
+   ================== */
+
+.wp-block-cover {
+    border-radius: var(--border-radius-lg) !important;
+    overflow: hidden !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.wp-block-cover__inner-container p {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+}
+
+/* ==================
+   6. SPACING SYSTEM
+   ================== */
+
+/* Secções */
+.wp-block-group {
+    padding-top: var(--spacing-3xl) !important;
+    padding-bottom: var(--spacing-3xl) !important;
+}
+
+.wp-block-group.has-background {
+    padding-left: var(--spacing-md) !important;
+    padding-right: var(--spacing-md) !important;
+}
+
+/* Headings */
+.wp-block-heading.has-text-align-center {
+    margin-bottom: var(--spacing-xl) !important;
+}
+
+/* ==================
+   7. ACCESSIBILITY (WCAG AA)
+   ================== */
+
+/* Focus states */
+a:focus,
+.wp-block-button__link:focus {
+    outline: 3px solid var(--cl-primary) !important;
+    outline-offset: 2px !important;
+}
+
+/* Skip to content */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cl-primary);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* ==================
+   8. RESPONSIVE DESIGN
+   ================== */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .wp-block-column {
+        flex: 1 1 calc(50% - var(--spacing-md)) !important;
+    }
+
+    .wp-block-group {
+        padding: var(--spacing-2xl) var(--spacing-md) !important;
+    }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+    /* Typography scaling */
+    h1, h1.wp-block-heading {
+        font-size: 32px !important;
+    }
+
+    h2, h2.wp-block-heading {
+        font-size: 28px !important;
+    }
+
+    h3, h3.wp-block-heading {
+        font-size: 22px !important;
+    }
+
+    /* Layout stack */
+    .wp-block-columns {
+        flex-direction: column !important;
+        gap: var(--spacing-lg) !important;
+    }
+
+    .wp-block-column {
+        flex: 1 1 100% !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Botões stack em mobile */
+    .wp-block-buttons {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .wp-block-button {
+        width: 100% !important;
+    }
+
+    .wp-block-button__link {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Spacing reduction */
+    .wp-block-group {
+        padding: var(--spacing-xl) var(--spacing-sm) !important;
+    }
+
+    /* Images */
+    .wp-block-image img {
+        max-width: 240px !important;
+    }
+}
+
+/* Small mobile (< 480px) */
+@media (max-width: 480px) {
+    :root {
+        --spacing-3xl: 48px;
+        --spacing-2xl: 40px;
+        --spacing-xl: 32px;
+    }
+}
+
+/* ==================
+   9. PERFORMANCE OPTIMIZATIONS
+   ================== */
+
+/* GPU acceleration */
+.wp-block-image img,
+.wp-block-button__link,
+.wp-block-column {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==================
+   10. CORES DAS COLEÇÕES
+   ================== */
+
+/* Outono/Inverno */
+.wp-block-column[style*="background-color:#faf5e9"],
+.wp-block-column[style*="background-color:#FAF5E9"] {
+    background-color: var(--cl-inverno) !important;
+    border-left: 4px solid var(--cl-primary) !important;
+}
+
+/* Primavera/Verão */
+.wp-block-column[style*="background-color:#fff6ef"],
+.wp-block-column[style*="background-color:#FFF6EF"] {
+    background-color: var(--cl-verao) !important;
+    border-left: 4px solid var(--cl-secondary) !important;
+}
+
+/* Panamá */
+.wp-block-column[style*="background-color:#f4f4f4"],
+.wp-block-column[style*="background-color:#F4F4F4"] {
+    background-color: var(--cl-panama) !important;
+    border-left: 4px solid var(--cl-accent) !important;
+}
+
+/* ==================
+   11. PRINT STYLES
+   ================== */
+
+@media print {
+    .wp-block-button,
+    .wp-block-cover {
+        display: none;
+    }
+
+    body {
+        color: black;
+        background: white;
+    }
+}
+
+/* ==================
+   12. UTILITIES
+   ================== */
+
+.text-center {
+    text-align: center !important;
+}
+
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+
+/* ===================================
+   END CUSTOM CSS
+   ================================ */
