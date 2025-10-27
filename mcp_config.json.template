@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "google-sheets": {
+      "command": "python3",
+      "args": ["scripts/sync_google_sheet.py"],
+      "env": {
+        "GOOGLE_SHEETS_ID": "YOUR_GOOGLE_SHEETS_ID",
+        "GOOGLE_SERVICE_ACCOUNT_FILE": "config/google-service-account.json",
+        "GOOGLE_SHEETS_TAB": "Catalogo"
+      }
+    },
+    "beautify-google-sheet": {
+      "command": "python3",
+      "args": ["scripts/beautify_google_sheet.py"],
+      "env": {
+        "GOOGLE_SHEETS_ID": "YOUR_GOOGLE_SHEETS_ID",
+        "GOOGLE_SERVICE_ACCOUNT_FILE": "config/google-service-account.json",
+        "GOOGLE_SHEETS_TAB": "Catalogo"
+      }
+    },
+    "wordpress-woocommerce": {
+      "command": "node",
+      "args": ["node_modules/@automattic/mcp-wordpress-remote/dist/index.js"],
+      "env": {
+        "WP_API_URL": "http://localhost:8080/wp-json",
+        "WOO_CUSTOMER_KEY": "YOUR_WOO_CUSTOMER_KEY",
+        "WOO_CUSTOMER_SECRET": "YOUR_WOO_CUSTOMER_SECRET"
+      }
+    }
+  }
+}

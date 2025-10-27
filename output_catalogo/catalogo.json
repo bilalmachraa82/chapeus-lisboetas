@@ -160,7 +160,7 @@
       }
     ],
     "slug": "bone-22182",
-    "priority": "#REF!",
+    "priority": 1,
     "long_description": "Paquet de 12 pcs assorties: 4*Noir, 3*Marron, 2*Beige, 1*Kaki, 1*Gris, 1*Camel"
   },
   {
@@ -168,7 +168,7 @@
     "sheet_row": 4,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVA INVERNO",
-    "info_short": null,
+    "info_short": "Boina oitavada em poliéster e rayon, cores sortidas",
     "supplier_url": "https://hologrammeparis.com/product/casquette-25025/",
     "extra_urls": [],
     "price": 29.9,
@@ -331,7 +331,7 @@
     "sheet_row": 8,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVA XADREZ",
-    "info_short": null,
+    "info_short": "Boina oitavada xadrez com mistura de lã, cores sortidas",
     "supplier_url": "https://hologrammeparis.com/product/casquette-22195/",
     "extra_urls": [],
     "price": 29.9,
@@ -467,7 +467,7 @@
     "sheet_row": 12,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVADA HARRINGBONE",
-    "info_short": null,
+    "info_short": "Boina oitavada harringbone com mistura de lã, cores sortidas",
     "supplier_url": "https://hologrammeparis.com/product/casquette-25023/",
     "extra_urls": [],
     "price": 29.9,
@@ -990,7 +990,9 @@
     "info_short": "Harris Tweed 100% lã virgem",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18438mc/",
     "extra_urls": [
-      "https://hologrammeparis.com/product/casquette-18502mi/"
+      "https://hologrammeparis.com/product/casquette-18456g/",
+      "https://hologrammeparis.com/product/casquette-18456ma/",
+      "https://hologrammeparis.com/product/casquette-18456v/"
     ],
     "price": 85.0,
     "supplier_code": "Boné – 18438MC\n18502MI",
@@ -1089,7 +1091,7 @@
     "sheet_row": 28,
     "brand": "HOLOGRAMME",
     "name": "BOINA PIEMONTE BOMBAZINE",
-    "info_short": null,
+    "info_short": "Boina Piemonte em 100% algodão bombazine, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18106e/",
     "extra_urls": [
       "https://hologrammeparis.com/product/casquette-18106k/",
@@ -1553,7 +1555,7 @@
     "sheet_row": 30,
     "brand": "HOLOGRAMME",
     "name": "BOINA MISTURA DE LÃ QUADRADOS",
-    "info_short": null,
+    "info_short": "Boina com mistura de lã e padrão quadrados, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18153k/",
     "extra_urls": [],
     "price": 35.0,
@@ -2015,7 +2017,7 @@
     "sheet_row": 40,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVADA PURE WOOL XADREZ",
-    "info_short": null,
+    "info_short": "Boina oitavada em 100% lã pura com padrão xadrez, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18440ol/",
     "extra_urls": [],
     "price": 45.0,
@@ -2109,7 +2111,7 @@
     "sheet_row": 46,
     "brand": "HOLOGRAMME",
     "name": "CHAPÉUS MIKI / MARINHEIRO",
-    "info_short": null,
+    "info_short": "Gorro estilo bretão Miki Docker em lã com pata de aperto traseira",
     "supplier_url": "https://hologrammeparis.com/product/bonnet-22100/",
     "extra_urls": [],
     "price": 24.9,
@@ -2215,7 +2217,7 @@
     "sheet_row": 48,
     "brand": "HOLOGRAMME",
     "name": "CHAPÉUS MIKI / MARINHEIRO",
-    "info_short": null,
+    "info_short": "Gorro estilo bretão em lã merino, fabricado em Portugal",
     "supplier_url": "https://hologrammeparis.com/product/bonnet-344974/?attribute_pa_couleur=gris-fonce",
     "extra_urls": [],
     "price": 24.9,
@@ -2327,7 +2329,7 @@
     "sheet_row": 50,
     "brand": "HOLOGRAMME",
     "name": "BOINA SEXTAVADA PURE WOOL",
-    "info_short": null,
+    "info_short": "Boina sextavada em 100% lã pura, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18508mi/",
     "extra_urls": [
       "https://hologrammeparis.com/product/casquette-18508k/",
@@ -2807,7 +2809,7 @@
     "sheet_row": 56,
     "brand": "HOLOGRAMME",
     "name": "BOINA PIEMONTE MIX WOOL",
-    "info_short": null,
+    "info_short": "Boina Piemonte com mistura de lã, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18074bl/",
     "extra_urls": [
       "https://hologrammeparis.com/product/casquette-18074v/",
@@ -3116,7 +3118,7 @@
     "sheet_row": 58,
     "brand": "HOLOGRAMME",
     "name": "BOINA SEXTAVADA COM BOMBAZINE",
-    "info_short": null,
+    "info_short": "Boina sextavada em bombazine, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18279k/",
     "extra_urls": [
       "https://hologrammeparis.com/product/casquette-18279mi/",
@@ -3346,7 +3348,7 @@
     "sheet_row": 60,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVADA HARRINGBONE",
-    "info_short": null,
+    "info_short": "Boina oitavada harringbone em lã e poliéster",
     "supplier_url": "https://hologrammeparis.com/product/casquette-22174/",
     "extra_urls": [],
     "price": 29.9,
@@ -3379,7 +3381,7 @@
     "sheet_row": 62,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVADA PURE WOOL",
-    "info_short": null,
+    "info_short": "Boina oitavada em 100% lã pura Shetland, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18220mi-new/",
     "extra_urls": [],
     "price": 45.0,
@@ -3567,7 +3569,7 @@
     "sheet_row": 2,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVADA LINHO",
-    "info_short": null,
+    "info_short": "Boina oitavada em linho e viscose, leve e fresca para verão",
     "supplier_url": "https://hologrammeparis.com/product/casquette-12805/",
     "extra_urls": [],
     "price": 27.5,
@@ -3729,7 +3731,7 @@
     "sheet_row": 4,
     "brand": "HOLOGRAMME",
     "name": "BOINA PIEMONTE LINHO E ALGODÃO",
-    "info_short": null,
+    "info_short": "Boina Piemonte em linho e algodão, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18110ec/",
     "extra_urls": [
       "https://hologrammeparis.com/fr/product/casquette-18110ol/"
@@ -3930,7 +3932,7 @@
     "sheet_row": 6,
     "brand": "HOLOGRAMME",
     "name": "BOINA SEXTAVADA CORES NA PALA",
-    "info_short": null,
+    "info_short": "Boina sextavada com detalhes coloridos na pala",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18474ol/",
     "extra_urls": [
       "https://hologrammeparis.com/product/casquette-18474g/"
@@ -4378,7 +4380,7 @@
     "sheet_row": 14,
     "brand": "HOLOGRAMME",
     "name": "BOINA PIEMONTE ALGODÃO",
-    "info_short": null,
+    "info_short": "Boina Piemonte em algodão, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/fr/product/casquette-18521a/",
     "extra_urls": [],
     "price": 35.0,
@@ -4471,7 +4473,7 @@
     "sheet_row": 16,
     "brand": "HOLOGRAMME",
     "name": "BOINA SEXTAVADA ALGODÃO",
-    "info_short": null,
+    "info_short": "Boina sextavada em algodão, leve e versátil",
     "supplier_url": "https://hologrammeparis.com/fr/product/casquette-15266f/",
     "extra_urls": [
       "https://hologrammeparis.com/fr/product/casquette-15266c/"

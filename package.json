@@ -11,7 +11,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "puppeteer": "^24.23.0"
+    "@automattic/mcp-wordpress-remote": "^0.2.18",
+    "puppeteer": "^24.23.0",
+    "server-wp-mcp": "^1.0.1"
   },
   "devDependencies": {
     "@playwright/mcp": "^0.0.40",

@@ -27,6 +27,20 @@
       "args": [
         "@playwright/mcp@latest"
       ]
+    },
+    "woocommerce": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@lockon0927/woocommerce-mcp"
+      ],
+      "env": {
+        "WORDPRESS_SITE_URL": "http://localhost:8080",
+        "WOOCOMMERCE_CONSUMER_KEY": "ck_c03beed029fe06a9d38004a9e279ef953cc26402",
+        "WOOCOMMERCE_CONSUMER_SECRET": "cs_efec5750e1e4f3413e7199e78b5de3ef031b3d62",
+        "WORDPRESS_USERNAME": "lisboetas",
+        "WORDPRESS_PASSWORD": "EUsourico82!"
+      }
     }
   }
 }

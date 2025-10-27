@@ -1,0 +1,8 @@
+# Configuração MCP para WordPress/WooCommerce
+# Gerado em: 2025-10-26 21:56:27
+
+WP_API_URL=http://localhost:8080/wp-json
+WOO_CUSTOMER_KEY=ck_b0050d91a55967c261bb4087c7831f8e41ffb385
+WOO_CUSTOMER_SECRET=cs_4bb82666a3d9c85d4fbff4cb96e75925034f5e2d
+CUSTOM_HEADERS='{"X-WC-Consumer-Key":"ck_b0050d91a55967c261bb4087c7831f8e41ffb385","X-WC-Consumer-Secret":"cs_4bb82666a3d9c85d4fbff4cb96e75925034f5e2d"}'
+MCP_ENDPOINT=http://localhost:8080/wp-json/mcp/v1/server

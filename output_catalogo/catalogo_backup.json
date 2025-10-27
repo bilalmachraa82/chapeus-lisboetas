@@ -159,14 +159,16 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-22182"
+    "slug": "bone-22182",
+    "priority": 1,
+    "long_description": "Paquet de 12 pcs assorties: 4*Noir, 3*Marron, 2*Beige, 1*Kaki, 1*Gris, 1*Camel"
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 4,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVA INVERNO",
-    "info_short": null,
+    "info_short": "Boina oitavada em poliéster e rayon, cores sortidas",
     "supplier_url": "https://hologrammeparis.com/product/casquette-25025/",
     "extra_urls": [],
     "price": 29.9,
@@ -321,14 +323,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-25025"
+    "slug": "bone-25025",
+    "long_description": "Paquet de 12 pcs assorties: 4*Noir, 2*Bordeaux, 2*Gris Clair, 1*Gris Fonce, 1*Marine, 1*Marron, 1*Kaki"
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 8,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVA XADREZ",
-    "info_short": null,
+    "info_short": "Boina oitavada xadrez com mistura de lã, cores sortidas",
     "supplier_url": "https://hologrammeparis.com/product/casquette-22195/",
     "extra_urls": [],
     "price": 29.9,
@@ -456,14 +459,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-22195"
+    "slug": "bone-22195",
+    "long_description": "Paquet de 12 pcs assorties: 4*Blanc, 3*Rouille, 3*Taupe, 2*Moutarde"
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 12,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVADA HARRINGBONE",
-    "info_short": null,
+    "info_short": "Boina oitavada harringbone com mistura de lã, cores sortidas",
     "supplier_url": "https://hologrammeparis.com/product/casquette-25023/",
     "extra_urls": [],
     "price": 29.9,
@@ -591,7 +595,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-25023"
+    "slug": "bone-25023",
+    "long_description": "Paquet de 12 pcs assorties: 5*Noir, 3*Beige, 3*Gris, 1*Marron"
   },
   {
     "sheet": "BOINAS INVERNO",
@@ -880,7 +885,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18456g"
+    "slug": "bone-18456g",
+    "long_description": "Découvrez notre Casquette - 18456MI au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS INVERNO",
@@ -973,7 +979,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18439ol"
+    "slug": "bone-18439ol",
+    "long_description": "Découvrez notre Casquette - 18439OL au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS INVERNO",
@@ -983,7 +990,9 @@
     "info_short": "Harris Tweed 100% lã virgem",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18438mc/",
     "extra_urls": [
-      "https://hologrammeparis.com/product/casquette-18502mi/"
+      "https://hologrammeparis.com/product/casquette-18456g/",
+      "https://hologrammeparis.com/product/casquette-18456ma/",
+      "https://hologrammeparis.com/product/casquette-18456v/"
     ],
     "price": 85.0,
     "supplier_code": "Boné – 18438MC\n18502MI",
@@ -1074,14 +1083,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18438mc-18502mi"
+    "slug": "bone-18438mc-18502mi",
+    "long_description": "Harris Tweed 100% Laine vierge"
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 28,
     "brand": "HOLOGRAMME",
     "name": "BOINA PIEMONTE BOMBAZINE",
-    "info_short": null,
+    "info_short": "Boina Piemonte em 100% algodão bombazine, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18106e/",
     "extra_urls": [
       "https://hologrammeparis.com/product/casquette-18106k/",
@@ -1537,14 +1547,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18106mi-bone-18106k-bone-18106g-18106ma"
+    "slug": "bone-18106mi-bone-18106k-bone-18106g-18106ma",
+    "long_description": "Découvrez notre Casquette - 18106MI au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 30,
     "brand": "HOLOGRAMME",
     "name": "BOINA MISTURA DE LÃ QUADRADOS",
-    "info_short": null,
+    "info_short": "Boina com mistura de lã e padrão quadrados, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18153k/",
     "extra_urls": [],
     "price": 35.0,
@@ -1643,7 +1654,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18153k"
+    "slug": "bone-18153k",
+    "long_description": "Découvrez notre Casquette - 18153K au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS INVERNO",
@@ -1997,14 +2009,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18445mi-bone-18445k-bone-18445n-bone-18445gr-bone-18445ca"
+    "slug": "bone-18445mi-bone-18445k-bone-18445n-bone-18445gr-bone-18445ca",
+    "long_description": "Découvrez notre Casquette - 18445MI au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 40,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVADA PURE WOOL XADREZ",
-    "info_short": null,
+    "info_short": "Boina oitavada em 100% lã pura com padrão xadrez, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18440ol/",
     "extra_urls": [],
     "price": 45.0,
@@ -2090,14 +2103,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18440ol"
+    "slug": "bone-18440ol",
+    "long_description": "Découvrez notre Casquette - 18440OL au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 46,
     "brand": "HOLOGRAMME",
     "name": "CHAPÉUS MIKI / MARINHEIRO",
-    "info_short": null,
+    "info_short": "Gorro estilo bretão Miki Docker em lã com pata de aperto traseira",
     "supplier_url": "https://hologrammeparis.com/product/bonnet-22100/",
     "extra_urls": [],
     "price": 24.9,
@@ -2195,14 +2209,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira"
+    "slug": "gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira",
+    "long_description": "Notre version Hologramme Paris du « Miki Docker » Bonnet style breton en laine avec patte de serrage arrière Sobre et sans logo apparent"
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 48,
     "brand": "HOLOGRAMME",
     "name": "CHAPÉUS MIKI / MARINHEIRO",
-    "info_short": null,
+    "info_short": "Gorro estilo bretão em lã merino, fabricado em Portugal",
     "supplier_url": "https://hologrammeparis.com/product/bonnet-344974/?attribute_pa_couleur=gris-fonce",
     "extra_urls": [],
     "price": 24.9,
@@ -2306,14 +2321,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira"
+    "slug": "gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira",
+    "long_description": "Découvrez notre Bonnet - 4974 Laine au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 50,
     "brand": "HOLOGRAMME",
     "name": "BOINA SEXTAVADA PURE WOOL",
-    "info_short": null,
+    "info_short": "Boina sextavada em 100% lã pura, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18508mi/",
     "extra_urls": [
       "https://hologrammeparis.com/product/casquette-18508k/",
@@ -2595,7 +2611,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18508mi-18452"
+    "slug": "bone-18508mi-18452",
+    "long_description": "Découvrez notre Casquette - 18508MI au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS INVERNO",
@@ -2689,7 +2706,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18500mi"
+    "slug": "bone-18500mi",
+    "long_description": "Harris Tweed 100% Laine vierge"
   },
   {
     "sheet": "BOINAS INVERNO",
@@ -2783,14 +2801,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18501mi"
+    "slug": "bone-18501mi",
+    "long_description": "Harris Tweed 100% Laine vierge"
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 56,
     "brand": "HOLOGRAMME",
     "name": "BOINA PIEMONTE MIX WOOL",
-    "info_short": null,
+    "info_short": "Boina Piemonte com mistura de lã, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18074bl/",
     "extra_urls": [
       "https://hologrammeparis.com/product/casquette-18074v/",
@@ -3091,14 +3110,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18074-bone-18074k-bone-18074gc"
+    "slug": "bone-18074-bone-18074k-bone-18074gc",
+    "long_description": "Découvrez notre Casquette - 18074BL au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 58,
     "brand": "HOLOGRAMME",
     "name": "BOINA SEXTAVADA COM BOMBAZINE",
-    "info_short": null,
+    "info_short": "Boina sextavada em bombazine, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18279k/",
     "extra_urls": [
       "https://hologrammeparis.com/product/casquette-18279mi/",
@@ -3320,14 +3340,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18279k-bone-18279ma-bone-18279mi-bone-18279bg-bone-18279g"
+    "slug": "bone-18279k-bone-18279ma-bone-18279mi-bone-18279bg-bone-18279g",
+    "long_description": "Découvrez notre Casquette - 18279K au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS INVERNO",
     "sheet_row": 60,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVADA HARRINGBONE",
-    "info_short": null,
+    "info_short": "Boina oitavada harringbone em lã e poliéster",
     "supplier_url": "https://hologrammeparis.com/product/casquette-22174/",
     "extra_urls": [],
     "price": 29.9,
@@ -3360,7 +3381,7 @@
     "sheet_row": 62,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVADA PURE WOOL",
-    "info_short": null,
+    "info_short": "Boina oitavada em 100% lã pura Shetland, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18220mi-new/",
     "extra_urls": [],
     "price": 45.0,
@@ -3446,7 +3467,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "18220mi"
+    "slug": "18220mi",
+    "long_description": "100% Pure Laine Shetland"
   },
   {
     "sheet": "COWBOY",
@@ -3539,14 +3561,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "hologramme"
+    "slug": "hologramme",
+    "long_description": "Découvrez notre Casquette - Pierre Cardin Noir au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS VERÃO",
     "sheet_row": 2,
     "brand": "HOLOGRAMME",
     "name": "BOINA OITAVADA LINHO",
-    "info_short": null,
+    "info_short": "Boina oitavada em linho e viscose, leve e fresca para verão",
     "supplier_url": "https://hologrammeparis.com/product/casquette-12805/",
     "extra_urls": [],
     "price": 27.5,
@@ -3700,14 +3723,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-12805"
+    "slug": "bone-12805",
+    "long_description": "Paquet de 24 pcs assorties: 4*Noir, 4*Marine, 5*Gris, 4*Vert, 3*Camel, 4*Beige"
   },
   {
     "sheet": "BOINAS VERÃO",
     "sheet_row": 4,
     "brand": "HOLOGRAMME",
     "name": "BOINA PIEMONTE LINHO E ALGODÃO",
-    "info_short": null,
+    "info_short": "Boina Piemonte em linho e algodão, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18110ec/",
     "extra_urls": [
       "https://hologrammeparis.com/fr/product/casquette-18110ol/"
@@ -3900,14 +3924,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18110ec-bone-18110ol"
+    "slug": "bone-18110ec-bone-18110ol",
+    "long_description": "Découvrez notre Casquette - 18110EC au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS VERÃO",
     "sheet_row": 6,
     "brand": "HOLOGRAMME",
     "name": "BOINA SEXTAVADA CORES NA PALA",
-    "info_short": null,
+    "info_short": "Boina sextavada com detalhes coloridos na pala",
     "supplier_url": "https://hologrammeparis.com/product/casquette-18474ol/",
     "extra_urls": [
       "https://hologrammeparis.com/product/casquette-18474g/"
@@ -4057,7 +4082,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18474"
+    "slug": "bone-18474",
+    "long_description": "Découvrez notre Casquette - 18474OL = 18519OL au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "COWBOY",
@@ -4150,7 +4176,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "hologramme"
+    "slug": "hologramme",
+    "long_description": "Découvrez notre Casquette - Pierre Cardin Noir au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS VERÃO",
@@ -4345,14 +4372,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18107-bone-18515"
+    "slug": "bone-18107-bone-18515",
+    "long_description": "Découvrez notre Casquette - E18107BL au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS VERÃO",
     "sheet_row": 14,
     "brand": "HOLOGRAMME",
     "name": "BOINA PIEMONTE ALGODÃO",
-    "info_short": null,
+    "info_short": "Boina Piemonte em algodão, fabricada na Itália",
     "supplier_url": "https://hologrammeparis.com/fr/product/casquette-18521a/",
     "extra_urls": [],
     "price": 35.0,
@@ -4437,14 +4465,15 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18521a"
+    "slug": "bone-18521a",
+    "long_description": "Découvrez notre Casquette - 18521A au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BOINAS VERÃO",
     "sheet_row": 16,
     "brand": "HOLOGRAMME",
     "name": "BOINA SEXTAVADA ALGODÃO",
-    "info_short": null,
+    "info_short": "Boina sextavada em algodão, leve e versátil",
     "supplier_url": "https://hologrammeparis.com/fr/product/casquette-15266f/",
     "extra_urls": [
       "https://hologrammeparis.com/fr/product/casquette-15266c/"
@@ -4959,7 +4988,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-15266f-bone-15266c"
+    "slug": "bone-15266f-bone-15266c",
+    "long_description": "Paquet de 24 pcs assorties: 2 de chaque couleur"
   },
   {
     "sheet": "BOINAS VERÃO",
@@ -5107,7 +5137,8 @@
         "images": []
       }
     ],
-    "slug": "bone-18161n-bone-18161m"
+    "slug": "bone-18161n-bone-18161m",
+    "long_description": "Découvrez notre Casquette - 18161N au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "ARTIGOS EM PELE",
@@ -5289,7 +5320,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "gants-17120"
+    "slug": "gants-17120",
+    "long_description": "Découvrez notre Gants en cuir classique - 17120 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "ARTIGOS EM PELE",
@@ -5401,7 +5433,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "gants-17119"
+    "slug": "gants-17119",
+    "long_description": "Découvrez notre Gants en cuir classique - 17119 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "ARTIGOS EM PELE",
@@ -5448,7 +5481,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "porte-monnaie-5657"
+    "slug": "porte-monnaie-5657",
+    "long_description": "Découvrez notre Porte-Monnaie - 5657 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "ARTIGOS EM PELE",
@@ -5513,7 +5547,8 @@
         "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
       }
     ],
-    "slug": "velen"
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
   },
   {
     "sheet": "CORTIÇA",
@@ -5558,7 +5593,8 @@
         "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
       }
     ],
-    "slug": "velen"
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
   },
   {
     "sheet": "CORTIÇA",
@@ -5603,7 +5639,8 @@
         "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
       }
     ],
-    "slug": "velen"
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
   },
   {
     "sheet": "CORTIÇA",
@@ -5648,7 +5685,8 @@
         "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
       }
     ],
-    "slug": "velen"
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
   },
   {
     "sheet": "CORTIÇA",
@@ -5693,7 +5731,8 @@
         "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
       }
     ],
-    "slug": "velen"
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
   },
   {
     "sheet": "CORTIÇA",
@@ -5738,7 +5777,8 @@
         "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
       }
     ],
-    "slug": "velen"
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
   },
   {
     "sheet": "CORTIÇA",
@@ -5783,7 +5823,8 @@
         "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
       }
     ],
-    "slug": "velen"
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
   },
   {
     "sheet": "CORTIÇA",
@@ -5828,7 +5869,8 @@
         "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
       }
     ],
-    "slug": "velen"
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
   },
   {
     "sheet": "GORROS",
@@ -5884,7 +5926,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "chapka-6064"
+    "slug": "chapka-6064",
+    "long_description": "Hologramme est un grossiste de Toques et Chapkas avec 40 ans d’expérience. Découvrez nos collections de chapeaux en fourrure au tarif de gros."
   },
   {
     "sheet": "GORROS",
@@ -6106,7 +6149,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "chapeu-49171"
+    "slug": "chapeu-49171",
+    "long_description": "Fausse fourrure en 100% Modacrylique Nous essayons de mettre 6 couleurs différentes par pack."
   },
   {
     "sheet": "GORROS",
@@ -6328,7 +6372,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "chapeu-49171"
+    "slug": "chapeu-49171",
+    "long_description": "Fausse fourrure en 100% Modacrylique Nous essayons de mettre 6 couleurs différentes par pack."
   },
   {
     "sheet": "GORROS",
@@ -6408,7 +6453,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bonnet-pierre-cardin"
+    "slug": "bonnet-pierre-cardin",
+    "long_description": "Découvrez notre Bonnet - Pierre Cardin au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "CHAPÉUS LÃ",
@@ -6563,7 +6609,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "tags-fabricado-na-italia-la-pura"
+    "slug": "tags-fabricado-na-italia-la-pura",
+    "long_description": "Notre version Hologramme Paris du \"Fedora classique\" Chapeau avec une ceinture contrastante marron, 100 g de pure laine. Sobre et sans logo apparent. 100% Laine et fabrication italienne"
   },
   {
     "sheet": "CHAPÉUS LÃ",
@@ -6718,7 +6765,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "tags-fabricado-na-italia-la-pura"
+    "slug": "tags-fabricado-na-italia-la-pura",
+    "long_description": "Notre version Hologramme Paris du \"Fedora classique\" Chapeau avec une ceinture contrastante marron, 100 g de pure laine. Sobre et sans logo apparent. 100% Laine et fabrication italienne"
   },
   {
     "sheet": "CHAPÉUS LÃ",
@@ -6833,7 +6881,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel"
+    "slug": "chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel",
+    "long_description": "Notre version Hologramme Paris du \"Fedora imperméable et indéformable\" Chapeau avec une ceinture marron, 100 g de pure laine Waterproof Crushable."
   },
   {
     "sheet": "CHAPÉUS LÃ",
@@ -6960,7 +7009,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "chapeu-art-970-pack-12"
+    "slug": "chapeu-art-970-pack-12",
+    "long_description": "Paquet de 12 pcs assorties: 2*55, 2*56, 3*57, 3*58, 2*59 (ou 1*60 et 2*58) Pour l’achat à l’unité de ce produit, c’est ici: https://hologrammeparis.com/product/chapeau-art-970/"
   },
   {
     "sheet": "CHAPÉUS LÃ",
@@ -7072,7 +7122,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel"
+    "slug": "chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel",
+    "long_description": "Paquet de 12 pcs assorties: 2*55, 2*56, 3*57, 3*58, 2*59 (ou 1*60 et 2*58) Pour l’achat à l’unité de ce produit, c’est ici: https://hologrammeparis.com/product/chapeau-art-181056/"
   },
   {
     "sheet": "DIVERSOS",
@@ -7266,7 +7317,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-13156"
+    "slug": "bone-13156",
+    "long_description": "Paquet de 12 pcs assorties: 4*Noir, 2*Gris + 1 de chaque couleur"
   },
   {
     "sheet": "FEMININO",
@@ -7405,7 +7457,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-12463"
+    "slug": "bone-12463",
+    "long_description": "Paquet de 24 pcs assorties: 9*Beige, 7*Gris, 8*Noir"
   },
   {
     "sheet": "FEMININO",
@@ -7556,7 +7609,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "palha-12673"
+    "slug": "palha-12673",
+    "long_description": "Découvrez notre Paille - 12673 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "CERIMÓNIA",
@@ -7788,7 +7842,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-12625"
+    "slug": "bone-12625",
+    "long_description": "Paquet de 24 pcs assorties: 2*Rouge, 2*Vert, 2*Bleu Ciel, 4*Camel, 4*Ecru, 3*Blanc, 3*Beige, 3*Marine, 1*Gris"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -7958,7 +8013,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "viseira-23119"
+    "slug": "viseira-23119",
+    "long_description": "Paquet de 30 pcs assorties: 2*Rose, 5*Orange, 5*Violet, 6*Bleu, 6*Beige, 6*Noir"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -8177,7 +8233,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-2018039"
+    "slug": "bone-2018039",
+    "long_description": "Paquet de 12 pcs assorties: 2*Gris Clair, 1*Gris Fonce, 1*Kaki, 1*Bordeaux, 1*Rouge, 2*Marine, 4*Noir"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -8479,7 +8536,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "casquette-22103"
+    "slug": "casquette-22103",
+    "long_description": "Paquet de 24 pcs assorties: 2 pcs de chaque couleur"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -8683,7 +8741,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "casquette-12448"
+    "slug": "casquette-12448",
+    "long_description": "Paquet de 24 pcs assorties: 2*Moutarde, 2*Marron, 3*Bordeaux, 3*Marine, 3*Vert, 3*Bleu, 3*Taupe, 5*Noir"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -8860,7 +8919,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "palha-12511"
+    "slug": "palha-12511",
+    "long_description": "Découvrez notre Paille - 12511 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "CERIMÓNIA",
@@ -9037,7 +9097,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "palha-12512"
+    "slug": "palha-12512",
+    "long_description": "Découvrez notre Paille - 12512 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "CERIMÓNIA",
@@ -9241,7 +9302,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "palha-12517"
+    "slug": "palha-12517",
+    "long_description": "Paquet de 30 pcs assorties: 11*Beige, 7*Camel, 4*Vert, 4*Gris, 4*Noir il reste que du naturel"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -9374,7 +9436,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "boina-classica-5020"
+    "slug": "boina-classica-5020",
+    "long_description": "Notre version Hologramme Paris du \"Béret Uni classique\" Sobre, intemporel et sans logo apparent. 75g de Laine grattée et rasée *les nouvelles couleurs sont à 90% laine."
   },
   {
     "sheet": "FEMININO",
@@ -9514,7 +9577,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "gorro-5942f-bonnet-5942c"
+    "slug": "gorro-5942f-bonnet-5942c",
+    "long_description": "Paquet de 12 pcs assorties: 1*Prune, 2*Bordeaux, 1*Marron, 3*Noir, 1*Camel, 1*Gris Fonce, 2*Marine, 1*Kaki"
   },
   {
     "sheet": "FEMININO",
@@ -9633,7 +9697,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-22238"
+    "slug": "bone-22238",
+    "long_description": "Paquet de 12 pcs assorties: 5*Gris Fonce, 4*Gris Clair, 3*Beige"
   },
   {
     "sheet": "FEMININO",
@@ -9838,7 +9903,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "palha-12673"
+    "slug": "palha-12673",
+    "long_description": "Découvrez notre Paille - 12673 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "CERIMÓNIA",
@@ -10070,7 +10136,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-12625"
+    "slug": "bone-12625",
+    "long_description": "Paquet de 24 pcs assorties: 2*Rouge, 2*Vert, 2*Bleu Ciel, 4*Camel, 4*Ecru, 3*Blanc, 3*Beige, 3*Marine, 1*Gris"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -10240,7 +10307,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "viseira-23119"
+    "slug": "viseira-23119",
+    "long_description": "Paquet de 30 pcs assorties: 2*Rose, 5*Orange, 5*Violet, 6*Bleu, 6*Beige, 6*Noir"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -10459,7 +10527,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-2018039"
+    "slug": "bone-2018039",
+    "long_description": "Paquet de 12 pcs assorties: 2*Gris Clair, 1*Gris Fonce, 1*Kaki, 1*Bordeaux, 1*Rouge, 2*Marine, 4*Noir"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -10761,7 +10830,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "casquette-22103"
+    "slug": "casquette-22103",
+    "long_description": "Paquet de 24 pcs assorties: 2 pcs de chaque couleur"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -10965,7 +11035,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "casquette-12448"
+    "slug": "casquette-12448",
+    "long_description": "Paquet de 24 pcs assorties: 2*Moutarde, 2*Marron, 3*Bordeaux, 3*Marine, 3*Vert, 3*Bleu, 3*Taupe, 5*Noir"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -11142,7 +11213,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "palha-12511"
+    "slug": "palha-12511",
+    "long_description": "Découvrez notre Paille - 12511 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "CERIMÓNIA",
@@ -11319,7 +11391,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "palha-12512"
+    "slug": "palha-12512",
+    "long_description": "Découvrez notre Paille - 12512 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "CERIMÓNIA",
@@ -11523,7 +11596,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "palha-12517"
+    "slug": "palha-12517",
+    "long_description": "Paquet de 30 pcs assorties: 11*Beige, 7*Camel, 4*Vert, 4*Gris, 4*Noir il reste que du naturel"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -11698,7 +11772,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "palha-937"
+    "slug": "palha-937",
+    "long_description": "Paquet de 30 pcs assorties: 12*55, 18*57"
   },
   {
     "sheet": "CERIMÓNIA",
@@ -11831,7 +11906,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "boina-classica-5020"
+    "slug": "boina-classica-5020",
+    "long_description": "Notre version Hologramme Paris du \"Béret Uni classique\" Sobre, intemporel et sans logo apparent. 75g de Laine grattée et rasée *les nouvelles couleurs sont à 90% laine."
   },
   {
     "sheet": "PALHA",
@@ -11951,7 +12027,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "palha-941216-couro"
+    "slug": "palha-941216-couro",
+    "long_description": "Paquet de 30 pcs assorties: 3*55, 4*56, 6*57, 7*58, 5*59, 3*60, 2*61"
   },
   {
     "sheet": "PANAMÁ",
@@ -12073,7 +12150,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "panama-201754"
+    "slug": "panama-201754",
+    "long_description": "Découvrez notre Panama - 201754 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "PANAMÁ",
@@ -12194,7 +12272,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "panama-201752"
+    "slug": "panama-201752",
+    "long_description": "Découvrez notre Panama - 201752-Ecru au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "PANAMÁ",
@@ -12329,7 +12408,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "panama-931"
+    "slug": "panama-931",
+    "long_description": "Découvrez notre Panama - Art 931 Japonais au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "À PROVA D´ÁGUA",
@@ -12702,7 +12782,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "chapeu-49103"
+    "slug": "chapeu-49103",
+    "long_description": "Découvrez notre Chapeau - 49103 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "PROTEÇÃO SOLAR",
@@ -13054,7 +13135,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bob-2018121"
+    "slug": "bob-2018121",
+    "long_description": "Paquet de 24 pcs assorties: 3*Noir, 3*Marine, 2*Orange, 2*Beige, 2*Bleu Royal, 2*Moutarde, 2*Kaki, 2*Gris, 2*Bordeaux, 2*Rouge, 1*Camel, 1*Marron Clair"
   },
   {
     "sheet": "CHAPÉUS EM TECIDO",
@@ -13264,7 +13346,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bob-2018120"
+    "slug": "bob-2018120",
+    "long_description": "Paquet de 24 pcs assorties: 3*Noir, 3*Marine, 2*Kaki, 2*Bordeaux, 2*Rouge, 2*Rouille, 2*Bleu Royal, 2*Gris, 2*Moutarde, 2*Beige, 1*Camel, 1*Marron Clair"
   },
   {
     "sheet": "CHAPÉUS EM TECIDO",
@@ -13382,7 +13465,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "hologramme"
+    "slug": "hologramme",
+    "long_description": "Découvrez notre Casquette - Pierre Cardin Noir au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BONÉS",
@@ -13823,7 +13907,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-12614-bone-15112"
+    "slug": "bone-12614-bone-15112",
+    "long_description": "Paquet de 24 pcs assorties: 2*Bleu, 2*Moutarde, 2*Rouge, 2*Kaki, 4*Noir, 3*Camel, 3*Gris, 4*Marine, 2*Vert"
   },
   {
     "sheet": "BONÉS",
@@ -14095,7 +14180,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-12694"
+    "slug": "bone-12694",
+    "long_description": "Paquet de 24 pcs assorties: 3*Noir, 3*Marine, 2*Rouge, 2*Orange, 2*Bleu, 2*Moutarde, 2*Kaki, 2*Gris, 2*Beige, 2*Camel, 1*Rose, 1*Gris Fonce"
   },
   {
     "sheet": "BONÉS",
@@ -14326,7 +14412,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-12849"
+    "slug": "bone-12849",
+    "long_description": "Paquet de 24 pcs assorties: 3*Noir, 3*Gris Clair, 3*Marine, 4*Beige, 2*Bleu Canard, 2*Rouge, 2*Jean, 2*Gris Fonce, 2*Blanc, 1*Moutarde"
   },
   {
     "sheet": "BONÉS",
@@ -14571,7 +14658,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-15165"
+    "slug": "bone-15165",
+    "long_description": "Paquet de 24 pcs assorties: 4*Noir, 3*Beige, 3*Marine, 2*Gris Clair, 2*Gris Fonce, 2*Camel, 2*Kaki, 2*Orange, 2*Moutarde, 2*Blanc"
   },
   {
     "sheet": "BONÉS",
@@ -14914,7 +15002,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-15116"
+    "slug": "bone-15116",
+    "long_description": "Paquet de 24 pcs assorties: 2 de chaque couleur"
   },
   {
     "sheet": "BONÉS",
@@ -15257,7 +15346,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-veludo-22138-ou-2019110"
+    "slug": "bone-veludo-22138-ou-2019110",
+    "long_description": "Découvrez notre casquette en velours, un incontournable pour les boutiques de mode et les enseignes d’accessoires."
   },
   {
     "sheet": "BONÉS",
@@ -15502,7 +15592,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-22134"
+    "slug": "bone-22134",
+    "long_description": "Paquet de 12 pcs assorties: 2*Marine, 2*Noir, 2*Gris, 1*Camel, 1*Bordeaux, 1*Rouge, 1*Kaki, 1*Bleu Ciel, 1*Moutarde"
   },
   {
     "sheet": "BONÉS",
@@ -15747,7 +15838,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-22134"
+    "slug": "bone-22134",
+    "long_description": "Paquet de 12 pcs assorties: 2*Marine, 2*Noir, 2*Gris, 1*Camel, 1*Bordeaux, 1*Rouge, 1*Kaki, 1*Bleu Ciel, 1*Moutarde"
   },
   {
     "sheet": "BONÉS",
@@ -16076,7 +16168,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-15263"
+    "slug": "bone-15263",
+    "long_description": "Découvrez notre Casquette - 15263 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "COWBOY",
@@ -16352,7 +16445,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-15125"
+    "slug": "bone-15125",
+    "long_description": "Paquet de 24 pcs assorties: 3*Noir, 3*Gris Clair, 3*Marine, 4*Beige, 2*Bleu Canard, 2*Rouge, 2*Jean, 2*Gris Fonce, 2*Blanc, 1*Moutarde"
   },
   {
     "sheet": "COWBOY",
@@ -16595,7 +16689,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-15114"
+    "slug": "bone-15114",
+    "long_description": "Paquet de 24 pcs assorties: 2*Gris Clair, 3*Beige, 1*Orange, 4*Bleu, 2*Rouge, 1*Vert Sapin, 2*Bordeaux, 2*Kaki, 3*Gris Foncé, 4*Noir"
   },
   {
     "sheet": "COWBOY",
@@ -16899,7 +16994,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "gorro-miki-12601-gorro-640182503"
+    "slug": "gorro-miki-12601-gorro-640182503",
+    "long_description": "Découvrez notre Bonnet - Miki 12601 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "COWBOY",
@@ -17036,7 +17132,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "algodao-4974"
+    "slug": "algodao-4974",
+    "long_description": "Découvrez notre Bonnet - Coton 4974 au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "COWBOY",
@@ -17153,7 +17250,8 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "bone-18110ec"
+    "slug": "bone-18110ec",
+    "long_description": "Découvrez notre Casquette - 18110EC au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "COWBOY",
@@ -17246,6 +17344,7 @@
         "raw_jsonld": null
       }
     ],
-    "slug": "hologramme"
+    "slug": "hologramme",
+    "long_description": "Découvrez notre Casquette - Pierre Cardin Noir au prix de grossiste pour votre boutique sur Hologramme Paris."
   }
 ]
