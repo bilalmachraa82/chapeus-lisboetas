@@ -5,13 +5,15 @@ add_action('wp_enqueue_scripts', function () {
         return;
     }
 
-    $theme_version = wp_get_theme()->get('Version');
+    // Use filemtime for cache busting during development
+    $custom_js_path = get_stylesheet_directory() . '/assets/js/custom.js';
+    $version = file_exists($custom_js_path) ? filemtime($custom_js_path) : time();
 
     wp_enqueue_script(
         'flatsome-child-custom',
         get_stylesheet_directory_uri() . '/assets/js/custom.js',
-        array(),
-        $theme_version,
+        array('jquery'),
+        $version,
         true
     );
-});
+}, 100);

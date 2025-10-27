@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Marquee - Chapéus Lisboeta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #8B4513;
+        }
+
+        /* Simulação do top bar do site */
+        .top-bar-simulation {
+            background: #8B4513;
+            color: white;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        /* CSS do marquee - copiado do style.css */
+        .top-bar .html_topbar_left,
+        .html_topbar_left {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .top-bar-marquee {
+            display: flex;
+            width: fit-content;
+            animation: marquee-scroll 30s linear infinite;
+            will-change: transform;
+        }
+
+        .top-bar-marquee span {
+            display: inline-block;
+            white-space: nowrap;
+            padding: 0 60px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            color: white;
+        }
+
+        /* Pause animation on hover for accessibility */
+        .top-bar-marquee:hover {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+
+        @keyframes marquee-scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-33.333%);
+            }
+        }
+
+        /* Mobile optimization */
+        @media only screen and (max-width: 768px) {
+            .top-bar-marquee {
+                animation-duration: 20s;
+            }
+
+            .top-bar-marquee span {
+                padding: 0 40px;
+                font-size: 12px;
+            }
+        }
+
+        .info-box {
+            background: #fff4e6;
+            border-left: 4px solid #8B4513;
+            padding: 16px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+
+        .info-box h3 {
+            color: #8B4513;
+            margin-bottom: 8px;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+        }
+
+        .info-box li {
+            margin: 6px 0;
+            color: #555;
+        }
+
+        .status {
+            text-align: center;
+            padding: 12px;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            margin-top: 20px;
+            color: #155724;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🎩 Teste de Animação Marquee - Header</h1>
+
+        <div class="top-bar-simulation">
+            <div class="html_topbar_left">
+                <!-- JavaScript vai preencher isto -->
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>✅ Funcionalidades Implementadas:</h3>
+            <ul>
+                <li><strong>Animação suave:</strong> Scroll contínuo da direita para esquerda</li>
+                <li><strong>Loop infinito:</strong> 3 cópias do texto para transição seamless</li>
+                <li><strong>Velocidade moderada:</strong> 30s para ciclo completo (20s no mobile)</li>
+                <li><strong>Pausa ao hover:</strong> Para melhor acessibilidade</li>
+                <li><strong>Responsive:</strong> Ajusta velocidade e espaçamento em mobile</li>
+                <li><strong>Performance otimizada:</strong> Usando CSS transform + will-change</li>
+            </ul>
+        </div>
+
+        <div class="status">
+            ✅ Ticker animado funcionando corretamente!
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            /**
+             * Initialize top bar marquee animation
+             * Transforms static text into smooth scrolling ticker
+             */
+            function initTopBarMarquee() {
+                const message = 'Envios grátis acima de 50€ · Loja física: Praça da Figueira, Lisboa';
+                const holders = document.querySelectorAll('.html_topbar_left');
+
+                holders.forEach(function(holder) {
+                    // Prevent double initialization
+                    if (holder.dataset.marqueeApplied === 'true') {
+                        return;
+                    }
+
+                    // Create marquee container
+                    const marquee = document.createElement('div');
+                    marquee.className = 'top-bar-marquee';
+                    marquee.setAttribute('role', 'text');
+                    marquee.setAttribute('aria-label', message);
+
+                    // Create 3 copies for seamless infinite scroll
+                    for (let i = 0; i < 3; i++) {
+                        const span = document.createElement('span');
+                        span.textContent = message;
+                        marquee.appendChild(span);
+                    }
+
+                    // Replace content
+                    holder.innerHTML = '';
+                    holder.appendChild(marquee);
+                    holder.dataset.marqueeApplied = 'true';
+
+                    console.log('✅ Marquee initialized successfully!');
+                });
+            }
+
+            // Initialize when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initTopBarMarquee);
+            } else {
+                // DOM already loaded
+                initTopBarMarquee();
+            }
+        })();
+    </script>
+</body>
+</html>
