@@ -523,36 +523,51 @@ h1, h2, h3, h4, h5, h6,
     }
 }
 
-/* Top bar marquee animation */
+/* Top bar marquee animation - Smooth continuous scroll */
 .top-bar .html_topbar_left {
     width: 100%;
+    overflow: hidden;
 }
 
 .top-bar-marquee {
-    position: relative;
-    overflow: hidden;
     display: flex;
-    gap: 4rem;
+    width: fit-content;
+    animation: marquee-scroll 30s linear infinite;
+    will-change: transform;
 }
 
 .top-bar-marquee span {
+    display: inline-block;
     white-space: nowrap;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    animation: top-bar-scroll 18s linear infinite;
-    flex-shrink: 0;
+    padding: 0 60px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
 }
 
-.top-bar-marquee span:nth-child(2) {
-    animation-delay: 9s;
+/* Pause animation on hover for accessibility */
+.top-bar-marquee:hover {
+    animation-play-state: paused;
 }
 
-@keyframes top-bar-scroll {
+@keyframes marquee-scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-33.333%);
+    }
+}
+
+/* Mobile optimization */
+@media only screen and (max-width: 768px) {
+    .top-bar-marquee {
+        animation-duration: 20s;
+    }
+
+    .top-bar-marquee span {
+        padding: 0 40px;
+        font-size: 12px;
     }
 }
 
