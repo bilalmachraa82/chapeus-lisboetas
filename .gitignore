@@ -58,6 +58,9 @@ pids
 
 # MCP configuration with sensitive data
 mcp_config.json
+
+# Google Service Account credentials
+config/google-service-account.json
 *.pid.lock
 
 # Coverage directory used by tools like istanbul
