@@ -1,3 +1,20 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD YOUR CUSTOM CSS HERE  ***************/
+
+:root {
+    --chap-primary: #6B4F4F;
+    --chap-secondary: #A07855;
+    --chap-light: #D4B499;
+    --chap-white: #FBFBFB;
+}
+
 /*************** TOP BAR MARQUEE ANIMATION ****************/
 
 .top-bar .html_topbar_left,
@@ -20,7 +37,7 @@
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.03em;
-    color: white;
+    color: var(--chap-white);
 }
 
 .top-bar-marquee:hover {
@@ -46,4 +63,126 @@
         padding: 0 40px;
         font-size: 12px;
     }
+}
+
+/*************** HEADER NEWSLETTER POPUP ****************/
+
+.newsletter-popup-form {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.newsletter-popup-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter-popup-row input[type="email"] {
+    flex: 1 1 220px;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+}
+
+.newsletter-popup-row button {
+    padding: 14px 28px;
+    border-radius: 30px;
+    border: none;
+    background: var(--chap-primary);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    flex-shrink: 0;
+}
+
+.newsletter-popup-row button:hover {
+    background: var(--chap-secondary);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+}
+
+.newsletter-popup-note {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 48em) {
+    .newsletter-popup-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .newsletter-popup-row button {
+        width: 100%;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--chap-primary);
+}
+
+#header {
+    background-color: var(--chap-white);
+}
+
+.header-top {
+    background-color: var(--chap-primary);
+    color: var(--chap-white);
+}
+
+.header-main {
+    background-color: var(--chap-white);
+}
+
+.header-bottom {
+    background-color: var(--chap-white);
+}
+
+.button, .button.primary {
+    background-color: var(--chap-primary);
+    color: var(--chap-white);
+}
+
+.button:hover, .button.primary:hover {
+    background-color: var(--chap-secondary);
+}
+
+.button.secondary {
+    background-color: var(--chap-light);
+    color: var(--chap-primary);
+}
+
+.button.secondary:hover {
+    background-color: var(--chap-secondary);
+    color: var(--chap-white);
+}
+
+a {
+    color: var(--chap-secondary);
+}
+
+a:hover {
+    color: var(--chap-primary);
+}
+
+.footer-1 {
+    background-color: var(--chap-primary);
+    color: var(--chap-white);
+}
+
+.footer-2 {
+    background-color: var(--chap-secondary);
+    color: var(--chap-white);
+}
+
+.absolute-footer {
+    background-color: var(--chap-primary);
+    color: var(--chap-white);
 }
