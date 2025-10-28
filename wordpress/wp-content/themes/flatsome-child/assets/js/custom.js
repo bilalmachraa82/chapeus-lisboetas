@@ -121,6 +121,7 @@
         card.dataset.featuredEnhanced = 'true';
       });
 
+      activate(activeIndex);
       startCycle();
       grid.dataset.dynamicEnhanced = 'true';
     });
