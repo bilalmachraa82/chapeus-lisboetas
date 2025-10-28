@@ -199,3 +199,7 @@ a:hover {
     color: var(--chap-light);
     text-decoration: underline;
 }
+
+.widget-title {
+    color: var(--chap-primary);
+}
