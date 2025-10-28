@@ -186,3 +186,16 @@ a:hover {
     background-color: var(--chap-primary);
     color: var(--chap-white);
 }
+
+.footer-1 a,
+.footer-2 a,
+.absolute-footer a {
+    color: var(--chap-white);
+}
+
+.footer-1 a:hover,
+.footer-2 a:hover,
+.absolute-footer a:hover {
+    color: var(--chap-light);
+    text-decoration: underline;
+}
