@@ -332,3 +332,221 @@ a:hover {
 .widget-title {
     color: var(--chap-primary);
 }
+
+/*************** P0.1 - PRODUCT CARD HOVER EFFECTS - CRITICAL UX IMPROVEMENT ****************/
+
+.product-small, .product-card {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.product-small:hover, .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.product-small img, .product-card img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-small:hover img, .product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Performance optimization */
+@media (prefers-reduced-motion: reduce) {
+    .product-small, .product-card,
+    .product-small img, .product-card img {
+        transition: none;
+    }
+}
+
+/*************** P0.3 - HERO CTA BUTTONS - GOLD PREMIUM STYLE ****************/
+
+/* Hero CTA Buttons - Gold Premium Style */
+.hero-section .button.primary,
+.banner .button.primary,
+a.button.primary[href*="colecoes"],
+a.button.primary[href*="chapeus"] {
+    background-color: #D4AF37 !important;
+    color: #2C2C2C !important;
+    border: none !important;
+    font-weight: 600 !important;
+    padding: 16px 32px !important;
+    font-size: 16px !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3) !important;
+}
+
+.hero-section .button.primary:hover,
+.banner .button.primary:hover,
+a.button.primary[href*="colecoes"]:hover,
+a.button.primary[href*="chapeus"]:hover {
+    background-color: #C19B2F !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* Secondary CTA - Outline style */
+.hero-section .button.secondary,
+.banner .button.secondary {
+    background-color: transparent !important;
+    border: 2px solid #D4AF37 !important;
+    color: #D4AF37 !important;
+    font-weight: 600 !important;
+    padding: 14px 30px !important;
+    transition: all 0.3s ease !important;
+}
+
+.hero-section .button.secondary:hover,
+.banner .button.secondary:hover {
+    background-color: #D4AF37 !important;
+    color: #2C2C2C !important;
+    transform: translateY(-2px) !important;
+}
+
+/*************** P0.2 - SWIPER CAROUSEL FOR FEATURED COLLECTIONS ****************/
+
+/* Swiper Carousel Container */
+.featured-collections-carousel {
+    padding: 40px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.featured-collections-carousel .swiper-slide {
+    height: auto;
+    display: flex;
+    align-items: stretch;
+}
+
+/* Navigation Arrows - Premium Gold Style */
+.featured-collections-carousel .swiper-button-next,
+.featured-collections-carousel .swiper-button-prev {
+    color: #D4AF37 !important;
+    width: 50px !important;
+    height: 50px !important;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.featured-collections-carousel .swiper-button-next:hover,
+.featured-collections-carousel .swiper-button-prev:hover {
+    background: #D4AF37;
+    color: white !important;
+    transform: scale(1.12);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.featured-collections-carousel .swiper-button-next::after,
+.featured-collections-carousel .swiper-button-prev::after {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+/* Disable arrows on very small screens */
+@media (max-width: 640px) {
+    .featured-collections-carousel .swiper-button-next,
+    .featured-collections-carousel .swiper-button-prev {
+        display: none;
+    }
+}
+
+/* Pagination Dots - Gold Theme */
+.featured-collections-carousel .swiper-pagination {
+    bottom: 10px !important;
+    padding: 10px 0;
+}
+
+.featured-collections-carousel .swiper-pagination-bullet {
+    background: #D4AF37 !important;
+    opacity: 0.35;
+    width: 12px;
+    height: 12px;
+    transition: all 0.3s ease;
+    margin: 0 6px !important;
+}
+
+.featured-collections-carousel .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.4);
+    background: var(--chap-primary) !important;
+}
+
+.featured-collections-carousel .swiper-pagination-bullet:hover {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+/* Swiper Slide Animation */
+.featured-collections-carousel .swiper-slide {
+    opacity: 0.6;
+    transform: scale(0.92);
+    transition: all 0.5s ease;
+}
+
+.featured-collections-carousel .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.featured-collections-carousel .swiper-slide-next,
+.featured-collections-carousel .swiper-slide-prev {
+    opacity: 0.85;
+    transform: scale(0.96);
+}
+
+/* Loading State */
+.featured-collections-carousel:not([data-swiper-initialized="true"]) {
+    opacity: 0.7;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .featured-collections-carousel {
+        padding: 30px 0;
+    }
+
+    .featured-collections-carousel .swiper-button-next,
+    .featured-collections-carousel .swiper-button-prev {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .featured-collections-carousel .swiper-button-next::after,
+    .featured-collections-carousel .swiper-button-prev::after {
+        font-size: 16px !important;
+    }
+
+    .featured-collections-carousel .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0 4px !important;
+    }
+}
+
+/* Accessibility: Focus States */
+.featured-collections-carousel .swiper-button-next:focus,
+.featured-collections-carousel .swiper-button-prev:focus,
+.featured-collections-carousel .swiper-pagination-bullet:focus {
+    outline: 3px solid var(--chap-primary);
+    outline-offset: 4px;
+}
+
+/* Smooth Transitions for Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+    .featured-collections-carousel .swiper-slide,
+    .featured-collections-carousel .swiper-button-next,
+    .featured-collections-carousel .swiper-button-prev,
+    .featured-collections-carousel .swiper-pagination-bullet {
+        transition: none !important;
+        animation: none !important;
+    }
+}

@@ -1,0 +1,281 @@
+<!-- wp:cover {"url":"http://localhost:8080/wp-content/uploads/2025/10/homepage/01_hero_mulher_feliz_panama.jpg","id":9999,"dimRatio":40,"overlayColor":"black","minHeight":600,"isDark":true,"align":"full","style":{"spacing":{"padding":{"top":"120px","bottom":"140px","right":"20px","left":"20px"}},"border":{"radius":"0px"}}} -->
+<div class="wp-block-cover alignfull is-light" style="border-radius:0px;padding-top:120px;padding-right:20px;padding-bottom:140px;padding-left:20px;min-height:600px"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-40 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-9999" alt="Cliente a experimentar chapéu na Chapéus Lisboetas" src="http://localhost:8080/wp-content/uploads/2025/10/homepage/01_hero_mulher_feliz_panama.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"letterSpacing":"0.2em"}},"textColor":"white","fontSize":"small"} -->
+<p class="has-text-align-center has-white-color has-text-color has-small-font-size" style="letter-spacing:0.2em">CHAPELARIA ARTESANAL LISBOETA DESDE 1950</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"64px","lineHeight":"1.1"}},"textColor":"white"} -->
+<h1 class="wp-block-heading has-text-align-center has-white-color has-text-color" style="font-size:64px;line-height:1.1">Chapéus desenhados para quem vive cada história</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"20px","bottom":"30px"}},"typography":{"fontSize":"20px"}},"textColor":"white"} -->
+<p class="has-text-align-center has-white-color has-text-color" style="margin-top:20px;margin-bottom:30px;font-size:20px">Atelier no coração de Lisboa, moldagens personalizadas e coleções limitadas para todas as estações. Escolha o chapéu ideal online ou visite-nos para um ajuste à medida.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"30px"}}}} -->
+<div class="wp-block-buttons" style="margin-top:30px"><!-- wp:button {"backgroundColor":"white","textColor":"primary","style":{"border":{"radius":"30px"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-white-background-color has-text-color has-background wp-element-button" href="/product-tag/panama/" style="border-radius:30px">Ver chapéus Panamá</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"style":{"border":{"radius":"30px","width":"2px"},"color":{"background":"#ffffff00"}},"borderColor":"white","textColor":"white","className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-white-color has-text-color has-background has-border-color has-white-border-color wp-element-button" href="/contactos/" style="border-width:2px;border-radius:30px;background-color:#ffffff00">Agendar visita ao atelier</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:spacer {"height":"60px"} -->
+<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"40px","bottom":"60px","left":"20px","right":"20px"}}},"backgroundColor":"white","layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group alignfull has-white-background-color has-background" style="padding-top:40px;padding-right:20px;padding-bottom:60px;padding-left:20px"><!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="wp-block-heading has-text-align-center">Momentos com Chapéus Lisboetas</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"40px"}}},"textColor":"secondary"} -->
+<p class="has-text-align-center has-secondary-color has-text-color" style="margin-bottom:40px">Clientes reais, materiais nobres e detalhes feitos à mão. Deslize para se inspirar.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"30px","left":"30px"}}}} -->
+<div class="wp-block-columns alignwide"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"id":10001,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+<figure class="wp-block-image size-large is-style-default"><img src="http://localhost:8080/wp-content/uploads/2025/10/homepage/02_momento_lisboa_bucket.jpg" alt="Cliente feliz com chapéu bucket nas ruas de Lisboa" class="wp-image-10001"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"14px"}},"textColor":"secondary"} -->
+<p class="has-text-align-center has-secondary-color has-text-color" style="font-size:14px">Passeio por Lisboa com estilo</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"id":10002,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://localhost:8080/wp-content/uploads/2025/10/homepage/03_momento_vintage_elegante.jpg" alt="Cliente elegante com chapéu vintage em evento" class="wp-image-10002"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"14px"}},"textColor":"secondary"} -->
+<p class="has-text-align-center has-secondary-color has-text-color" style="font-size:14px">Elegância atemporal para eventos</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"id":10003,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://localhost:8080/wp-content/uploads/2025/10/homepage/04_momento_loja_fedora.jpg" alt="Cliente na loja Chapéus Lisboetas experimentando fedora" class="wp-image-10003"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"14px"}},"textColor":"secondary"} -->
+<p class="has-text-align-center has-secondary-color has-text-color" style="font-size:14px">Atendimento personalizado na loja</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:spacer {"height":"40px"} -->
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:group {"align":"full","backgroundColor":"lightGray","style":{"spacing":{"padding":{"top":"60px","bottom":"60px","left":"20px","right":"20px"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group alignfull has-light-gray-background-color has-background" style="padding-top:60px;padding-right:20px;padding-bottom:60px;padding-left:20px"><!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="wp-block-heading has-text-align-center">Coleções em destaque</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div class="featured-collections-wrapper" style="margin-top: 40px;">
+  <div class="featured-collections-carousel swiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1: Outono · Inverno -->
+      <div class="swiper-slide">
+        <div class="product-card" style="text-align: center; padding: 30px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: 100%;">
+          <img src="/wp-content/uploads/2025/10/img_01-1-600x900.jpg" alt="Coleção Outono Inverno" style="width: 100%; height: auto; max-width: 400px; border-radius: 4px; margin: 0 auto 16px; display: block;" />
+          <h3 style="font-size: 24px; margin-bottom: 8px; color: #2C2C2C;">Outono · Inverno</h3>
+          <p style="color: #6B4423; margin-bottom: 16px;">Lã prensada, modelos impermeáveis e boinas clássicas prontas para os dias frios.</p>
+          <a href="/product-tag/inverno/" class="button primary" style="background: #D4AF37; color: #2C2C2C; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; font-weight: 600;">Ver coleção</a>
+        </div>
+      </div>
+
+      <!-- Slide 2: Panamá & Cerimónia -->
+      <div class="swiper-slide">
+        <div class="product-card" style="text-align: center; padding: 30px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: 100%;">
+          <img src="/wp-content/uploads/2025/10/img_01-21-600x900.jpg" alt="Coleção Panamá" style="width: 100%; height: auto; max-width: 400px; border-radius: 4px; margin: 0 auto 16px; display: block;" />
+          <h3 style="font-size: 24px; margin-bottom: 8px; color: #2C2C2C;">Panamá & Cerimónia</h3>
+          <p style="color: #6B4423; margin-bottom: 16px;">Peças 100% sisal, acabamentos premium e personalização no atelier.</p>
+          <a href="/product-tag/panama/" class="button primary" style="background: #D4AF37; color: #2C2C2C; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; font-weight: 600;">Ver coleção</a>
+        </div>
+      </div>
+
+      <!-- Slide 3: Boinas Tradicionais -->
+      <div class="swiper-slide">
+        <div class="product-card" style="text-align: center; padding: 30px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: 100%;">
+          <img src="/wp-content/uploads/2025/10/img_01-67.jpg" alt="Boinas Tradicionais" style="width: 100%; height: auto; max-width: 400px; border-radius: 4px; margin: 0 auto 16px; display: block;" />
+          <h3 style="font-size: 24px; margin-bottom: 8px; color: #2C2C2C;">Boinas Tradicionais</h3>
+          <p style="color: #6B4423; margin-bottom: 16px;">Herança portuguesa com design contemporâneo para o dia a dia.</p>
+          <a href="/categoria-produto/boinas/" class="button primary" style="background: #D4AF37; color: #2C2C2C; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; font-weight: 600;">Ver coleção</a>
+        </div>
+      </div>
+
+      <!-- Slide 4: Verão & Proteção Solar -->
+      <div class="swiper-slide">
+        <div class="product-card" style="text-align: center; padding: 30px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: 100%;">
+          <img src="/wp-content/uploads/2025/10/img_01-50.jpg" alt="Coleção Verão" style="width: 100%; height: auto; max-width: 400px; border-radius: 4px; margin: 0 auto 16px; display: block;" />
+          <h3 style="font-size: 24px; margin-bottom: 8px; color: #2C2C2C;">Verão & Proteção Solar</h3>
+          <p style="color: #6B4423; margin-bottom: 16px;">Materiais respiráveis e proteção UV para os dias quentes de Lisboa.</p>
+          <a href="/categoria-produto/verao/" class="button primary" style="background: #D4AF37; color: #2C2C2C; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; font-weight: 600;">Ver coleção</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Pagination Dots -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<!-- /wp:html --></div>
+<!-- /wp:group -->
+
+<!-- wp:spacer {"height":"40px"} -->
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="wp-block-heading has-text-align-center">Novidades na Loja Online</h2>
+<!-- /wp:heading -->
+
+<!-- wp:spacer {"height":"40px"} -->
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:group {"align":"full","backgroundColor":"primary","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"20px","right":"20px"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group alignfull has-primary-background-color has-background" style="padding-top:80px;padding-right:20px;padding-bottom:80px;padding-left:20px"><!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+<div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:image {"id":10004,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://localhost:8080/wp-content/uploads/2025/10/homepage/05_momento_homem_boina.jpg" alt="Interior da Chapéus Lisboetas" class="wp-image-10004"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","width":"50%","style":{"spacing":{"padding":{"left":"40px"}}}} -->
+<div class="wp-block-column is-vertically-aligned-center" style="padding-left:40px;flex-basis:50%"><!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
+<p class="has-secondary-color has-text-color has-small-font-size">Loja física · Baixa de Lisboa</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color">Um lugar onde cada chapéu é moldado à mão</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"white"} -->
+<p class="has-white-color has-text-color">Atelier, restauro e personalização na Rua 1.º de Dezembro. Reserve uma visita para ajustar o seu chapéu em minutos.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"25px"}}}} -->
+<div class="wp-block-buttons" style="margin-top:25px"><!-- wp:button {"backgroundColor":"secondary","textColor":"white","style":{"border":{"radius":"30px"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-secondary-background-color has-text-color has-background wp-element-button" href="https://wa.link/zl8thc" style="border-radius:30px">Agendar atendimento</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"style":{"border":{"radius":"30px","width":"2px"},"color":{"background":"#ffffff00"}},"borderColor":"white","textColor":"white","className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-white-color has-text-color has-background has-border-color has-white-border-color wp-element-button" href="https://maps.app.goo.gl/" style="border-width:2px;border-radius:30px;background-color:#ffffff00">Ver no mapa</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"margin":{"top":"50px"},"padding":{"top":"40px"},"blockGap":{"left":"40px"}},"border":{"top":{"color":"#ffffff33","width":"1px"}}}} -->
+<div class="wp-block-columns alignwide are-vertically-aligned-center" style="border-top-color:#ffffff33;border-top-width:1px;margin-top:50px;padding-top:40px"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color">Visite-nos na Baixa de Lisboa</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"white"} -->
+<p class="has-white-color has-text-color"><strong>Morada</strong><br>Rua 1.º de Dezembro, 85/87 · Praça da Figueira<br>1200-358 Lisboa</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"textColor":"white"} -->
+<p class="has-white-color has-text-color"><strong>Horário</strong><br>Segunda a Sábado · 10h00 – 19h00</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"textColor":"white"} -->
+<p class="has-white-color has-text-color"><strong>Contactos</strong><br><a href="tel:+351918911308">+351 918 911 308</a><br><a href="mailto:mail@chapeuslisboetas.com">mail@chapeuslisboetas.com</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:html -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.0!2d-9.137!3d38.714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQyJzUwLjQiTiA5wrAwOCcxMy4yIlc!5e0!3m2!1spt-PT!2spt!4v1234567890" width="100%" height="300" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy"></iframe>
+<!-- /wp:html --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:spacer {"height":"60px"} -->
+<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:group {"align":"full","backgroundColor":"lightGray","style":{"spacing":{"padding":{"top":"60px","bottom":"60px","left":"20px","right":"20px"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group alignfull has-light-gray-background-color has-background" style="padding-top:60px;padding-right:20px;padding-bottom:60px;padding-left:20px"><!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="wp-block-heading has-text-align-center">Porque escolher a Chapéus Lisboetas?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"top":"40px"},"blockGap":{"left":"60px"}}}} -->
+<div class="wp-block-columns alignwide" style="margin-top:40px"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:list {"className":"is-style-checkmark-list"} -->
+<ul class="is-style-checkmark-list"><!-- wp:list-item -->
+<li><strong>Artesanato certificado</strong> — feltros 100% lã premium, sisal e cortiça portugueses.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Ajuste personalizado</strong> — moldagem, vapor, redução e alargamento feitos no momento.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Envios rápidos</strong> — CTT Expresso 24/48h com embalamento seguro e seguro opcional.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:list {"className":"is-style-checkmark-list"} -->
+<ul class="is-style-checkmark-list"><!-- wp:list-item -->
+<li><strong>Atendimento especialista</strong> — chapelistas com décadas de experiência para aconselhar formatos.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Personalização e restauro</strong> — troca de fitas, bordados, limpeza e remodelação de chapéus históricos.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Projetos B2B</strong> — consultoria para cinema, teatro, hotelaria e eventos corporativos.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:spacer {"height":"40px"} -->
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:group {"align":"full","backgroundColor":"secondary","style":{"spacing":{"padding":{"top":"60px","bottom":"60px","left":"20px","right":"20px"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+<div class="wp-block-group alignfull has-secondary-background-color has-background" style="padding-top:60px;padding-right:20px;padding-bottom:60px;padding-left:20px"><!-- wp:heading {"textAlign":"center","level":2,"textColor":"white"} -->
+<h2 class="wp-block-heading has-text-align-center has-white-color has-text-color">Receba novidades, guias de cuidados e convites para eventos</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","textColor":"white"} -->
+<p class="has-text-align-center has-white-color has-text-color">Subscreva a newsletter para acesso prioritário a lançamentos limitados e serviços exclusivos do atelier.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<form class="newsletter-form" style="max-width:600px; margin:30px auto 0;">
+  <div style="display:flex; gap:10px;">
+    <input type="email" placeholder="O seu email" style="flex:1; padding:14px 20px; border-radius:30px; border:none; font-size:16px;" required>
+    <button type="submit" style="padding:14px 30px; background:#8B4513; color:white; border:none; border-radius:30px; font-weight:bold; cursor:pointer; white-space:nowrap;">Subscrever</button>
+  </div>
+</form>
+<!-- /wp:html -->
+
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"14px"},"spacing":{"margin":{"top":"15px"}}},"textColor":"white"} -->
+<p class="has-text-align-center has-white-color has-text-color" style="margin-top:15px;font-size:14px">Prometemos enviar apenas histórias e novidades com estilo. Pode cancelar em qualquer momento.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
