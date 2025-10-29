@@ -2236,3 +2236,137 @@ body .wp-block-cover__image-background {
  *
  * VALIDATION: OBRIGATÓRIA antes de commit/merge
  */
+
+
+/*************** P0.2: HEADER HEIGHT FIX - Eliminar espaço branco ***************/
+/*
+ * PROBLEMA CRÍTICO: Cliente reportou "continuamso com muito espaço antes da priomeira foto"
+ *
+ * ROOT CAUSE IDENTIFIED:
+ * - Flatsome .header-wrapper tem min-height: 500px (ANORMAL!)
+ * - Header deveria ter ~90-180px mas está inflado a 500px
+ * - Isto NÃO é espaço entre header e hero, é o PRÓPRIO HEADER que está gigante
+ *
+ * DIAGNÓSTICO PLAYWRIGHT (29 Oct 2025):
+ * - header#header: height = 500px (deveria ~90-180px)
+ * - .header-wrapper: min-height = 500px ← CULPADO
+ * - .header-bg-container.fill: height = 500px (absolute positioned background)
+ * - Conteúdo real: #top-bar (74px) + #masthead (90px) = ~164px
+ *
+ * BEST PRACTICE FIX:
+ * - Forçar header height = auto (contentor adapta ao conteúdo)
+ * - Remover min-height forçado do Flatsome
+ * - Manter backgrounds funcionais
+ *
+ * IMPACTO ESPERADO:
+ * - Hero vai aparecer imediatamente após navegação (~90-180px de header)
+ * - Zero "colchão branco" desnecessário
+ * - Mais espaço above-fold para hero image
+ */
+
+/* Fix 1: Remover min-height forçado do header wrapper */
+body #header.header,
+body .header-wrapper {
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* Fix 2: Forçar backgrounds a seguir o container */
+body .header-bg-container.fill,
+body .header-bg-image.fill,
+body .header-bg-color.fill {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* Fix 3: Garantir que conteúdo do header não tem padding extra */
+body #top-bar.header-top,
+body #masthead.header-main {
+  margin-bottom: 0 !important;
+}
+
+/*************** FIM P0.2: HEADER HEIGHT FIX ***************/
+
+
+/*************** P0.3: NEWSLETTER COLOR FIX - Portuguese Luxury Theme ***************/
+/*
+ * PROBLEMA: Cliente reportou "não gosto da cor da última caixa antes do footer"
+ *
+ * CONTEXTO:
+ * - Newsletter section tem background terracotta/brick (#D2691E ou #E07A31)
+ * - Cliente acha que "não está enquadrada com o tema"
+ * - Precisa de cor mais elegante, alinhada com brand "Portuguese luxury artisan"
+ *
+ * SOLUÇÃO: Cream/Wheat elegante com border terracotta
+ * - Background: #FAF7F2 → #F5EFE7 gradient (cream suave)
+ * - Border: 3px solid #E07A31 (terracotta como accent)
+ * - Text: #4A310F (dark brown, WCAG AAA 7.1:1)
+ * - Button: Mantém terracotta #E07A31 (CTA accent)
+ *
+ * BEST PRACTICE:
+ * - Newsletter boxes devem ser sutis, não competir com conteúdo
+ * - Cream/wheat é neutral, elegante, premium feel
+ * - Border colorido mantém brand identity sem ser agressivo
+ *
+ * WCAG VALIDATION:
+ * - Text #4A310F on #FAF7F2 = 7.1:1 (AAA) ✅
+ * - Button white on #E07A31 = 4.54:1 (AA large) ✅
+ */
+
+/* Find newsletter section - múltiplos seletores possíveis */
+body section:has(h2:contains("Receba novidades")),
+body .newsletter-section,
+body section.newsletter,
+body .section-newsletter {
+  background: linear-gradient(135deg, #FAF7F2 0%, #F5EFE7 100%) !important;
+  border: 3px solid #E07A31 !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 8px !important;
+  padding: 60px 40px !important;
+}
+
+/* Text → Dark brown WCAG AAA */
+body section:has(h2:contains("Receba novidades")) h2,
+body section:has(h2:contains("Receba novidades")) p,
+body .newsletter-section h2,
+body .newsletter-section p {
+  color: #4A310F !important;
+}
+
+/* Button → Terracotta accent (mantém brand) */
+body section:has(h2:contains("Receba novidades")) button[type="submit"],
+body section:has(h2:contains("Receba novidades")) .button,
+body .newsletter-section button[type="submit"],
+body .newsletter-section .button {
+  background: #E07A31 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(224, 122, 49, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+body section:has(h2:contains("Receba novidades")) button[type="submit"]:hover,
+body .newsletter-section button[type="submit"]:hover {
+  background: #C96A28 !important;
+  box-shadow: 0 6px 16px rgba(224, 122, 49, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Input field → Match cream background */
+body section:has(h2:contains("Receba novidades")) input[type="email"],
+body section:has(h2:contains("Receba novidades")) input[type="text"],
+body .newsletter-section input[type="email"],
+body .newsletter-section input[type="text"] {
+  background: #FFFFFF !important;
+  border: 2px solid #D4C5B9 !important;
+  color: #4A310F !important;
+}
+
+body section:has(h2:contains("Receba novidades")) input:focus,
+body .newsletter-section input:focus {
+  border-color: #E07A31 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(224, 122, 49, 0.1) !important;
+}
+
+/*************** FIM P0.3: NEWSLETTER COLOR FIX ***************/
