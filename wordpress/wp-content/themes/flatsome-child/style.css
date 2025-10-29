@@ -2370,3 +2370,46 @@ body .newsletter-section input:focus {
 }
 
 /*************** FIM P0.3: NEWSLETTER COLOR FIX ***************/
+
+/*************** P0.4: BUTTON TEXT-SHADOW FIX - Secondary Button Hero ***************/
+/*
+ * PROBLEMA: Cliente reportou "o botao agendar visita ao atelier é que esta muito sombreado"
+ *
+ * DIAGNÓSTICO PLAYWRIGHT (29 Oct 2025):
+ * - Button "Agendar visita ao atelier" (secondary outline button no hero)
+ * - text-shadow atual: rgba(0, 0, 0, 0.9) 0px 2px 4px, rgba(0, 0, 0, 0.6) 0px 6px 18px
+ * - Problema: Dupla sombra escura (90% + 60% opacity, blur até 18px) = excessivo
+ *
+ * SOLUÇÃO: Sombra subtil única
+ * - text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px
+ * - 20% opacity (em vez de 90%+60%)
+ * - 2px blur (em vez de 4px+18px)
+ * - Mantém legibilidade mas remove peso visual excessivo
+ */
+
+/* Target secondary button no hero section - Gutenberg button
+   SPECIFICITY FIX: Match body.home .wp-block-cover.alignfull.is-light .wp-block-button__link */
+body.home .wp-block-cover.alignfull.is-light .wp-block-button__link,
+body.home .wp-block-cover.alignfull .wp-block-button__link[href*="contactos"],
+body.home .wp-block-cover.alignfull .wp-block-button__link[href*="atelier"],
+body .wp-block-cover .wp-block-button__link[href*="contactos"],
+body .wp-block-cover a.wp-block-button__link[href*="atelier"],
+body .hero-cover-2025 .wp-block-button__link,
+body a.wp-block-button__link.has-white-background-color,
+body .wp-block-buttons .wp-block-button__link {
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px !important;
+}
+
+/* Garantir que hover state também usa sombra subtil */
+body.home .wp-block-cover.alignfull.is-light .wp-block-button__link:hover,
+body.home .wp-block-cover.alignfull .wp-block-button__link[href*="contactos"]:hover,
+body.home .wp-block-cover.alignfull .wp-block-button__link[href*="atelier"]:hover,
+body .wp-block-cover .wp-block-button__link[href*="contactos"]:hover,
+body .wp-block-cover a.wp-block-button__link[href*="atelier"]:hover,
+body .hero-cover-2025 .wp-block-button__link:hover,
+body a.wp-block-button__link.has-white-background-color:hover,
+body .wp-block-buttons .wp-block-button__link:hover {
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 1px 3px !important;
+}
+
+/*************** FIM P0.4: BUTTON TEXT-SHADOW FIX ***************/

@@ -150,12 +150,17 @@ body.home .wp-block-cover.alignfull.is-light .wp-block-cover__inner-container {
     padding-top: clamp(40px, 6vh, 80px) !important;
 }
 
+/* P0.4 FIX: Separate text-shadow for h1/p vs buttons */
 body.home .wp-block-cover.alignfull.is-light h1,
-body.home .wp-block-cover.alignfull.is-light p,
-body.home .wp-block-cover.alignfull.is-light .wp-block-button__link {
+body.home .wp-block-cover.alignfull.is-light p {
     text-shadow:
         0 2px 4px rgba(0, 0, 0, 0.9),
         0 6px 18px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* P0.4: Reduced text-shadow for buttons (client feedback: "muito sombreado") */
+body.home .wp-block-cover.alignfull.is-light .wp-block-button__link {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
 }
 
 body.home .wp-block-cover.alignfull.is-light .wp-block-button__link {
