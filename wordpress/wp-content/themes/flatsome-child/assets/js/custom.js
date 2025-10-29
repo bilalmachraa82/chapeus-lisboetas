@@ -415,6 +415,172 @@
     });
   }
 
+  /**
+   * P1.2 - Initialize GLightbox for Instagram gallery
+   */
+  function initInstagramLightbox() {
+    // Check if GLightbox is loaded
+    if (typeof window.GLightbox === 'undefined') {
+      console.warn('GLightbox not loaded yet, retrying...');
+      setTimeout(initInstagramLightbox, 100);
+      return;
+    }
+
+    // Find Instagram section and add lightbox attributes
+    const instagramImages = document.querySelectorAll('.instagram-card img, [class*="instagram"] img, .moment-gallery img, .momentos-gallery__item img');
+
+    if (instagramImages.length === 0) {
+      console.log('No Instagram images found for lightbox');
+      return;
+    }
+
+    // Wrap images in lightbox links if not already wrapped
+    instagramImages.forEach(function(img, index) {
+      if (img.parentElement.tagName !== 'A' || !img.parentElement.classList.contains('glightbox')) {
+        const link = document.createElement('a');
+        link.href = img.src.replace(/-\d+x\d+\./, '.'); // Remove WordPress size suffix for full image
+        link.classList.add('glightbox');
+        link.setAttribute('data-gallery', 'instagram-moments');
+        link.setAttribute('data-glightbox', 'title: Momento ' + (index + 1) + ' - Chapéus Lisboetas; description: Cliente real com chapéu artesanal português.');
+
+        // Wrap image with link
+        img.parentNode.insertBefore(link, img);
+        link.appendChild(img);
+      }
+    });
+
+    // Initialize GLightbox
+    const lightbox = window.GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: false,
+      closeButton: true,
+      closeOnOutsideClick: true,
+      openEffect: 'zoom',
+      closeEffect: 'fade',
+      slideEffect: 'slide',
+      moreText: 'Ver mais',
+      moreLength: 60,
+      skin: 'clean',
+      cssEfects: {
+        fade: { in: 'fadeIn', out: 'fadeOut' },
+        zoom: { in: 'zoomIn', out: 'zoomOut' }
+      }
+    });
+
+    console.log('✅ GLightbox initialized for Instagram gallery:', instagramImages.length, 'images');
+  }
+
+  /**
+   * P1.3 - Initialize AOS (Animate On Scroll)
+   */
+  function initAOS() {
+    // Check if AOS is loaded
+    if (typeof AOS === 'undefined') {
+      console.warn('AOS not loaded yet, retrying...');
+      setTimeout(initAOS, 100);
+      return;
+    }
+
+    // Initialize AOS with custom settings
+    AOS.init({
+      duration: 800,           // Animation duration (ms)
+      easing: 'ease-in-out',   // Easing function
+      once: true,              // Animation happens only once
+      mirror: false,           // Don't animate on scroll up
+      offset: 120,             // Offset from viewport (px)
+      delay: 0,                // Default delay (ms)
+      anchorPlacement: 'top-bottom', // When animation triggers
+      disable: function() {
+        // Disable on mobile if preferred
+        return window.innerWidth < 768 && !document.body.classList.contains('force-aos');
+      }
+    });
+
+    console.log('✅ AOS initialized with ' + document.querySelectorAll('[data-aos]').length + ' animated elements');
+
+    // Refresh AOS on dynamic content load
+    document.addEventListener('flatsome-load-complete', function() {
+      AOS.refresh();
+    });
+  }
+
+  /**
+   * P1.3 - Add AOS attributes to elements dynamically
+   */
+  function addAOSAttributes() {
+    // Hero section
+    const heroSection = document.querySelector('.hero-cover-2025, .wp-block-cover.alignfull');
+    if (heroSection && !heroSection.hasAttribute('data-aos')) {
+      heroSection.setAttribute('data-aos', 'fade-up');
+      heroSection.setAttribute('data-aos-delay', '100');
+    }
+
+    // Hero inner container
+    const heroInner = heroSection ? heroSection.querySelector('.wp-block-cover__inner-container') : null;
+    if (heroInner && !heroInner.hasAttribute('data-aos')) {
+      heroInner.setAttribute('data-aos', 'fade-up');
+      heroInner.setAttribute('data-aos-delay', '200');
+    }
+
+    // Collections heading - find by text content
+    const headings = document.querySelectorAll('h2.wp-block-heading');
+    headings.forEach(function(heading) {
+      const text = heading.textContent ? heading.textContent.trim().toLowerCase() : '';
+      if (text.includes('coleções em destaque') && !heading.hasAttribute('data-aos')) {
+        heading.setAttribute('data-aos', 'fade-down');
+        heading.setAttribute('data-aos-delay', '200');
+      } else if (text.includes('momentos com chapéus') && !heading.hasAttribute('data-aos')) {
+        heading.setAttribute('data-aos', 'fade-down');
+        heading.setAttribute('data-aos-delay', '100');
+      } else if (text.includes('receba novidades') && !heading.hasAttribute('data-aos')) {
+        heading.setAttribute('data-aos', 'fade-down');
+        heading.setAttribute('data-aos-delay', '100');
+      }
+    });
+
+    // Swiper carousel
+    const swiperCarousel = document.querySelector('.featured-collections-carousel');
+    if (swiperCarousel && !swiperCarousel.hasAttribute('data-aos')) {
+      swiperCarousel.setAttribute('data-aos', 'zoom-in');
+      swiperCarousel.setAttribute('data-aos-delay', '300');
+    }
+
+    // Featured collections section
+    const featuredSection = document.querySelector('.is-featured-collections');
+    if (featuredSection && !featuredSection.hasAttribute('data-aos')) {
+      featuredSection.setAttribute('data-aos', 'fade-up');
+      featuredSection.setAttribute('data-aos-delay', '100');
+    }
+
+    // Instagram/Momentos section
+    const momentosSection = document.querySelector('.is-momentos-gallery');
+    if (momentosSection && !momentosSection.hasAttribute('data-aos')) {
+      momentosSection.setAttribute('data-aos', 'fade-up');
+      momentosSection.setAttribute('data-aos-delay', '100');
+    }
+
+    // Newsletter section
+    const newsletterSection = document.querySelector('.is-newsletter-cta');
+    if (newsletterSection && !newsletterSection.hasAttribute('data-aos')) {
+      newsletterSection.setAttribute('data-aos', 'flip-up');
+      newsletterSection.setAttribute('data-aos-delay', '200');
+    }
+
+    // Why choose section
+    const whyChooseSection = document.querySelector('.is-why-choose');
+    if (whyChooseSection && !whyChooseSection.hasAttribute('data-aos')) {
+      whyChooseSection.setAttribute('data-aos', 'fade-up');
+      whyChooseSection.setAttribute('data-aos-delay', '150');
+    }
+
+    // Refresh AOS to detect new elements
+    if (typeof AOS !== 'undefined') {
+      AOS.refresh();
+    }
+  }
+
   function initAll() {
     tagDynamicSections();
     initTopBarMarquee();
@@ -427,6 +593,24 @@
       initSwiperCarousel();
     } else {
       setTimeout(initSwiperCarousel, 100);
+    }
+
+    // P1.2 - Initialize Instagram lightbox
+    if (typeof window.GLightbox !== 'undefined') {
+      initInstagramLightbox();
+    } else {
+      setTimeout(initInstagramLightbox, 200);
+    }
+
+    // P1.3 - Initialize AOS
+    if (typeof AOS !== 'undefined') {
+      addAOSAttributes();
+      initAOS();
+    } else {
+      setTimeout(function() {
+        addAOSAttributes();
+        initAOS();
+      }, 200);
     }
   }
 

@@ -8,11 +8,365 @@ Version: 3.0
 
 /*************** ADD YOUR CUSTOM CSS HERE  ***************/
 
+/**
+ * CHAPÉUS LISBOETAS - DESIGN SYSTEM
+ * Color Palette & Typography - 2025
+ * Premium Portuguese Craftsmanship Theme
+ */
+
+/**
+ * TYPOGRAPHY SYSTEM
+ * Google Fonts: Cormorant Garamond (elegant serif) + Inter (modern sans)
+ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
-    --chap-primary: #8B4513;
-    --chap-secondary: #A07855;
-    --chap-light: #fff4e6;
-    --chap-white: #FBFBFB;
+  /* PRIMARY COLORS - Portuguese Heritage */
+  --chap-primary: #D4AF37;          /* Gold - Luxury & Craftsmanship */
+  --chap-primary-dark: #C19B2F;     /* Darker gold for hover states */
+  --chap-primary-light: #E5C961;    /* Lighter gold for accents */
+
+  --chap-brown: #6B4423;            /* Deep warm brown - Leather & wood */
+  --chap-brown-light: #8B5A3C;      /* Medium brown for text */
+  --chap-brown-dark: #4A2F18;       /* Dark brown for headers */
+
+  --chap-cream: #FAF7F2;            /* Warm cream - Background */
+  --chap-cream-dark: #F0EBE3;       /* Slightly darker cream */
+
+  /* SECONDARY COLORS - Nature & Sustainability */
+  --chap-sage: #8A9A7B;             /* Sage green - Sustainability */
+  --chap-terracotta: #C85A3A;       /* Terracotta - Portuguese tiles */
+  --chap-slate: #5B7B8F;            /* Slate blue - Links & accents */
+
+  /* NEUTRAL PALETTE */
+  --chap-charcoal: #2C2C2C;         /* Dark charcoal - Primary text */
+  --chap-gray: #6C6C6C;             /* Medium gray - Secondary text */
+  --chap-light-gray: #E8E8E8;       /* Light gray - Borders & dividers */
+  --chap-white: #FFFFFF;            /* Pure white */
+
+  /* SEMANTIC COLORS */
+  --chap-success: #7CAA68;          /* Success states */
+  --chap-warning: #E8A547;          /* Warning states */
+  --chap-error: #C85A54;            /* Error states */
+  --chap-info: #5B7B8F;             /* Info states */
+
+  /* LEGACY COMPATIBILITY */
+  --chap-secondary: #8B5A3C;        /* Map to brown-light for backwards compatibility */
+  --chap-light: #FAF7F2;            /* Map to cream for backwards compatibility */
+
+  /* GRADIENTS */
+  --chap-gradient-gold: linear-gradient(135deg, #D4AF37 0%, #C19B2F 100%);
+  --chap-gradient-brown: linear-gradient(135deg, #6B4423 0%, #4A2F18 100%);
+  --chap-gradient-overlay: linear-gradient(to top, rgba(44, 44, 44, 0.9), transparent);
+
+  /* SHADOWS */
+  --chap-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --chap-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --chap-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --chap-shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.2);
+  --chap-shadow-gold: 0 4px 12px rgba(212, 175, 55, 0.3);
+
+  /* SPACING SYSTEM (8px base) */
+  --chap-space-xs: 4px;
+  --chap-space-sm: 8px;
+  --chap-space-md: 16px;
+  --chap-space-lg: 24px;
+  --chap-space-xl: 32px;
+  --chap-space-2xl: 48px;
+  --chap-space-3xl: 64px;
+
+  /* BORDER RADIUS */
+  --chap-radius-sm: 4px;
+  --chap-radius-md: 8px;
+  --chap-radius-lg: 12px;
+  --chap-radius-full: 9999px;
+
+  /* TRANSITIONS */
+  --chap-transition-fast: 150ms ease;
+  --chap-transition-base: 300ms ease;
+  --chap-transition-slow: 500ms ease;
+  --chap-transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* FONT FAMILIES */
+  --chap-font-heading: 'Cormorant Garamond', Georgia, serif;
+  --chap-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --chap-font-mono: 'SF Mono', Monaco, 'Courier New', monospace;
+
+  /* FONT SIZES - Fluid Typography */
+  --chap-text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);      /* 12-14px */
+  --chap-text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);         /* 14-16px */
+  --chap-text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);      /* 16-18px */
+  --chap-text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);         /* 18-20px */
+  --chap-text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);        /* 20-24px */
+  --chap-text-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);         /* 24-30px */
+  --chap-text-3xl: clamp(1.875rem, 1.6rem + 1.35vw, 2.25rem);     /* 30-36px */
+  --chap-text-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);         /* 36-48px */
+  --chap-text-5xl: clamp(3rem, 2.5rem + 2.5vw, 4rem);             /* 48-64px */
+
+  /* FONT WEIGHTS */
+  --chap-weight-normal: 400;
+  --chap-weight-medium: 500;
+  --chap-weight-semibold: 600;
+  --chap-weight-bold: 700;
+
+  /* LINE HEIGHTS */
+  --chap-leading-none: 1;
+  --chap-leading-tight: 1.25;
+  --chap-leading-snug: 1.375;
+  --chap-leading-normal: 1.5;
+  --chap-leading-relaxed: 1.625;
+  --chap-leading-loose: 1.75;
+
+  /* LETTER SPACING */
+  --chap-tracking-tighter: -0.05em;
+  --chap-tracking-tight: -0.025em;
+  --chap-tracking-normal: 0;
+  --chap-tracking-wide: 0.025em;
+  --chap-tracking-wider: 0.05em;
+  --chap-tracking-widest: 0.1em;
+}
+
+/**
+ * TYPOGRAPHY BASE STYLES
+ */
+body {
+  font-family: var(--chap-font-body);
+  font-size: var(--chap-text-base);
+  line-height: var(--chap-leading-relaxed);
+  color: var(--chap-charcoal);
+  background-color: var(--chap-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* HEADINGS - Elegant Serif */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--chap-font-heading);
+  font-weight: var(--chap-weight-semibold);
+  line-height: var(--chap-leading-tight);
+  color: var(--chap-brown-dark);
+  margin-bottom: var(--chap-space-md);
+  letter-spacing: var(--chap-tracking-tight);
+}
+
+h1, .h1 {
+  font-size: var(--chap-text-5xl);
+  font-weight: var(--chap-weight-bold);
+  line-height: var(--chap-leading-none);
+  letter-spacing: var(--chap-tracking-tighter);
+}
+
+h2, .h2 {
+  font-size: var(--chap-text-4xl);
+  font-weight: var(--chap-weight-semibold);
+}
+
+h3, .h3 {
+  font-size: var(--chap-text-3xl);
+}
+
+h4, .h4 {
+  font-size: var(--chap-text-2xl);
+}
+
+h5, .h5 {
+  font-size: var(--chap-text-xl);
+  font-family: var(--chap-font-body);
+  font-weight: var(--chap-weight-semibold);
+}
+
+h6, .h6 {
+  font-size: var(--chap-text-lg);
+  font-family: var(--chap-font-body);
+  font-weight: var(--chap-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--chap-tracking-wider);
+}
+
+/* PARAGRAPHS & TEXT */
+p {
+  margin-bottom: var(--chap-space-md);
+  line-height: var(--chap-leading-relaxed);
+}
+
+p.lead {
+  font-size: var(--chap-text-lg);
+  line-height: var(--chap-leading-loose);
+  color: var(--chap-brown-light);
+  font-weight: var(--chap-weight-normal);
+}
+
+.text-small {
+  font-size: var(--chap-text-sm);
+}
+
+.text-large {
+  font-size: var(--chap-text-lg);
+}
+
+/* LINKS */
+a {
+  color: var(--chap-slate);
+  text-decoration: none;
+  transition: color var(--chap-transition-fast);
+}
+
+a:hover {
+  color: var(--chap-primary);
+}
+
+/* BUTTONS - Use Design System Colors */
+.button,
+button,
+input[type="submit"],
+input[type="button"] {
+  font-family: var(--chap-font-body);
+  font-weight: var(--chap-weight-semibold);
+  font-size: var(--chap-text-sm);
+  letter-spacing: var(--chap-tracking-wide);
+  text-transform: uppercase;
+  padding: var(--chap-space-md) var(--chap-space-xl);
+  border-radius: var(--chap-radius-sm);
+  transition: all var(--chap-transition-base);
+  cursor: pointer;
+  border: none;
+}
+
+.button.primary,
+.button-primary {
+  background: var(--chap-primary);
+  color: var(--chap-charcoal);
+  box-shadow: var(--chap-shadow-gold);
+}
+
+.button.primary:hover {
+  background: var(--chap-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--chap-shadow-lg);
+}
+
+/* UTILITY CLASSES */
+.font-heading {
+  font-family: var(--chap-font-heading);
+}
+
+.font-body {
+  font-family: var(--chap-font-body);
+}
+
+.text-gold {
+  color: var(--chap-primary);
+}
+
+.text-brown {
+  color: var(--chap-brown);
+}
+
+.bg-cream {
+  background-color: var(--chap-cream);
+}
+
+.bg-gold {
+  background-color: var(--chap-primary);
+}
+
+/**
+ * APPLY DESIGN SYSTEM TO EXISTING THEME
+ */
+
+/* Override Flatsome primary color */
+.primary-color,
+.has-primary-color {
+  color: var(--chap-primary) !important;
+}
+
+.primary-bg,
+.has-primary-background-color {
+  background-color: var(--chap-primary) !important;
+}
+
+/* Update existing buttons */
+.button.alt,
+.woocommerce-Button {
+  background: var(--chap-primary);
+  color: var(--chap-charcoal);
+  border: none;
+}
+
+/* Update form inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="url"],
+textarea,
+select {
+  font-family: var(--chap-font-body);
+  font-size: var(--chap-text-base);
+  color: var(--chap-charcoal);
+  border: 1px solid var(--chap-light-gray);
+  border-radius: var(--chap-radius-sm);
+  padding: var(--chap-space-md);
+  transition: border-color var(--chap-transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--chap-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Update product prices */
+.woocommerce-Price-amount,
+.price .amount {
+  color: var(--chap-primary);
+  font-weight: var(--chap-weight-semibold);
+  font-family: var(--chap-font-heading);
+}
+
+/* Update sale badges */
+.onsale {
+  background: var(--chap-terracotta) !important;
+  color: var(--chap-white) !important;
+  font-family: var(--chap-font-body);
+  font-weight: var(--chap-weight-bold);
+}
+
+/* WooCommerce Notices */
+.woocommerce-message,
+.woocommerce-info {
+  border-top-color: var(--chap-info);
+}
+
+.woocommerce-error {
+  border-top-color: var(--chap-error);
+}
+
+/* Product badges */
+.badge {
+  font-family: var(--chap-font-body);
+  font-size: var(--chap-text-xs);
+  font-weight: var(--chap-weight-semibold);
+  letter-spacing: var(--chap-tracking-wider);
+}
+
+.badge.new {
+  background: var(--chap-success);
+}
+
+.badge.sale {
+  background: var(--chap-terracotta);
+}
+
+.badge.featured {
+  background: var(--chap-primary);
+  color: var(--chap-charcoal);
 }
 
 /*************** TOP BAR MARQUEE ANIMATION ****************/
@@ -252,10 +606,7 @@ Version: 3.0
     }
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--chap-primary);
-}
+/* LEGACY THEME OVERRIDES - Use Design System Variables */
 
 #header {
     background-color: var(--chap-white);
@@ -274,45 +625,18 @@ body {
     background-color: var(--chap-white);
 }
 
-.button, .button.primary {
-    background-color: var(--chap-primary);
-    color: var(--chap-white);
-}
-
-.button:hover, .button.primary:hover {
-    background-color: var(--chap-secondary);
-}
-
-.button.secondary {
-    background-color: var(--chap-light);
-    color: var(--chap-primary);
-}
-
-.button.secondary:hover {
-    background-color: var(--chap-secondary);
-    color: var(--chap-white);
-}
-
-a {
-    color: var(--chap-secondary);
-}
-
-a:hover {
-    color: var(--chap-primary);
-}
-
 .footer-1 {
     background-color: var(--chap-primary);
     color: var(--chap-white);
 }
 
 .footer-2 {
-    background-color: var(--chap-secondary);
+    background-color: var(--chap-brown);
     color: var(--chap-white);
 }
 
 .absolute-footer {
-    background-color: var(--chap-primary);
+    background-color: var(--chap-brown-dark);
     color: var(--chap-white);
 }
 
@@ -325,12 +649,13 @@ a:hover {
 .footer-1 a:hover,
 .footer-2 a:hover,
 .absolute-footer a:hover {
-    color: var(--chap-light);
+    color: var(--chap-cream);
     text-decoration: underline;
 }
 
 .widget-title {
     color: var(--chap-primary);
+    font-family: var(--chap-font-heading);
 }
 
 /*************** P0.1 - PRODUCT CARD HOVER EFFECTS - CRITICAL UX IMPROVEMENT ****************/
@@ -548,5 +873,275 @@ a.button.primary[href*="chapeus"]:hover {
     .featured-collections-carousel .swiper-pagination-bullet {
         transition: none !important;
         animation: none !important;
+    }
+}
+
+/*************** P1.1 - INSTAGRAM GRID HOVER EFFECTS ****************/
+
+/* Instagram Grid Hover Effects - P1.1 */
+.instagram-section {
+    position: relative;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.instagram-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+.instagram-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.instagram-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+}
+
+/* Instagram Overlay with Icon */
+.instagram-card::after {
+    content: '📷';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 48px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-card:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Caption fade-in on hover */
+.instagram-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.instagram-card:hover .instagram-caption {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .instagram-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .instagram-card img {
+        height: 300px;
+    }
+}
+
+/*************** P1.2 - GLIGHTBOX THEME CUSTOMIZATION ****************/
+
+/* GLightbox Theme Customization - P1.2 */
+.glightbox-clean .gclose,
+.glightbox-clean .gnext,
+.glightbox-clean .gprev {
+    background: rgba(212, 175, 55, 0.9) !important;
+    color: #2C2C2C !important;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.glightbox-clean .gclose:hover,
+.glightbox-clean .gnext:hover,
+.glightbox-clean .gprev:hover {
+    background: #D4AF37 !important;
+    transform: scale(1.1);
+}
+
+.glightbox-clean .gslide-description {
+    background: rgba(44, 44, 44, 0.95);
+    color: #FAF7F2;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.glightbox-clean .gslide-title {
+    color: #D4AF37;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Loading spinner - gold theme */
+.glightbox-loading {
+    border: 4px solid rgba(212, 175, 55, 0.2);
+    border-top: 4px solid #D4AF37;
+}
+
+/*************** P1.3 - AOS CUSTOM ANIMATIONS ****************/
+
+/* Ensure AOS elements are initially hidden properly */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* Custom fade-up with slight bounce */
+[data-aos="fade-up-bounce"] {
+    transform: translate3d(0, 60px, 0);
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+[data-aos="fade-up-bounce"].aos-animate {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+/* Stagger delays for grid items - Instagram/Momentos Gallery */
+.momentos-gallery__item:nth-child(1) {
+    transition-delay: 0ms;
+}
+
+.momentos-gallery__item:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.momentos-gallery__item:nth-child(3) {
+    transition-delay: 200ms;
+}
+
+.momentos-gallery__item:nth-child(4) {
+    transition-delay: 300ms;
+}
+
+.momentos-gallery__item:nth-child(5) {
+    transition-delay: 400ms;
+}
+
+.momentos-gallery__item:nth-child(6) {
+    transition-delay: 500ms;
+}
+
+/* Collection cards stagger */
+.featured-collections__card:nth-child(1),
+.swiper-slide:nth-child(1) {
+    transition-delay: 0ms;
+}
+
+.featured-collections__card:nth-child(2),
+.swiper-slide:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.featured-collections__card:nth-child(3),
+.swiper-slide:nth-child(3) {
+    transition-delay: 200ms;
+}
+
+.featured-collections__card:nth-child(4),
+.swiper-slide:nth-child(4) {
+    transition-delay: 300ms;
+}
+
+/* Enhanced flip animation for newsletter CTA */
+[data-aos="flip-up"] {
+    transform: perspective(2500px) rotateX(-100deg);
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+[data-aos="flip-up"].aos-animate {
+    transform: perspective(2500px) rotateX(0);
+    opacity: 1;
+}
+
+/* Hero section fade timing enhancement */
+.hero-cover-2025[data-aos] {
+    transition-duration: 1000ms;
+}
+
+/* Collections heading subtle movement */
+h2.wp-block-heading[data-aos="fade-down"] {
+    transition-duration: 900ms;
+}
+
+/* Carousel zoom effect enhancement */
+.featured-collections-carousel[data-aos="zoom-in"] {
+    transition-duration: 1000ms;
+}
+
+/* Reduced motion preference - P1.3 AOS */
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    [data-aos]::before,
+    [data-aos]::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Mobile optimization - disable complex animations */
+@media (max-width: 767px) {
+    [data-aos="flip-up"] {
+        transform: translate3d(0, 30px, 0);
+        opacity: 0;
+    }
+
+    [data-aos="flip-up"].aos-animate {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    [data-aos="zoom-in"] {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    [data-aos="zoom-in"].aos-animate {
+        transform: scale(1);
+        opacity: 1;
     }
 }
