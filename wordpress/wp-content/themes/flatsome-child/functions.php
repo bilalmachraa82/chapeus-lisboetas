@@ -93,6 +93,102 @@ add_action('wp_enqueue_scripts', function () {
     );
 }, 100);
 
+// Inject homepage hero tweaks responding to latest client feedback
+add_action('wp_enqueue_scripts', function () {
+    if (is_admin()) {
+        return;
+    }
+
+    $hero_overrides = <<<CSS
+body.home .wp-block-cover.alignfull.is-light {
+    padding-top: 0 !important;
+    padding-bottom: clamp(40px, 8vh, 72px) !important;
+    min-height: clamp(420px, 60vh, 620px) !important;
+    max-height: clamp(520px, 70vh, 720px) !important;
+}
+
+body.home .content-area.page-wrapper,
+body.home .page-wrapper .col-inner {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+body.home .page-wrapper .col-inner > *:first-child {
+    margin-top: 0 !important;
+}
+
+body.home #main,
+body.home #content,
+body.home .row.row-main,
+body.home .row.row-main > .col,
+body.home .row.row-main > .col .col-inner {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+body.home .top-divider.full-width {
+    display: none !important;
+    height: 0 !important;
+}
+
+body.home .wp-block-cover.alignfull.is-light .wp-block-cover__background {
+    background: linear-gradient(
+        180deg,
+        rgba(17, 8, 2, 0.28) 0%,
+        rgba(17, 8, 2, 0.42) 55%,
+        rgba(17, 8, 2, 0.48) 100%
+    ) !important;
+    opacity: 1 !important;
+}
+
+body.home .wp-block-cover.alignfull.is-light .wp-block-cover__image-background {
+    object-fit: cover !important;
+    object-position: 50% 24% !important;
+}
+
+body.home .wp-block-cover.alignfull.is-light .wp-block-cover__inner-container {
+    padding-top: clamp(40px, 6vh, 80px) !important;
+}
+
+body.home .wp-block-cover.alignfull.is-light h1,
+body.home .wp-block-cover.alignfull.is-light p,
+body.home .wp-block-cover.alignfull.is-light .wp-block-button__link {
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.9),
+        0 6px 18px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.home .wp-block-cover.alignfull.is-light .wp-block-button__link {
+    background-color: var(--chap-action-primary, #E07A31) !important;
+    color: var(--chap-white, #FFFFFF) !important;
+    border: none !important;
+    padding: 16px 32px !important;
+}
+
+body.home .wp-block-cover.alignfull.is-light .wp-block-button.is-style-outline .wp-block-button__link {
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    color: var(--chap-action-primary, #E07A31) !important;
+    border: 2px solid rgba(255, 255, 255, 0.92) !important;
+}
+
+@media (max-width: 767px) {
+    body.home .wp-block-cover.alignfull.is-light {
+        min-height: clamp(360px, 72vh, 520px) !important;
+        max-height: 78vh !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    body.home .wp-block-cover.alignfull.is-light h1 {
+        font-size: clamp(36px, 7vw, 44px) !important;
+        line-height: 1.1 !important;
+    }
+}
+CSS;
+
+    wp_add_inline_style('flatsome-style', $hero_overrides);
+}, 110);
+
 // P2.2 - Add loading priority hints to images
 function chapeus_add_image_loading_attributes($attr, $attachment, $size) {
     // Hero images: eager loading (high priority)
