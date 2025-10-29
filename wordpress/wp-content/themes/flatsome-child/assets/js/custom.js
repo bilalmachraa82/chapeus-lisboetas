@@ -507,6 +507,77 @@
   }
 
   /**
+   * P2.1 - Parallax Hero Background Effect
+   */
+  function initParallaxHero() {
+    // Check if device supports smooth scrolling
+    if (window.innerWidth < 768) {
+      console.log('Parallax disabled on mobile for performance');
+      return;
+    }
+
+    // Check for reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      console.log('Parallax disabled due to reduced motion preference');
+      return;
+    }
+
+    // Find hero sections
+    const heroSections = document.querySelectorAll('.hero-section, .page-header, .wp-block-cover.alignfull, .hero-cover-2025, [class*="banner"]');
+
+    if (heroSections.length === 0) {
+      console.log('No hero sections found for parallax');
+      return;
+    }
+
+    let ticking = false;
+    let lastScrollY = window.pageYOffset;
+
+    // Parallax scroll handler
+    function updateParallax() {
+      const scrollY = window.pageYOffset;
+
+      heroSections.forEach(function(section) {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionBottom = sectionTop + sectionHeight;
+
+        // Only apply parallax if section is in viewport
+        if (scrollY + window.innerHeight > sectionTop && scrollY < sectionBottom) {
+          const bg = section.querySelector('.bg, .banner-bg, .wp-block-cover__background, .wp-block-cover__image-background, [class*="background"]');
+
+          if (bg) {
+            // Calculate parallax offset (slower than scroll)
+            const parallaxSpeed = 0.5; // 50% of scroll speed
+            const offset = (scrollY - sectionTop) * parallaxSpeed;
+
+            // Apply transform with GPU acceleration
+            bg.style.transform = 'translate3d(0, ' + offset + 'px, 0)';
+          }
+        }
+      });
+
+      ticking = false;
+    }
+
+    // Request animation frame for smooth performance
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }
+
+    // Throttled scroll listener
+    window.addEventListener('scroll', requestTick, { passive: true });
+
+    // Initial call
+    updateParallax();
+
+    console.log('✅ Parallax initialized for', heroSections.length, 'hero sections');
+  }
+
+  /**
    * P1.3 - Add AOS attributes to elements dynamically
    */
   function addAOSAttributes() {
@@ -581,6 +652,129 @@
     }
   }
 
+  /**
+   * P2.2 - Lazy Loading with Intersection Observer
+   */
+  function initLazyLoading() {
+    // Check for Intersection Observer support
+    if (!('IntersectionObserver' in window)) {
+      console.warn('IntersectionObserver not supported, falling back to native lazy loading');
+      // Fallback: add loading="lazy" to all images
+      document.querySelectorAll('img:not([loading])').forEach(function(img) {
+        img.setAttribute('loading', 'lazy');
+      });
+      return;
+    }
+
+    // Configure Intersection Observer
+    const lazyImageObserver = new IntersectionObserver(
+      function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+
+            // Load image
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.classList.add('loaded');
+
+              // Load srcset if available
+              if (img.dataset.srcset) {
+                img.srcset = img.dataset.srcset;
+              }
+
+              // Remove data attributes
+              delete img.dataset.src;
+              delete img.dataset.srcset;
+            }
+
+            // Stop observing
+            observer.unobserve(img);
+          }
+        });
+      },
+      {
+        // Start loading 200px before image enters viewport
+        rootMargin: '200px 0px',
+        threshold: 0.01
+      }
+    );
+
+    // Find all lazy images
+    const lazyImages = document.querySelectorAll('img[data-src], img[loading="lazy"]');
+
+    lazyImages.forEach(function(img) {
+      // Add native lazy loading as fallback
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+
+      // Observe with Intersection Observer for better control
+      if (img.dataset.src) {
+        lazyImageObserver.observe(img);
+      }
+    });
+
+    console.log('✅ Lazy loading initialized for', lazyImages.length, 'images');
+  }
+
+  /**
+   * P2.2 - Convert existing images to lazy loading
+   */
+  function convertToLazyLoading() {
+    // Target images below the fold (not in hero section)
+    const images = document.querySelectorAll('img:not([data-src]):not([loading])');
+
+    let converted = 0;
+
+    images.forEach(function(img, index) {
+      // Skip first 3 images (likely in hero/above fold)
+      if (index < 3) {
+        return;
+      }
+
+      // Skip if image already loaded
+      if (img.complete) {
+        return;
+      }
+
+      // Convert to lazy loading
+      const src = img.src;
+      const srcset = img.srcset;
+
+      if (src) {
+        img.dataset.src = src;
+        img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E';
+        converted++;
+      }
+
+      if (srcset) {
+        img.dataset.srcset = srcset;
+        img.removeAttribute('srcset');
+      }
+
+      img.setAttribute('loading', 'lazy');
+    });
+
+    console.log('🔄 Converted', converted, 'images to lazy loading');
+  }
+
+  /**
+   * P2.2 - WooCommerce product image lazy loading
+   */
+  function initProductImageLazyLoad() {
+    // Target product grid images
+    const productImages = document.querySelectorAll('.product-small img, .woocommerce-LoopProduct-link img');
+
+    productImages.forEach(function(img) {
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+    });
+
+    console.log('🛍️ Lazy loading enabled for', productImages.length, 'product images');
+  }
+
   function initAll() {
     tagDynamicSections();
     initTopBarMarquee();
@@ -612,6 +806,136 @@
         initAOS();
       }, 200);
     }
+
+    // P2.1 - Initialize parallax after short delay (let page settle)
+    setTimeout(initParallaxHero, 300);
+
+    // P2.2 - Initialize lazy loading
+    convertToLazyLoading();
+    initLazyLoading();
+    initProductImageLazyLoad();
+
+    // P2.3 - Initialize mobile optimizations
+    initMobileOptimizations();
+  }
+
+  /**
+   * P2.3 - Mobile Touch Optimizations
+   */
+  function initMobileOptimizations() {
+    // Detect mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (!isMobile && !isTouch) {
+      console.log('Desktop device detected, mobile optimizations skipped');
+      return;
+    }
+
+    // Add mobile class to body
+    document.body.classList.add('is-mobile');
+    if (isTouch) {
+      document.body.classList.add('is-touch');
+    }
+
+    // Fast click handling (remove 300ms delay)
+    document.addEventListener('touchstart', function() {}, { passive: true });
+
+    // Prevent double-tap zoom on buttons
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function(event) {
+      const now = Date.now();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add swipe gestures for carousel (if Swiper not available)
+    const carousels = document.querySelectorAll('.image-slider, .product-slider');
+    carousels.forEach(function(carousel) {
+      let startX = 0;
+      let endX = 0;
+
+      carousel.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', function(e) {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe(carousel, startX, endX);
+      }, { passive: true });
+    });
+
+    function handleSwipe(element, startX, endX) {
+      const diff = startX - endX;
+      const threshold = 50;
+
+      if (Math.abs(diff) > threshold) {
+        if (diff > 0) {
+          // Swipe left - next
+          const nextBtn = element.querySelector('.next-button, .swiper-button-next');
+          if (nextBtn) nextBtn.click();
+        } else {
+          // Swipe right - previous
+          const prevBtn = element.querySelector('.prev-button, .swiper-button-prev');
+          if (prevBtn) prevBtn.click();
+        }
+      }
+    }
+
+    // Optimize images for mobile (if not already optimized)
+    if (window.innerWidth < 768) {
+      const images = document.querySelectorAll('img[src*="1920"], img[src*="1200"]');
+      images.forEach(function(img) {
+        // Replace large images with mobile versions if available
+        const src = img.src;
+        const mobileSrc = src.replace(/-(1920|1200)x\d+/, '-768x768');
+        if (mobileSrc !== src) {
+          img.dataset.src = mobileSrc;
+          img.src = mobileSrc;
+        }
+      });
+    }
+
+    // Viewport height fix for iOS
+    function setVH() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+    }
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', setVH);
+
+    // Prevent iOS rubber band scroll
+    let preventScroll = false;
+    document.body.addEventListener('touchmove', function(e) {
+      if (preventScroll) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    // Add loading indicator for slow networks
+    if (navigator.connection && navigator.connection.effectiveType === '2g') {
+      document.body.classList.add('slow-network');
+      console.warn('Slow network detected, optimizing experience');
+    }
+
+    console.log('✅ Mobile optimizations initialized');
   }
 
   if (document.readyState === 'loading') {
@@ -621,4 +945,10 @@
   }
 
   document.addEventListener('flatsome-load-complete', initAll);
+
+  // P2.2 - Re-initialize on AJAX content load (WooCommerce filters)
+  document.addEventListener('wc-fragments-refreshed', function() {
+    initLazyLoading();
+    initProductImageLazyLoad();
+  });
 })();

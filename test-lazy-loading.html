@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Lazy Loading - Chapéus Lisboetas</title>
+    <style>
+        :root {
+            --chap-primary: #D4AF37;
+            --chap-cream-dark: #F0EBE3;
+            --chap-light-gray: #E8E8E8;
+            --chap-charcoal: #2C2C2C;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #FAF7F2;
+        }
+
+        h1 {
+            color: var(--chap-charcoal);
+        }
+
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-card {
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Lazy loading styles from P2.2 */
+        img[data-src],
+        img[loading="lazy"] {
+            background: linear-gradient(
+                90deg,
+                var(--chap-cream-dark, #F0EBE3) 0%,
+                var(--chap-light-gray, #E8E8E8) 50%,
+                var(--chap-cream-dark, #F0EBE3) 100%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        img[data-src].loaded,
+        img[loading="lazy"].loaded {
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .console-output {
+            background: #2C2C2C;
+            color: #00FF00;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .status.success {
+            background: #7CAA68;
+            color: white;
+        }
+
+        .status.warning {
+            background: #E8A547;
+            color: white;
+        }
+
+        .spacer {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #D4AF37 0%, #C19B2F 100%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Lazy Loading Test - P2.2 Implementation</h1>
+
+    <div class="test-section">
+        <h2>Test Status</h2>
+        <p><strong>Intersection Observer Support:</strong>
+            <span class="status" id="io-status">Checking...</span>
+        </p>
+        <p><strong>Native Lazy Loading Support:</strong>
+            <span class="status" id="native-status">Checking...</span>
+        </p>
+        <p><strong>Images Loaded:</strong>
+            <span id="loaded-count">0</span> / <span id="total-count">0</span>
+        </p>
+    </div>
+
+    <div class="test-section">
+        <h2>Above the Fold (Eager Loading)</h2>
+        <p>These images should load immediately with <code>loading="eager"</code></p>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="https://picsum.photos/400/300?random=1"
+                     loading="eager"
+                     fetchpriority="high"
+                     alt="Hero Image 1">
+            </div>
+            <div class="image-card">
+                <img src="https://picsum.photos/400/300?random=2"
+                     loading="eager"
+                     alt="Hero Image 2">
+            </div>
+            <div class="image-card">
+                <img src="https://picsum.photos/400/300?random=3"
+                     loading="eager"
+                     alt="Hero Image 3">
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer">
+        ⬇️ Scroll down to trigger lazy loading ⬇️
+    </div>
+
+    <div class="test-section">
+        <h2>Below the Fold (Lazy Loading)</h2>
+        <p>These images should load as you scroll with <code>loading="lazy"</code></p>
+        <div class="image-grid">
+            <div class="image-card">
+                <img data-src="https://picsum.photos/400/300?random=4"
+                     loading="lazy"
+                     alt="Lazy Image 1"
+                     class="lazy-test">
+            </div>
+            <div class="image-card">
+                <img data-src="https://picsum.photos/400/300?random=5"
+                     loading="lazy"
+                     alt="Lazy Image 2"
+                     class="lazy-test">
+            </div>
+            <div class="image-card">
+                <img data-src="https://picsum.photos/400/300?random=6"
+                     loading="lazy"
+                     alt="Lazy Image 3"
+                     class="lazy-test">
+            </div>
+            <div class="image-card">
+                <img data-src="https://picsum.photos/400/300?random=7"
+                     loading="lazy"
+                     alt="Lazy Image 4"
+                     class="lazy-test">
+            </div>
+            <div class="image-card">
+                <img data-src="https://picsum.photos/400/300?random=8"
+                     loading="lazy"
+                     alt="Lazy Image 5"
+                     class="lazy-test">
+            </div>
+            <div class="image-card">
+                <img data-src="https://picsum.photos/400/300?random=9"
+                     loading="lazy"
+                     alt="Lazy Image 6"
+                     class="lazy-test">
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer">
+        ⬇️ More lazy loaded images below ⬇️
+    </div>
+
+    <div class="test-section">
+        <h2>Product Images (Lazy Loading)</h2>
+        <p>Simulating WooCommerce product grid</p>
+        <div class="image-grid">
+            <div class="image-card product-small">
+                <img data-src="https://picsum.photos/400/300?random=10"
+                     loading="lazy"
+                     alt="Product 1">
+            </div>
+            <div class="image-card product-small">
+                <img data-src="https://picsum.photos/400/300?random=11"
+                     loading="lazy"
+                     alt="Product 2">
+            </div>
+            <div class="image-card product-small">
+                <img data-src="https://picsum.photos/400/300?random=12"
+                     loading="lazy"
+                     alt="Product 3">
+            </div>
+            <div class="image-card product-small">
+                <img data-src="https://picsum.photos/400/300?random=13"
+                     loading="lazy"
+                     alt="Product 4">
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Console Output</h2>
+        <div class="console-output" id="console-output">
+            &gt; Loading test page...<br>
+        </div>
+    </div>
+
+    <script>
+        // P2.2 - Lazy Loading Implementation Test
+        (function() {
+            'use strict';
+
+            const consoleOutput = document.getElementById('console-output');
+            let loadedCount = 0;
+
+            function log(message) {
+                const timestamp = new Date().toLocaleTimeString();
+                consoleOutput.innerHTML += `[${timestamp}] ${message}<br>`;
+                consoleOutput.scrollTop = consoleOutput.scrollHeight;
+                console.log(message);
+            }
+
+            // Check browser support
+            const hasIntersectionObserver = 'IntersectionObserver' in window;
+            const hasNativeLazyLoading = 'loading' in HTMLImageElement.prototype;
+
+            document.getElementById('io-status').textContent = hasIntersectionObserver ? '✅ Supported' : '❌ Not Supported';
+            document.getElementById('io-status').className = `status ${hasIntersectionObserver ? 'success' : 'warning'}`;
+
+            document.getElementById('native-status').textContent = hasNativeLazyLoading ? '✅ Supported' : '❌ Not Supported';
+            document.getElementById('native-status').className = `status ${hasNativeLazyLoading ? 'success' : 'warning'}`;
+
+            log(`✅ Intersection Observer: ${hasIntersectionObserver ? 'Supported' : 'Not Supported'}`);
+            log(`✅ Native Lazy Loading: ${hasNativeLazyLoading ? 'Supported' : 'Not Supported'}`);
+
+            // Initialize lazy loading
+            function initLazyLoading() {
+                if (!hasIntersectionObserver) {
+                    log('⚠️ Falling back to native lazy loading');
+                    document.querySelectorAll('img[data-src]').forEach(img => {
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                    });
+                    return;
+                }
+
+                const lazyImages = document.querySelectorAll('img[data-src]');
+                const totalImages = lazyImages.length;
+                document.getElementById('total-count').textContent = totalImages;
+
+                log(`📸 Found ${totalImages} lazy images to load`);
+
+                const lazyImageObserver = new IntersectionObserver(
+                    function(entries, observer) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+
+                                log(`🔄 Loading: ${img.alt || 'Image'}`);
+
+                                if (img.dataset.src) {
+                                    img.src = img.dataset.src;
+                                    img.classList.add('loaded');
+
+                                    img.addEventListener('load', function() {
+                                        loadedCount++;
+                                        document.getElementById('loaded-count').textContent = loadedCount;
+                                        log(`✅ Loaded: ${img.alt || 'Image'} (${loadedCount}/${totalImages})`);
+                                    });
+
+                                    delete img.dataset.src;
+                                }
+
+                                observer.unobserve(img);
+                            }
+                        });
+                    },
+                    {
+                        rootMargin: '200px 0px',
+                        threshold: 0.01
+                    }
+                );
+
+                lazyImages.forEach(img => lazyImageObserver.observe(img));
+
+                log('✅ Lazy loading initialized with 200px rootMargin');
+            }
+
+            // Count eager images
+            const eagerImages = document.querySelectorAll('img[loading="eager"]');
+            log(`🚀 ${eagerImages.length} images set to eager loading (above fold)`);
+
+            // Initialize
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initLazyLoading);
+            } else {
+                initLazyLoading();
+            }
+
+            log('✅ Test page ready. Scroll down to test lazy loading!');
+        })();
+    </script>
+</body>
+</html>

@@ -966,6 +966,241 @@ a.button.primary[href*="chapeus"]:hover {
     }
 }
 
+/*************** P2.1 - PARALLAX HERO BACKGROUND ****************/
+
+/* Hero section container */
+.hero-section,
+.page-header,
+.header-wrapper,
+.wp-block-cover.alignfull,
+.hero-cover-2025,
+[class*="banner"] {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+/* Parallax background image */
+.hero-section .bg,
+.page-header .bg,
+.wp-block-cover__background,
+.wp-block-cover__image-background,
+.banner-bg,
+[class*="parallax"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* Extra height for parallax movement */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+/* Parallax overlay for text readability */
+.hero-section::after,
+.page-header::after,
+.wp-block-cover.alignfull::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure content is above parallax */
+.hero-section .section-content,
+.page-header .page-title,
+.wp-block-cover__inner-container,
+.banner-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* Performance optimization for parallax */
+.hero-section .bg,
+.page-header .bg,
+.wp-block-cover__background,
+.wp-block-cover__image-background,
+.banner-bg {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+/* Lazy load hero images */
+.hero-section .bg[data-src],
+.page-header .bg[data-src],
+.wp-block-cover__image-background[data-src] {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hero-section .bg[data-src].loaded,
+.page-header .bg[data-src].loaded,
+.wp-block-cover__image-background[data-src].loaded {
+  opacity: 1;
+}
+
+/* Mobile: Disable parallax for performance */
+@media (max-width: 768px) {
+  .hero-section .bg,
+  .page-header .bg,
+  .wp-block-cover__background,
+  .wp-block-cover__image-background,
+  .banner-bg {
+    position: absolute;
+    height: 100%;
+    transform: none !important;
+  }
+}
+
+/* Reduced motion: Disable parallax */
+@media (prefers-reduced-motion: reduce) {
+  .hero-section .bg,
+  .page-header .bg,
+  .wp-block-cover__background,
+  .wp-block-cover__image-background,
+  .banner-bg {
+    transform: none !important;
+  }
+}
+
+/*************** P2.2 - LAZY LOADING OPTIMIZATION ****************/
+
+/* Placeholder for images before load */
+img[data-src],
+img[loading="lazy"] {
+  background: linear-gradient(
+    90deg,
+    var(--chap-cream-dark, #F0EBE3) 0%,
+    var(--chap-light-gray, #E8E8E8) 50%,
+    var(--chap-cream-dark, #F0EBE3) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Fade in when loaded */
+img[data-src].loaded,
+img[loading="lazy"].loaded {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Blur-up technique for progressive loading */
+img.blur-up {
+  filter: blur(20px);
+  transition: filter 0.3s ease;
+}
+
+img.blur-up.loaded {
+  filter: blur(0);
+}
+
+/* Loading spinner for large images */
+.image-loader {
+  position: relative;
+  min-height: 200px;
+}
+
+.image-loader::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 4px solid var(--chap-light-gray, #E8E8E8);
+  border-top-color: var(--chap-primary, #D4AF37);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  opacity: 0.5;
+}
+
+.image-loader.loaded::before {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Aspect ratio boxes to prevent layout shift */
+.aspect-ratio-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.aspect-ratio-box::before {
+  content: '';
+  display: block;
+  padding-top: 66.67%; /* 3:2 aspect ratio, adjust as needed */
+}
+
+.aspect-ratio-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product image aspect ratios */
+.product-small .aspect-ratio-box::before {
+  padding-top: 133%; /* 3:4 portrait for product images */
+}
+
+.instagram-card .aspect-ratio-box::before {
+  padding-top: 100%; /* 1:1 square for Instagram */
+}
+
+/* Reduced motion preference - Disable lazy load animations */
+@media (prefers-reduced-motion: reduce) {
+  img[data-src],
+  img[loading="lazy"],
+  img.blur-up {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .image-loader::before {
+    animation: none !important;
+  }
+}
+
 /*************** P1.2 - GLIGHTBOX THEME CUSTOMIZATION ****************/
 
 /* GLightbox Theme Customization - P1.2 */
@@ -1144,4 +1379,253 @@ h2.wp-block-heading[data-aos="fade-down"] {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+/*************** P2.3 - MOBILE DEEP OPTIMIZATION ****************/
+
+/* Base mobile optimizations */
+@media (max-width: 768px) {
+  /* Typography adjustments */
+  html {
+    font-size: 15px; /* Slightly smaller base for mobile */
+  }
+
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    -webkit-text-size-adjust: 100%; /* Prevent iOS text scaling */
+  }
+
+  /* Touch-friendly spacing */
+  :root {
+    --chap-space-xs: 6px;
+    --chap-space-sm: 12px;
+    --chap-space-md: 20px;
+    --chap-space-lg: 32px;
+    --chap-space-xl: 48px;
+  }
+
+  /* Larger tap targets (min 48x48px) */
+  a, button, input[type="button"], input[type="submit"], .button {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px 24px;
+  }
+
+  /* Stack elements vertically */
+  .row, .flex-row {
+    flex-direction: column;
+  }
+
+  /* Full-width containers */
+  .container {
+    max-width: 100%;
+    padding-left: var(--chap-space-md);
+    padding-right: var(--chap-space-md);
+  }
+
+  /* Reduce heading sizes on mobile */
+  h1, .h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem); /* 32-40px */
+  }
+
+  h2, .h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem); /* 24-32px */
+  }
+
+  h3, .h3 {
+    font-size: clamp(1.25rem, 3.5vw, 1.75rem); /* 20-28px */
+  }
+}
+
+/* Mobile product grid */
+@media (max-width: 768px) {
+  .products,
+  .product-grid,
+  .woocommerce ul.products {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns on mobile */
+    gap: var(--chap-space-sm);
+  }
+
+  .product-small {
+    font-size: 0.85rem;
+  }
+
+  .product-small .box-text {
+    padding: var(--chap-space-sm);
+  }
+
+  /* Smaller product images for faster loading */
+  .product-small img {
+    max-height: 250px;
+    object-fit: cover;
+  }
+}
+
+/* Mobile navigation optimizations */
+@media (max-width: 768px) {
+  /* Hamburger menu improvements */
+  .mobile-nav {
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+
+  .mobile-nav a {
+    padding: var(--chap-space-md);
+    border-bottom: 1px solid var(--chap-light-gray);
+  }
+
+  /* Sticky mobile header */
+  .header-main {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--chap-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Mobile forms */
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevent iOS zoom */
+    padding: 14px;
+    border-radius: var(--chap-radius-sm);
+  }
+
+  /* Larger checkboxes and radios */
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 24px;
+    height: 24px;
+  }
+
+  label {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile hero section */
+@media (max-width: 768px) {
+  .hero-section,
+  .hero-cover-2025,
+  .wp-block-cover.alignfull {
+    min-height: 400px;
+    padding: var(--chap-space-xl) var(--chap-space-md);
+  }
+
+  .hero-section h1,
+  .hero-cover-2025 h1,
+  .wp-block-cover h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-section .button,
+  .hero-cover-2025 .button {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--chap-space-sm);
+  }
+}
+
+/* Mobile Swiper carousel */
+@media (max-width: 768px) {
+  .featured-collections-carousel {
+    padding: var(--chap-space-md) 0;
+  }
+
+  .swiper-slide {
+    padding: 0 var(--chap-space-xs);
+  }
+
+  /* Larger dots for touch */
+  .swiper-pagination-bullet {
+    width: 14px !important;
+    height: 14px !important;
+    margin: 0 8px !important;
+  }
+}
+
+/* Mobile Instagram grid */
+@media (max-width: 768px) {
+  .instagram-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--chap-space-md);
+  }
+
+  .instagram-card img {
+    height: 350px;
+  }
+}
+
+/* Mobile modals and lightbox */
+@media (max-width: 768px) {
+  .glightbox-clean .gslide-description {
+    font-size: 14px;
+    padding: var(--chap-space-md);
+  }
+
+  .glightbox-clean .gslide-title {
+    font-size: 20px;
+  }
+
+  .glightbox-clean .gclose {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
+/* Mobile footer */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    text-align: center;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: var(--chap-space-lg);
+  }
+}
+
+/* Performance: Disable animations on mobile if needed */
+@media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+  /* Simplify animations for performance */
+  * {
+    animation-duration: 0.5s !important;
+  }
+}
+
+/* iOS-specific fixes */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari fixes */
+  input, textarea, select {
+    -webkit-appearance: none;
+    border-radius: var(--chap-radius-sm);
+  }
+
+  /* Fix iOS viewport height bug */
+  .hero-section,
+  .hero-cover-2025,
+  .wp-block-cover.alignfull {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Android-specific fixes */
+@media (max-width: 768px) {
+  /* Improve tap highlight */
+  * {
+    -webkit-tap-highlight-color: rgba(212, 175, 55, 0.2);
+  }
+
+  /* Optimize scrolling */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
 }
