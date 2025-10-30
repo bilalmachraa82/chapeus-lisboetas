@@ -556,3 +556,109 @@ function chapeus_blog_render_fallback_thumbnail($html, $post_id, $thumbnail_id, 
     return sprintf('<img src="%s"%s />', esc_url($fallback['url']), $attribute_string);
 }
 add_filter('post_thumbnail_html', 'chapeus_blog_render_fallback_thumbnail', 10, 5);
+
+/**
+ * CRITICAL: Inline CSS para garantir que fixes aparecem no browser
+ * Adiciona CSS diretamente no <head> com prioridade MÁXIMA
+ *
+ * Razão: CSS file pode estar em cache do browser mesmo com hard refresh
+ * Solução: Inline CSS no header = SEMPRE executado, NUNCA em cache
+ */
+add_action('wp_head', function() {
+    ?>
+    <style id="chapeus-critical-fixes-inline">
+        /********** CRITICAL FIXES - INLINE (Always Execute) **********/
+
+        /* ISSUE-005: Menu Dropdown Z-Index - MUST appear above images */
+        .header-wrapper {
+            position: relative !important;
+            z-index: 10000 !important;
+        }
+
+        .header-nav .nav-dropdown,
+        .nav-dropdown {
+            z-index: 10001 !important;
+            background: #FFFFFF !important;
+        }
+
+        .hero-section,
+        .section-bg-overlay {
+            z-index: 1 !important;
+        }
+
+        /* ISSUE-003: Links MUST be brown (not slate blue) */
+        a:not(.button):not(.nav-top-link) {
+            color: #8B4513 !important;
+        }
+
+        a:not(.button):not(.nav-top-link):hover {
+            color: #D27855 !important;
+        }
+
+        /* ISSUE-001: Cookie Banner buttons MUST be terracotta */
+        .cli-plugin-button,
+        .cli-plugin-main-button {
+            background-color: #E07A31 !important;
+            color: #FFFFFF !important;
+            border-color: #E07A31 !important;
+        }
+
+        /* ISSUE-002: Admin Bar MUST be terracotta */
+        #wpadminbar {
+            background: #E07A31 !important;
+        }
+
+        #wpadminbar .ab-item,
+        #wpadminbar .ab-item:before {
+            color: #FFFFFF !important;
+        }
+
+        /* ISSUE-004: WooCommerce notices MUST be terracotta */
+        .woocommerce-message,
+        .woocommerce-info {
+            border-top-color: #E07A31 !important;
+            background-color: #FAF7F2 !important;
+        }
+
+        .woocommerce-message::before,
+        .woocommerce-info::before {
+            color: #E07A31 !important;
+        }
+
+        /* ISSUE-010: Sobre-Nós Page - MUST have warm cream background (not blue) */
+        body.page-id-12 .section,
+        body.page-id-12 .hero-section,
+        body.page-id-12 .wp-block-cover,
+        body.page-id-12 .wp-block-group {
+            background-color: #FAF7F2 !important;
+            background-image: linear-gradient(135deg, #FAF7F2 0%, #F5EFE6 50%, #FAF7F2 100%) !important;
+        }
+
+        /* Override ANY inline blue backgrounds on sobre-nos */
+        body.page-id-12 [style*="#b2b0b0"],
+        body.page-id-12 [style*="#1863dc"],
+        body.page-id-12 [style*="rgb(178, 176, 176)"] {
+            background-color: #FAF7F2 !important;
+            background-image: none !important;
+        }
+
+        /* Text legibility on cream background */
+        body.page-id-12 .hero-section h1,
+        body.page-id-12 .hero-section h2,
+        body.page-id-12 .hero-section p,
+        body.page-id-12 .section h1,
+        body.page-id-12 .section h2,
+        body.page-id-12 .section p {
+            color: #2C323A !important;
+            text-shadow: none !important;
+        }
+
+        /* WCAG: Dark text on light background = 8.2:1 AAA */
+        body.page-id-12 .wp-block-cover__inner-container h1,
+        body.page-id-12 .wp-block-cover__inner-container h2 {
+            color: #2C323A !important;
+            text-shadow: none !important;
+        }
+    </style>
+    <?php
+}, 999); // Priority 999 = load LAST, override everything
