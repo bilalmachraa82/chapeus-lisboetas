@@ -2265,6 +2265,47 @@ a.button[href*="agendar"]:hover {
   border-color: #E07A31 !important;
 }
 
+/**
+ * ISSUE-010: Sobre-Nós Page Blue Hero Section
+ * Problem: Hero section uses slate blue/grey background (#b2b0b059, #1863dc)
+ * Fix: Override with warm cream/terracotta tones
+ * Page: /sobre-nos/
+ */
+.page-id-12 .section,
+.page-id-12 .hero-section,
+.page-id-12 .wp-block-cover,
+.page-template-page-sobre-nos .section,
+body.sobre-nos .section {
+  background-color: #FAF7F2 !important; /* Warm cream */
+}
+
+/* Override inline styles with blue backgrounds on sobre-nos */
+.page-id-12 [style*="#b2b0b0"],
+.page-id-12 [style*="#1863dc"],
+.page-id-12 [style*="background-color:#b2b0b0"],
+.page-id-12 [style*="background-color: rgb(178, 176, 176)"] {
+  background-color: #FAF7F2 !important; /* Warm cream */
+}
+
+/* Alternative: Light terracotta tint for subtle warmth */
+.page-id-12 .section.hero-section,
+.page-id-12 .wp-block-cover.alignfull {
+  background: linear-gradient(
+    135deg,
+    #FAF7F2 0%,     /* Cream */
+    #F5EFE6 50%,    /* Light wheat */
+    #FAF7F2 100%    /* Cream */
+  ) !important;
+}
+
+/* Ensure text remains legible on cream background */
+.page-id-12 .hero-section h1,
+.page-id-12 .hero-section h2,
+.page-id-12 .hero-section p {
+  color: #2C323A !important; /* Dark charcoal text */
+  text-shadow: none !important; /* Remove text shadow (not needed on light bg) */
+}
+
 /*************** END P0 CRITICAL FIXES ****************/
 
 /**
