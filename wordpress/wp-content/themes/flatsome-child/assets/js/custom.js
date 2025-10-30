@@ -952,3 +952,49 @@
     initProductImageLazyLoad();
   });
 })();
+
+/**
+ * P1 Integration - Apply zebra backgrounds to alternating sections
+ * Automatically adds .section-zebra class to main page sections
+ */
+(function() {
+  'use strict';
+
+  function applyZebraBackgrounds() {
+    // Only run on homepage
+    if (!document.body.classList.contains('home')) {
+      return;
+    }
+
+    // Select all main content sections (skip header, footer, and nested sections)
+    var sections = document.querySelectorAll('.page-wrapper > .row > .col > .col-inner > .section-content > .section:not([class*="zebra"])');
+
+    if (sections.length === 0) {
+      // Fallback: try broader selector
+      sections = document.querySelectorAll('main .section:not([class*="zebra"]):not(.hero-section):not(.page-header)');
+    }
+
+    // Apply .section-zebra class to alternating sections
+    sections.forEach(function(section, index) {
+      // Skip hero section
+      if (!section.classList.contains('hero-section') && !section.classList.contains('page-header')) {
+        section.classList.add('section-zebra');
+        console.log('✅ Applied .section-zebra to section ' + (index + 1));
+      }
+    });
+
+    if (sections.length > 0) {
+      console.log('✅ Zebra backgrounds applied to ' + sections.length + ' sections');
+    }
+  }
+
+  // Run on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyZebraBackgrounds);
+  } else {
+    applyZebraBackgrounds();
+  }
+
+  // Re-run on Flatsome AJAX load complete
+  document.addEventListener('flatsome-load-complete', applyZebraBackgrounds);
+})();
