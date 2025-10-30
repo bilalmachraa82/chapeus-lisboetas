@@ -66,7 +66,7 @@ Version: 3.1
   /* CONTRAST ANCHOR - Profissionalism */
   --chap-contrast-dark: #2C323A;    /* Deep Navy - Text on dark backgrounds */
   --chap-contrast-medium: #36454F;  /* Charcoal - Passive text */
-  --chap-contrast-light: #5B7B8F;   /* Slate blue - Links, icons */
+  --chap-contrast-light: #8B4513;   /* FIXED: Brand brown - Links, icons (was slate blue #5B7B8F) */
 
   /* SUPPORTING - Emotional Nuance */
   --chap-soft-rose: #D8A29E;        /* Soft Rose - Subtle hover states */
@@ -1909,6 +1909,202 @@ h2.wp-block-heading[data-aos="fade-down"] {
  * - CLS: <0.1
  * - FID: <100ms
  */
+
+/*************** HOMEPAGE FIXES - 2025-10-30 ****************/
+/**
+ * Fix: "Loja física · Baixa de Lisboa" text too small
+ * Make it more prominent and readable
+ */
+p.has-small-font-size:has-text("Loja física"),
+.wp-block-column p.has-small-font-size {
+    font-size: 1.125rem !important; /* 18px instead of default ~12px */
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+    font-weight: 500 !important;
+    opacity: 0.95 !important;
+}
+
+/* Specific targeting for Baixa Lisboa text */
+.home .wp-block-column p.has-secondary-color.has-small-font-size {
+    font-size: 1.25rem !important; /* 20px - even more prominent */
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+}
+
+/*************** CRITICAL FIXES - PHASE 1 (2025-10-30) ****************/
+
+/**
+ * ISSUE-005: Menu Dropdown Z-Index Bug
+ * Problem: Dropdown menus appear BEHIND hero images/content
+ * Fix: Increase z-index to 10000
+ */
+.header-wrapper {
+    position: relative;
+    z-index: 10000 !important;
+}
+
+.header-nav .nav-dropdown,
+.nav-dropdown {
+    z-index: 10001 !important;
+}
+
+/* Ensure hero section doesn't overlap */
+.hero-section,
+.section-bg-overlay {
+    z-index: 1 !important;
+}
+
+/**
+ * ISSUE-003: Site-Wide Link Color Fix
+ * Problem: CSS variable --chap-contrast-light was slate blue #5B7B8F
+ * Fix: Changed to brand brown #8B4513 (line 248)
+ * Impact: ALL links across entire site now use brand color
+ */
+
+/**
+ * ISSUE-001: Cookie Banner Blue CTAs
+ * Problem: Cookie Law Info plugin uses bright blue #1863DC
+ * Fix: Override to terracotta #E07A31
+ */
+.cli-plugin-button,
+.cli-plugin-main-button,
+.cli-switch input:checked + .cli-slider {
+    background-color: #E07A31 !important;
+    color: #FFFFFF !important;
+    border-color: #E07A31 !important;
+}
+
+.cli-plugin-button:hover,
+.cli-plugin-main-button:hover {
+    background-color: #C8682A !important;
+}
+
+/* Cookie banner links */
+.cli-plugin-main-link,
+a.cli-privacy-readmore {
+    color: #E07A31 !important;
+}
+
+/**
+ * ISSUE-002: WordPress Admin Bar Blue
+ * Problem: WP default blue #007cba
+ * Fix: Terracotta for logged-in users
+ */
+#wpadminbar {
+    background: #E07A31 !important;
+}
+
+#wpadminbar .ab-item,
+#wpadminbar .ab-item:before,
+#wpadminbar .ab-icon:before {
+    color: #FFFFFF !important;
+}
+
+#wpadminbar .ab-item:hover,
+#wpadminbar a:hover {
+    background: #C8682A !important;
+    color: #FFFFFF !important;
+}
+
+/**
+ * ISSUE-004: WooCommerce Notices Cyan Blue
+ * Problem: "Added to cart" messages use cyan #0693e3
+ * Fix: Terracotta with cream background
+ */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-notices-wrapper .woocommerce-message {
+    border-top-color: #E07A31 !important;
+    background-color: #FAF7F2 !important;
+    color: #2C3E50 !important;
+}
+
+.woocommerce-message::before,
+.woocommerce-info::before {
+    color: #E07A31 !important;
+}
+
+.woocommerce-message .button,
+.woocommerce-info .button {
+    background-color: #E07A31 !important;
+    color: #FFFFFF !important;
+}
+
+.woocommerce-message .button:hover,
+.woocommerce-info .button:hover {
+    background-color: #C8682A !important;
+}
+
+/*************** BLOG FIXES - WordPress Integration 2025-10-29 ****************/
+/**
+ * Fix: Blog post images not appearing in archive view
+ * Issue: Some images have width="1" height="1" causing invisible thumbnails
+ * Solution: Force proper dimensions and visibility for all blog images
+ */
+
+/* Force blog archive images to be visible */
+.blog .entry-image,
+.archive .entry-image {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 200px;
+    width: 100%;
+}
+
+/* Override inline width/height attributes on blog images */
+.blog .entry-image img,
+.archive .entry-image img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px;
+    object-fit: cover;
+    display: block !important;
+}
+
+/* Ensure proper aspect ratio for blog thumbnails */
+.blog article .entry-image,
+.archive article .entry-image {
+    position: relative;
+    padding-bottom: 66.67%; /* 3:2 aspect ratio */
+    overflow: hidden;
+    background-color: var(--chap-cream, #FAF7F2);
+}
+
+.blog article .entry-image a,
+.archive article .entry-image a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blog article .entry-image img,
+.archive article .entry-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: auto;
+}
+
+/* Hide placeholder images (1x1 transparent) */
+.blog .entry-image img[width="1"],
+.archive .entry-image img[height="1"] {
+    display: none !important;
+}
+
+/* Make sure featured images show on mobile too */
+@media (max-width: 767px) {
+    .blog .entry-image,
+    .archive .entry-image {
+        min-height: 180px;
+        padding-bottom: 75%; /* 4:3 aspect ratio on mobile */
+    }
+}
 
 /*************** P0: CRITICAL UX FIXES - ULTRA-THINK 2025-10-29 ****************/
 /**

@@ -1,0 +1,10 @@
+245ca30c feat(ux): P0.4 Button Text-Shadow Fix - Subtle shadow for hero secondary button
+3bbc7911 feat(ux): P0.2+P0.3 - Header Height Fix + Newsletter Color Fix
+f8fcfd56 feat(ux): P0.1 CLIENT FEEDBACK - Zero padding + Light overlay + Hat framing
+76acf3bd docs(ux): Add P0 validation report with test results
+d0147379 feat(ux): P0 CRITICAL FIXES - Top fold + Overlay + WCAG AAA
+4680cc0f feat(ux): FASE 3 P2 complete - Parallax + Lazy Loading + Mobile
+4f4057ab feat(ux): FASE 2 P1 complete - Instagram + AOS + Design System
+b5e5c79c feat(ux): FASE 1 P0 complete - Hover effects + Gold CTAs + Swiper carousel
+5f5d96c0 docs: add comprehensive reports for blog posts and migration
+33f11699 fix: adjust widget titles color

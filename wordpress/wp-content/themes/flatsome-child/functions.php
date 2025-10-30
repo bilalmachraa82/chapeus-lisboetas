@@ -217,8 +217,8 @@ add_filter('wp_get_attachment_image_attributes', 'chapeus_add_image_loading_attr
 // P2.2 - Preload critical images
 function chapeus_preload_critical_images() {
     if (is_front_page()) {
-        // Get hero image (you can customize this path)
-        $hero_image = get_template_directory_uri() . '/wp-content/uploads/hero-image.jpg';
+        // Get hero image - corrected path (P0.4 fix)
+        $hero_image = get_site_url() . '/wp-content/uploads/2025/10/homepage/01_hero_mulher_feliz_panama.jpg';
 
         // Check if custom hero image is set via theme options
         if (function_exists('get_theme_mod')) {
@@ -228,7 +228,7 @@ function chapeus_preload_critical_images() {
             }
         }
 
-        // Preload the hero image
+        // Preload the hero image with high priority for LCP optimization
         echo '<link rel="preload" as="image" href="' . esc_url($hero_image) . '" fetchpriority="high">' . "\n";
     }
 }
@@ -286,3 +286,273 @@ function chapeus_mobile_meta_tags() {
     <?php
 }
 add_action('wp_head', 'chapeus_mobile_meta_tags', 1);
+
+// WordPress Integration - Social Proof Badge
+function chapeus_add_social_proof_badge() {
+    if (!is_front_page()) {
+        return;
+    }
+    ?>
+    <script>
+    jQuery(document).ready(function($) {
+        // Add Social Proof badge before Instagram/Momentos section
+        var instagramSection = $('.is-momentos-gallery, .instagram-feed, [class*="instagram"]').first().closest('.section');
+        if (instagramSection.length && !instagramSection.find('.section-label-social-proof').length) {
+            instagramSection.prepend('<div class="text-center mb-3"><span class="section-label-social-proof">Social Proof</span></div>');
+        }
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'chapeus_add_social_proof_badge', 100);
+
+// WordPress Integration - "Ver todas as coleções" CTA
+function chapeus_add_view_all_collections() {
+    if (!is_front_page()) {
+        return;
+    }
+    ?>
+    <script>
+    jQuery(document).ready(function($) {
+        // Add "Ver todas as coleções" button after featured collections
+        var collectionsSection = $('.is-featured-collections, .featured-collections-carousel').last().closest('.section');
+        if (collectionsSection.length && !collectionsSection.find('.featured-collections__view-all').length) {
+            var shopUrl = '<?php echo get_permalink(wc_get_page_id('shop')); ?>';
+            collectionsSection.append('<div class="featured-collections__view-all text-center mt-4"><a href="' + shopUrl + '" class="button">Ver todas as coleções</a></div>');
+        }
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'chapeus_add_view_all_collections', 100);
+
+// WordPress Integration - Micro-CTAs "Saber mais"
+function chapeus_add_saber_mais_ctas() {
+    if (!is_front_page()) {
+        return;
+    }
+    ?>
+    <script>
+    jQuery(document).ready(function($) {
+        // Add "Saber mais" links to icon boxes that don't have them
+        $('.icon-box').each(function() {
+            var $iconBox = $(this);
+            var $textBox = $iconBox.find('.icon-box-text, .text');
+
+            // Only add if there's no existing link
+            if ($textBox.length && !$textBox.find('.text-more').length && !$textBox.find('a').length) {
+                var aboutUrl = '<?php echo get_permalink(get_page_by_path('sobre-nos')); ?>';
+                $textBox.append('<a href="' + aboutUrl + '" class="text-more">Saber mais</a>');
+            }
+        });
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'chapeus_add_saber_mais_ctas', 100);
+
+// ISSUE-009: Livro de Reclamações - Portugal Legal Requirement
+// Decreto-Lei n.º 156/2005
+function chapeus_add_livro_reclamacoes() {
+    ?>
+    <div class="livro-reclamacoes-footer" style="margin-top: 20px; text-align: center;">
+        <a href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener noreferrer" title="Livro de Reclamações">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/livro-reclamacoes.png"
+                 alt="Livro de Reclamações"
+                 style="height: 50px; width: auto; display: inline-block;"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
+            <span style="display:none; color: #E07A31; font-size: 14px; text-decoration: underline;">📖 Livro de Reclamações</span>
+        </a>
+    </div>
+    <?php
+}
+add_action('flatsome_footer_bottom', 'chapeus_add_livro_reclamacoes', 100);
+
+/**
+ * Blog archive featured image fallbacks.
+ *
+ * Some imported posts do not have a `_thumbnail_id`, which prevents Flatsome from
+ * rendering the `.entry-image` wrapper. This hook chain forces a graceful
+ * fallback so archives always display a hero image while also replacing the
+ * outdated "boneco de madeira" photo.
+ */
+
+/**
+ * Map blog post title keywords to curated fallback images.
+ */
+function chapeus_blog_fallback_image_map() {
+    return [
+        'cinema' => '2025/10/blog/blog_cinema_iconico.jpg',
+        'presente' => '2025/10/blog/blog_presente_feliz.jpg',
+        'ovelha' => '2025/10/blog/blog_sustentavel_maos.jpg',
+        'inverno-sem-frio' => '2025/10/blog/blog_inverno_feltro.jpg',
+        'joao-28' => '2025/10/blog/blog_joao_jovem.jpg',
+        'verao-em-lisboa' => '2025/10/blog/blog_verao_lisboa.jpg',
+        'boina-portuguesa' => '2025/10/blog/blog_boina_tradicional.jpg',
+        'fedora' => '2025/10/blog/blog_fedora_outono.jpg',
+        'maria-do-carmo' => '2025/10/blog/blog_maria_vintage.jpg',
+        'casamentos' => '2025/10/blog/blog_casamentos_elegante.jpg',
+        'cuidar-do-seu' => '2025/10/blog/blog_cuidados_lisboa.jpg',
+        'atelier' => '2025/10/blog/blog_atelier_loja.jpg',
+        'panama' => '2025/10/blog/blog_panama_feliz.jpg',
+        '75-anos' => '2025/10/blog/blog_historia_vintage.jpg',
+        '3-perguntas' => '2025/10/blog/blog_perguntas_boina.jpg',
+    ];
+}
+
+/**
+ * Resolve an image stored within the uploads directory.
+ *
+ * @param string  $relative_path Relative path inside uploads (Y/m/filename).
+ * @param WP_Post $post          Post instance used for alt text context.
+ * @return array|null            Fallback data structure or null when missing.
+ */
+function chapeus_blog_prepare_image_from_upload($relative_path, $post) {
+    $relative = ltrim($relative_path, '/');
+
+    $upload_dir = wp_upload_dir();
+    $file_path = trailingslashit($upload_dir['basedir']) . str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $relative);
+
+    if (!file_exists($file_path)) {
+        return null;
+    }
+
+    $url = trailingslashit($upload_dir['baseurl']) . str_replace('\\', '/', $relative);
+    $dimensions = @getimagesize($file_path);
+
+    return [
+        'url' => $url,
+        'width' => $dimensions ? (int) $dimensions[0] : null,
+        'height' => $dimensions ? (int) $dimensions[1] : null,
+        /* translators: %s: blog post title. */
+        'alt' => sprintf(__('Fotografia ilustrativa para "%s"', 'flatsome-child'), $post->post_title),
+    ];
+}
+
+/**
+ * Compute fallback metadata for a post when no featured image exists.
+ */
+function chapeus_blog_get_fallback_image($post_id) {
+    static $cache = [];
+
+    if (array_key_exists($post_id, $cache)) {
+        return $cache[$post_id];
+    }
+
+    $post = get_post($post_id);
+
+    if (!$post instanceof WP_Post || $post->post_type !== 'post') {
+        $cache[$post_id] = null;
+        return null;
+    }
+
+    $normalized_title = sanitize_title($post->post_title);
+
+    foreach (chapeus_blog_fallback_image_map() as $keyword => $relative_path) {
+        if (strpos($normalized_title, $keyword) !== false) {
+            $image = chapeus_blog_prepare_image_from_upload($relative_path, $post);
+            if ($image) {
+                $cache[$post_id] = $image;
+                return $image;
+            }
+        }
+    }
+
+    if (!empty($post->post_content) && preg_match('/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/i', $post->post_content, $matches)) {
+        $alt = $post->post_title;
+
+        if (!empty($matches[0]) && preg_match('/alt=["\']([^"\']*)["\']/i', $matches[0], $alt_match)) {
+            $alt = $alt_match[1];
+        }
+
+        $cache[$post_id] = [
+            'url' => $matches[1],
+            'width' => null,
+            'height' => null,
+            'alt' => $alt,
+        ];
+
+        return $cache[$post_id];
+    }
+
+    $placeholder_path = get_stylesheet_directory() . '/assets/images/blog-placeholder.svg';
+    $placeholder_url = get_stylesheet_directory_uri() . '/assets/images/blog-placeholder.svg';
+
+    if (file_exists($placeholder_path)) {
+        $cache[$post_id] = [
+            'url' => $placeholder_url,
+            'width' => 1200,
+            'height' => 800,
+            'alt' => $post->post_title,
+        ];
+
+        return $cache[$post_id];
+    }
+
+    $cache[$post_id] = null;
+
+    return null;
+}
+
+/**
+ * Pretend posts have a thumbnail when a fallback image is available.
+ */
+function chapeus_blog_force_fallback_thumbnail($has_thumbnail, $post, $thumbnail_id) {
+    if ($has_thumbnail || !$post instanceof WP_Post || $post->post_type !== 'post') {
+        return $has_thumbnail;
+    }
+
+    return chapeus_blog_get_fallback_image($post->ID) ? true : $has_thumbnail;
+}
+add_filter('has_post_thumbnail', 'chapeus_blog_force_fallback_thumbnail', 10, 3);
+
+/**
+ * Render fallback markup for the_posts without a featured image.
+ */
+function chapeus_blog_render_fallback_thumbnail($html, $post_id, $thumbnail_id, $size, $attr) {
+    if (!empty($html)) {
+        return $html;
+    }
+
+    $fallback = chapeus_blog_get_fallback_image($post_id);
+
+    if (!$fallback) {
+        return $html;
+    }
+
+    $attributes = is_array($attr) ? $attr : [];
+    $classes = isset($attributes['class']) ? $attributes['class'] : '';
+    $attributes['class'] = trim($classes . ' wp-post-image chapeus-fallback-thumbnail');
+
+    if (empty($attributes['alt'])) {
+        $attributes['alt'] = $fallback['alt'];
+    }
+
+    if (empty($attributes['loading'])) {
+        $attributes['loading'] = 'lazy';
+    }
+
+    if (empty($attributes['decoding'])) {
+        $attributes['decoding'] = 'async';
+    }
+
+    if (!empty($fallback['width']) && empty($attributes['width'])) {
+        $attributes['width'] = (string) $fallback['width'];
+    }
+
+    if (!empty($fallback['height']) && empty($attributes['height'])) {
+        $attributes['height'] = (string) $fallback['height'];
+    }
+
+    $attribute_string = '';
+    foreach ($attributes as $name => $value) {
+        if ($value === null || $value === '') {
+            continue;
+        }
+
+        $attribute_string .= sprintf(' %s="%s"', esc_attr($name), esc_attr($value));
+    }
+
+    return sprintf('<img src="%s"%s />', esc_url($fallback['url']), $attribute_string);
+}
+add_filter('post_thumbnail_html', 'chapeus_blog_render_fallback_thumbnail', 10, 5);
