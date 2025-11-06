@@ -91,7 +91,7 @@
   }
 
   function initTopBarMarquee() {
-    const message = 'Envios grátis acima de 50€ · Loja física: Praça da Figueira, Lisboa';
+    const message = 'Envios grátis acima de 50€ · Rua 1.º de Dezembro, 85/87 & R. Áurea 261, Lisboa';
     const holders = document.querySelectorAll('.html_topbar_left');
 
     holders.forEach(function(holder) {
