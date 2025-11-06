@@ -1,0 +1,221 @@
+CHAPÉUS LISBOETAS - DIRECTORY TREE (TEMA & PLUGINS)
+====================================================
+
+/Users/bilal/Programaçao/Tiago Andrado/full-chapeus-lisboetas (2)/
+│
+├── wordpress/
+│   ├── wp-admin/                          [WordPress core - DO NOT EDIT]
+│   ├── wp-includes/                       [WordPress core - DO NOT EDIT]
+│   ├── wp-content/
+│   │   │
+│   │   ├── themes/
+│   │   │   │
+│   │   │   ├── flatsome/                  [PARENT THEME - DO NOT EDIT]
+│   │   │   │   ├── assets/
+│   │   │   │   │   ├── css/               [Theme stylesheets]
+│   │   │   │   │   ├── img/               [Theme images & icons]
+│   │   │   │   │   ├── js/                [Theme JavaScript]
+│   │   │   │   │   └── libs/              [Swiper, AOS, etc.]
+│   │   │   │   ├── inc/
+│   │   │   │   │   ├── admin/             [Admin customizations]
+│   │   │   │   │   ├── blocks/            [Gutenberg support]
+│   │   │   │   │   ├── builder/           [UX Builder (page builder)]
+│   │   │   │   │   ├── functions/         [Core functions]
+│   │   │   │   │   ├── helpers/           [Helper functions]
+│   │   │   │   │   ├── integrations/      [3rd party integrations]
+│   │   │   │   │   ├── shortcodes/        [Custom shortcodes]
+│   │   │   │   │   ├── structure/         [Page structure]
+│   │   │   │   │   ├── woocommerce/       [WooCommerce overrides]
+│   │   │   │   │   └── widgets/           [WordPress widgets]
+│   │   │   │   ├── template-parts/
+│   │   │   │   │   ├── header/            [Header variations]
+│   │   │   │   │   ├── footer/            [Footer templates]
+│   │   │   │   │   ├── pages/             [Page templates]
+│   │   │   │   │   └── posts/             [Post templates]
+│   │   │   │   ├── woocommerce/           [WooCommerce templates]
+│   │   │   │   │   ├── cart/
+│   │   │   │   │   ├── checkout/
+│   │   │   │   │   ├── loop/
+│   │   │   │   │   └── single-product/
+│   │   │   │   ├── languages/             [Translation files]
+│   │   │   │   ├── functions.php          [Theme functions (932 bytes)]
+│   │   │   │   ├── header.php             [Main header]
+│   │   │   │   ├── footer.php             [Main footer]
+│   │   │   │   ├── style.css              [Theme stylesheet]
+│   │   │   │   ├── page-*.php             [Page templates]
+│   │   │   │   ├── single.php             [Single post]
+│   │   │   │   ├── index.php              [Fallback]
+│   │   │   │   ├── 404.php                [Error page]
+│   │   │   │   └── theme.json             [Block editor settings]
+│   │   │   │
+│   │   │   ├── flatsome-child/            [CHILD THEME - EDIT THIS]
+│   │   │   │   ├── assets/
+│   │   │   │   │   ├── images/
+│   │   │   │   │   │   └── blog-placeholder.svg
+│   │   │   │   │   └── js/
+│   │   │   │   │       └── custom.js      [Primary JS file - EDIT]
+│   │   │   │   ├── template-parts/        [Child overrides]
+│   │   │   │   ├── style.css              [Primary CSS file - EDIT (3,036 lines)]
+│   │   │   │   ├── functions.php          [Primary PHP - EDIT (22K)]
+│   │   │   │   │
+│   │   │   │   └── [Documentation Files]
+│   │   │   │       ├── P0_QUICK_REFERENCE.md
+│   │   │   │       ├── P0_VALIDATION_REPORT.md
+│   │   │   │       ├── RELATORIO_IMPLEMENTACAO_UX_2025.md
+│   │   │   │       ├── DESIGN_SYSTEM_REPORT.md
+│   │   │   │       ├── SWIPER_IMPLEMENTATION_REPORT.md
+│   │   │   │       ├── COLOR_PALETTE_PREVIEW.html
+│   │   │   │       └── screenshot.png
+│   │   │   │
+│   │   │   ├── twentytwentyone/           [Alternative themes - ignore]
+│   │   │   ├── twentytwentythree/
+│   │   │   ├── twentytwentyfour/
+│   │   │   └── twentytwentyfive/
+│   │   │
+│   │   ├── plugins/
+│   │   │   ├── woocommerce/               [E-commerce platform]
+│   │   │   ├── wordpress-seo/             [Yoast SEO]
+│   │   │   ├── cookie-law-info/           [RGPD compliance]
+│   │   │   ├── multibanco-ifthen-*        [Portuguese payment gateway]
+│   │   │   ├── ctt-expresso-*             [Portuguese shipping]
+│   │   │   ├── flexible-shipping/         [Shipping options]
+│   │   │   ├── classic-editor/            [Legacy editor]
+│   │   │   ├── regenerate-thumbnails/     [Image optimization]
+│   │   │   ├── akismet/                   [Spam protection]
+│   │   │   ├── mcp-adapter/               [MCP integration]
+│   │   │   └── hello.php                  [Hello Dolly - ignore]
+│   │   │
+│   │   └── uploads/                       [Product images & media (381MB)]
+│   │       ├── product images by ID/
+│   │       └── featured images/
+│   │
+│   └── [WordPress config files]
+│       ├── wp-config.php
+│       ├── .htaccess
+│       └── wp-settings.php
+
+
+ARQUIVOS CRÍTICOS PARA EDIÇÃO (absolutos paths)
+================================================
+
+CSS STYLING:
+  PRIMARY:   /Users/bilal/Programaçao/Tiago Andrado/full-chapeus-lisboetas (2)/wordpress/wp-content/themes/flatsome-child/style.css
+  SIZE:      3,036 lines
+  EDIT:      Color variables, component styling, P0 fixes
+
+JAVASCRIPT:
+  PRIMARY:   /Users/bilal/Programaçao/Tiago Andrado/full-chapeus-lisboetas (2)/wordpress/wp-content/themes/flatsome-child/assets/js/custom.js
+  EDIT:      Section tagging, carousel init, animations
+
+PHP FUNCTIONS:
+  PRIMARY:   /Users/bilal/Programaçao/Tiago Andrado/full-chapeus-lisboetas (2)/wordpress/wp-content/themes/flatsome-child/functions.php
+  SIZE:      22K
+  EDIT:      Enqueue scripts, hooks, filters
+
+HEADER TEMPLATES:
+  /wordpress/wp-content/themes/flatsome/template-parts/header/header-wrapper.php
+  /wordpress/wp-content/themes/flatsome/template-parts/header/header-top.php
+  /wordpress/wp-content/themes/flatsome/template-parts/header/header-main.php
+  /wordpress/wp-content/themes/flatsome/template-parts/header/header-bottom.php
+
+FOOTER TEMPLATES:
+  /wordpress/wp-content/themes/flatsome/template-parts/footer/
+
+
+SEÇÕES DA HOMEPAGE (Identificadas via custom.js)
+=================================================
+
+1. HERO SECTION
+   Tag:     .hero-cover-2025
+   Arquivo: Gutenberg block (WordPress editor)
+   CSS:     style.css lines ~1900-2000
+   Desc:    Full-width cover com overlay + CTA
+
+2. COLEÇÕES EM DESTAQUE
+   Tag:     .is-featured-collections
+   Arquivo: Gutenberg block (WordPress editor)
+   JS:      custom.js lines 119-200+ (Swiper carousel)
+   CSS:     style.css (featured-collections__*)
+   Desc:    Grid cards com carousel
+
+3. MOMENTOS COM CHAPÉUS
+   Tag:     .is-momentos-gallery
+   Arquivo: Gutenberg block (WordPress editor)
+   JS:      custom.js (GLightbox lightbox)
+   CSS:     style.css (momentos-gallery__*)
+   Desc:    Instagram gallery com lightbox
+
+4. PORQUE ESCOLHER
+   Tag:     .is-why-choose
+   Arquivo: Gutenberg block (WordPress editor)
+   CSS:     style.css (is-why-choose)
+   Desc:    Feature list com animações
+
+5. NEWSLETTER
+   Tag:     .is-newsletter-cta
+   Arquivo: Gutenberg block (WordPress editor)
+   CSS:     style.css (newsletter-*)
+   Desc:    Newsletter signup form
+
+6. TOP BAR MARQUEE
+   Tag:     .top-bar-marquee
+   JS:      custom.js lines 93-117
+   Desc:    Scrolling promo message
+
+
+LIBRARIES & DEPENDENCIES
+========================
+
+JavaScript CDN:
+  - Swiper.js v11.0.0 (Carousels)
+    https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js
+  
+  - AOS v2.3.4 (Animate On Scroll)
+    https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js
+  
+  - GLightbox v3.2.0 (Lightbox)
+    https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js
+
+Fonts (Google):
+  - Cormorant Garamond (Headings - elegant serif)
+  - Inter (Body - modern sans-serif)
+
+WordPress Plugins:
+  - WooCommerce (E-commerce)
+  - Yoast SEO (wordpress-seo)
+  - RGPD (cookie-law-info)
+  - Payment: multibanco-ifthen (Portuguese gateway)
+  - Shipping: ctt-expresso (CTT Expresso)
+
+
+DATABASE INFO
+=============
+
+Host:      localhost:3306
+Database:  lisboetas_web
+User:      lisboetas
+Password:  e$$4rU9h8
+Root:      rootpassword
+Prefix:    lx_
+
+Tables use lx_ prefix (NOT wp_)
+Example: lx_posts, lx_postmeta, lx_options
+
+
+LOCAL DEVELOPMENT URLS
+======================
+
+Site:      http://localhost:8080
+Admin:     http://localhost:8080/wp-admin
+phpMyAdmin http://localhost:8081
+
+
+QUICK ACTIONS
+=============
+
+Hard refresh CSS:   Cmd+Shift+R (Mac) / Ctrl+F5 (Windows)
+Clear WP cache:     WP Admin > WP Rocket > Clear Cache
+Check file dates:   ls -lh /wordpress/wp-content/themes/flatsome-child/
+Git status:         cd full-chapeus-lisboetas\ \(2\) && git status
+
+
