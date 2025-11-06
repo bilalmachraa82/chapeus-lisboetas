@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf7f2" />
+      <stop offset="100%" stop-color="#e8dfd1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grad)" />
+  <g fill="#5c3a21" opacity="0.65" font-family="'Helvetica Neue', Arial, sans-serif" font-size="88" font-weight="600" text-anchor="middle">
+    <text x="50%" y="46%">Chapeus Lisboetas</text>
+    <text x="50%" y="58%" font-size="40" opacity="0.75">Blog</text>
+  </g>
+</svg>

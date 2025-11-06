@@ -629,6 +629,7 @@ add_action('wp_head', function() {
         body.page-id-12 .section,
         body.page-id-12 .hero-section,
         body.page-id-12 .wp-block-cover,
+        body.page-id-12 .wp-block-cover__background,
         body.page-id-12 .wp-block-group {
             background-color: #FAF7F2 !important;
             background-image: linear-gradient(135deg, #FAF7F2 0%, #F5EFE6 50%, #FAF7F2 100%) !important;
@@ -637,7 +638,10 @@ add_action('wp_head', function() {
         /* Override ANY inline blue backgrounds on sobre-nos */
         body.page-id-12 [style*="#b2b0b0"],
         body.page-id-12 [style*="#1863dc"],
-        body.page-id-12 [style*="rgb(178, 176, 176)"] {
+        body.page-id-12 [style*="rgb(178, 176, 176)"],
+        body.page-id-12 .wp-block-cover__background.has-primary-background-color,
+        body.page-id-12 .wp-block-cover__background.has-primary-background-color::before,
+        body.page-id-12 .wp-block-cover__background.has-primary-background-color::after {
             background-color: #FAF7F2 !important;
             background-image: none !important;
         }

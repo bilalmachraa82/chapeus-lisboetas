@@ -1,0 +1,8 @@
+{
+  "chapeus_lisboetas": {
+    "URL": "http://localhost:8080",
+    "USER": "lisboetas",
+    "PASS": "EUsourico82!",
+    "authType": "wordpress"
+  }
+}

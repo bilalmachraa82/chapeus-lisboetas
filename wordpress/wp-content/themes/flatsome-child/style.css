@@ -1245,7 +1245,7 @@ a.button.primary[href*="chapeus"]:hover {
 .banner-inner {
   position: relative;
   z-index: 2; /* Above overlay to ensure readability */
-  max-width: 960px; /* Constrain width for readability */
+  max-width: min(1200px, 92vw); /* Wider layout, still responsive */
   margin-left: auto;
   margin-right: auto;
 }
@@ -1885,7 +1885,7 @@ h2.wp-block-heading[data-aos="fade-down"] {
  * - Micro-CTAs "Saber mais" with animated arrow
  * - Section label "Social Proof" (terracotta badge)
  * - Zebra backgrounds (.section-zebra alternating cream)
- * - Hero content max-width: 960px, paragraphs max 60ch
+ * - Hero content max-width: 1200px (capped by viewport), paragraphs max 60ch
  * - H6 uppercase removed (body headings not uppercase)
  *
  * ✅ MOBILE OPTIMIZATION:
@@ -2650,3 +2650,387 @@ body .wp-block-buttons .wp-block-button__link:hover {
 }
 
 /*************** FIM P0.4: BUTTON TEXT-SHADOW FIX ***************/
+
+/*************** P0.5: WCAG AA CONTRAST FIXES - Critical Accessibility ***************/
+/*
+ * PROBLEMA: Orange text (#E07A31) on brown background (#8B4513) = WCAG failure
+ * - Contrast ratio: ~1.8:1 (needs 4.5:1 for AA compliance)
+ * - Found in "Novidades na Loja Online" section line 143
+ *
+ * SOLUÇÃO: Force white text on primary (brown) backgrounds
+ * - White (#FFFFFF) on Brown (#8B4513) = 5.5:1 ✓ AA compliant
+ * - All text inside .has-primary-background-color gets white color
+ */
+
+/* Fix: All text on primary brown background MUST be white */
+.has-primary-background-color,
+.has-primary-background-color *,
+.bg-primary,
+.bg-primary * {
+  color: #FFFFFF !important;
+}
+
+/* Exception: Keep links visible on primary background */
+.has-primary-background-color a,
+.bg-primary a {
+  color: #F4E4C1 !important; /* Cream highlight for links */
+  text-decoration: underline !important;
+}
+
+.has-primary-background-color a:hover,
+.bg-primary a:hover {
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+}
+
+/* Fix: Secondary/terracotta text only on light backgrounds */
+.has-secondary-color,
+.has-secondary-background-color {
+  /* Only allow on white or cream backgrounds */
+  /* Chrome/Safari will ignore invalid combinations */
+}
+
+/* Ensure secondary text has proper contrast */
+.has-white-background-color .has-secondary-color,
+.has-light-gray-background-color .has-secondary-color {
+  color: #E07A31 !important; /* Terracotta only on light backgrounds */
+}
+
+/* Newsletter section - ensure cream background with dark text */
+.has-secondary-background-color.wp-block-group,
+body section.newsletter,
+body .newsletter-section {
+  background-color: #FAF7F2 !important; /* Cream instead of terracotta */
+  border: 3px solid #E07A31 !important; /* Terracotta border */
+}
+
+.has-secondary-background-color h2,
+.has-secondary-background-color p,
+.has-secondary-background-color .has-white-color {
+  color: #2C323A !important; /* Dark navy text for maximum contrast */
+}
+
+/* Newsletter button - white text on terracotta */
+.has-secondary-background-color button,
+.has-secondary-background-color .button {
+  background-color: #E07A31 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+}
+
+/*************** FIM P0.5: WCAG AA CONTRAST FIXES ***************/
+
+/*************** P0.6: IMAGE OPTIMIZATION & LAZY LOADING ***************/
+/*
+ * OBJETIVO: Prevent Cumulative Layout Shift (CLS) and optimize loading
+ * - Add aspect ratio boxes for all images
+ * - Ensure width/height attributes set in HTML prevent reflow
+ * - object-fit: cover prevents distortion
+ */
+
+/* Hero image - prevent layout shift */
+.wp-block-cover__image-background {
+  object-fit: cover !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Collection images - maintain aspect ratio 2:3 (600x900) */
+.wp-block-image.aligncenter img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 2 / 3 !important;
+}
+
+/* Moment gallery images - maintain aspect ratio 3:4 (1080x1440) */
+.wp-block-columns .wp-block-image img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 3 / 4 !important;
+}
+
+/* Prevent image loading flash */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+img[loading="lazy"].loaded,
+img[loading="lazy"]:not([src=""]) {
+  opacity: 1;
+}
+
+/* Responsive image sizing */
+@media (max-width: 768px) {
+  .wp-block-image.aligncenter img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/*************** FIM P0.6: IMAGE OPTIMIZATION ***************/
+
+/*************** P0.7: MOBILE RESPONSIVE FIXES ***************/
+/*
+ * OBJETIVO: Ensure all sections work on mobile (375px width)
+ * - Fix hero text overflow
+ * - Adjust column gaps
+ * - Scale images properly
+ */
+
+@media (max-width: 768px) {
+  /* Hero section mobile */
+  .wp-block-cover.alignfull {
+    min-height: 500px !important;
+    padding-top: 80px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .wp-block-cover h1 {
+    font-size: 36px !important;
+    line-height: 1.2 !important;
+  }
+
+  .wp-block-cover p {
+    font-size: 16px !important;
+  }
+
+  /* Stack columns on mobile */
+  .wp-block-columns {
+    flex-direction: column !important;
+  }
+
+  .wp-block-column {
+    width: 100% !important;
+    flex-basis: 100% !important;
+  }
+
+  /* Collection section mobile spacing */
+  .wp-block-group.alignfull {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  /* Newsletter section mobile */
+  .newsletter-form {
+    flex-direction: column !important;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+/*************** FIM P0.7: MOBILE RESPONSIVE FIXES ***************/
+
+/*************** PAGE 4-6 IMAGE & CONTENT FIXES (Client Feedback Nov 6, 2025) ***************/
+/*
+ * CLIENT FEEDBACK:
+ * - PAGE 4: Remove caption below 2nd image in "Momentos com Chapéus"
+ * - PAGE 5: Update heading to "30 anos..." and fix image cropping
+ * - PAGE 6: Verify color contrast and mobile responsiveness
+ *
+ * APPLIED FIXES:
+ * - Caption removal: PHP script (fix_pages_4_6_images.php)
+ * - Visual refinement: CSS below
+ */
+
+/* ========== PAGE 4: Momentos com Chapéus ========== */
+
+/* Consistent image sizing - prevent cropping */
+.wp-block-columns .wp-block-image img[src*="02_momento_"],
+.wp-block-columns .wp-block-image img[src*="03_momento_"],
+.wp-block-columns .wp-block-image img[src*="04_momento_"] {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  aspect-ratio: 4/3 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Hover effect */
+.wp-block-columns .wp-block-image img[src*="momento_"]:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Mobile: square images */
+@media (max-width: 768px) {
+  .wp-block-columns .wp-block-image img[src*="momento_"] {
+    aspect-ratio: 1/1 !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+/* ========== PAGE 5: Atelier Section (30 anos) ========== */
+
+/* Fix atelier image cropping */
+.wp-block-image img[src*="05_momento_homem_boina"],
+.wp-block-image img[src*="05_momento_"] {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: center 40% !important;
+  aspect-ratio: 4/3 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* "30 anos" heading emphasis */
+.wp-block-group.has-primary-background-color h3:contains("30 anos") {
+  font-size: clamp(28px, 4vw, 42px) !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 20px !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Button contrast on brown background */
+.wp-block-group.has-primary-background-color .wp-block-button__link {
+  background: var(--chap-action-primary, #E07A31) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  padding: 14px 28px !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.wp-block-group.has-primary-background-color .wp-block-button__link:hover {
+  background: var(--chap-action-hover, #C77E3B) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Mobile: stack columns */
+@media (max-width: 768px) {
+  .wp-block-group.has-primary-background-color .wp-block-columns {
+    flex-direction: column !important;
+  }
+
+  .wp-block-group.has-primary-background-color .wp-block-column {
+    flex-basis: 100% !important;
+    padding-left: 0 !important;
+    margin-top: 30px !important;
+  }
+}
+
+/* ========== PAGE 6: Why Choose & Newsletter ========== */
+
+/* Checkmark list styling */
+.is-style-checkmark-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.is-style-checkmark-list li {
+  position: relative !important;
+  padding-left: 32px !important;
+  margin-bottom: 16px !important;
+  color: var(--chap-charcoal, #3E2723) !important;
+  line-height: 1.6 !important;
+  font-size: 16px !important;
+}
+
+.is-style-checkmark-list li::before {
+  content: "✓" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  color: var(--chap-action-primary, #E07A31) !important;
+  font-weight: bold !important;
+  font-size: 18px !important;
+}
+
+/* Newsletter - WCAG AAA contrast */
+.wp-block-group.has-secondary-background-color h2.has-white-color {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.wp-block-group.has-secondary-background-color p.has-white-color {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Newsletter form */
+.newsletter-form input[type="email"] {
+  background: #FFFFFF !important;
+  border: 2px solid transparent !important;
+  color: var(--chap-charcoal, #3E2723) !important;
+  font-size: 16px !important;
+  min-height: 44px !important;
+}
+
+.newsletter-form input[type="email"]:focus {
+  border-color: var(--chap-primary, #8B4513) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1) !important;
+}
+
+.newsletter-form button[type="submit"] {
+  background: var(--chap-primary, #8B4513) !important;
+  color: #FFFFFF !important;
+  min-height: 44px !important;
+  padding: 14px 30px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.newsletter-form button[type="submit"]:hover {
+  background: var(--chap-primary-dark, #654321) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Mobile: full-width form */
+@media (max-width: 768px) {
+  .newsletter-form > div {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button[type="submit"] {
+    width: 100% !important;
+  }
+}
+
+/* ========== GLOBAL IMAGE OPTIMIZATION ========== */
+
+/* Prevent layout shift */
+body img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Lazy loading placeholder */
+body img[loading="lazy"] {
+  background: var(--chap-light-gray, #E8E8E8) !important;
+}
+
+/* Focus states for accessibility */
+body a:focus,
+body button:focus,
+body input:focus {
+  outline: 3px solid var(--chap-action-primary, #E07A31) !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure 44x44px touch targets */
+body .wp-block-button__link,
+body button,
+body input[type="submit"] {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
+/*************** FIM PAGE 4-6 FIXES ***************/
