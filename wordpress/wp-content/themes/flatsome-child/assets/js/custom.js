@@ -9,6 +9,42 @@
   function tagDynamicSections() {
     const headings = document.querySelectorAll('.wp-block-heading');
 
+    function findFollowingColumns(base) {
+      if (!base) {
+        return null;
+      }
+
+      const direct = base.querySelector ? base.querySelector('.wp-block-columns') : null;
+      if (direct) {
+        return direct;
+      }
+
+      let sibling = base.nextElementSibling;
+      let safety = 0;
+
+      while (sibling && safety < 6) {
+        if (sibling.classList && sibling.classList.contains('wp-block-columns')) {
+          return sibling;
+        }
+
+        if (typeof sibling.querySelector === 'function') {
+          const nested = sibling.querySelector('.wp-block-columns');
+          if (nested) {
+            return nested;
+          }
+        }
+
+        if (sibling.matches && sibling.matches('h1, h2, h3, .wp-block-heading')) {
+          break;
+        }
+
+        sibling = sibling.nextElementSibling;
+        safety += 1;
+      }
+
+      return null;
+    }
+
     headings.forEach(function(heading) {
       const text = heading.textContent ? heading.textContent.trim().toLowerCase() : '';
       const parentGroup = heading.closest('.wp-block-group');
@@ -22,8 +58,12 @@
       }
 
       if (text.includes('coleções em destaque')) {
-        const columns = parentGroup.querySelector('.wp-block-columns');
-        parentGroup.classList.add('is-featured-collections');
+        const columns = findFollowingColumns(parentGroup || heading.parentElement);
+
+        const wrapper = parentGroup || columns?.parentElement || heading.parentElement;
+        if (wrapper) {
+          wrapper.classList.add('is-featured-collections');
+        }
 
         if (columns && !columns.classList.contains('featured-collections__grid')) {
           columns.classList.add('featured-collections__grid');
