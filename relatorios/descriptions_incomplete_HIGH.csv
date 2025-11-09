@@ -1,0 +1,4 @@
+sku,nome,categoria,price,priority,has_short_desc,has_long_desc,has_specs,has_tags,has_composition,completeness_score,gaps,supplier_url,can_auto_scrape
+chapeu-australiano,CHAPEU AUSTRALIANO,ARTIGOS EM PELE,€67.50,HIGH,NO,NO,NO,YES,NO,1/5,"short_desc, long_desc, specs, composition",,NO
+"chapeu colonial
+pith helmet",CHAPEU COLONIAL,DIVERSOS,€45.00,HIGH,NO,NO,YES,YES,YES,3/5,"short_desc, long_desc",,NO

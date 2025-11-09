@@ -1,0 +1,115 @@
+sku,nome,categoria,price,priority,has_long_desc,has_specs,has_tags,has_composition,has_materials,completeness_score,gaps,supplier_url,can_auto_scrape
+N/A,N/A,UNCATEGORIZED,€27.50,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€29.90,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€29.90,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€29.90,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€85.00,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€27.50,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€35.00,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€29.90,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€24.90,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€24.90,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€55.00,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€85.00,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€85.00,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€29.90,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€29.90,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€8.00,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€27.50,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€27.50,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€8.00,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€47.50,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€35.00,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€16.90,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€37.50,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€89.90,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€35.00,MEDIUM,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€35.00,MEDIUM,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€35.00,MEDIUM,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€67.50,HIGH,NO,NO,YES,NO,NO,1/5,"long_desc, specs, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€1.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€3.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€3.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€35.00,MEDIUM,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€35.00,MEDIUM,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€67.50,HIGH,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€29.90,MEDIUM,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€49.90,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,NO,YES,NO,NO,1/5,"long_desc, specs, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€3.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€14.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€15.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€19.90,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€29.90,MEDIUM,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€35.00,MEDIUM,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€1.00,LOW,NO,NO,YES,NO,NO,1/5,"long_desc, specs, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€2.00,LOW,NO,NO,YES,NO,NO,1/5,"long_desc, specs, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€3.00,LOW,NO,NO,YES,NO,NO,1/5,"long_desc, specs, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€14.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€15.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€35.00,MEDIUM,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€67.50,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€67.50,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€67.50,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€45.00,HIGH,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€19.90,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€19.90,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€19.90,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€19.90,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€14.90,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€19.90,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€19.90,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€8.00,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€12.90,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€2.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€2.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,YES,NO,NO,2/5,"long_desc, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,NO,NO,NO,1/5,"long_desc, tags, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,NO,NO,NO,1/5,"long_desc, tags, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,NO,NO,NO,1/5,"long_desc, tags, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€0.00,LOW,NO,YES,NO,NO,NO,1/5,"long_desc, tags, composition, materials",,NO
+N/A,N/A,UNCATEGORIZED,€8.00,LOW,YES,YES,YES,NO,NO,3/5,"composition, materials",,NO

@@ -1,0 +1,92 @@
+{
+  "audit_date": "2025-11-09",
+  "catalog_json": {
+    "total_products": 114,
+    "unique_slugs": 86,
+    "unique_supplier_codes": 86,
+    "with_price": 79,
+    "without_price": 35,
+    "with_images": 96,
+    "without_images": 18,
+    "products_over_300": 0,
+    "duplicates_hologramme_velen": 2,
+    "duplicate_slugs_total": 18,
+    "brands": {
+      "HOLOGRAMME": 89,
+      "None": 11,
+      "MONTADO": 8,
+      "SOLID": 4,
+      "Other": 2
+    }
+  },
+  "wordpress_db": {
+    "total_products": 150,
+    "published_products": 131,
+    "draft_products": 0,
+    "pending_products": 0,
+    "gap_catalog_vs_published": 52,
+    "note": "131 publicados vs 79 com preço no catalog = 52 produtos a mais no WP (possível inconsistência)"
+  },
+  "stack_risks": {
+    "php_version": "7.4.33",
+    "php_eol_date": "2022-11-28",
+    "days_outdated": 1077,
+    "years_outdated": 2.9,
+    "wordpress_version": "UNKNOWN (db_version: 60421)",
+    "wordpress_estimated": "~5.x (legacy, likely 5.4.1)",
+    "security_risk": "CRITICAL",
+    "known_issues": [
+      "PHP 7.4 EOL since Nov 2022 - no security patches for 2.9 years",
+      "WordPress outdated - likely multiple CVEs",
+      "Revolution Slider disabled due to PHP incompatibility"
+    ]
+  },
+  "integrations_verified": {
+    "ifthen_pay_multibanco": true,
+    "ifthen_pay_configured": "ent=11873, subent=235, enabled=yes",
+    "cookie_law_info_rgpd": true,
+    "yoast_seo": true,
+    "google_analytics": "NOT VERIFIED (no clear GA4 config found)",
+    "woocommerce": true,
+    "transposh_translation": true,
+    "really_simple_ssl": true
+  },
+  "pending_photos": {
+    "total_pending": 13,
+    "high_value_products": 2,
+    "total_blocked_value_eur": 300,
+    "percentage_blocked": "15%",
+    "action_required": "Client must provide photos or remove products"
+  },
+  "critical_findings": [
+    "❌ STACK OUTDATED: PHP 7.4 EOL for 1119 days (3.1 years) - MAJOR SECURITY RISK",
+    "⚠️ INCONSISTÊNCIA: 131 produtos publicados vs 79 com preço no catalog.json",
+    "⚠️ DUPLICADOS: 18 slugs duplicados (incluindo 2 HOLOGRAMME/VELEN)",
+    "⚠️ 13 produtos sem imagens bloqueiam export limpo",
+    "⚠️ 0 produtos >€300 encontrados (pode indicar problema de import de Google Sheet)",
+    "✓ IfthenPay Multibanco configurado e ativo",
+    "✓ Yoast SEO instalado",
+    "✓ Cookie Law Info (RGPD) instalado",
+    "❓ Google Analytics 4 NÃO VERIFICADO (sem config clara)"
+  ],
+  "deployment_recommendation": {
+    "status": "HOLD - DO NOT DEPLOY TO PRODUCTION",
+    "blocking_issues": [
+      "PHP 7.4 EOL = security vulnerability (MANDATORY upgrade to PHP 8.1+)",
+      "WordPress outdated = potential exploits",
+      "Inconsistent catalog data (131 vs 79)",
+      "Missing GA4 verification"
+    ],
+    "required_actions_before_deploy": [
+      "1. CRITICAL: Upgrade PHP to 8.1 or 8.2 (test all plugins compatibility)",
+      "2. CRITICAL: Upgrade WordPress to latest (currently ~6.4+)",
+      "3. HIGH: Reconcile catalog.json vs WP database (resolve 52 product gap)",
+      "4. HIGH: Fix 18 duplicate slugs (especially HOLOGRAMME/VELEN)",
+      "5. MEDIUM: Verify GA4 installation or install if missing",
+      "6. MEDIUM: Resolve 13 pending photos or remove products",
+      "7. LOW: Verify products >€300 exist in catalog (0 found is suspicious)"
+    ],
+    "estimated_time_to_fix": "4-6 days",
+    "risk_level_if_deployed_now": "CRITICAL (high chance of security breach)"
+  }
+}
