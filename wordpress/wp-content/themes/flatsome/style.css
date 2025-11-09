@@ -18,3 +18,8 @@ License URI:          https://themeforest.net/licenses
 All custom CSS should be added to Flatsome > Advanced > Custom CSS,
 or in the style.css of a Child Theme.
 ***************/
+
+
+/* Esconder categorias duplicadas nos produtos */
+.product-category:nth-of-type(2)    display: none !important;
+}

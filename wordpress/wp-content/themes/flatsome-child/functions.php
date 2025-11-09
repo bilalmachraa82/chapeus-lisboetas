@@ -74,6 +74,18 @@ function chapeus_enqueue_glightbox() {
 }
 add_action('wp_enqueue_scripts', 'chapeus_enqueue_glightbox', 90);
 
+// Force child theme stylesheet to carry cache-busting version.
+add_filter('style_loader_src', function ($src, $handle) {
+    $targets = array('flatsome-style', 'flatsome-style-css', 'flatsome-style-css-css');
+    if (in_array($handle, $targets, true)) {
+        $style_path = get_stylesheet_directory() . '/style.css';
+        $version = file_exists($style_path) ? filemtime($style_path) : time();
+        $src = add_query_arg('ver', $version, remove_query_arg('ver', $src));
+    }
+
+    return $src;
+}, 20, 2);
+
 // Enqueue custom assets for the child theme.
 add_action('wp_enqueue_scripts', function () {
     if (is_admin()) {
@@ -666,3 +678,53 @@ add_action('wp_head', function() {
     </style>
     <?php
 }, 999); // Priority 999 = load LAST, override everything
+
+// -----------------------------------------------------------------------------
+// UX IMPROVEMENTS: PRODUCT LOOP + BLOG COPY
+// -----------------------------------------------------------------------------
+
+remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
+add_action('woocommerce_shop_loop_item_title', function () {
+    $product_id = get_the_ID();
+    $categories = get_the_terms($product_id, 'product_cat');
+    if ($categories && !is_wp_error($categories)) {
+        $primary = array_shift($categories);
+        echo '<span class="product-category">' . esc_html($primary->name) . '</span>';
+    }
+
+    echo '<h2 class="woocommerce-loop-product__title">' . esc_html(get_the_title()) . '</h2>';
+}, 10);
+
+add_filter('flatsome_blog_no_comments_text', function () {
+    return 'Ainda não há comentários. Seja o primeiro a comentar!';
+});
+
+add_action('wp_footer', function () {
+    if (!is_page('faq')) {
+        return;
+    }
+    ?>
+    <script>
+    document.querySelectorAll('.faq-section h3').forEach(function (title) {
+        const answer = title.nextElementSibling;
+        if (!answer) { return; }
+        answer.style.maxHeight = '0px';
+        answer.style.overflow = 'hidden';
+        answer.dataset.collapsed = 'true';
+        title.classList.add('faq-question');
+        title.addEventListener('click', function () {
+            const expanded = answer.dataset.collapsed === 'false';
+            if (expanded) {
+                answer.style.maxHeight = '0px';
+                answer.dataset.collapsed = 'true';
+                title.classList.remove('is-open');
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.dataset.collapsed = 'false';
+                title.classList.add('is-open');
+            }
+        });
+    });
+    </script>
+    <?php
+});
