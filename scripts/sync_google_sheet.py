@@ -74,12 +74,18 @@ def load_sheet_rows():
 
     sheet = client.open_by_key(SHEET_ID)
     worksheet = sheet.worksheet(WORKSHEET_NAME) if WORKSHEET_NAME else sheet.sheet1
-    rows = worksheet.get_all_records()
+    rows_raw = worksheet.get_all_records()
     headers = worksheet.row_values(1)
 
     missing = [col for col in REQUIRED_COLUMNS if col not in headers]
     if missing:
         raise SystemExit(f"Colunas obrigatórias em falta no Sheet: {', '.join(missing)}")
+
+    # Add row number to each row (starting from 2, after header)
+    rows = []
+    for idx, row in enumerate(rows_raw, start=2):
+        row['_row_number'] = idx
+        rows.append(row)
 
     return rows
 
@@ -121,8 +127,20 @@ def merge_sheet(rows: List[Dict], catalog: List[Dict]) -> List[Dict]:
     catalog_by_sku = {record_key(r): r for r in catalog}
     updated = []
     seen = set()
+    seen_unique_keys = set()  # Track (sheet, row_number) to avoid duplicates
 
     for row in rows:
+        # Get sheet name and row number
+        sheet_name = str(row.get("Sheet", "")).strip()
+        row_number = row.get("_row_number")
+
+        # Create unique key (sheet, row) - FASE 0 deduplication method
+        unique_key = (sheet_name, row_number)
+        if unique_key in seen_unique_keys:
+            print(f"[SKIP] Duplicate row: Sheet '{sheet_name}', Row {row_number}")
+            continue
+        seen_unique_keys.add(unique_key)
+
         sku = str(row.get("SKU", "")).strip()
         if not sku:
             continue
@@ -180,9 +198,11 @@ def merge_sheet(rows: List[Dict], catalog: List[Dict]) -> List[Dict]:
             else:
                 base[target] = value
 
-        # ensure sheet column
+        # ensure sheet column + row number for traceability
         if row.get("Sheet"):
             base["sheet"] = row["Sheet"].strip()
+        if row.get("_row_number"):
+            base["sheet_row"] = row["_row_number"]
         base["supplier_code"] = sku
         base.setdefault("price", row.get("Preço") or base.get("price"))
         try:

@@ -4086,6 +4086,100 @@
     "long_description": "Découvrez notre Casquette - 18474OL = 18519OL au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
+    "sheet": "COWBOY",
+    "sheet_row": 16,
+    "brand": "HOLOGRAMME",
+    "name": "VISEIRA  FEMININA",
+    "info_short": "COR        \nBege, Castanho, Verde, Azul, Bordo, Marinho\n\nTAMANHO                \n55 , 56 , 57 , 58 , 59 , 60 , 61\n\nVENDIDO POR        \nPacote 24\n\nCOMPOSIÇÃO                \n69% Poliéster – 31% Algodão / Forro 100% Algodão",
+    "supplier_url": "https://hologrammeparis.com/product/casquette-18474ol/",
+    "extra_urls": [
+      "https://hologrammeparis.com/product/casquette-e18107gr/"
+    ],
+    "price": 8.0,
+    "supplier_code": "HOLOGRAMME",
+    "tags": [
+      "VISEIRA  FEMININA"
+    ],
+    "specs": {
+      "COR": "Pink, verde, preto, azul, bege, camel",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61",
+      "COMPOSIÇÃO": "69% Poliéster – 31% Algodão / Forro 100% Algodão",
+      "VENDIDO POR": "Pacote 24"
+    },
+    "variations": "https://hologrammeparis.com/product/casquette-18474ol/",
+    "downloaded_images": [
+      {
+        "path": "images/cowboy/hologramme/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cowboy/hologramme/img_02.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cowboy/hologramme/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/cowboy/hologramme/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/casquette-18474ol/",
+        "name": "Casquette - 18474OL = 18519OL - Hologramme Paris",
+        "description": "Découvrez notre Casquette - 18474OL = 18519OL au prix de grossiste pour votre boutique sur Hologramme Paris.",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-2.jpg",
+            "alt": "Casquette - 18474OL = 18519OL – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-3.jpg",
+            "alt": "Casquette - 18474OL = 18519OL – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-4.jpg",
+            "alt": "Casquette - 18474OL = 18519OL – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "hologramme",
+    "long_description": "Découvrez notre Casquette - Pierre Cardin Noir au prix de grossiste pour votre boutique sur Hologramme Paris."
+  },
+  {
     "sheet": "BOINAS VERÃO",
     "sheet_row": 12,
     "brand": "Boné – 18107\nBoné – 18515 ",
@@ -5457,6 +5551,328 @@
     "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
   },
   {
+    "sheet": "CORTIÇA",
+    "sheet_row": 16,
+    "brand": "MONTADO",
+    "name": "CHAPÉU TIROLÊS EM CORTIÇA",
+    "info_short": null,
+    "supplier_url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+    "extra_urls": [],
+    "price": 45.0,
+    "supplier_code": "VELEN",
+    "tags": [
+      "Chapéu tirolês em cortiça. Na confecção deste chapéu não foi usado nenhum material de origem animal.\n\n– Chapéu tirolês",
+      "100% cortiça\n\n– Produto sustentável.\n\n– Produto produzido em Portugal com cortiça Portuguesa.\n\n– Duradouro",
+      "eco-Friendly e resistente à água.\n\n– Pode ser limpo com água e sabão neutro.\n\n– Cor da peça em exibição: Natural."
+    ],
+    "specs": {
+      "COULEUR": "Natural",
+      "TAILLE": "54, 55 , 56 , 57 , 58 , 59 , 60 , 61, 62, 63",
+      "VENDU PAR": "Unitaire",
+      "COMPOSITION": "100%",
+      "COR": "Natural",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61",
+      "COMPOSIÇÃO": "100%",
+      "VENDIDO POR": "Unitário"
+    },
+    "variations": "Etiqueta: Fabricado em Portugal",
+    "downloaded_images": [
+      {
+        "path": "images/cortiça/velen/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "error": "404 Client Error: Not Found for url: http://velen-cork.com/?product=chapeu-tiroles-em-cortica",
+        "url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+        "images": [],
+        "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+      }
+    ],
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+  },
+  {
+    "sheet": "CORTIÇA",
+    "sheet_row": 16,
+    "brand": "MONTADO",
+    "name": "CHAPÉU TIROLÊS EM CORTIÇA",
+    "info_short": null,
+    "supplier_url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+    "extra_urls": [],
+    "price": 45.0,
+    "supplier_code": "VELEN",
+    "tags": [
+      "Chapéu tirolês em cortiça. Na confecção deste chapéu não foi usado nenhum material de origem animal.\n\n– Chapéu tirolês",
+      "100% cortiça\n\n– Produto sustentável.\n\n– Produto produzido em Portugal com cortiça Portuguesa.\n\n– Duradouro",
+      "eco-Friendly e resistente à água.\n\n– Pode ser limpo com água e sabão neutro.\n\n– Cor da peça em exibição: Natural."
+    ],
+    "specs": {
+      "COULEUR": "Natural",
+      "TAILLE": "54, 55 , 56 , 57 , 58 , 59 , 60 , 61, 62, 63",
+      "VENDU PAR": "Unitaire",
+      "COMPOSITION": "100%",
+      "COR": "Natural",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61",
+      "COMPOSIÇÃO": "100%",
+      "VENDIDO POR": "Unitário"
+    },
+    "variations": "Etiqueta: Fabricado em Portugal",
+    "downloaded_images": [
+      {
+        "path": "images/cortiça/velen/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "error": "404 Client Error: Not Found for url: http://velen-cork.com/?product=chapeu-tiroles-em-cortica",
+        "url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+        "images": [],
+        "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+      }
+    ],
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+  },
+  {
+    "sheet": "CORTIÇA",
+    "sheet_row": 16,
+    "brand": "MONTADO",
+    "name": "CHAPÉU TIROLÊS EM CORTIÇA",
+    "info_short": null,
+    "supplier_url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+    "extra_urls": [],
+    "price": 45.0,
+    "supplier_code": "VELEN",
+    "tags": [
+      "Chapéu tirolês em cortiça. Na confecção deste chapéu não foi usado nenhum material de origem animal.\n\n– Chapéu tirolês",
+      "100% cortiça\n\n– Produto sustentável.\n\n– Produto produzido em Portugal com cortiça Portuguesa.\n\n– Duradouro",
+      "eco-Friendly e resistente à água.\n\n– Pode ser limpo com água e sabão neutro.\n\n– Cor da peça em exibição: Natural."
+    ],
+    "specs": {
+      "COULEUR": "Natural",
+      "TAILLE": "54, 55 , 56 , 57 , 58 , 59 , 60 , 61, 62, 63",
+      "VENDU PAR": "Unitaire",
+      "COMPOSITION": "100%",
+      "COR": "Natural",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61",
+      "COMPOSIÇÃO": "100%",
+      "VENDIDO POR": "Unitário"
+    },
+    "variations": "Etiqueta: Fabricado em Portugal",
+    "downloaded_images": [
+      {
+        "path": "images/cortiça/velen/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "error": "404 Client Error: Not Found for url: http://velen-cork.com/?product=chapeu-tiroles-em-cortica",
+        "url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+        "images": [],
+        "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+      }
+    ],
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+  },
+  {
+    "sheet": "CORTIÇA",
+    "sheet_row": 16,
+    "brand": "MONTADO",
+    "name": "CHAPÉU TIROLÊS EM CORTIÇA",
+    "info_short": null,
+    "supplier_url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+    "extra_urls": [],
+    "price": 45.0,
+    "supplier_code": "VELEN",
+    "tags": [
+      "Chapéu tirolês em cortiça. Na confecção deste chapéu não foi usado nenhum material de origem animal.\n\n– Chapéu tirolês",
+      "100% cortiça\n\n– Produto sustentável.\n\n– Produto produzido em Portugal com cortiça Portuguesa.\n\n– Duradouro",
+      "eco-Friendly e resistente à água.\n\n– Pode ser limpo com água e sabão neutro.\n\n– Cor da peça em exibição: Natural."
+    ],
+    "specs": {
+      "COULEUR": "Natural",
+      "TAILLE": "54, 55 , 56 , 57 , 58 , 59 , 60 , 61, 62, 63",
+      "VENDU PAR": "Unitaire",
+      "COMPOSITION": "100%",
+      "COR": "Natural",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61",
+      "COMPOSIÇÃO": "100%",
+      "VENDIDO POR": "Unitário"
+    },
+    "variations": "Etiqueta: Fabricado em Portugal",
+    "downloaded_images": [
+      {
+        "path": "images/cortiça/velen/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "error": "404 Client Error: Not Found for url: http://velen-cork.com/?product=chapeu-tiroles-em-cortica",
+        "url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+        "images": [],
+        "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+      }
+    ],
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+  },
+  {
+    "sheet": "CORTIÇA",
+    "sheet_row": 16,
+    "brand": "MONTADO",
+    "name": "CHAPÉU TIROLÊS EM CORTIÇA",
+    "info_short": null,
+    "supplier_url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+    "extra_urls": [],
+    "price": 45.0,
+    "supplier_code": "VELEN",
+    "tags": [
+      "Chapéu tirolês em cortiça. Na confecção deste chapéu não foi usado nenhum material de origem animal.\n\n– Chapéu tirolês",
+      "100% cortiça\n\n– Produto sustentável.\n\n– Produto produzido em Portugal com cortiça Portuguesa.\n\n– Duradouro",
+      "eco-Friendly e resistente à água.\n\n– Pode ser limpo com água e sabão neutro.\n\n– Cor da peça em exibição: Natural."
+    ],
+    "specs": {
+      "COULEUR": "Natural",
+      "TAILLE": "54, 55 , 56 , 57 , 58 , 59 , 60 , 61, 62, 63",
+      "VENDU PAR": "Unitaire",
+      "COMPOSITION": "100%",
+      "COR": "Natural",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61",
+      "COMPOSIÇÃO": "100%",
+      "VENDIDO POR": "Unitário"
+    },
+    "variations": "Etiqueta: Fabricado em Portugal",
+    "downloaded_images": [
+      {
+        "path": "images/cortiça/velen/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "error": "404 Client Error: Not Found for url: http://velen-cork.com/?product=chapeu-tiroles-em-cortica",
+        "url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+        "images": [],
+        "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+      }
+    ],
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+  },
+  {
+    "sheet": "CORTIÇA",
+    "sheet_row": 16,
+    "brand": "MONTADO",
+    "name": "CHAPÉU TIROLÊS EM CORTIÇA",
+    "info_short": null,
+    "supplier_url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+    "extra_urls": [],
+    "price": 45.0,
+    "supplier_code": "VELEN",
+    "tags": [
+      "Chapéu tirolês em cortiça. Na confecção deste chapéu não foi usado nenhum material de origem animal.\n\n– Chapéu tirolês",
+      "100% cortiça\n\n– Produto sustentável.\n\n– Produto produzido em Portugal com cortiça Portuguesa.\n\n– Duradouro",
+      "eco-Friendly e resistente à água.\n\n– Pode ser limpo com água e sabão neutro.\n\n– Cor da peça em exibição: Natural."
+    ],
+    "specs": {
+      "COULEUR": "Natural",
+      "TAILLE": "54, 55 , 56 , 57 , 58 , 59 , 60 , 61, 62, 63",
+      "VENDU PAR": "Unitaire",
+      "COMPOSITION": "100%",
+      "COR": "Natural",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61",
+      "COMPOSIÇÃO": "100%",
+      "VENDIDO POR": "Unitário"
+    },
+    "variations": "Etiqueta: Fabricado em Portugal",
+    "downloaded_images": [
+      {
+        "path": "images/cortiça/velen/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "error": "404 Client Error: Not Found for url: http://velen-cork.com/?product=chapeu-tiroles-em-cortica",
+        "url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+        "images": [],
+        "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+      }
+    ],
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+  },
+  {
+    "sheet": "CORTIÇA",
+    "sheet_row": 16,
+    "brand": "MONTADO",
+    "name": "CHAPÉU TIROLÊS EM CORTIÇA",
+    "info_short": null,
+    "supplier_url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+    "extra_urls": [],
+    "price": 45.0,
+    "supplier_code": "VELEN",
+    "tags": [
+      "Chapéu tirolês em cortiça. Na confecção deste chapéu não foi usado nenhum material de origem animal.\n\n– Chapéu tirolês",
+      "100% cortiça\n\n– Produto sustentável.\n\n– Produto produzido em Portugal com cortiça Portuguesa.\n\n– Duradouro",
+      "eco-Friendly e resistente à água.\n\n– Pode ser limpo com água e sabão neutro.\n\n– Cor da peça em exibição: Natural."
+    ],
+    "specs": {
+      "COULEUR": "Natural",
+      "TAILLE": "54, 55 , 56 , 57 , 58 , 59 , 60 , 61, 62, 63",
+      "VENDU PAR": "Unitaire",
+      "COMPOSITION": "100%",
+      "COR": "Natural",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61",
+      "COMPOSIÇÃO": "100%",
+      "VENDIDO POR": "Unitário"
+    },
+    "variations": "Etiqueta: Fabricado em Portugal",
+    "downloaded_images": [
+      {
+        "path": "images/cortiça/velen/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "error": "404 Client Error: Not Found for url: http://velen-cork.com/?product=chapeu-tiroles-em-cortica",
+        "url": "https://vips-velen.pt/?product=chapeu-tiroles-em-cortica",
+        "images": [],
+        "description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+      }
+    ],
+    "slug": "velen",
+    "long_description": "Boné Vegan estilo basebol de cortiça. 100% Eco-Friendly, produzido em Portugal. Leve,  prático e resistente. Montado - Cortiça com Arte."
+  },
+  {
     "sheet": "GORROS",
     "sheet_row": 2,
     "brand": "HOLOGRAMME",
@@ -5512,6 +5928,229 @@
     ],
     "slug": "chapka-6064",
     "long_description": "Hologramme est un grossiste de Toques et Chapkas avec 40 ans d’expérience. Découvrez nos collections de chapeaux en fourrure au tarif de gros."
+  },
+  {
+    "sheet": "GORROS",
+    "sheet_row": 6,
+    "brand": "HOLOGRAMME",
+    "name": "CHAPÉU CHAPKA",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/toque-49171-simili-cuir/?attribute_pa_couleur=rouge-noir",
+    "extra_urls": [],
+    "price": 3.0,
+    "supplier_code": "Chapéu – 49171",
+    "tags": [
+      "Etiqueta: Fabricado em Portugal"
+    ],
+    "specs": {
+      "COR": "Bege , Azul Claro , Borgonha , Cinza , Marinho , Marrom , Mostarda , Preto , Laranja , Rosa , Vermelho , Verde",
+      "COMPOSIÇÃO": "100% modacrílica"
+    },
+    "variations": "https://hologrammeparis.com/product/toque-49171-simili-cuir/?attribute_pa_couleur=rouge-noir",
+    "downloaded_images": [
+      {
+        "path": "images/gorros/chapeu-49171/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      }
+    ],
+    "filtered_images": [
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Bordeaux-1.jpg",
+        "reason": "fallback_used_low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Bordeaux-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Bordeaux-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Marine-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Marine-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Marron-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Marron-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Noir-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Noir-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Noir-Blanc-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Noir-Blanc-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Rouge-Noir-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Rouge-Noir-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      }
+    ],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/toque-49171-simili-cuir/?attribute_pa_couleur=rouge-noir",
+        "name": "Toque - 49171 Simili-Cuir - Hologramme Paris",
+        "description": "Fausse fourrure en 100% Modacrylique",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Bordeaux-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Bordeaux-2.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Bordeaux-3.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Marine-2.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Marine-3.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Marron-2.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Marron-3.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Noir-2.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 8",
+            "origin": "gallery",
+            "position": 11,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Noir-3.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 9",
+            "origin": "gallery",
+            "position": 12,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Noir-Blanc-2.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 10",
+            "origin": "gallery",
+            "position": 13,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Noir-Blanc-3.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 11",
+            "origin": "gallery",
+            "position": 14,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Rouge-Noir-2.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 12",
+            "origin": "gallery",
+            "position": 15,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/49171-Simili-cuir-Rouge-Noir-3.jpg",
+            "alt": "Toque - 49171 Simili-Cuir – Image 13",
+            "origin": "gallery",
+            "position": 16,
+            "width_hint": 533,
+            "height_hint": 800
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "chapeu-49171",
+    "long_description": "Fausse fourrure en 100% Modacrylique Nous essayons de mettre 6 couleurs différentes par pack."
   },
   {
     "sheet": "GORROS",
@@ -5816,6 +6455,162 @@
     ],
     "slug": "bonnet-pierre-cardin",
     "long_description": "Découvrez notre Bonnet - Pierre Cardin au prix de grossiste pour votre boutique sur Hologramme Paris."
+  },
+  {
+    "sheet": "CHAPÉUS LÃ",
+    "sheet_row": 4,
+    "brand": "HOLOGRAMME",
+    "name": "CHAPEU FEDORA",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/chapeau-art-01-gros-grain-pack-12/",
+    "extra_urls": [],
+    "price": 35.0,
+    "supplier_code": "Tags: Fabricado na Itália , Lã Pura",
+    "tags": [
+      "Nossa versão Hologram Paris do “Fedora clássico”\n\nChapéu com fita tom sobre tom",
+      "100 g de pura lã.\n\nSóbrio e sem logótipo visível.\n\n100% lã e fabricação italiana"
+    ],
+    "specs": {
+      "COR": "Sortido",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61 , 62",
+      "VENDIDO POR": "Pacote 12",
+      "COMPOSIÇÃO": "100% Lã"
+    },
+    "variations": "Bege , Branco , Branco Preto , Verde-azulado, Azul Céu , Azul Royal , Borgonha , Camelo , Castor , Creme , Cinza Claro , Cinza Escuro , Índigo , Cáqui , Marinho , Marrom , Mostarda , Preto , Laranja , Rosa , Vermelho , Ferrugem , Rubino , Verde Escuro , Rosa Velha",
+    "downloaded_images": [
+      {
+        "path": "images/chapéus lã/tags-fabricado-na-italia-la-pura/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      }
+    ],
+    "filtered_images": [
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Creme.jpg",
+        "reason": "fallback_used_low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-4.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-Noir-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-Noir-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-Noir-4.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-Noir-5.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      }
+    ],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/chapeau-art-01-gros-grain-pack-12/",
+        "name": "Chapeau - Art 01 Gros grain (Pack 12) - Hologramme Paris",
+        "description": "Notre version Hologramme Paris du \"Fedora classique\" Chapeau avec un Ruban ton sur ton, 100 g de pure laine. Sobre et sans logo apparent.",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Creme.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-2.jpg",
+            "alt": "Chapeau - Art 01 Gros grain (Pack 12) – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-3.jpg",
+            "alt": "Chapeau - Art 01 Gros grain (Pack 12) – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-4.jpg",
+            "alt": "Chapeau - Art 01 Gros grain (Pack 12) – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-Noir-2.jpg",
+            "alt": "Chapeau - Art 01 Gros grain (Pack 12) – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-Noir-3.jpg",
+            "alt": "Chapeau - Art 01 Gros grain (Pack 12) – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-Noir-4.jpg",
+            "alt": "Chapeau - Art 01 Gros grain (Pack 12) – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Art-01-Gros-grain-Blanc-Noir-5.jpg",
+            "alt": "Chapeau - Art 01 Gros grain (Pack 12) – Image 8",
+            "origin": "gallery",
+            "position": 11,
+            "width_hint": 533,
+            "height_hint": 800
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "tags-fabricado-na-italia-la-pura",
+    "long_description": "Notre version Hologramme Paris du \"Fedora classique\" Chapeau avec une ceinture contrastante marron, 100 g de pure laine. Sobre et sans logo apparent. 100% Laine et fabrication italienne"
   },
   {
     "sheet": "CHAPÉUS LÃ",
@@ -8992,6 +9787,1820 @@
   },
   {
     "sheet": "CERIMÓNIA",
+    "sheet_row": 8,
+    "brand": "HOLOGRAMME",
+    "name": "CHAPÉUS DE PALHA FEMININOS",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/paille-12673/",
+    "extra_urls": [],
+    "price": "Tags: Fabricado na China , Tamanho ajustável",
+    "supplier_code": "Palha – 12673",
+    "tags": [
+      "Nossa versão Hologram Paris do chapéu de palha em forma de sino.\n\nChapéu luxuoso tricotado em palha de ráfia extrafina .\nSólido",
+      "dobrável e intemporal.\n\nPalha 100% Ráfia"
+    ],
+    "specs": {
+      "COR": "Natural, Preto",
+      "TAMANHO": "Tamanho único",
+      "VENDIDO POR": "Unitário",
+      "COMPOSIÇÃO": "Palha 100% natural"
+    },
+    "variations": "https://hologrammeparis.com/product/paille-12673/",
+    "downloaded_images": [
+      {
+        "path": "images/cerimónia/palha-12673/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cerimónia/palha-12673/img_02.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cerimónia/palha-12673/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/cerimónia/palha-12673/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      },
+      {
+        "path": "images/cerimónia/palha-12673/img_05.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 5
+      },
+      {
+        "path": "images/cerimónia/palha-12673/img_06.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 6
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/paille-12673/",
+        "name": "Paille - 12673 - Hologramme Paris",
+        "description": "Découvrez notre Paille - 12673 au prix de grossiste pour votre boutique sur Hologramme Paris.",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12673-Naturel-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12673-Naturel-2.jpg",
+            "alt": "Paille - 12673 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12673-Naturel-3.jpg",
+            "alt": "Paille - 12673 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2022/01/12673-Noir-1.jpg",
+            "alt": "Paille - 12673 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2022/01/12673-Noir-2.jpg",
+            "alt": "Paille - 12673 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2022/01/12673-Noir-4.jpg",
+            "alt": "Paille - 12673 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 800,
+            "height_hint": 1200
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "palha-12673",
+    "long_description": "Découvrez notre Paille - 12673 au prix de grossiste pour votre boutique sur Hologramme Paris."
+  },
+  {
+    "sheet": "CERIMÓNIA",
+    "sheet_row": 10,
+    "brand": "HOLOGRAMME",
+    "name": "BONÉS DE VERÃO PARA MULHERES",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/casquette-12625/",
+    "extra_urls": [],
+    "price": "Etiqueta: Fabricado na China",
+    "supplier_code": "Boné – 12625",
+    "tags": [
+      "BONÉS DE VERÃO PARA MULHERES"
+    ],
+    "specs": {
+      "COR": "Bege , Branco , Camelo , Cinza , Marinho , Vermelho",
+      "TAMANHO": "56 , 58",
+      "VENDIDO POR": "Pacote 24",
+      "COMPOSIÇÃO": "7% Viscose – 33% Algodão – 60% Poliéster"
+    },
+    "variations": "Pacote de 24 peças variadas:\n2 * vermelho, 2 * verde, 2 * azul celeste, 4 * camelo, 4 * cru, 3 * branco, 3 * bege, 3 * marinho, 1 * cinza\n",
+    "downloaded_images": [
+      {
+        "path": "images/cerimónia/bone-12625/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cerimónia/bone-12625/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cerimónia/bone-12625/img_05.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/cerimónia/bone-12625/img_06.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      },
+      {
+        "path": "images/cerimónia/bone-12625/img_07.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 5
+      },
+      {
+        "path": "images/cerimónia/bone-12625/img_08.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 6
+      },
+      {
+        "path": "images/cerimónia/bone-12625/img_10.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 7
+      }
+    ],
+    "filtered_images": [
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-4.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-5.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-6.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-7.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-8.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-9.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      }
+    ],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/casquette-12625/",
+        "name": "Casquette - 12625 - Hologramme Paris",
+        "description": "Paquet de 24 pcs assorties: 2*Rouge, 2*Vert, 2*Bleu Ciel, 4*Camel, 4*Ecru, 3*Blanc, 3*Beige, 3*Marine, 1*Gris",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-4.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-5.jpg",
+            "alt": "Casquette - 12625 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2025/06/12625-1.jpg",
+            "alt": "Casquette - 12625 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2025/06/12625-3.jpg",
+            "alt": "Casquette - 12625 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2025/06/12625-2.jpg",
+            "alt": "Casquette - 12625 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2025/06/12625-4.jpg",
+            "alt": "Casquette - 12625 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2022/01/12625-6.jpg",
+            "alt": "Casquette - 12625 – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2022/01/12625-7.jpg",
+            "alt": "Casquette - 12625 – Image 8",
+            "origin": "gallery",
+            "position": 11,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-6.jpg",
+            "alt": "Casquette - 12625 – Image 9",
+            "origin": "gallery",
+            "position": 12,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2022/01/12625-9.jpg",
+            "alt": "Casquette - 12625 – Image 10",
+            "origin": "gallery",
+            "position": 13,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-7.jpg",
+            "alt": "Casquette - 12625 – Image 11",
+            "origin": "gallery",
+            "position": 14,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-8.jpg",
+            "alt": "Casquette - 12625 – Image 12",
+            "origin": "gallery",
+            "position": 15,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-9.jpg",
+            "alt": "Casquette - 12625 – Image 13",
+            "origin": "gallery",
+            "position": 16,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12625-3.jpg",
+            "alt": "Casquette - 12625 – Image 14",
+            "origin": "gallery",
+            "position": 17,
+            "width_hint": 533,
+            "height_hint": 800
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "bone-12625",
+    "long_description": "Paquet de 24 pcs assorties: 2*Rouge, 2*Vert, 2*Bleu Ciel, 4*Camel, 4*Ecru, 3*Blanc, 3*Beige, 3*Marine, 1*Gris"
+  },
+  {
+    "sheet": "CERIMÓNIA",
+    "sheet_row": 12,
+    "brand": "HOLOGRAMME",
+    "name": "BONÉS DE VERÃO PARA MULHERES",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/casquette-2018016/",
+    "extra_urls": [],
+    "price": "Etiqueta: Fabricado na China",
+    "supplier_code": "Boné – 2018016",
+    "tags": [
+      "BONÉS DE VERÃO PARA MULHERES"
+    ],
+    "specs": {
+      "COR": "Bordeaux ,",
+      "TAMANHO": "55 , 57",
+      "VENDIDO POR": "Pacote 24",
+      "COMPOSIÇÃO": "100% Algodão / Forro: 100% Poliéster"
+    },
+    "variations": "Pacote de 24 peças variadas:\n3*Cáqui, 5*Preto, 3*Bordeaux, 3*Azul, 2*Laranja, 4*Cinza, 4*Bege\n\n",
+    "downloaded_images": [],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "error": "404 Client Error: Not Found for url: https://hologrammeparis.com/product/casquette-2018016/",
+        "url": "https://hologrammeparis.com/product/casquette-2018016/",
+        "images": []
+      }
+    ],
+    "slug": "bone-2018016"
+  },
+  {
+    "sheet": "CERIMÓNIA",
+    "sheet_row": 14,
+    "brand": "HOLOGRAMME",
+    "name": "BONÉS DE VERÃO PARA MULHERES",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/visiere-23119/",
+    "extra_urls": [],
+    "price": "Etiqueta: Fabricado na China",
+    "supplier_code": "Viseira – 23119",
+    "tags": [
+      "SIZE\t\nOne size adjustable"
+    ],
+    "specs": {
+      "COR": "Bege , Bordéus , Marinho , Preto , Rosa , Vermelho",
+      "VENDIDO POR": "Pacote 15",
+      "COMPOSIÇÃO": "100% Papel"
+    },
+    "variations": "Pacote de 30 peças variadas:\n2*Rosa, 5*Laranja, 5*Roxo, 6*Azul, 6*Bege, 6*Preto",
+    "downloaded_images": [
+      {
+        "path": "images/cerimónia/viseira-23119/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      }
+    ],
+    "filtered_images": [
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-1.jpg",
+        "reason": "fallback_used_low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-7.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-4.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-5.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-6.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      }
+    ],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/visiere-23119/",
+        "name": "Visière - 23119 - Hologramme Paris",
+        "description": "Paquet de 30 pcs assorties: 2*Rose, 5*Orange, 5*Violet, 6*Bleu, 6*Beige, 6*Noir",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-7.jpg",
+            "alt": "Visière - 23119 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-2.jpg",
+            "alt": "Visière - 23119 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-3.jpg",
+            "alt": "Visière - 23119 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-4.jpg",
+            "alt": "Visière - 23119 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-5.jpg",
+            "alt": "Visière - 23119 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/23119-6.jpg",
+            "alt": "Visière - 23119 – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 533,
+            "height_hint": 800
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "viseira-23119",
+    "long_description": "Paquet de 30 pcs assorties: 2*Rose, 5*Orange, 5*Violet, 6*Bleu, 6*Beige, 6*Noir"
+  },
+  {
+    "sheet": "CERIMÓNIA",
+    "sheet_row": 16,
+    "brand": "HOLOGRAMME",
+    "name": "BONÉS DE INVERNO PARA MULHERES",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/casquette-2018039/",
+    "extra_urls": [],
+    "price": "NÃO TEM MAIS NO ESTOQUE",
+    "supplier_code": "Boné – 2018039",
+    "tags": [
+      "Fabricado na China",
+      "Mistura de lã"
+    ],
+    "specs": {
+      "COR": "Azul , Cinza , Cinza Escuro , Preto , Vermelho , Verde",
+      "TAMANHO": "56 , 58",
+      "VENDIDO POR": "Pacote 12",
+      "COMPOSIÇÃO": "5% Acrílico – 7% Fibra – 40% Lã – 48% Poliéster"
+    },
+    "variations": "2*Cinza claro, \n1*Cinza escuro, \n1*Cáqui, \n1*Bordeaux, \n1*Vermelho, \n2*Marinho, \n4*Preto",
+    "downloaded_images": [
+      {
+        "path": "images/cerimónia/bone-2018039/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cerimónia/bone-2018039/img_02.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cerimónia/bone-2018039/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/cerimónia/bone-2018039/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      }
+    ],
+    "filtered_images": [
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-4.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-5.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-6.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-7.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-1.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-8.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-9.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-10.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      }
+    ],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/casquette-2018039/",
+        "name": "Casquette - 2018039 - Hologramme Paris",
+        "description": "Paquet de 12 pcs assorties: 2*Gris Clair, 1*Gris Fonce, 1*Kaki, 1*Bordeaux, 1*Rouge, 2*Marine, 4*Noir",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/2018039-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/2018039-4.jpg",
+            "alt": "Casquette - 2018039 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/2018039-2.jpg",
+            "alt": "Casquette - 2018039 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/2018039-3.jpg",
+            "alt": "Casquette - 2018039 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-3.jpg",
+            "alt": "Casquette - 2018039 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-4.jpg",
+            "alt": "Casquette - 2018039 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-5.jpg",
+            "alt": "Casquette - 2018039 – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-6.jpg",
+            "alt": "Casquette - 2018039 – Image 8",
+            "origin": "gallery",
+            "position": 11,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-7.jpg",
+            "alt": "Casquette - 2018039 – Image 9",
+            "origin": "gallery",
+            "position": 12,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-1.jpg",
+            "alt": "Casquette - 2018039 – Image 10",
+            "origin": "gallery",
+            "position": 13,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-8.jpg",
+            "alt": "Casquette - 2018039 – Image 11",
+            "origin": "gallery",
+            "position": 14,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-9.jpg",
+            "alt": "Casquette - 2018039 – Image 12",
+            "origin": "gallery",
+            "position": 15,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/2018039-10.jpg",
+            "alt": "Casquette - 2018039 – Image 13",
+            "origin": "gallery",
+            "position": 16,
+            "width_hint": 533,
+            "height_hint": 800
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "bone-2018039",
+    "long_description": "Paquet de 12 pcs assorties: 2*Gris Clair, 1*Gris Fonce, 1*Kaki, 1*Bordeaux, 1*Rouge, 2*Marine, 4*Noir"
+  },
+  {
+    "sheet": "CERIMÓNIA",
+    "sheet_row": 18,
+    "brand": "HOLOGRAMME",
+    "name": "BONÉS DE INVERNO PARA MULHERES",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/casquette-22103/",
+    "extra_urls": [],
+    "price": 14.0,
+    "supplier_code": "Casquette – 22103",
+    "tags": [
+      "Fabricado na China",
+      "Mistura de lã"
+    ],
+    "specs": {
+      "COR": "Preto",
+      "TAMANHO": "Unico",
+      "COMPOSIÇÃO": "50% Polyester – 50% Laine"
+    },
+    "variations": "https://hologrammeparis.com/product/casquette-22103/",
+    "downloaded_images": [
+      {
+        "path": "images/cerimónia/casquette-22103/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cerimónia/casquette-22103/img_02.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cerimónia/casquette-22103/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/cerimónia/casquette-22103/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      }
+    ],
+    "filtered_images": [
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-8.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-4.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-5.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-6.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-7.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-9.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-11.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-12.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-13.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-14.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-15.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-16.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-17.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      }
+    ],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/casquette-22103/",
+        "name": "Casquette - 22103 - Hologramme Paris",
+        "description": "Paquet de 24 pcs assorties: 2 pcs de chaque couleur",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/22103-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/22103-4.jpg",
+            "alt": "Casquette - 22103 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/22103-2.jpg",
+            "alt": "Casquette - 22103 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/22103-3.jpg",
+            "alt": "Casquette - 22103 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-8.jpg",
+            "alt": "Casquette - 22103 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-2.jpg",
+            "alt": "Casquette - 22103 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-4.jpg",
+            "alt": "Casquette - 22103 – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-5.jpg",
+            "alt": "Casquette - 22103 – Image 8",
+            "origin": "gallery",
+            "position": 11,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-3.jpg",
+            "alt": "Casquette - 22103 – Image 9",
+            "origin": "gallery",
+            "position": 12,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-6.jpg",
+            "alt": "Casquette - 22103 – Image 10",
+            "origin": "gallery",
+            "position": 13,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-7.jpg",
+            "alt": "Casquette - 22103 – Image 11",
+            "origin": "gallery",
+            "position": 14,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-9.jpg",
+            "alt": "Casquette - 22103 – Image 12",
+            "origin": "gallery",
+            "position": 15,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-11.jpg",
+            "alt": "Casquette - 22103 – Image 13",
+            "origin": "gallery",
+            "position": 16,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-12.jpg",
+            "alt": "Casquette - 22103 – Image 14",
+            "origin": "gallery",
+            "position": 17,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-13.jpg",
+            "alt": "Casquette - 22103 – Image 15",
+            "origin": "gallery",
+            "position": 18,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-14.jpg",
+            "alt": "Casquette - 22103 – Image 16",
+            "origin": "gallery",
+            "position": 19,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-15.jpg",
+            "alt": "Casquette - 22103 – Image 17",
+            "origin": "gallery",
+            "position": 20,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-16.jpg",
+            "alt": "Casquette - 22103 – Image 18",
+            "origin": "gallery",
+            "position": 21,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/22103-17.jpg",
+            "alt": "Casquette - 22103 – Image 19",
+            "origin": "gallery",
+            "position": 22,
+            "width_hint": 533,
+            "height_hint": 800
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "casquette-22103",
+    "long_description": "Paquet de 24 pcs assorties: 2 pcs de chaque couleur"
+  },
+  {
+    "sheet": "CERIMÓNIA",
+    "sheet_row": 20,
+    "brand": "HOLOGRAMME",
+    "name": "BONÉS DE INVERNO PARA MULHERES",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/casquette-12448/",
+    "extra_urls": [],
+    "price": 15.0,
+    "supplier_code": "Casquette – 12448",
+    "tags": [
+      "Fabricado na China",
+      "Tamanho ajustável"
+    ],
+    "specs": {
+      "COR": "2*Mostarda, 2*Marrom, 3*Bordéus, 3*Marinho, 3*Verde, 3*Azul, 3*Taupe, 5*Preto",
+      "TAMANHO": "Unico com ajuste (elástico)",
+      "COMPOSIÇÃO": "100% PU"
+    },
+    "variations": "2*Mostarda, 2*Marrom, 3*Bordéus, 3*Marinho, 3*Verde, 3*Azul, 3*Taupe, 5*Preto",
+    "downloaded_images": [
+      {
+        "path": "images/cerimónia/casquette-12448/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cerimónia/casquette-12448/img_02.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cerimónia/casquette-12448/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/cerimónia/casquette-12448/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      },
+      {
+        "path": "images/cerimónia/casquette-12448/img_05.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 5
+      },
+      {
+        "path": "images/cerimónia/casquette-12448/img_06.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 6
+      },
+      {
+        "path": "images/cerimónia/casquette-12448/img_07.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 7
+      },
+      {
+        "path": "images/cerimónia/casquette-12448/img_08.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 8
+      },
+      {
+        "path": "images/cerimónia/casquette-12448/img_09.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 9
+      },
+      {
+        "path": "images/cerimónia/casquette-12448/img_10.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 10
+      },
+      {
+        "path": "images/cerimónia/casquette-12448/img_11.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 11
+      }
+    ],
+    "filtered_images": [
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12448-4.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      }
+    ],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/casquette-12448/",
+        "name": "Casquette - 12448 - Hologramme Paris",
+        "description": "Paquet de 24 pcs assorties: 2*Moutarde, 2*Marron, 3*Bordeaux, 3*Marine, 3*Vert, 3*Bleu, 3*Taupe, 5*Noir",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-4.jpg",
+            "alt": "Casquette - 12448 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-2.jpg",
+            "alt": "Casquette - 12448 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-3.jpg",
+            "alt": "Casquette - 12448 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-9.jpg",
+            "alt": "Casquette - 12448 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-7.jpg",
+            "alt": "Casquette - 12448 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-8.jpg",
+            "alt": "Casquette - 12448 – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-6.jpg",
+            "alt": "Casquette - 12448 – Image 8",
+            "origin": "gallery",
+            "position": 11,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-5.jpg",
+            "alt": "Casquette - 12448 – Image 9",
+            "origin": "gallery",
+            "position": 12,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-10.jpg",
+            "alt": "Casquette - 12448 – Image 10",
+            "origin": "gallery",
+            "position": 13,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/10/12448-11.jpg",
+            "alt": "Casquette - 12448 – Image 11",
+            "origin": "gallery",
+            "position": 14,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12448-4.jpg",
+            "alt": "Casquette - 12448 – Image 12",
+            "origin": "gallery",
+            "position": 15,
+            "width_hint": 533,
+            "height_hint": 800
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "casquette-12448",
+    "long_description": "Paquet de 24 pcs assorties: 2*Moutarde, 2*Marron, 3*Bordeaux, 3*Marine, 3*Vert, 3*Bleu, 3*Taupe, 5*Noir"
+  },
+  {
+    "sheet": "CERIMÓNIA",
+    "sheet_row": 22,
+    "brand": "HOLOGRAMME",
+    "name": "CHAPÉUS DE PALHA FEMININOS",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/paille-12511/",
+    "extra_urls": [],
+    "price": "Tags: Fabricado na China , Tamanho ajustável",
+    "supplier_code": "Palha – 12511",
+    "tags": [
+      "Nossa versão Hologram Paris do chapéu de palha em forma de sino.\n\nChapéu luxuoso tricotado em palha de ráfia extrafina .\nSólido",
+      "dobrável e intemporal.\n\nPalha 100% Ráfia"
+    ],
+    "specs": {
+      "COR": "Camel , Cinza , Natural , Preto , Verde",
+      "TAMANHO": "Tamanho único",
+      "VENDIDO POR": "Unitário",
+      "COMPOSIÇÃO": "Palha 100% natural"
+    },
+    "variations": "https://hologrammeparis.com/product/paille-12511/",
+    "downloaded_images": [
+      {
+        "path": "images/cerimónia/palha-12511/img_09.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cerimónia/palha-12511/img_10.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      }
+    ],
+    "filtered_images": [
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-7.jpg",
+        "reason": "low_resolution",
+        "width": 528,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12516-4.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-1.jpg",
+        "reason": "low_resolution",
+        "width": 528,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-5.jpg",
+        "reason": "low_resolution",
+        "width": 528,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-4.jpg",
+        "reason": "low_resolution",
+        "width": 528,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-6.jpg",
+        "reason": "low_resolution",
+        "width": 522,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-3.jpg",
+        "reason": "low_resolution",
+        "width": 528,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-2.jpg",
+        "reason": "low_resolution",
+        "width": 527,
+        "height": 800
+      }
+    ],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/paille-12511/",
+        "name": "Paille - 12511 - Hologramme Paris",
+        "description": "Découvrez notre Paille - 12511 au prix de grossiste pour votre boutique sur Hologramme Paris.",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-7.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12516-4.jpg",
+            "alt": "Paille - 12511 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-1.jpg",
+            "alt": "Paille - 12511 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 528,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-5.jpg",
+            "alt": "Paille - 12511 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 528,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-4.jpg",
+            "alt": "Paille - 12511 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 528,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-6.jpg",
+            "alt": "Paille - 12511 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 522,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-3.jpg",
+            "alt": "Paille - 12511 – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 528,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12511-2.jpg",
+            "alt": "Paille - 12511 – Image 8",
+            "origin": "gallery",
+            "position": 11,
+            "width_hint": 527,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12511-Gris.jpg",
+            "alt": "Paille - 12511 – Image 9",
+            "origin": "gallery",
+            "position": 12,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12511-Noir.jpg",
+            "alt": "Paille - 12511 – Image 10",
+            "origin": "gallery",
+            "position": 13,
+            "width_hint": 800,
+            "height_hint": 1200
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "palha-12511",
+    "long_description": "Découvrez notre Paille - 12511 au prix de grossiste pour votre boutique sur Hologramme Paris."
+  },
+  {
+    "sheet": "CERIMÓNIA",
+    "sheet_row": 24,
+    "brand": "HOLOGRAMME",
+    "name": "CHAPÉUS DE PALHA FEMININOS",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/paille-12512/",
+    "extra_urls": [],
+    "price": "Tags: Fabricado na China , Tamanho ajustável",
+    "supplier_code": "Palha – 12512",
+    "tags": [
+      "Nossa versão Hologram Paris do chapéu de palha em forma de sino.\n\nChapéu luxuoso tricotado em palha de ráfia extrafina .\nSólido",
+      "dobrável e intemporal.\n\nPalha 100% Ráfia"
+    ],
+    "specs": {
+      "COR": "Preto, Verde, Natural",
+      "TAMANHO": "Tamanho único",
+      "VENDIDO POR": "Unitário",
+      "COMPOSIÇÃO": "Palha 100% natural"
+    },
+    "variations": "Straw - 12512 - Hologram Paris (hologrammeparis.com)",
+    "downloaded_images": [
+      {
+        "path": "images/cerimónia/palha-12512/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cerimónia/palha-12512/img_02.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cerimónia/palha-12512/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/cerimónia/palha-12512/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      }
+    ],
+    "filtered_images": [
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-7.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-4.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-6.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-5.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      }
+    ],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/paille-12512/",
+        "name": "Paille - 12512 - Hologramme Paris",
+        "description": "Découvrez notre Paille - 12512 au prix de grossiste pour votre boutique sur Hologramme Paris.",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12512-Camel-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12512-Camel-2.jpg",
+            "alt": "Paille - 12512 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12512-Camel-3.jpg",
+            "alt": "Paille - 12512 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12512-Gris.jpg",
+            "alt": "Paille - 12512 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-7.jpg",
+            "alt": "Paille - 12512 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-3.jpg",
+            "alt": "Paille - 12512 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-2.jpg",
+            "alt": "Paille - 12512 – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-4.jpg",
+            "alt": "Paille - 12512 – Image 8",
+            "origin": "gallery",
+            "position": 11,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-6.jpg",
+            "alt": "Paille - 12512 – Image 9",
+            "origin": "gallery",
+            "position": 12,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/12512-5.jpg",
+            "alt": "Paille - 12512 – Image 10",
+            "origin": "gallery",
+            "position": 13,
+            "width_hint": 533,
+            "height_hint": 800
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "palha-12512",
+    "long_description": "Découvrez notre Paille - 12512 au prix de grossiste pour votre boutique sur Hologramme Paris."
+  },
+  {
+    "sheet": "CERIMÓNIA",
+    "sheet_row": 26,
+    "brand": "HOLOGRAMME",
+    "name": "CHAPÉUS DE PALHA FEMININOS",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/paille-12517/",
+    "extra_urls": [],
+    "price": "Tags: Fabricado na China , Tamanho ajustável",
+    "supplier_code": "Palha – 12517",
+    "tags": [
+      "Nossa versão Hologram Paris do chapéu de palha em forma de sino.\n\nChapéu luxuoso tricotado em palha de ráfia extrafina .\nSólido",
+      "dobrável e intemporal.\n\nPalha 100% Ráfia"
+    ],
+    "specs": {
+      "COR": "Cinza, Verde, Natural",
+      "TAMANHO": "Tamanho único",
+      "VENDIDO POR": "Unitário",
+      "COMPOSIÇÃO": "Palha 100% natural"
+    },
+    "variations": "11*Bege, 7*Camelo, 4*Verde, 4*Cinza, 4*Preto",
+    "downloaded_images": [
+      {
+        "path": "images/cerimónia/palha-12517/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_02.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_05.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 5
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_06.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 6
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_07.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 7
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_08.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 8
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_09.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 9
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_10.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 10
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_11.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 11
+      },
+      {
+        "path": "images/cerimónia/palha-12517/img_12.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 12
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/paille-12517/",
+        "name": "Paille - 12517 - Hologramme Paris",
+        "description": "Paquet de 30 pcs assorties: 11*Beige, 7*Camel, 4*Vert, 4*Gris, 4*Noir il reste que du naturel",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/12517-4.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/12517-9.jpg",
+            "alt": "Paille - 12517 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12517-Gris-1.jpg",
+            "alt": "Paille - 12517 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12517-Gris-2.jpg",
+            "alt": "Paille - 12517 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12517-Gris-3.jpg",
+            "alt": "Paille - 12517 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/12517-1.jpg",
+            "alt": "Paille - 12517 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/12517-3.jpg",
+            "alt": "Paille - 12517 – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/12517-7.jpg",
+            "alt": "Paille - 12517 – Image 8",
+            "origin": "gallery",
+            "position": 11,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/12517-6.jpg",
+            "alt": "Paille - 12517 – Image 9",
+            "origin": "gallery",
+            "position": 12,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/12517-8.jpg",
+            "alt": "Paille - 12517 – Image 10",
+            "origin": "gallery",
+            "position": 13,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/08/12517-5.jpg",
+            "alt": "Paille - 12517 – Image 11",
+            "origin": "gallery",
+            "position": 14,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/12517-Noir.jpg",
+            "alt": "Paille - 12517 – Image 12",
+            "origin": "gallery",
+            "position": 15,
+            "width_hint": 800,
+            "height_hint": 1200
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "palha-12517",
+    "long_description": "Paquet de 30 pcs assorties: 11*Beige, 7*Camel, 4*Vert, 4*Gris, 4*Noir il reste que du naturel"
+  },
+  {
+    "sheet": "CERIMÓNIA",
     "sheet_row": 28,
     "brand": "HOLOGRAMME",
     "name": "CHAPÉUS DE PALHA FEMININOS",
@@ -9165,6 +11774,140 @@
     ],
     "slug": "palha-937",
     "long_description": "Paquet de 30 pcs assorties: 12*55, 18*57"
+  },
+  {
+    "sheet": "CERIMÓNIA",
+    "sheet_row": 30,
+    "brand": "HOLOGRAMME",
+    "name": "BOINA CLÁSSICA / BERET",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/beret-5020/?attribute_pa_couleur=beige-na1302",
+    "extra_urls": [],
+    "price": "Etiqueta: Fabricado na China",
+    "supplier_code": "Boina Clássica – 5020",
+    "tags": [
+      "Nossa versão holográfica parisiense da “boina lisa clássica”\n\nSóbrio",
+      "intemporal e sem logótipo visível.\n\n75g de lã escovada e raspada"
+    ],
+    "specs": {
+      "VENDIDO POR": "Unitário",
+      "COMPOSIÇÃO": "100% Lã"
+    },
+    "variations": "https://hologrammeparis.com/product/beret-5020/?attribute_pa_couleur=beige-na1302",
+    "downloaded_images": [
+      {
+        "path": "images/cerimónia/boina-classica-5020/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cerimónia/boina-classica-5020/img_06.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cerimónia/boina-classica-5020/img_07.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      }
+    ],
+    "filtered_images": [
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Beret-5020-Noir-3.00-2.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Beret-5020-Noir-3.00-3.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Beret-5020-Noir-3.00.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      },
+      {
+        "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Beret-5020-Noir-3.00-4.jpg",
+        "reason": "low_resolution",
+        "width": 533,
+        "height": 800
+      }
+    ],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/beret-5020/?attribute_pa_couleur=beige-na1302",
+        "name": "Beret Classique - 5020 - Hologramme Paris",
+        "description": "Notre version Hologramme Paris du \"Béret Uni classique\" Sobre, intemporel et sans logo apparent. 75g de Laine grattée et rasée *les nouvelles couleurs sont à 90% laine.",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/12/5020-Mannequin.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Beret-5020-Noir-3.00-2.jpg",
+            "alt": "Beret Classique - 5020 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Beret-5020-Noir-3.00-3.jpg",
+            "alt": "Beret Classique - 5020 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Beret-5020-Noir-3.00.jpg",
+            "alt": "Beret Classique - 5020 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/07/Beret-5020-Noir-3.00-4.jpg",
+            "alt": "Beret Classique - 5020 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 533,
+            "height_hint": 800
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/12/Shooting-PFS-beret-102021-2.jpg",
+            "alt": "Beret Classique - 5020 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 800,
+            "height_hint": 1180
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2021/12/Shooting-PFS-beret-102021-1.jpg",
+            "alt": "Beret Classique - 5020 – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 800,
+            "height_hint": 1180
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "boina-classica-5020",
+    "long_description": "Notre version Hologramme Paris du \"Béret Uni classique\" Sobre, intemporel et sans logo apparent. 75g de Laine grattée et rasée *les nouvelles couleurs sont à 90% laine."
   },
   {
     "sheet": "PALHA",
@@ -10068,6 +12811,81 @@
     "slug": "solid"
   },
   {
+    "sheet": "PROTEÇÃO SOLAR",
+    "sheet_row": 4,
+    "brand": "SOLID",
+    "name": "CHAPÉU UV",
+    "info_short": null,
+    "supplier_url": null,
+    "extra_urls": [],
+    "price": 19.9,
+    "supplier_code": "SOLID",
+    "tags": [
+      "CHAPÉU UV"
+    ],
+    "specs": {
+      "COR": "Verde, Bege",
+      "TAMANHO": "56 , 58 , 60",
+      "VENDIDO POR": "Unitário",
+      "COMPOSIÇÃO": "100% Nylon"
+    },
+    "variations": null,
+    "downloaded_images": [],
+    "filtered_images": [],
+    "scraped": [],
+    "slug": "solid"
+  },
+  {
+    "sheet": "PROTEÇÃO SOLAR",
+    "sheet_row": 4,
+    "brand": "SOLID",
+    "name": "CHAPÉU UV",
+    "info_short": null,
+    "supplier_url": null,
+    "extra_urls": [],
+    "price": 19.9,
+    "supplier_code": "SOLID",
+    "tags": [
+      "CHAPÉU UV"
+    ],
+    "specs": {
+      "COR": "Verde, Bege",
+      "TAMANHO": "56 , 58 , 60",
+      "VENDIDO POR": "Unitário",
+      "COMPOSIÇÃO": "100% Nylon"
+    },
+    "variations": null,
+    "downloaded_images": [],
+    "filtered_images": [],
+    "scraped": [],
+    "slug": "solid"
+  },
+  {
+    "sheet": "PROTEÇÃO SOLAR",
+    "sheet_row": 4,
+    "brand": "SOLID",
+    "name": "CHAPÉU UV",
+    "info_short": null,
+    "supplier_url": null,
+    "extra_urls": [],
+    "price": 19.9,
+    "supplier_code": "SOLID",
+    "tags": [
+      "CHAPÉU UV"
+    ],
+    "specs": {
+      "COR": "Verde, Bege",
+      "TAMANHO": "56 , 58 , 60",
+      "VENDIDO POR": "Unitário",
+      "COMPOSIÇÃO": "100% Nylon"
+    },
+    "variations": null,
+    "downloaded_images": [],
+    "filtered_images": [],
+    "scraped": [],
+    "slug": "solid"
+  },
+  {
     "sheet": "CHAPÉUS EM TECIDO",
     "sheet_row": 2,
     "brand": "HOLOGRAMME",
@@ -10555,6 +13373,100 @@
     "filtered_images": [],
     "scraped": [],
     "slug": "bucket-hat-reversivel"
+  },
+  {
+    "sheet": "COWBOY",
+    "sheet_row": 16,
+    "brand": "HOLOGRAMME",
+    "name": "VISEIRA  FEMININA",
+    "info_short": "COR        \nBege, Castanho, Verde, Azul, Bordo, Marinho\n\nTAMANHO                \n55 , 56 , 57 , 58 , 59 , 60 , 61\n\nVENDIDO POR        \nPacote 24\n\nCOMPOSIÇÃO                \n69% Poliéster – 31% Algodão / Forro 100% Algodão",
+    "supplier_url": "https://hologrammeparis.com/product/casquette-18474ol/",
+    "extra_urls": [
+      "https://hologrammeparis.com/product/casquette-e18107gr/"
+    ],
+    "price": 8.0,
+    "supplier_code": "HOLOGRAMME",
+    "tags": [
+      "VISEIRA  FEMININA"
+    ],
+    "specs": {
+      "COR": "Pink, verde, preto, azul, bege, camel",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61",
+      "COMPOSIÇÃO": "69% Poliéster – 31% Algodão / Forro 100% Algodão",
+      "VENDIDO POR": "Pacote 24"
+    },
+    "variations": "https://hologrammeparis.com/product/casquette-18474ol/",
+    "downloaded_images": [
+      {
+        "path": "images/cowboy/hologramme/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cowboy/hologramme/img_02.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cowboy/hologramme/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/cowboy/hologramme/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/casquette-18474ol/",
+        "name": "Casquette - 18474OL = 18519OL - Hologramme Paris",
+        "description": "Découvrez notre Casquette - 18474OL = 18519OL au prix de grossiste pour votre boutique sur Hologramme Paris.",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-2.jpg",
+            "alt": "Casquette - 18474OL = 18519OL – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-3.jpg",
+            "alt": "Casquette - 18474OL = 18519OL – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-4.jpg",
+            "alt": "Casquette - 18474OL = 18519OL – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "hologramme",
+    "long_description": "Découvrez notre Casquette - Pierre Cardin Noir au prix de grossiste pour votre boutique sur Hologramme Paris."
   },
   {
     "sheet": "BONÉS",
@@ -12685,6 +15597,252 @@
   },
   {
     "sheet": "BONÉS",
+    "sheet_row": 18,
+    "brand": "HOLOGRAMME",
+    "name": "BONÉS TRUCKER",
+    "info_short": null,
+    "supplier_url": "https://hologrammeparis.com/product/casquette-2015022/",
+    "extra_urls": [],
+    "price": "Tags: Fabricado na China",
+    "supplier_code": "Boné – 22134",
+    "tags": [
+      "BONÉS TRUCKER"
+    ],
+    "specs": {
+      "COR": "Bege , Azul , Bordéus , Cru , Cinza Claro , Cinza Escuro , Cáqui , Marinho , Mostarda , Laranja , Rosa , Verde",
+      "VENDIDO POR": "Pacote 24",
+      "TAMANHO": 575,
+      "COMPOSIÇÃO": "100% algodão"
+    },
+    "variations": "Pacote de 12 peças variadas:\n2*Marinho, 2*Preto, 2*Cinza, 1*Camelo, 1*Bordéus, 1*Vermelho, 1*Cáqui, 1*Azul celeste, 1*Mostarda",
+    "downloaded_images": [
+      {
+        "path": "images/bonés/bone-22134/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/bonés/bone-22134/img_02.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/bonés/bone-22134/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/bonés/bone-22134/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      },
+      {
+        "path": "images/bonés/bone-22134/img_05.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 5
+      },
+      {
+        "path": "images/bonés/bone-22134/img_06.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 6
+      },
+      {
+        "path": "images/bonés/bone-22134/img_07.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 7
+      },
+      {
+        "path": "images/bonés/bone-22134/img_08.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 8
+      },
+      {
+        "path": "images/bonés/bone-22134/img_09.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 9
+      },
+      {
+        "path": "images/bonés/bone-22134/img_10.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 10
+      },
+      {
+        "path": "images/bonés/bone-22134/img_11.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 11
+      },
+      {
+        "path": "images/bonés/bone-22134/img_12.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 12
+      },
+      {
+        "path": "images/bonés/bone-22134/img_13.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 13
+      },
+      {
+        "path": "images/bonés/bone-22134/img_14.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 14
+      },
+      {
+        "path": "images/bonés/bone-22134/img_15.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 15
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/casquette-2015022/",
+        "name": "Casquette - 2015022 - Hologramme Paris",
+        "description": "Paquet de 24 pcs assorties: 3*Noir, 3*Marine, 2*Vert, 2*Turquoise, 2*Bordeaux, 2*Orange, 2*Moutarde, 2*Gris, 2*Beige, 2*Camel, 1*Kaki, 1*Rose",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-3.jpg",
+            "alt": "Casquette - 2015022 – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-2.jpg",
+            "alt": "Casquette - 2015022 – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-4.jpg",
+            "alt": "Casquette - 2015022 – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-5.jpg",
+            "alt": "Casquette - 2015022 – Image 5",
+            "origin": "gallery",
+            "position": 8,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-6.jpg",
+            "alt": "Casquette - 2015022 – Image 6",
+            "origin": "gallery",
+            "position": 9,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-7.jpg",
+            "alt": "Casquette - 2015022 – Image 7",
+            "origin": "gallery",
+            "position": 10,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-8.jpg",
+            "alt": "Casquette - 2015022 – Image 8",
+            "origin": "gallery",
+            "position": 11,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-9.jpg",
+            "alt": "Casquette - 2015022 – Image 9",
+            "origin": "gallery",
+            "position": 12,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-10.jpg",
+            "alt": "Casquette - 2015022 – Image 10",
+            "origin": "gallery",
+            "position": 13,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-11.jpg",
+            "alt": "Casquette - 2015022 – Image 11",
+            "origin": "gallery",
+            "position": 14,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-12.jpg",
+            "alt": "Casquette - 2015022 – Image 12",
+            "origin": "gallery",
+            "position": 15,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-13.jpg",
+            "alt": "Casquette - 2015022 – Image 13",
+            "origin": "gallery",
+            "position": 16,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-14.jpg",
+            "alt": "Casquette - 2015022 – Image 14",
+            "origin": "gallery",
+            "position": 17,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/06/2015022-15.jpg",
+            "alt": "Casquette - 2015022 – Image 15",
+            "origin": "gallery",
+            "position": 18,
+            "width_hint": 800,
+            "height_hint": 1200
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "bone-22134",
+    "long_description": "Paquet de 12 pcs assorties: 2*Marine, 2*Noir, 2*Gris, 1*Camel, 1*Bordeaux, 1*Rouge, 1*Kaki, 1*Bleu Ciel, 1*Moutarde"
+  },
+  {
+    "sheet": "BONÉS",
     "sheet_row": 20,
     "brand": "HOLOGRAMME",
     "name": "BONÉS TRUCKER",
@@ -13012,6 +16170,29 @@
     ],
     "slug": "bone-15263",
     "long_description": "Découvrez notre Casquette - 15263 au prix de grossiste pour votre boutique sur Hologramme Paris."
+  },
+  {
+    "sheet": "COWBOY",
+    "sheet_row": 4,
+    "brand": null,
+    "name": "CHAPÉU COWBOY",
+    "info_short": null,
+    "supplier_url": null,
+    "extra_urls": [],
+    "price": 2.0,
+    "supplier_code": "chapeu-cowboy",
+    "tags": [
+      "CHAPÉU COWBOY"
+    ],
+    "specs": {
+      "COR": "Sortido",
+      "TAMANHO": "UNICO"
+    },
+    "variations": null,
+    "downloaded_images": [],
+    "filtered_images": [],
+    "scraped": [],
+    "slug": "chapeu-cowboy"
   },
   {
     "sheet": "COWBOY",
@@ -14071,5 +17252,99 @@
     ],
     "slug": "bone-18110ec",
     "long_description": "Découvrez notre Casquette - 18110EC au prix de grossiste pour votre boutique sur Hologramme Paris."
+  },
+  {
+    "sheet": "COWBOY",
+    "sheet_row": 16,
+    "brand": "HOLOGRAMME",
+    "name": "VISEIRA  FEMININA",
+    "info_short": "COR        \nBege, Castanho, Verde, Azul, Bordo, Marinho\n\nTAMANHO                \n55 , 56 , 57 , 58 , 59 , 60 , 61\n\nVENDIDO POR        \nPacote 24\n\nCOMPOSIÇÃO                \n69% Poliéster – 31% Algodão / Forro 100% Algodão",
+    "supplier_url": "https://hologrammeparis.com/product/casquette-18474ol/",
+    "extra_urls": [
+      "https://hologrammeparis.com/product/casquette-e18107gr/"
+    ],
+    "price": 8.0,
+    "supplier_code": "HOLOGRAMME",
+    "tags": [
+      "VISEIRA  FEMININA"
+    ],
+    "specs": {
+      "COR": "Pink, verde, preto, azul, bege, camel",
+      "TAMANHO": "55 , 56 , 57 , 58 , 59 , 60 , 61",
+      "COMPOSIÇÃO": "69% Poliéster – 31% Algodão / Forro 100% Algodão",
+      "VENDIDO POR": "Pacote 24"
+    },
+    "variations": "https://hologrammeparis.com/product/casquette-18474ol/",
+    "downloaded_images": [
+      {
+        "path": "images/cowboy/hologramme/img_01.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 1
+      },
+      {
+        "path": "images/cowboy/hologramme/img_02.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 2
+      },
+      {
+        "path": "images/cowboy/hologramme/img_03.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 3
+      },
+      {
+        "path": "images/cowboy/hologramme/img_04.jpg",
+        "url": "",
+        "origin": "sheet",
+        "position": 4
+      }
+    ],
+    "filtered_images": [],
+    "scraped": [
+      {
+        "url": "https://hologrammeparis.com/product/casquette-18474ol/",
+        "name": "Casquette - 18474OL = 18519OL - Hologramme Paris",
+        "description": "Découvrez notre Casquette - 18474OL = 18519OL au prix de grossiste pour votre boutique sur Hologramme Paris.",
+        "price": null,
+        "currency": null,
+        "images": [
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-1.jpg",
+            "alt": null,
+            "origin": "og:image",
+            "position": 1
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-2.jpg",
+            "alt": "Casquette - 18474OL = 18519OL – Image 2",
+            "origin": "gallery",
+            "position": 5,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-3.jpg",
+            "alt": "Casquette - 18474OL = 18519OL – Image 3",
+            "origin": "gallery",
+            "position": 6,
+            "width_hint": 800,
+            "height_hint": 1200
+          },
+          {
+            "url": "https://hologrammeparis.com/wp-content/uploads/2024/02/18474OL-4.jpg",
+            "alt": "Casquette - 18474OL = 18519OL – Image 4",
+            "origin": "gallery",
+            "position": 7,
+            "width_hint": 800,
+            "height_hint": 1200
+          }
+        ],
+        "raw_jsonld": null
+      }
+    ],
+    "slug": "hologramme",
+    "long_description": "Découvrez notre Casquette - Pierre Cardin Noir au prix de grossiste pour votre boutique sur Hologramme Paris."
   }
 ]

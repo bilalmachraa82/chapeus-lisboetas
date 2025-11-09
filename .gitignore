@@ -89,3 +89,5 @@ jspm_packages/
 tmp/
 temp/
 .env.mcp
+*.json
+config/*.json
