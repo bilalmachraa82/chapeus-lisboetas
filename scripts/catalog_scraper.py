@@ -44,8 +44,8 @@ SPEC_KEYS = [
     "COMPOSITION",
 ]
 
-MIN_WIDTH = 800
-MIN_HEIGHT = 800
+MIN_WIDTH = 533
+MIN_HEIGHT = 533
 
 session = requests.Session()
 session.headers.update(HEADERS)
