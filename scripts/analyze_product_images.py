@@ -173,29 +173,32 @@ def analyze_product_images(product):
 
     for local_img in local_images:
         img_path = Path(local_img['path'])
-        # Check if exists (relative to project root or absolute)
-        if img_path.exists():
-            valid_local.append({
-                'path': local_img['path'],
-                'position': local_img['position'],
-                'type': 'local',
-                'status': 'Exists'
-            })
-        else:
-            # Try with wordpress/ prefix
-            wp_path = Path('wordpress') / img_path
-            if wp_path.exists():
+
+        # Try multiple locations for relative paths
+        candidates = [
+            img_path,  # As-is (if absolute)
+            Path('output_catalogo') / img_path,  # Most likely: output_catalogo/images/...
+            Path('wordpress') / img_path  # WordPress uploads
+        ]
+
+        found = False
+        for candidate in candidates:
+            if candidate.exists():
                 valid_local.append({
-                    'path': str(wp_path),
+                    'path': str(candidate),
+                    'original_path': local_img['path'],
                     'position': local_img['position'],
                     'type': 'local',
-                    'status': 'Exists (wordpress/)'
+                    'status': f'Exists ({candidate.parent})'
                 })
-            else:
-                invalid_local.append({
-                    'path': local_img['path'],
-                    'error': 'File not found'
-                })
+                found = True
+                break
+
+        if not found:
+            invalid_local.append({
+                'path': local_img['path'],
+                'error': 'File not found in any location'
+            })
 
     # Analyze each image URL
     valid_urls = []
