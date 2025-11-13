@@ -1,0 +1,127 @@
+✓ Connected to WordPress database
+
+======================================================================
+IMPORT AI PHOTOS VIA WORDPRESS MEDIA API
+======================================================================
+Mode: LIVE
+======================================================================
+
+======================================================================
+CLEANUP: Deleting old attachments (214474-214824)
+======================================================================
+
+✓ Deleted 351 attachments and 1755 metadata entries
+
+📦 Found 32 products with AI photos
+
+
+[1/32] Dockers Miki Bombazine (ID: 212404)
+  ⚠️  No AI photos found
+
+[2/32] Dockers Miki Inverno 80% Lã (ID: 212594)
+  ⚠️  No AI photos found
+
+[3/32] Dockers Miki Verão (ID: 212686)
+  ⚠️  No AI photos found
+
+[4/32] Dockers Miki Verão 50% Algodão (ID: 212719)
+  ⚠️  No AI photos found
+
+[5/32] Boina Jornaleiro Linho (ID: 212783)
+  ⚠️  No AI photos found
+
+[6/32] Gorro Ushanka (ID: 212810)
+  ⚠️  No AI photos found
+
+[7/32] Gorro Chapka Impermeável (ID: 212812)
+  ⚠️  No AI photos found
+
+[8/32] Boina Jornaleiro Inverno Liso (ID: 212868)
+  ⚠️  No AI photos found
+
+[9/32] Boina Jornaleiro Pied Poule (ID: 212948)
+  ⚠️  No AI photos found
+
+[10/32] Boina Pure Wool Herringbone (ID: 213052)
+  ⚠️  No AI photos found
+
+[11/32] Boina Pure Wool Quadrados (ID: 213074)
+  ⚠️  No AI photos found
+
+[12/32] Boina Harris Tweed Jornaleiro (ID: 213119)
+  ⚠️  No AI photos found
+
+[13/32] Boina Bico de Pato Ajustável (ID: 213226)
+  ⚠️  No AI photos found
+
+[14/32] Boina Piemonte Quadrados (ID: 213247)
+  ⚠️  No AI photos found
+
+[15/32] Boina Cashmere (ID: 213264)
+  ⚠️  No AI photos found
+
+[16/32] Boina Xadrez Pure Wool (ID: 213269)
+  ⚠️  No AI photos found
+
+[17/32] Boina Feminina Angorá (ID: 213359)
+  ⚠️  No AI photos found
+
+[18/32] Boina Feminina Mescla (ID: 213361)
+  ⚠️  No AI photos found
+
+[19/32] Chapéu Feminino Ráfia (ID: 213379)
+  ⚠️  No AI photos found
+
+[20/32] Boina Sextavada Bic (ID: 213483)
+  ⚠️  No AI photos found
+
+[21/32] Boina Linen Blend (ID: 213770)
+  ⚠️  No AI photos found
+
+[22/32] Boina Jornaleiro Pure Wool (ID: 213782)
+  ⚠️  No AI photos found
+
+[23/32] Boina Harris Tweed Patchwork (ID: 213808)
+  ⚠️  No AI photos found
+
+[24/32] Boina Piemonte Herringbone (ID: 213861)
+  ⚠️  No AI photos found
+
+[25/32] Chapéu Impermeável (ID: 213898)
+  ⚠️  No AI photos found
+
+[26/32] Boina Sextavada Veludo (ID: 214015)
+  ⚠️  No AI photos found
+
+[27/32] Carteira em Pele (ID: 214104)
+  ⚠️  No AI photos found
+
+[28/32] Luvas Femininas em Pele (ID: 214112)
+  ⚠️  No AI photos found
+
+[29/32] Luvas Masculinas em Pele (ID: 214122)
+  ⚠️  No AI photos found
+
+[30/32] Boina Marinheiro Impermeável (ID: 214125)
+  ⚠️  No AI photos found
+
+[31/32] Bob Impermeável Bucket Hat (ID: 214141)
+  ⚠️  No AI photos found
+
+[32/32] Chapéu Impermeável Dobrável (ID: 214424)
+  ⚠️  No AI photos found
+
+======================================================================
+Flushing WordPress cache...
+✓ Cache flushed
+
+======================================================================
+SUMMARY
+======================================================================
+✓ Products processed: 0
+✓ Images imported: 0
+✓ Featured images set: 0
+✓ Galleries updated: 0
+✗ Errors: 0
+======================================================================
+

@@ -1067,3 +1067,32 @@ html {
 /* ===================================
    END CUSTOM CSS
    ================================ */
+#masthead,
+.header-wrapper {
+    position: relative !important;
+    z-index: 10000 !important;
+}
+
+.nav-dropdown,
+.nav-dropdown-has-arrow,
+.ux-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    z-index: 10001 !important;
+}
+
+.wp-block-cover.hero-cover-2025 {
+    z-index: 1 !important;
+}
+
+.momentos-gallery__item img {
+    object-fit: cover !important;
+    object-position: 50% 15% !important;
+}
+
+.wp-block-cover__image-background,
+.wp-block-cover img {
+    object-fit: cover !important;
+    object-position: center center !important;
+}

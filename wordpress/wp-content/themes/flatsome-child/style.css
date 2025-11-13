@@ -189,6 +189,94 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: var(--chap-tracking-tight);
 }
 
+/* ----------------------------------------------------------------------------
+ * HOMEPAGE HERO (faces cropped)                                               
+ * ---------------------------------------------------------------------------- */
+body.home .wp-block-cover.alignfull:first-of-type {
+  min-height: clamp(560px, 70vh, 800px) !important;
+  padding-top: clamp(80px, 10vw, 130px) !important;
+  padding-bottom: clamp(80px, 12vw, 150px) !important;
+}
+
+body.home .wp-block-cover.alignfull:first-of-type .wp-block-cover__image-background {
+  object-fit: cover;
+  object-position: 50% 12% !important; /* puxa o enquadramento bem para cima */
+  transform: none !important;
+}
+
+@media (max-width: 768px) {
+  body.home .wp-block-cover.alignfull:first-of-type .wp-block-cover__image-background {
+    object-position: 50% 38% !important;
+  }
+
+  body.home .wp-block-cover.alignfull:first-of-type .wp-block-cover__inner-container {
+    gap: var(--chap-space-md);
+  }
+}
+
+/* ----------------------------------------------------------------------------
+ * SHOP FILTERS - layered nav widgets                                          
+ * ---------------------------------------------------------------------------- */
+.widget_layered_nav {
+  border: 1px solid var(--chap-light-gray);
+  border-radius: var(--chap-radius-md);
+  padding: var(--chap-space-md);
+  margin-bottom: var(--chap-space-lg);
+  background: var(--chap-white);
+  box-shadow: var(--chap-shadow-sm);
+}
+
+.widget_layered_nav .widget-title,
+.widget_price_filter .widget-title,
+.widget_product_categories .widget-title {
+  font-family: var(--chap-font-heading);
+  font-size: var(--chap-text-lg);
+  margin-bottom: var(--chap-space-sm);
+}
+
+.widget_layered_nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--chap-space-sm);
+}
+
+.widget_layered_nav ul li a,
+.widget_layered_nav ul li span {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border: 1px solid var(--chap-light-gray);
+  border-radius: 999px;
+  font-size: var(--chap-text-sm);
+  color: var(--chap-brown);
+  transition: all var(--chap-transition-base);
+}
+
+.widget_layered_nav ul li.chosen a,
+.widget_layered_nav ul li a:hover {
+  background: var(--chap-action-primary);
+  border-color: var(--chap-action-primary);
+  color: var(--chap-white);
+}
+
+/* ----------------------------------------------------------------------------
+ * Floating CTA (Step 3.5)                                                     
+ * ---------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .floating-button,
+  .mcp-adapter-button {
+    bottom: 90px !important;
+    z-index: 999 !important;
+  }
+
+  .woocommerce .single_add_to_cart_button {
+    z-index: 1000 !important;
+  }
+}
+
 .page-title,
 .entry-title,
 .section-title,
@@ -958,6 +1046,8 @@ footer.footer-main {
 }
 
 #header .header-nav-main {
+  display: flex !important;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -2513,6 +2603,32 @@ img.blur-up.loaded {
     transition-delay: 500ms;
 }
 
+/* Momentos gallery images – keep hats/faces centered */
+.is-momentos-gallery .momentos-gallery__item img,
+.is-momentos-gallery .wp-block-image img {
+  width: 100%;
+  height: clamp(260px, 32vw, 360px);
+  object-fit: cover;
+  object-position: 50% 18%;
+  border-radius: var(--chap-radius-lg);
+}
+
+.is-momentos-gallery .momentos-gallery__item:nth-child(2) img {
+  object-position: 50% 32%;
+}
+
+.is-momentos-gallery .momentos-gallery__item:nth-child(3) img {
+  object-position: 50% 25%;
+}
+
+@media (max-width: 768px) {
+  .is-momentos-gallery .momentos-gallery__item img,
+  .is-momentos-gallery .wp-block-image img {
+    height: 280px;
+    object-position: 50% 22%;
+  }
+}
+
 /* Collection cards stagger */
 .featured-collections__card:nth-child(1),
 .swiper-slide:nth-child(1) {
@@ -4029,3 +4145,58 @@ body input[type="submit"] {
 }
 
 /*************** FIM PAGE 4-6 FIXES ***************/
+
+/*************** FASE 1 - CORREÇÕES CRÍTICAS 2025-01-12 ***************/
+
+/* ========== FIX 1.1: MENU DROPDOWN Z-INDEX ========== */
+/* Garante que dropdown aparece ACIMA de TUDO (hero, imagens, etc) */
+
+.nav-dropdown,
+.sub-menu,
+.header-nav .nav-dropdown,
+.header .nav-dropdown,
+.nav-dropdown-default {
+  z-index: 999999 !important;
+  position: relative !important;
+}
+
+.header-wrapper,
+.header-main,
+#masthead {
+  z-index: 99999 !important;
+  position: relative !important;
+}
+
+/* Remove conflitos que prendem submenus */
+.hero-section,
+.featured-section,
+.page-wrapper {
+  isolation: auto !important;
+  z-index: 1 !important;
+}
+
+/* ========== FIX 1.3: FOTOS HOMEPAGE CORTADAS ========== */
+/* Centra fotos de pessoas no rosto, não no topo da cabeça */
+
+.gallery-item img,
+.team-member img,
+.testimonial-image img,
+.image-cover img,
+.wp-block-image img {
+  object-fit: cover !important;
+  object-position: 50% 25% !important; /* Foca 25% do topo = área do rosto */
+}
+
+/* Específico para hero se tiver pessoas */
+.hero-section .bg-fill,
+.featured-section .bg-fill {
+  background-position: center 25% !important;
+}
+
+/* Grid de novidades - manter aspecto sem cortar */
+.product-small .box-image img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+/*************** FIM FASE 1 FIXES ***************/

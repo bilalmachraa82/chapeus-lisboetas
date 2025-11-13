@@ -14,10 +14,14 @@ import json
 from pathlib import Path
 from typing import List, Dict
 
+# Paths / URLs
+UPLOADS_ROOT = "/var/www/html/wp-content/uploads"
+UPLOADS_URL = "http://localhost:8080/wp-content/uploads"
+
 # Configuration
 WORDPRESS_CONTAINER = "chapeus_wordpress"
-IMAGES_PATH = "/var/www/html/wp-content/uploads/products"
-WP_USER = "lisboetas"
+IMAGES_PATH = f"{UPLOADS_ROOT}/products"
+WP_USER = "codex-admin"
 
 def run_docker_command(cmd: List[str]) -> str:
     """Run command in WordPress Docker container."""
@@ -46,24 +50,35 @@ def find_all_images() -> List[str]:
         return []
     return output.split('\n')
 
+def relative_path(filepath: str) -> str:
+    """Return path relative to uploads/ directory."""
+    if filepath.startswith(UPLOADS_ROOT):
+        rel = filepath[len(UPLOADS_ROOT):].lstrip("/")
+    else:
+        rel = filepath
+    return rel
+
+
 def is_image_registered(filepath: str) -> bool:
-    """Check if image is already in media library."""
-    # Extract filename for checking
-    filename = Path(filepath).name
+    """Check if image is already in media library using _wp_attached_file."""
+    rel = relative_path(filepath)
     cmd = [
         "wp", "post", "list",
         "--post_type=attachment",
-        f"--s={filename}",
-        "--format=count",
+        "--field=ID",
+        f"--meta_key=_wp_attached_file",
+        f"--meta_value={rel}",
+        "--format=ids",
         "--allow-root"
     ]
-    count = run_docker_command(cmd)
-    return int(count) > 0 if count.isdigit() else False
+    result = run_docker_command(cmd)
+    return bool(result.strip())
 
 def register_image(filepath: str) -> Dict:
     """Register image in WordPress media library."""
     cmd = [
         "wp", "media", "import", filepath,
+        "--skip-copy",
         "--porcelain",
         "--allow-root"
     ]

@@ -1,0 +1,878 @@
+✓ Connected to WordPress database
+
+======================================================================
+IMPORT AI PHOTOS FROM FILESYSTEM VIA WORDPRESS MEDIA API
+======================================================================
+Mode: DRY RUN
+======================================================================
+
+📁 Scanning filesystem for AI photos...
+  Found 40 folders with AI photos
+  Total images: 351
+
+🔗 Matching folders to products...
+
+
+📂 tags-fabricado-na-italia-la-pura (8 images)
+  ✓ Manual mapping: 1 product(s)
+  ✓ Processing: Boina Jornaleiro Pure Wool (ID: 213782)
+    [1/8] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_01_pro.jpg' --post_id=213782 --title='AI - Boina Jornaleiro Pure Wool - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/8] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_02_pro.jpg' --post_id=213782 --title='AI - Boina Jornaleiro Pure Wool - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/8] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_03_pro.jpg' --post_id=213782 --title='AI - Boina Jornaleiro Pure Wool - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/8] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_04_pro.jpg' --post_id=213782 --title='AI - Boina Jornaleiro Pure Wool - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/8] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_05_pro.jpg' --post_id=213782 --title='AI - Boina Jornaleiro Pure Wool - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/8] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_06_pro.jpg' --post_id=213782 --title='AI - Boina Jornaleiro Pure Wool - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/8] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_07_pro.jpg' --post_id=213782 --title='AI - Boina Jornaleiro Pure Wool - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [8/8] Importing img_08_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_08_pro.jpg' --post_id=213782 --title='AI - Boina Jornaleiro Pure Wool - 8' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 213782 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 7 images
+  [DRY RUN] Would execute: wp post meta update 213782 _product_image_gallery '100001,100002,100003,100004,100005,100006,100007' --allow-root
+    ✓ Gallery updated
+
+📂 chapeu-art-970-pack-12 (6 images)
+  ✓ Manual mapping: 1 product(s)
+  ✓ Processing: Chapéu Feminino Ráfia (ID: 213379)
+    [1/6] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-art-970-pack-12/img_01_pro.jpg' --post_id=213379 --title='AI - Chapéu Feminino Ráfia - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/6] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-art-970-pack-12/img_02_pro.jpg' --post_id=213379 --title='AI - Chapéu Feminino Ráfia - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/6] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-art-970-pack-12/img_03_pro.jpg' --post_id=213379 --title='AI - Chapéu Feminino Ráfia - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/6] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-art-970-pack-12/img_04_pro.jpg' --post_id=213379 --title='AI - Chapéu Feminino Ráfia - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/6] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-art-970-pack-12/img_05_pro.jpg' --post_id=213379 --title='AI - Chapéu Feminino Ráfia - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/6] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-art-970-pack-12/img_06_pro.jpg' --post_id=213379 --title='AI - Chapéu Feminino Ráfia - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 213379 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 5 images
+  [DRY RUN] Would execute: wp post meta update 213379 _product_image_gallery '100001,100002,100003,100004,100005' --allow-root
+    ✓ Gallery updated
+
+📂 chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel (5 images)
+  ✓ Manual mapping: 2 product(s)
+  ✓ Processing: Boina Marinheiro Impermeável (ID: 214125)
+    [1/5] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_01_pro.jpg' --post_id=214125 --title='AI - Boina Marinheiro Impermeável - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/5] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_02_pro.jpg' --post_id=214125 --title='AI - Boina Marinheiro Impermeável - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/5] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_03_pro.jpg' --post_id=214125 --title='AI - Boina Marinheiro Impermeável - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/5] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_04_pro.jpg' --post_id=214125 --title='AI - Boina Marinheiro Impermeável - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/5] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_05_pro.jpg' --post_id=214125 --title='AI - Boina Marinheiro Impermeável - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 214125 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 4 images
+  [DRY RUN] Would execute: wp post meta update 214125 _product_image_gallery '100001,100002,100003,100004' --allow-root
+    ✓ Gallery updated
+  ✓ Processing: Bob Impermeável Bucket Hat (ID: 214141)
+    [1/5] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_01_pro.jpg' --post_id=214141 --title='AI - Bob Impermeável Bucket Hat - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/5] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_02_pro.jpg' --post_id=214141 --title='AI - Bob Impermeável Bucket Hat - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/5] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_03_pro.jpg' --post_id=214141 --title='AI - Bob Impermeável Bucket Hat - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/5] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_04_pro.jpg' --post_id=214141 --title='AI - Bob Impermeável Bucket Hat - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/5] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_05_pro.jpg' --post_id=214141 --title='AI - Bob Impermeável Bucket Hat - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 214141 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 4 images
+  [DRY RUN] Would execute: wp post meta update 214141 _product_image_gallery '100001,100002,100003,100004' --allow-root
+    ✓ Gallery updated
+
+📂 chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel (5 images)
+  ✓ Manual mapping: 2 product(s)
+  ✓ Processing: Chapéu Impermeável (ID: 213898)
+    [1/5] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_01_pro.jpg' --post_id=213898 --title='AI - Chapéu Impermeável - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/5] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_02_pro.jpg' --post_id=213898 --title='AI - Chapéu Impermeável - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/5] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_03_pro.jpg' --post_id=213898 --title='AI - Chapéu Impermeável - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/5] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_04_pro.jpg' --post_id=213898 --title='AI - Chapéu Impermeável - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/5] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_05_pro.jpg' --post_id=213898 --title='AI - Chapéu Impermeável - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 213898 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 4 images
+  [DRY RUN] Would execute: wp post meta update 213898 _product_image_gallery '100001,100002,100003,100004' --allow-root
+    ✓ Gallery updated
+  ✓ Processing: Chapéu Impermeável Dobrável (ID: 214424)
+    [1/5] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_01_pro.jpg' --post_id=214424 --title='AI - Chapéu Impermeável Dobrável - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/5] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_02_pro.jpg' --post_id=214424 --title='AI - Chapéu Impermeável Dobrável - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/5] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_03_pro.jpg' --post_id=214424 --title='AI - Chapéu Impermeável Dobrável - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/5] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_04_pro.jpg' --post_id=214424 --title='AI - Chapéu Impermeável Dobrável - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/5] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_05_pro.jpg' --post_id=214424 --title='AI - Chapéu Impermeável Dobrável - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 214424 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 4 images
+  [DRY RUN] Would execute: wp post meta update 214424 _product_image_gallery '100001,100002,100003,100004' --allow-root
+    ✓ Gallery updated
+
+📂 porte-monnaie-5657 (1 images)
+  Extracted SKUs: 5657
+  ✓ Processing: Carteira em Pele (ID: 214104)
+    [1/1] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/porte-monnaie-5657/img_01_pro.jpg' --post_id=214104 --title='AI - Carteira em Pele - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 214104 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+
+📂 gants-17119 (5 images)
+  Extracted SKUs: 17119
+  ✓ Processing: Luvas Masculinas em Pele (ID: 214122)
+    [1/5] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17119/img_01_pro.jpg' --post_id=214122 --title='AI - Luvas Masculinas em Pele - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/5] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17119/img_02_pro.jpg' --post_id=214122 --title='AI - Luvas Masculinas em Pele - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/5] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17119/img_03_pro.jpg' --post_id=214122 --title='AI - Luvas Masculinas em Pele - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/5] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17119/img_04_pro.jpg' --post_id=214122 --title='AI - Luvas Masculinas em Pele - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/5] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17119/img_05_pro.jpg' --post_id=214122 --title='AI - Luvas Masculinas em Pele - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 214122 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 4 images
+  [DRY RUN] Would execute: wp post meta update 214122 _product_image_gallery '100001,100002,100003,100004' --allow-root
+    ✓ Gallery updated
+
+📂 gants-17120 (10 images)
+  Extracted SKUs: 17120
+  ✓ Processing: Luvas Femininas em Pele (ID: 214112)
+    [1/10] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17120/img_01_pro.jpg' --post_id=214112 --title='AI - Luvas Femininas em Pele - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/10] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17120/img_02_pro.jpg' --post_id=214112 --title='AI - Luvas Femininas em Pele - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/10] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17120/img_03_pro.jpg' --post_id=214112 --title='AI - Luvas Femininas em Pele - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/10] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17120/img_04_pro.jpg' --post_id=214112 --title='AI - Luvas Femininas em Pele - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/10] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17120/img_05_pro.jpg' --post_id=214112 --title='AI - Luvas Femininas em Pele - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/10] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17120/img_06_pro.jpg' --post_id=214112 --title='AI - Luvas Femininas em Pele - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/10] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17120/img_07_pro.jpg' --post_id=214112 --title='AI - Luvas Femininas em Pele - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [8/10] Importing img_08_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17120/img_08_pro.jpg' --post_id=214112 --title='AI - Luvas Femininas em Pele - 8' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [9/10] Importing img_09_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17120/img_09_pro.jpg' --post_id=214112 --title='AI - Luvas Femininas em Pele - 9' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [10/10] Importing img_10_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/artigos em pele/gants-17120/img_10_pro.jpg' --post_id=214112 --title='AI - Luvas Femininas em Pele - 10' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 214112 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 9 images
+  [DRY RUN] Would execute: wp post meta update 214112 _product_image_gallery '100001,100002,100003,100004,100005,100006,100007,100008,100009' --allow-root
+    ✓ Gallery updated
+
+📂 bone-18161n-bone-18161m (5 images)
+  Extracted SKUs: 18161n, 18161m
+  ⚠️  No product found with SKU(s): 18161n, 18161m
+
+📂 bone-22195 (7 images)
+  Extracted SKUs: 22195
+  ⚠️  No product found with SKU(s): 22195
+
+📂 bone-18508mi-18452 (16 images)
+  Extracted SKUs: 18452, 18508mi
+  ⚠️  No product found with SKU(s): 18452, 18508mi
+
+📂 bone-18438mc-18502mi (4 images)
+  Extracted SKUs: 18438mc, 18502mi
+  ⚠️  No product found with SKU(s): 18438mc, 18502mi
+
+📂 bone-18106mi-bone-18106k-bone-18106g-18106ma (21 images)
+  Extracted SKUs: 18106mi, 18106k, 18106g, 18106ma
+  ⚠️  No product found with SKU(s): 18106mi, 18106k, 18106g, 18106ma
+
+📂 bone-18439ol (4 images)
+  Extracted SKUs: 18439ol
+  ⚠️  No product found with SKU(s): 18439ol
+
+📂 bone-18445mi-bone-18445k-bone-18445n-bone-18445gr-bone-18445ca (20 images)
+  Extracted SKUs: 18445mi, 18445k, 18445n, 18445gr, 18445ca
+  ⚠️  No product found with SKU(s): 18445mi, 18445k, 18445n, 18445gr, 18445ca
+
+📂 bone-18501mi (4 images)
+  Extracted SKUs: 18501mi
+  ⚠️  No product found with SKU(s): 18501mi
+
+📂 bone-18279k-bone-18279ma-bone-18279mi-bone-18279bg-bone-18279g (12 images)
+  Extracted SKUs: 18279k, 18279ma, 18279mi, 18279bg, 18279g
+  ⚠️  No product found with SKU(s): 18279k, 18279ma, 18279mi, 18279bg, 18279g
+
+📂 18220mi (4 images)
+  Extracted SKUs: 18220mi
+  ⚠️  No product found with SKU(s): 18220mi
+
+📂 gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira (5 images)
+  ✓ Manual mapping: 2 product(s)
+  ✓ Processing: Dockers Miki Bombazine (ID: 212404)
+    [1/5] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_01_pro.jpg' --post_id=212404 --title='AI - Dockers Miki Bombazine - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/5] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_02_pro.jpg' --post_id=212404 --title='AI - Dockers Miki Bombazine - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/5] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_03_pro.jpg' --post_id=212404 --title='AI - Dockers Miki Bombazine - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/5] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_04_pro.jpg' --post_id=212404 --title='AI - Dockers Miki Bombazine - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/5] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_05_pro.jpg' --post_id=212404 --title='AI - Dockers Miki Bombazine - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 212404 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 4 images
+  [DRY RUN] Would execute: wp post meta update 212404 _product_image_gallery '100001,100002,100003,100004' --allow-root
+    ✓ Gallery updated
+  ✓ Processing: Dockers Miki Inverno 80% Lã (ID: 212594)
+    [1/5] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_01_pro.jpg' --post_id=212594 --title='AI - Dockers Miki Inverno 80% Lã - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/5] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_02_pro.jpg' --post_id=212594 --title='AI - Dockers Miki Inverno 80% Lã - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/5] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_03_pro.jpg' --post_id=212594 --title='AI - Dockers Miki Inverno 80% Lã - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/5] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_04_pro.jpg' --post_id=212594 --title='AI - Dockers Miki Inverno 80% Lã - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/5] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_05_pro.jpg' --post_id=212594 --title='AI - Dockers Miki Inverno 80% Lã - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 212594 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 4 images
+  [DRY RUN] Would execute: wp post meta update 212594 _product_image_gallery '100001,100002,100003,100004' --allow-root
+    ✓ Gallery updated
+
+📂 bone-18440ol (4 images)
+  Extracted SKUs: 18440ol
+  ⚠️  No product found with SKU(s): 18440ol
+
+📂 bone-18074-bone-18074k-bone-18074gc (18 images)
+  Extracted SKUs: 18074, 18074k, 18074gc
+  ✓ Processing: Boina Piemonte Herringbone (ID: 213861)
+    [1/18] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_01_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/18] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_02_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/18] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_03_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/18] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_04_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/18] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_05_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/18] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_06_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/18] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_07_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [8/18] Importing img_08_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_08_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 8' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [9/18] Importing img_09_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_09_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 9' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [10/18] Importing img_10_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_10_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 10' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [11/18] Importing img_11_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_11_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 11' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [12/18] Importing img_12_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_12_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 12' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [13/18] Importing img_13_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_13_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 13' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [14/18] Importing img_14_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_14_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 14' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [15/18] Importing img_15_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_15_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 15' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [16/18] Importing img_16_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_16_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 16' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [17/18] Importing img_17_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_17_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 17' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [18/18] Importing img_18_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-18074-bone-18074k-bone-18074gc/img_18_pro.jpg' --post_id=213861 --title='AI - Boina Piemonte Herringbone - 18' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 213861 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 17 images
+  [DRY RUN] Would execute: wp post meta update 213861 _product_image_gallery '100001,100002,100003,100004,100005,100006,100007,100008,100009,100010,100011,100012,100013,100014,100015,100016,100017' --allow-root
+    ✓ Gallery updated
+
+📂 bone-25025 (9 images)
+  Extracted SKUs: 25025
+  ✓ Processing: Boina Jornaleiro Inverno Liso (ID: 212868)
+    [1/9] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-25025/img_01_pro.jpg' --post_id=212868 --title='AI - Boina Jornaleiro Inverno Liso - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/9] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-25025/img_02_pro.jpg' --post_id=212868 --title='AI - Boina Jornaleiro Inverno Liso - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/9] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-25025/img_03_pro.jpg' --post_id=212868 --title='AI - Boina Jornaleiro Inverno Liso - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/9] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-25025/img_04_pro.jpg' --post_id=212868 --title='AI - Boina Jornaleiro Inverno Liso - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/9] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-25025/img_05_pro.jpg' --post_id=212868 --title='AI - Boina Jornaleiro Inverno Liso - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/9] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-25025/img_06_pro.jpg' --post_id=212868 --title='AI - Boina Jornaleiro Inverno Liso - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/9] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-25025/img_07_pro.jpg' --post_id=212868 --title='AI - Boina Jornaleiro Inverno Liso - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [8/9] Importing img_08_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-25025/img_08_pro.jpg' --post_id=212868 --title='AI - Boina Jornaleiro Inverno Liso - 8' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [9/9] Importing img_09_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-25025/img_09_pro.jpg' --post_id=212868 --title='AI - Boina Jornaleiro Inverno Liso - 9' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 212868 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 8 images
+  [DRY RUN] Would execute: wp post meta update 212868 _product_image_gallery '100001,100002,100003,100004,100005,100006,100007,100008' --allow-root
+    ✓ Gallery updated
+
+📂 bone-25023 (7 images)
+  Extracted SKUs: 25023
+  ⚠️  No product found with SKU(s): 25023
+
+📂 gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira (5 images)
+  ✓ Manual mapping: 2 product(s)
+  ✓ Processing: Dockers Miki Verão (ID: 212686)
+    [1/5] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_01_pro.jpg' --post_id=212686 --title='AI - Dockers Miki Verão - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/5] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_02_pro.jpg' --post_id=212686 --title='AI - Dockers Miki Verão - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/5] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_03_pro.jpg' --post_id=212686 --title='AI - Dockers Miki Verão - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/5] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_04_pro.jpg' --post_id=212686 --title='AI - Dockers Miki Verão - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/5] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_05_pro.jpg' --post_id=212686 --title='AI - Dockers Miki Verão - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 212686 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 4 images
+  [DRY RUN] Would execute: wp post meta update 212686 _product_image_gallery '100001,100002,100003,100004' --allow-root
+    ✓ Gallery updated
+  ✓ Processing: Dockers Miki Verão 50% Algodão (ID: 212719)
+    [1/5] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_01_pro.jpg' --post_id=212719 --title='AI - Dockers Miki Verão 50% Algodão - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/5] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_02_pro.jpg' --post_id=212719 --title='AI - Dockers Miki Verão 50% Algodão - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/5] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_03_pro.jpg' --post_id=212719 --title='AI - Dockers Miki Verão 50% Algodão - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/5] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_04_pro.jpg' --post_id=212719 --title='AI - Dockers Miki Verão 50% Algodão - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/5] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira/img_05_pro.jpg' --post_id=212719 --title='AI - Dockers Miki Verão 50% Algodão - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 212719 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 4 images
+  [DRY RUN] Would execute: wp post meta update 212719 _product_image_gallery '100001,100002,100003,100004' --allow-root
+    ✓ Gallery updated
+
+📂 bone-18153k (5 images)
+  Extracted SKUs: 18153k
+  ⚠️  No product found with SKU(s): 18153k
+
+📂 bone-18456g (16 images)
+  Extracted SKUs: 18456g
+  ⚠️  No product found with SKU(s): 18456g
+
+📂 bone-18500mi (4 images)
+  Extracted SKUs: 18500mi
+  ⚠️  No product found with SKU(s): 18500mi
+
+📂 bone-22182 (9 images)
+  Extracted SKUs: 22182
+  ✓ Processing: Boina Bico de Pato Ajustável (ID: 213226)
+    [1/9] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-22182/img_01_pro.jpg' --post_id=213226 --title='AI - Boina Bico de Pato Ajustável - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/9] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-22182/img_02_pro.jpg' --post_id=213226 --title='AI - Boina Bico de Pato Ajustável - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/9] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-22182/img_03_pro.jpg' --post_id=213226 --title='AI - Boina Bico de Pato Ajustável - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/9] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-22182/img_04_pro.jpg' --post_id=213226 --title='AI - Boina Bico de Pato Ajustável - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/9] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-22182/img_05_pro.jpg' --post_id=213226 --title='AI - Boina Bico de Pato Ajustável - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/9] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-22182/img_06_pro.jpg' --post_id=213226 --title='AI - Boina Bico de Pato Ajustável - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/9] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-22182/img_07_pro.jpg' --post_id=213226 --title='AI - Boina Bico de Pato Ajustável - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [8/9] Importing img_08_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-22182/img_08_pro.jpg' --post_id=213226 --title='AI - Boina Bico de Pato Ajustável - 8' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [9/9] Importing img_09_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas inverno/bone-22182/img_09_pro.jpg' --post_id=213226 --title='AI - Boina Bico de Pato Ajustável - 9' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 213226 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 8 images
+  [DRY RUN] Would execute: wp post meta update 213226 _product_image_gallery '100001,100002,100003,100004,100005,100006,100007,100008' --allow-root
+    ✓ Gallery updated
+
+📂 chapka-6064 (1 images)
+  Extracted SKUs: 6064
+  ✓ Processing: Gorro Ushanka (ID: 212810)
+    [1/1] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapka-6064/img_01_pro.jpg' --post_id=212810 --title='AI - Gorro Ushanka - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 212810 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+
+📂 bonnet-pierre-cardin (3 images)
+  ⚠️  Could not extract SKU from folder name
+
+📂 chapeu-49171 (24 images)
+  Extracted SKUs: 49171
+  ✓ Processing: Gorro Chapka Impermeável (ID: 212812)
+    [1/24] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_01_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/24] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_02_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/24] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_03_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/24] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_04_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/24] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_05_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/24] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_06_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/24] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_07_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [8/24] Importing img_08_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_08_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 8' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [9/24] Importing img_09_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_09_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 9' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [10/24] Importing img_10_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_10_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 10' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [11/24] Importing img_11_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_11_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 11' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [12/24] Importing img_12_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_12_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 12' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [13/24] Importing img_13_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_13_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 13' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [14/24] Importing img_14_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_14_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 14' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [15/24] Importing img_15_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_15_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 15' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [16/24] Importing img_16_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_16_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 16' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [17/24] Importing img_17_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_17_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 17' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [18/24] Importing img_18_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_18_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 18' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [19/24] Importing img_19_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_19_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 19' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [20/24] Importing img_20_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_20_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 20' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [21/24] Importing img_21_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_21_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 21' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [22/24] Importing img_22_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_22_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 22' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [23/24] Importing img_23_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_23_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 23' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [24/24] Importing img_24_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/gorros/chapeu-49171/img_24_pro.jpg' --post_id=212812 --title='AI - Gorro Chapka Impermeável - 24' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 212812 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 23 images
+  [DRY RUN] Would execute: wp post meta update 212812 _product_image_gallery '100001,100002,100003,100004,100005,100006,100007,100008,100009,100010,100011,100012,100013,100014,100015,100016,100017,100018,100019,100020,100021,100022,100023' --allow-root
+    ✓ Gallery updated
+
+📂 bone-13156 (10 images)
+  Extracted SKUs: 13156
+  ✓ Processing: Boina Feminina Angorá (ID: 213359)
+    [1/10] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-13156/img_01_pro.jpg' --post_id=213359 --title='AI - Boina Feminina Angorá - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/10] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-13156/img_02_pro.jpg' --post_id=213359 --title='AI - Boina Feminina Angorá - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/10] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-13156/img_03_pro.jpg' --post_id=213359 --title='AI - Boina Feminina Angorá - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/10] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-13156/img_04_pro.jpg' --post_id=213359 --title='AI - Boina Feminina Angorá - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/10] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-13156/img_05_pro.jpg' --post_id=213359 --title='AI - Boina Feminina Angorá - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/10] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-13156/img_06_pro.jpg' --post_id=213359 --title='AI - Boina Feminina Angorá - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/10] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-13156/img_07_pro.jpg' --post_id=213359 --title='AI - Boina Feminina Angorá - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [8/10] Importing img_08_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-13156/img_08_pro.jpg' --post_id=213359 --title='AI - Boina Feminina Angorá - 8' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [9/10] Importing img_09_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-13156/img_09_pro.jpg' --post_id=213359 --title='AI - Boina Feminina Angorá - 9' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [10/10] Importing img_10_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-13156/img_10_pro.jpg' --post_id=213359 --title='AI - Boina Feminina Angorá - 10' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 213359 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 9 images
+  [DRY RUN] Would execute: wp post meta update 213359 _product_image_gallery '100001,100002,100003,100004,100005,100006,100007,100008,100009' --allow-root
+    ✓ Gallery updated
+
+📂 bone-12463 (7 images)
+  Extracted SKUs: 12463
+  ✓ Processing: Boina Feminina Mescla (ID: 213361)
+    [1/7] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-12463/img_01_pro.jpg' --post_id=213361 --title='AI - Boina Feminina Mescla - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/7] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-12463/img_02_pro.jpg' --post_id=213361 --title='AI - Boina Feminina Mescla - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/7] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-12463/img_03_pro.jpg' --post_id=213361 --title='AI - Boina Feminina Mescla - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/7] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-12463/img_04_pro.jpg' --post_id=213361 --title='AI - Boina Feminina Mescla - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/7] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-12463/img_05_pro.jpg' --post_id=213361 --title='AI - Boina Feminina Mescla - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/7] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-12463/img_06_pro.jpg' --post_id=213361 --title='AI - Boina Feminina Mescla - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/7] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/bone-12463/img_07_pro.jpg' --post_id=213361 --title='AI - Boina Feminina Mescla - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 213361 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 6 images
+  [DRY RUN] Would execute: wp post meta update 213361 _product_image_gallery '100001,100002,100003,100004,100005,100006' --allow-root
+    ✓ Gallery updated
+
+📂 palha-12673 (3 images)
+  Extracted SKUs: 12673
+  ✓ Processing: Chapéu Feminino Ráfia (ID: 213379)
+    [1/3] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/palha-12673/img_01_pro.jpg' --post_id=213379 --title='AI - Chapéu Feminino Ráfia - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/3] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/palha-12673/img_02_pro.jpg' --post_id=213379 --title='AI - Chapéu Feminino Ráfia - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/3] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/feminino/palha-12673/img_03_pro.jpg' --post_id=213379 --title='AI - Chapéu Feminino Ráfia - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 213379 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 2 images
+  [DRY RUN] Would execute: wp post meta update 213379 _product_image_gallery '100001,100002' --allow-root
+    ✓ Gallery updated
+
+📂 bone-12805 (9 images)
+  Extracted SKUs: 12805
+  ✓ Processing: Boina Jornaleiro Linho (ID: 212783)
+    [1/9] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-12805/img_01_pro.jpg' --post_id=212783 --title='AI - Boina Jornaleiro Linho - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/9] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-12805/img_02_pro.jpg' --post_id=212783 --title='AI - Boina Jornaleiro Linho - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/9] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-12805/img_03_pro.jpg' --post_id=212783 --title='AI - Boina Jornaleiro Linho - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/9] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-12805/img_04_pro.jpg' --post_id=212783 --title='AI - Boina Jornaleiro Linho - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/9] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-12805/img_05_pro.jpg' --post_id=212783 --title='AI - Boina Jornaleiro Linho - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/9] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-12805/img_06_pro.jpg' --post_id=212783 --title='AI - Boina Jornaleiro Linho - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/9] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-12805/img_07_pro.jpg' --post_id=212783 --title='AI - Boina Jornaleiro Linho - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [8/9] Importing img_08_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-12805/img_08_pro.jpg' --post_id=212783 --title='AI - Boina Jornaleiro Linho - 8' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [9/9] Importing img_09_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-12805/img_09_pro.jpg' --post_id=212783 --title='AI - Boina Jornaleiro Linho - 9' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 212783 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 8 images
+  [DRY RUN] Would execute: wp post meta update 212783 _product_image_gallery '100001,100002,100003,100004,100005,100006,100007,100008' --allow-root
+    ✓ Gallery updated
+
+📂 hologramme (8 images)
+  ⚠️  Could not extract SKU from folder name
+
+📂 bone-18110ec-bone-18110ol (11 images)
+  Extracted SKUs: 18110ec, 18110ol
+  ⚠️  No product found with SKU(s): 18110ec, 18110ol
+
+📂 bone-18107-bone-18515 (10 images)
+  Extracted SKUs: 18107, 18515
+  ✓ Processing: Boina Linen Blend (ID: 213770)
+    [1/10] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18107-bone-18515/img_01_pro.jpg' --post_id=213770 --title='AI - Boina Linen Blend - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/10] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18107-bone-18515/img_02_pro.jpg' --post_id=213770 --title='AI - Boina Linen Blend - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/10] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18107-bone-18515/img_03_pro.jpg' --post_id=213770 --title='AI - Boina Linen Blend - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/10] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18107-bone-18515/img_04_pro.jpg' --post_id=213770 --title='AI - Boina Linen Blend - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/10] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18107-bone-18515/img_05_pro.jpg' --post_id=213770 --title='AI - Boina Linen Blend - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/10] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18107-bone-18515/img_06_pro.jpg' --post_id=213770 --title='AI - Boina Linen Blend - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/10] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18107-bone-18515/img_07_pro.jpg' --post_id=213770 --title='AI - Boina Linen Blend - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [8/10] Importing img_08_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18107-bone-18515/img_08_pro.jpg' --post_id=213770 --title='AI - Boina Linen Blend - 8' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [9/10] Importing img_09_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18107-bone-18515/img_09_pro.jpg' --post_id=213770 --title='AI - Boina Linen Blend - 9' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [10/10] Importing img_10_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18107-bone-18515/img_10_pro.jpg' --post_id=213770 --title='AI - Boina Linen Blend - 10' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 213770 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 9 images
+  [DRY RUN] Would execute: wp post meta update 213770 _product_image_gallery '100001,100002,100003,100004,100005,100006,100007,100008,100009' --allow-root
+    ✓ Gallery updated
+
+📂 bone-18474 (8 images)
+  Extracted SKUs: 18474
+  ✓ Processing: Boina Sextavada Bic (ID: 213483)
+    [1/8] Importing img_01_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18474/img_01_pro.jpg' --post_id=213483 --title='AI - Boina Sextavada Bic - 1' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [2/8] Importing img_02_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18474/img_02_pro.jpg' --post_id=213483 --title='AI - Boina Sextavada Bic - 2' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [3/8] Importing img_03_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18474/img_03_pro.jpg' --post_id=213483 --title='AI - Boina Sextavada Bic - 3' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [4/8] Importing img_04_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18474/img_04_pro.jpg' --post_id=213483 --title='AI - Boina Sextavada Bic - 4' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [5/8] Importing img_05_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18474/img_05_pro.jpg' --post_id=213483 --title='AI - Boina Sextavada Bic - 5' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [6/8] Importing img_06_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18474/img_06_pro.jpg' --post_id=213483 --title='AI - Boina Sextavada Bic - 6' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [7/8] Importing img_07_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18474/img_07_pro.jpg' --post_id=213483 --title='AI - Boina Sextavada Bic - 7' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+    [8/8] Importing img_08_pro.jpg...
+  [DRY RUN] Would execute: wp media import '/var/www/html/wp-content/uploads/products/boinas verão/bone-18474/img_08_pro.jpg' --post_id=213483 --title='AI - Boina Sextavada Bic - 8' --porcelain --allow-root
+      [DRY RUN] Would import successfully
+  Setting featured image: 100000
+  [DRY RUN] Would execute: wp post meta update 213483 _thumbnail_id 100000 --allow-root
+    ✓ Featured image set
+  Updating gallery with 7 images
+  [DRY RUN] Would execute: wp post meta update 213483 _product_image_gallery '100001,100002,100003,100004,100005,100006,100007' --allow-root
+    ✓ Gallery updated
+
+📂 bone-15266f-bone-15266c (34 images)
+  Extracted SKUs: 15266f, 15266c
+  ⚠️  No product found with SKU(s): 15266f, 15266c
+
+📂 bone-18521a (4 images)
+  Extracted SKUs: 18521a
+  ⚠️  No product found with SKU(s): 18521a
+
+======================================================================
+Flushing WordPress cache...
+  [DRY RUN] Would execute: wp cache flush --allow-root
+✓ Cache flushed
+
+======================================================================
+SUMMARY
+======================================================================
+📁 Folders found: 40
+✓ Folders matched: 14
+✓ Products processed: 24
+✓ Images imported: 178
+✓ Featured images set: 24
+✓ Galleries updated: 22
+✗ Errors: 20
+
+Errors (first 10):
+  • bone-18161n-bone-18161m: No product match for SKUs ['18161n', '18161m']
+  • bone-22195: No product match for SKUs ['22195']
+  • bone-18508mi-18452: No product match for SKUs ['18452', '18508mi']
+  • bone-18438mc-18502mi: No product match for SKUs ['18438mc', '18502mi']
+  • bone-18106mi-bone-18106k-bone-18106g-18106ma: No product match for SKUs ['18106mi', '18106k', '18106g', '18106ma']
+  • bone-18439ol: No product match for SKUs ['18439ol']
+  • bone-18445mi-bone-18445k-bone-18445n-bone-18445gr-bone-18445ca: No product match for SKUs ['18445mi', '18445k', '18445n', '18445gr', '18445ca']
+  • bone-18501mi: No product match for SKUs ['18501mi']
+  • bone-18279k-bone-18279ma-bone-18279mi-bone-18279bg-bone-18279g: No product match for SKUs ['18279k', '18279ma', '18279mi', '18279bg', '18279g']
+  • 18220mi: No product match for SKUs ['18220mi']
+======================================================================
+

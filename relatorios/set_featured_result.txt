@@ -1,0 +1,190 @@
+✓ Connected to WordPress database
+
+======================================================================
+SET AI IMAGES AS FEATURED
+======================================================================
+Mode: LIVE
+======================================================================
+
+📦 Found 54 products with AI images
+
+[1/54] Cortiça Bucket Hat
+  ⚠️  No AI image found in gallery
+[2/54] Chapéu de couro ocidental australiano
+  ⚠️  No AI image found in gallery
+[3/54] Chapéu de Cowboy Cortiça e Rede
+  ⚠️  No AI image found in gallery
+[4/54] Dockers Miki Bombazine
+  Setting featured: AI - boinas inverno - gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira - img_01_pro (ID: 214659)
+  ✓ Updated
+
+[5/54] Dockers Miki Inverno 80% Lã
+  Setting featured: AI - boinas inverno - gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira - img_04_pro (ID: 214662)
+  ✓ Updated
+
+[6/54] Dockers Miki Verão
+  Setting featured: AI - boinas inverno - gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira - img_01_pro (ID: 214664)
+  ✓ Updated
+
+[7/54] Dockers Miki Verão 50% Algodão
+  Setting featured: AI - boinas inverno - gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira - img_04_pro (ID: 214667)
+  ✓ Updated
+
+[8/54] Boina Jornaleiro Linho
+  Setting featured: AI - boinas verão - bone-12805 - img_01_pro (ID: 214669)
+  ✓ Updated
+
+[9/54] Gorro Ushanka
+  Setting featured: AI - gorros - chapka-6064 - img_01_pro (ID: 214824)
+  ✓ Updated
+
+[10/54] Gorro Chapka Impermeável
+  Setting featured: AI - gorros - chapeu-49171 - img_01_pro (ID: 214800)
+  ✓ Updated
+
+[11/54] Chapéu Feminino Lã
+  ⚠️  No AI image found in gallery
+[12/54] Boina Jornaleiro Inverno Liso
+  Setting featured: AI - boinas inverno - bone-25025 - img_01_pro (ID: 214650)
+  ✓ Updated
+
+[13/54] Boina Jornaleiro Pied Poule
+  Setting featured: AI - boinas inverno - bone-25023 - img_01_pro (ID: 214643)
+  ✓ Updated
+
+[14/54] Boina Pure Wool Herringbone
+  Setting featured: AI - boinas inverno - bone-18456g - img_01_pro (ID: 214587)
+  ✓ Updated
+
+[15/54] Boina Pure Wool Quadrados
+  Setting featured: AI - boinas inverno - bone-18439ol - img_01_pro (ID: 214559)
+  ✓ Updated
+
+[16/54] Boina Harris Tweed Jornaleiro
+  Setting featured: AI - boinas inverno - bone-18438mc-18502mi - img_01_pro (ID: 214555)
+  ✓ Updated
+
+[17/54] Boina Bico de Pato Ajustável
+  Setting featured: AI - boinas inverno - bone-22182 - img_01_pro (ID: 214627)
+  ✓ Updated
+
+[18/54] Boina Piemonte Quadrados
+  Setting featured: AI - boinas inverno - bone-18153k - img_01_pro (ID: 214538)
+  ✓ Updated
+
+[19/54] Boina Cashmere
+  Setting featured: AI - boinas inverno - bone-18445mi-bone-18445k-bone-18445n-bone-18445gr-bone-18445ca - img_01_pro (ID: 214567)
+  ✓ Updated
+
+[20/54] Boina Xadrez Pure Wool
+  Setting featured: AI - boinas inverno - bone-18440ol - img_01_pro (ID: 214563)
+  ✓ Updated
+
+[21/54] Boina Feminina Angorá
+  Setting featured: AI - feminino - bone-13156 - img_01_pro (ID: 214784)
+  ✓ Updated
+
+[22/54] Boina Feminina Mescla
+  Setting featured: AI - feminino - bone-12463 - img_01_pro (ID: 214777)
+  ✓ Updated
+
+[23/54] Chapéu Feminino Ráfia
+  Setting featured: AI - feminino - palha-12673 - img_01_pro (ID: 214794)
+  ✓ Updated
+
+[24/54] Boina Feminina em Lã
+  ⚠️  No AI image found in gallery
+[25/54] Boina Sextavada Bic
+  Setting featured: AI - boinas verão - bone-18474 - img_01_pro (ID: 214733)
+  ✓ Updated
+
+[26/54] Boina Linen Blend
+  Setting featured: AI - boinas verão - bone-18107-bone-18515 - img_01_pro (ID: 214712)
+  ✓ Updated
+
+[27/54] Boina Jornaleiro Pure Wool
+  Setting featured: AI - boinas inverno - bone-18508mi-18452 - img_01_pro (ID: 214611)
+  ✓ Updated
+
+[28/54] Boina Harris Tweed Patchwork
+  Setting featured: AI - boinas inverno - bone-18501mi - img_01_pro (ID: 214607)
+  ✓ Updated
+
+[29/54] Chapéu Cowboy
+  ⚠️  No AI image found in gallery
+[30/54] Chapéu Cowboy Feltro
+  ⚠️  No AI image found in gallery
+[31/54] Boina Piemonte Herringbone
+  Setting featured: AI - boinas inverno - bone-18074-bone-18074k-bone-18074gc - img_01_pro (ID: 214499)
+  ✓ Updated
+
+[32/54] Bucket Hat Impermeável
+  ⚠️  No AI image found in gallery
+[33/54] Chapéu Impermeável
+  Setting featured: AI - chapéus lã - chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel - img_01_pro (ID: 214759)
+  ✓ Updated
+
+[34/54] Casquete
+  ⚠️  No AI image found in gallery
+[35/54] Chapéu Cerimónia Pérolas
+  ⚠️  No AI image found in gallery
+[36/54] Chapéu Cerimónia Flores
+  ⚠️  No AI image found in gallery
+[37/54] Boina Sextavada Veludo
+  Setting featured: AI - boinas inverno - bone-18279k-bone-18279ma-bone-18279mi-bone-18279bg-bone-18279g - img_01_pro (ID: 214543)
+  ✓ Updated
+
+[38/54] Boina Sextavada Pele
+  ⚠️  No AI image found in gallery
+[39/54] Boina Jornaleiro Herringbone Lã
+  ⚠️  No AI image found in gallery
+[40/54] Carteira em Pele
+  Setting featured: AI - artigos em pele - porte-monnaie-5657 - img_01_pro (ID: 214494)
+  ✓ Updated
+
+[41/54] Luvas Femininas em Pele
+  Setting featured: AI - artigos em pele - gants-17120 - img_01_pro (ID: 214484)
+  ✓ Updated
+
+[42/54] Luvas Masculinas em Pele
+  Setting featured: AI - artigos em pele - gants-17119 - img_01_pro (ID: 214479)
+  ✓ Updated
+
+[43/54] Boina Marinheiro Impermeável
+  Setting featured: AI - chapéus lã - chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel - img_01_pro (ID: 214764)
+  ✓ Updated
+
+[44/54] Bob Impermeável Bucket Hat
+  Setting featured: AI - chapéus lã - chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel - img_04_pro (ID: 214767)
+  ✓ Updated
+
+[45/54] Chapéu Impermeável Feminino
+  ⚠️  No AI image found in gallery
+[46/54] Chapéu de Pelo
+  ⚠️  No AI image found in gallery
+[47/54] Boina Feminina Pied-de-Poule
+  ⚠️  No AI image found in gallery
+[48/54] Boina Piemonte Primavera
+  ⚠️  No AI image found in gallery
+[49/54] Boné Cubano Algodão
+  ⚠️  No AI image found in gallery
+[50/54] Chapéu Colonial
+  ⚠️  No AI image found in gallery
+[51/54] Chapéu Impermeável Dobrável
+  Setting featured: AI - chapéus lã - chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel - img_04_pro (ID: 214762)
+  ✓ Updated
+
+[52/54] Safari Cortiça
+  ⚠️  No AI image found in gallery
+[53/54] Boina Cortiça
+  ⚠️  No AI image found in gallery
+[54/54] Ráfia Crochê Couro
+  ⚠️  No AI image found in gallery
+
+======================================================================
+SUMMARY
+======================================================================
+✓ Products updated: 32
+✗ Errors: 0
+======================================================================
+

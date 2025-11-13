@@ -114,9 +114,9 @@ add_action('wp_enqueue_scripts', function () {
     $hero_overrides = <<<CSS
 body.home .wp-block-cover.alignfull.is-light {
     padding-top: 0 !important;
-    padding-bottom: clamp(40px, 8vh, 72px) !important;
-    min-height: clamp(420px, 60vh, 620px) !important;
-    max-height: clamp(520px, 70vh, 720px) !important;
+    padding-bottom: clamp(60px, 10vh, 120px) !important;
+    min-height: clamp(560px, 70vh, 800px) !important;
+    max-height: clamp(640px, 80vh, 900px) !important;
 }
 
 body.home .content-area.page-wrapper,
@@ -155,7 +155,7 @@ body.home .wp-block-cover.alignfull.is-light .wp-block-cover__background {
 
 body.home .wp-block-cover.alignfull.is-light .wp-block-cover__image-background {
     object-fit: cover !important;
-    object-position: 50% 24% !important;
+    object-position: 50% 12% !important;
 }
 
 body.home .wp-block-cover.alignfull.is-light .wp-block-cover__inner-container {
@@ -190,8 +190,8 @@ body.home .wp-block-cover.alignfull.is-light .wp-block-button.is-style-outline .
 
 @media (max-width: 767px) {
     body.home .wp-block-cover.alignfull.is-light {
-        min-height: clamp(360px, 72vh, 520px) !important;
-        max-height: 78vh !important;
+        min-height: clamp(420px, 70vh, 560px) !important;
+        max-height: 80vh !important;
         padding-left: 16px !important;
         padding-right: 16px !important;
     }
@@ -323,6 +323,12 @@ function chapeus_add_view_all_collections() {
     if (!is_front_page()) {
         return;
     }
+    
+    // Verificar se WooCommerce está ativo antes de usar funções WC
+    if (!function_exists('wc_get_page_id')) {
+        return;
+    }
+    
     ?>
     <script>
     jQuery(document).ready(function($) {
@@ -727,4 +733,21 @@ add_action('wp_footer', function () {
     });
     </script>
     <?php
+});
+
+/**
+ * Temporary redirect for legacy /shop/ URLs → /loja/.
+ * Prevents 404s coming from antigas campanhas e ligações externas.
+ */
+add_action('template_redirect', function () {
+    if (!is_page() && !is_404()) {
+        return;
+    }
+
+    $request_path = trim(parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH) ?? '', '/');
+
+    if ($request_path === 'shop') {
+        wp_safe_redirect(home_url('/loja/'), 301);
+        exit;
+    }
 });
