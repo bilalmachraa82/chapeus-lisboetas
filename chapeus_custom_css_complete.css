@@ -1082,6 +1082,18 @@ html {
     z-index: 10001 !important;
 }
 
+.header-nav .has-dropdown:hover > .nav-dropdown,
+.header-nav .has-dropdown.is-active > .nav-dropdown {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+.header-nav .nav-dropdown {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 .wp-block-cover.hero-cover-2025 {
     z-index: 1 !important;
 }

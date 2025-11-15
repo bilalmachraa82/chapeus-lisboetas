@@ -9,15 +9,21 @@ Strategy:
 4. Set first image as featured, rest as gallery
 """
 
-import sys
+import os
 import re
+import sys
 from collections import defaultdict
+
 import mysql.connector
 from mysql.connector import Error
 
+TABLE_PREFIX = os.environ.get('WP_TABLE_PREFIX', 'wp_')
+POSTS_TABLE = f"{TABLE_PREFIX}posts"
+POSTMETA_TABLE = f"{TABLE_PREFIX}postmeta"
+
 # WordPress database
 DB_CONFIG = {
-    'host': 'localhost',
+    'host': '127.0.0.1',
     'port': 3306,
     'database': 'lisboetas_web',
     'user': 'root',
@@ -34,6 +40,7 @@ class ImageProductLinker:
         self.cursor = None
         self.stats = {
             'products_updated': 0,
+            'matched_by_sku': 0,
             'images_linked': 0,
             'products_not_found': [],
             'errors': []
@@ -59,14 +66,14 @@ class ImageProductLinker:
 
     def get_all_ai_images(self):
         """Get all registered AI images with metadata."""
-        query = """
+        query = f"""
             SELECT
                 p.ID,
                 p.post_title,
                 p.guid,
                 pm.meta_value as file_path
-            FROM lx_posts p
-            LEFT JOIN lx_postmeta pm ON p.ID = pm.post_id AND pm.meta_key = '_wp_attached_file'
+            FROM {POSTS_TABLE} p
+            LEFT JOIN {POSTMETA_TABLE} pm ON p.ID = pm.post_id AND pm.meta_key = '_wp_attached_file'
             WHERE p.post_type = 'attachment'
             AND p.post_title LIKE 'AI -%'
             ORDER BY p.ID
@@ -91,9 +98,9 @@ class ImageProductLinker:
     def find_product_by_slug(self, product_slug: str):
         """Find WooCommerce product by post_name (slug)."""
         # Try exact match first
-        query = """
+        query = f"""
             SELECT ID, post_title, post_name
-            FROM lx_posts
+            FROM {POSTS_TABLE}
             WHERE post_type = 'product'
             AND post_status = 'publish'
             AND post_name = %s
@@ -110,9 +117,9 @@ class ImageProductLinker:
         first_sku = product_slug.split('-')[:2]  # Get first 2 parts (e.g., bone-18074)
         if len(first_sku) == 2:
             partial_slug = '-'.join(first_sku)
-            query = """
+            query = f"""
                 SELECT ID, post_title, post_name
-                FROM lx_posts
+                FROM {POSTS_TABLE}
                 WHERE post_type = 'product'
                 AND post_status = 'publish'
                 AND post_name LIKE %s
@@ -136,8 +143,8 @@ class ImageProductLinker:
         featured_id = image_ids[0]
 
         # Check if featured image already exists
-        check_query = """
-            SELECT meta_value FROM lx_postmeta
+        check_query = f"""
+            SELECT meta_value FROM {POSTMETA_TABLE}
             WHERE post_id = %s AND meta_key = '_thumbnail_id'
         """
         self.cursor.execute(check_query, (product_id,))
@@ -145,16 +152,16 @@ class ImageProductLinker:
 
         if existing:
             # Update existing
-            update_query = """
-                UPDATE lx_postmeta
+            update_query = f"""
+                UPDATE {POSTMETA_TABLE}
                 SET meta_value = %s
                 WHERE post_id = %s AND meta_key = '_thumbnail_id'
             """
             self.cursor.execute(update_query, (featured_id, product_id))
         else:
             # Insert new
-            insert_query = """
-                INSERT INTO lx_postmeta (post_id, meta_key, meta_value)
+            insert_query = f"""
+                INSERT INTO {POSTMETA_TABLE} (post_id, meta_key, meta_value)
                 VALUES (%s, '_thumbnail_id', %s)
             """
             self.cursor.execute(insert_query, (product_id, featured_id))
@@ -164,7 +171,8 @@ class ImageProductLinker:
             gallery_ids = ','.join(str(id) for id in image_ids[1:])
 
             # Check if gallery exists
-            self.cursor.execute(check_query.replace('_thumbnail_id', '_product_image_gallery'), (product_id,))
+            gallery_check = check_query.replace('_thumbnail_id', '_product_image_gallery')
+            self.cursor.execute(gallery_check, (product_id,))
             existing_gallery = self.cursor.fetchone()
 
             if existing_gallery:
@@ -173,21 +181,85 @@ class ImageProductLinker:
                 if existing_ids:
                     gallery_ids = f"{existing_ids},{gallery_ids}"
 
-                update_query = """
-                    UPDATE lx_postmeta
+                update_query = f"""
+                    UPDATE {POSTMETA_TABLE}
                     SET meta_value = %s
                     WHERE post_id = %s AND meta_key = '_product_image_gallery'
                 """
                 self.cursor.execute(update_query, (gallery_ids, product_id))
             else:
                 # Insert new gallery
-                insert_query = """
-                    INSERT INTO lx_postmeta (post_id, meta_key, meta_value)
+                insert_query = f"""
+                    INSERT INTO {POSTMETA_TABLE} (post_id, meta_key, meta_value)
                     VALUES (%s, '_product_image_gallery', %s)
                 """
                 self.cursor.execute(insert_query, (product_id, gallery_ids))
 
         self.conn.commit()
+
+    def extract_possible_skus(self, folder_name: str) -> list:
+        """
+        Extract potential SKU fragments from folder name.
+        Returns list ordered by likelihood.
+        """
+        if not folder_name:
+            return []
+
+        patterns = [
+            r'\b(\d{4,6})\b',             # pure numbers
+            r'\b(\d{4,6}[a-z]{1,3})\b',   # number + short suffix
+            r'\b(\d{4,6}[a-z]+)\b'        # number + longer suffix
+        ]
+        seen = set()
+        candidates = []
+
+        for pattern in patterns:
+            for match in re.findall(pattern, folder_name, re.IGNORECASE):
+                normalized = match.lower()
+                if normalized not in seen:
+                    seen.add(normalized)
+                    candidates.append(match)
+
+        return candidates
+
+    def find_product_by_sku(self, sku_fragment: str):
+        """Find WooCommerce product by matching SKU meta, allowing partial matches."""
+        if not sku_fragment:
+            return None
+
+        # Exact match
+        query = f"""
+            SELECT p.ID, p.post_title, p.post_name, pm.meta_value as sku
+            FROM {POSTS_TABLE} p
+            INNER JOIN {POSTMETA_TABLE} pm ON p.ID = pm.post_id
+            WHERE p.post_type = 'product'
+            AND p.post_status = 'publish'
+            AND pm.meta_key = '_sku'
+            AND pm.meta_value = %s
+            LIMIT 1
+        """
+        self.cursor.execute(query, (sku_fragment,))
+        result = self.cursor.fetchone()
+        if result:
+            return result
+
+        # Partial match on numeric portion
+        digits = re.sub(r'\D', '', sku_fragment)
+        if len(digits) >= 4:
+            query = f"""
+                SELECT p.ID, p.post_title, p.post_name, pm.meta_value as sku
+                FROM {POSTS_TABLE} p
+                INNER JOIN {POSTMETA_TABLE} pm ON p.ID = pm.post_id
+                WHERE p.post_type = 'product'
+                AND p.post_status = 'publish'
+                AND pm.meta_key = '_sku'
+                AND pm.meta_value LIKE %s
+                LIMIT 1
+            """
+            self.cursor.execute(query, (f"%{digits}%",))
+            return self.cursor.fetchone()
+
+        return None
 
     def process_all(self):
         """Main process: link all AI images to products."""
@@ -221,13 +293,32 @@ class ImageProductLinker:
 
             # Find WooCommerce product
             product = self.find_product_by_slug(product_slug)
+            # track how we matched
+            match_method = 'slug'
+            match_value = product_slug
 
             if not product:
-                print(f"  ⚠️  Product not found in WooCommerce")
-                self.stats['products_not_found'].append(product_slug)
-                continue
+                possible_skus = self.extract_possible_skus(product_slug)
+                for sku_candidate in possible_skus:
+                    found = self.find_product_by_sku(sku_candidate)
+                    if found:
+                        product = found
+                        match_method = 'sku'
+                        match_value = sku_candidate
+                        self.stats['matched_by_sku'] += 1
+                        break
 
-            print(f"  ✓ Found: {product['post_title']} (ID: {product['ID']})")
+                if not product:
+                    print(f"  ⚠️  Product not found in WooCommerce")
+                    if possible_skus:
+                        print(f"     Tried SKUs: {', '.join(possible_skus[:5])}")
+                    self.stats['products_not_found'].append(product_slug)
+                    continue
+
+            if match_method == 'sku':
+                print(f"  ✓ Matched by SKU fragment '{match_value}' → {product['post_title']} (ID: {product['ID']})")
+            else:
+                print(f"  ✓ Found: {product['post_title']} (ID: {product['ID']})")
 
             # Link images
             try:
@@ -250,6 +341,7 @@ class ImageProductLinker:
         print("="*70)
         print(f"✓ Products updated: {self.stats['products_updated']}")
         print(f"✓ Images linked: {self.stats['images_linked']}")
+        print(f"✓ Matched via SKU fallback: {self.stats['matched_by_sku']}")
         print(f"⚠️  Products not found: {len(self.stats['products_not_found'])}")
         print(f"✗ Errors: {len(self.stats['errors'])}")
 

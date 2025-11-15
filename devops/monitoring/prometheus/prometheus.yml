@@ -1,0 +1,189 @@
+# Prometheus Configuration for Chapéus Lisboeta
+# Monitors WordPress, WooCommerce, Server Metrics, and Uptime
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'chapeus-lisboeta'
+    environment: 'production'
+    site: 'chapeuslisboeta.pt'
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - 'alertmanager:9093'
+
+# Load alerting rules
+rule_files:
+  - 'alerts.yml'
+
+# Scrape configurations
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+        labels:
+          service: 'prometheus'
+
+  # Node Exporter (server metrics)
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node_exporter:9100']
+        labels:
+          instance: 'ptisp-server'
+          service: 'node-exporter'
+
+  # cAdvisor (container metrics)
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['cadvisor:8080']
+        labels:
+          service: 'cadvisor'
+
+  # Blackbox Exporter - Website monitoring
+  - job_name: 'blackbox-http'
+    metrics_path: /probe
+    params:
+      module: [http_2xx]
+    static_configs:
+      - targets:
+          - https://chapeuslisboeta.pt
+          - https://www.chapeuslisboeta.pt
+          - https://chapeuslisboeta.pt/shop/
+          - https://chapeuslisboeta.pt/cart/
+          - https://chapeuslisboeta.pt/checkout/
+        labels:
+          environment: 'production'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox_exporter:9115
+
+  # Blackbox - WordPress health check
+  - job_name: 'blackbox-wordpress-health'
+    metrics_path: /probe
+    params:
+      module: [wordpress_health]
+    static_configs:
+      - targets:
+          - https://chapeuslisboeta.pt/wp-json/
+          - https://chapeuslisboeta.pt/wp-json/wp/v2/
+        labels:
+          check_type: 'wordpress-api'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox_exporter:9115
+
+  # Blackbox - WooCommerce API health
+  - job_name: 'blackbox-woocommerce'
+    metrics_path: /probe
+    params:
+      module: [woocommerce_api]
+    static_configs:
+      - targets:
+          - https://chapeuslisboeta.pt/wp-json/wc/v3/
+          - https://chapeuslisboeta.pt/wp-json/wc/v3/system_status
+        labels:
+          check_type: 'woocommerce-api'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox_exporter:9115
+
+  # Blackbox - SSL certificate monitoring
+  - job_name: 'blackbox-ssl'
+    metrics_path: /probe
+    params:
+      module: [http_2xx]
+    static_configs:
+      - targets:
+          - https://chapeuslisboeta.pt
+        labels:
+          check_type: 'ssl-certificate'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox_exporter:9115
+
+  # Blackbox - DNS monitoring
+  - job_name: 'blackbox-dns'
+    metrics_path: /probe
+    params:
+      module: [dns_lookup]
+    static_configs:
+      - targets:
+          - chapeuslisboeta.pt
+          - www.chapeuslisboeta.pt
+        labels:
+          check_type: 'dns'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox_exporter:9115
+
+  # MySQL monitoring (if mysqld_exporter installed)
+  - job_name: 'mysql'
+    static_configs:
+      - targets: ['ptisp-server:9104']
+        labels:
+          service: 'mysql'
+          database: 'lisboetas_web'
+    # Optional: only if mysqld_exporter is installed on PTisp server
+
+  # PHP-FPM monitoring (if php-fpm_exporter installed)
+  - job_name: 'php-fpm'
+    static_configs:
+      - targets: ['ptisp-server:9253']
+        labels:
+          service: 'php-fpm'
+          version: '8.3'
+    # Optional: only if php-fpm_exporter is installed
+
+  # Nginx monitoring (if nginx_exporter installed)
+  - job_name: 'nginx'
+    static_configs:
+      - targets: ['ptisp-server:9113']
+        labels:
+          service: 'nginx'
+    # Optional: only if nginx_exporter is installed
+
+  # Alertmanager
+  - job_name: 'alertmanager'
+    static_configs:
+      - targets: ['alertmanager:9093']
+        labels:
+          service: 'alertmanager'
+
+  # Grafana
+  - job_name: 'grafana'
+    static_configs:
+      - targets: ['grafana:3000']
+        labels:
+          service: 'grafana'
+
+  # Loki (if enabled)
+  - job_name: 'loki'
+    static_configs:
+      - targets: ['loki:3100']
+        labels:
+          service: 'loki'

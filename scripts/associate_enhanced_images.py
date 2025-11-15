@@ -15,6 +15,8 @@ Date: 2025-11-13
 import argparse
 import csv
 import json
+import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -23,7 +25,14 @@ from typing import Dict, List, Optional, Tuple
 # Configuration
 BASE_PATH = Path("/Users/bilal/Programaçao/Tiago Andrado/full-chapeus-lisboetas (2)")
 TRACKING_CSV = BASE_PATH / "relatorios/ai_enhanced_images_registered.csv"
-DOCKER_CONTAINER = "chapeus_wordpress"
+DOCKER_CONTAINER = os.environ.get("WP_CONTAINER", "chapeus_wordpress")
+MYSQL_CONTAINER = os.environ.get("MYSQL_CONTAINER", "chapeus_mysql")
+MYSQL_DB = os.environ.get("WP_DB_NAME", "lisboetas_web")
+MYSQL_USER = os.environ.get("WP_DB_USER", "root")
+MYSQL_PASS = os.environ.get("WP_DB_PASS", "rootpassword")
+TABLE_PREFIX = os.environ.get("WP_TABLE_PREFIX", "wp_")
+POSTS_TABLE = f"{TABLE_PREFIX}posts"
+POSTMETA_TABLE = f"{TABLE_PREFIX}postmeta"
 
 # Stats
 stats = {
@@ -37,7 +46,74 @@ stats = {
 }
 
 
-def get_product_by_sku(sku: str) -> Optional[int]:
+def run_mysql_query(sql: str) -> Optional[Tuple[int, str]]:
+    """Run SQL inside MySQL container and return first row (ID, title)."""
+    safe_sql = sql.replace('"', r'\"')
+    cmd = [
+        "docker", "exec", MYSQL_CONTAINER,
+        "mysql",
+        f"-u{MYSQL_USER}",
+        f"-p{MYSQL_PASS}",
+        "-D", MYSQL_DB,
+        "-e", safe_sql
+    ]
+
+    result = subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        timeout=10
+    )
+
+    if result.returncode != 0:
+        return None
+
+    lines = [line.strip() for line in result.stdout.splitlines() if line.strip()]
+    if len(lines) < 2:
+        return None
+
+    first_data = lines[1]
+    parts = first_data.split("\t")
+    if not parts:
+        return None
+
+    try:
+        product_id = int(parts[0])
+    except ValueError:
+        return None
+
+    title = parts[1] if len(parts) > 1 else ""
+    return product_id, title
+
+
+def generate_sku_candidates(raw_value: str) -> List[str]:
+    """Generate possible SKU tokens from folder/sku string."""
+    if not raw_value:
+        return []
+
+    cleaned = raw_value.replace("–", "-").replace("—", "-").strip()
+    candidates = []
+
+    # direct cleaned folder name
+    if cleaned:
+        candidates.append(cleaned)
+
+    # add tokens by splitting on delimiters
+    for token in re.split(r"[\\s_/]+", cleaned):
+        token = token.strip("- ")
+        if token and token not in candidates:
+            candidates.append(token)
+
+    # numeric fragments (e.g., 18074, 18074GC)
+    numeric_tokens = re.findall(r"\d{3,6}[a-zA-Z]*", cleaned)
+    for token in numeric_tokens:
+        if token not in candidates:
+            candidates.append(token)
+
+    return candidates
+
+
+def get_product_by_sku(sku: str) -> Optional[Tuple[int, str]]:
     """
     Find WordPress product ID by SKU using WP-CLI.
 
@@ -47,58 +123,36 @@ def get_product_by_sku(sku: str) -> Optional[int]:
     Returns:
         Product ID or None if not found
     """
-    try:
-        # Clean SKU (remove variants like -A, -B)
-        base_sku = sku.split('-')[0] if '-' in sku else sku
+    candidates = generate_sku_candidates(sku)
 
-        # Search by SKU
-        cmd = [
-            "docker", "exec", DOCKER_CONTAINER,
-            "wp", "post", "list",
-            "--post_type=product",
-            "--meta_key=_sku",
-            f"--meta_value={base_sku}",
-            "--field=ID",
-            "--allow-root"
-        ]
-
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=10
+    for candidate in candidates:
+        # Exact match
+        safe_candidate = candidate.replace("'", "''")
+        sql = (
+            f"SELECT p.ID, p.post_title FROM {POSTS_TABLE} p "
+            f"INNER JOIN {POSTMETA_TABLE} pm ON p.ID = pm.post_id "
+            f"WHERE p.post_type='product' AND p.post_status='publish' "
+            f"AND pm.meta_key='_sku' AND pm.meta_value='{safe_candidate}' LIMIT 1;"
         )
+        result = run_mysql_query(sql)
+        if result:
+            return result
 
-        if result.returncode == 0 and result.stdout.strip():
-            product_id = int(result.stdout.strip().split('\n')[0])
-            return product_id
+        # Partial numeric match
+        digits = re.sub(r"\\D", "", candidate)
+        if digits and len(digits) >= 3:
+            sql_like = (
+                f"SELECT p.ID, p.post_title FROM {POSTS_TABLE} p "
+                f"INNER JOIN {POSTMETA_TABLE} pm ON p.ID = pm.post_id "
+                f"WHERE p.post_type='product' AND p.post_status='publish' "
+                f"AND pm.meta_key='_sku' AND pm.meta_value LIKE '%{digits}%' "
+                f"LIMIT 1;"
+            )
+            result = run_mysql_query(sql_like)
+            if result:
+                return result
 
-        # Try alternative SKU search (in post_name/slug)
-        cmd = [
-            "docker", "exec", DOCKER_CONTAINER,
-            "wp", "post", "list",
-            "--post_type=product",
-            f"--name={sku.lower()}",
-            "--field=ID",
-            "--allow-root"
-        ]
-
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=10
-        )
-
-        if result.returncode == 0 and result.stdout.strip():
-            product_id = int(result.stdout.strip().split('\n')[0])
-            return product_id
-
-        return None
-
-    except Exception as e:
-        print(f"      ❌ Error searching product: {e}")
-        return None
+    return None
 
 
 def get_product_gallery(product_id: int) -> List[int]:
@@ -287,14 +341,15 @@ def main():
         print(f"[{i}/{len(images_by_sku)}] 📦 {sku}")
 
         # Find WordPress product
-        product_id = get_product_by_sku(sku)
+        product_info = get_product_by_sku(sku)
 
-        if not product_id:
+        if not product_info:
             print(f"      ⚠️  Product not found in WordPress (skipping)")
             stats['skipped'] += 1
             continue
 
-        print(f"      ✓ Found product ID: {product_id}")
+        product_id, product_title = product_info
+        print(f"      ✓ Found product ID {product_id} ({product_title})")
 
         # Get attachment IDs
         attachment_ids = [

@@ -1,0 +1,573 @@
+SKU MAPPING FULL REPORT
+================================================================================
+
+MATCHED (62 folders):
+--------------------------------------------------------------------------------
+Folder: chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel
+  Category: chapéus lã
+  Candidates: 181056, 18105, 1810
+  → Matched SKU: 18102 (ID: 212575)
+  → Product: Boina Piemonte Algodão
+  → Photos: 13
+
+Folder: chapeu-impermeavel-art-181054-pack-12-tags-fabricado-na-italia-la-esmagavel-impermeavel
+  Category: chapéus lã
+  Candidates: 181054, 18105, 1810
+  → Matched SKU: 18102 (ID: 212575)
+  → Product: Boina Piemonte Algodão
+  → Photos: 13
+
+Folder: bone-15125
+  Category: cowboy
+  Candidates: 15125, 1512
+  → Matched SKU: 15125 (ID: 212838)
+  → Product: Boina Jornaleiro Primavera
+  → Photos: 17
+
+Folder: bone-15114
+  Category: cowboy
+  Candidates: 15114, 1511
+  → Matched SKU: 15114 (ID: 212754)
+  → Product: Boina Jornaleiro Verão Algodão
+  → Photos: 15
+
+Folder: chapeu-49103
+  Category: à prova d´água
+  Candidates: 49103, 4910
+  → Matched SKU: 49103 (ID: 213898)
+  → Product: Chapéu Impermeável
+  → Photos: 24
+
+Folder: porte-monnaie-5657
+  Category: artigos em pele
+  Candidates: 5657
+  → Matched SKU: 5657 (ID: 214104)
+  → Product: Carteira em Pele
+  → Photos: 2
+
+Folder: gants-17119
+  Category: artigos em pele
+  Candidates: 17119, 1711
+  → Matched SKU: 17119 (ID: 214122)
+  → Product: Luvas Masculinas em Pele
+  → Photos: 13
+
+Folder: gants-17120
+  Category: artigos em pele
+  Candidates: 17120, 1712
+  → Matched SKU: 17120 (ID: 214112)
+  → Product: Luvas Femininas em Pele
+  → Photos: 23
+
+Folder: bone-22195
+  Category: boinas inverno
+  Candidates: 22195, 2219
+  → Matched SKU: 22199 (ID: 212885)
+  → Product: Boina Jornaleiro Contraste
+  → Photos: 16
+
+Folder: bone-18508mi-18452
+  Category: boinas inverno
+  Candidates: 18508, 18452, 1845
+  → Matched SKU: 18508 (ID: 213782)
+  → Product: Boina Jornaleiro Pure Wool
+  → Photos: 32
+
+Folder: bone-18438mc-18502mi
+  Category: boinas inverno
+  Candidates: 18438, 18502
+  → Matched SKU: 18438 (ID: 213119)
+  → Product: Boina Harris Tweed Jornaleiro
+  → Photos: 11
+
+Folder: bone-18439ol
+  Category: boinas inverno
+  Candidates: 18439
+  → Matched SKU: 18439 (ID: 213074)
+  → Product: Boina Pure Wool Quadrados
+  → Photos: 8
+
+Folder: bone-18445mi-bone-18445k-bone-18445n-bone-18445gr-bone-18445ca
+  Category: boinas inverno
+  Candidates: 18445
+  → Matched SKU: 18445 (ID: 213264)
+  → Product: Boina Cashmere
+  → Photos: 40
+
+Folder: bone-18501mi
+  Category: boinas inverno
+  Candidates: 18501
+  → Matched SKU: 18501 (ID: 213808)
+  → Product: Boina Harris Tweed Patchwork
+  → Photos: 8
+
+Folder: bone-18279k-bone-18279ma-bone-18279mi-bone-18279bg-bone-18279g
+  Category: boinas inverno
+  Candidates: 18279
+  → Matched SKU: 18279 (ID: 214015)
+  → Product: Boina Sextavada Veludo
+  → Photos: 24
+
+Folder: bone-18440ol
+  Category: boinas inverno
+  Candidates: 18440
+  → Matched SKU: 18440 (ID: 213269)
+  → Product: Boina Xadrez Pure Wool
+  → Photos: 8
+
+Folder: bone-18074-bone-18074k-bone-18074gc
+  Category: boinas inverno
+  Candidates: 18074, 1807
+  → Matched SKU: 18074 (ID: 213861)
+  → Product: Boina Piemonte Herringbone
+  → Photos: 36
+
+Folder: bone-25025
+  Category: boinas inverno
+  Candidates: 25025, 2502
+  → Matched SKU: 25025 (ID: 212868)
+  → Product: Boina Jornaleiro Inverno Liso
+  → Photos: 20
+
+Folder: bone-25023
+  Category: boinas inverno
+  Candidates: 25023, 2502
+  → Matched SKU: 25023-1 (ID: 212948)
+  → Product: Boina Jornaleiro Pied Poule
+  → Photos: 14
+
+Folder: gorro-miki-22100-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira
+  Category: boinas inverno
+  Candidates: 22100, 2210
+  → Matched SKU: 22103 (ID: 213442)
+  → Product: Boina Feminina em Lã
+  → Photos: 10
+
+Folder: bone-18153k
+  Category: boinas inverno
+  Candidates: 18153
+  → Matched SKU: 18153 (ID: 213247)
+  → Product: Boina Piemonte Quadrados
+  → Photos: 10
+
+Folder: bone-18456g
+  Category: boinas inverno
+  Candidates: 18456
+  → Matched SKU: 18456 (ID: 213052)
+  → Product: Boina Pure Wool Herringbone
+  → Photos: 32
+
+Folder: bone-22182
+  Category: boinas inverno
+  Candidates: 22182, 2218
+  → Matched SKU: 22182 (ID: 213226)
+  → Product: Boina Bico de Pato Ajustável
+  → Photos: 20
+
+Folder: palha-12512
+  Category: cerimónia
+  Candidates: 12512, 1251
+  → Matched SKU: 12511 (ID: 212427)
+  → Product: Chapéu Sisal Cloche
+  → Photos: 10
+
+Folder: bone-2018039
+  Category: cerimónia
+  Candidates: 20180, 2018
+  → Matched SKU: 2018016 (ID: 213407)
+  → Product: Boina Feminina Algodão
+  → Photos: 13
+
+Folder: casquette-12448
+  Category: cerimónia
+  Candidates: 12448, 1244
+  → Matched SKU: 12448 (ID: 213451)
+  → Product: Boina Feminina em Pele Ecológica
+  → Photos: 12
+
+Folder: casquette-22103
+  Category: cerimónia
+  Candidates: 22103, 2210
+  → Matched SKU: 22103 (ID: 213442)
+  → Product: Boina Feminina em Lã
+  → Photos: 19
+
+Folder: boina-classica-5020
+  Category: cerimónia
+  Candidates: 5020
+  → Matched SKU: 5020 (ID: 213284)
+  → Product: Boina Francesa
+  → Photos: 9
+
+Folder: palha-12517
+  Category: cerimónia
+  Candidates: 12517, 1251
+  → Matched SKU: 12517 (ID: 213727)
+  → Product: Chapéu Ráfia Aba Larga
+  → Photos: 12
+
+Folder: palha-12511
+  Category: cerimónia
+  Candidates: 12511, 1251
+  → Matched SKU: 12511 (ID: 212427)
+  → Product: Chapéu Sisal Cloche
+  → Photos: 10
+
+Folder: bone-12625
+  Category: cerimónia
+  Candidates: 12625, 1262
+  → Matched SKU: 12625 (ID: 213391)
+  → Product: Boina de Verão Feminina
+  → Photos: 14
+
+Folder: viseira-23119
+  Category: cerimónia
+  Candidates: 23119, 2311
+  → Matched SKU: 23119 (ID: 213427)
+  → Product: Viseira
+  → Photos: 7
+
+Folder: palha-12673
+  Category: cerimónia
+  Candidates: 12673, 1267
+  → Matched SKU: 12673 (ID: 213379)
+  → Product: Chapéu Feminino Ráfia
+  → Photos: 6
+
+Folder: panama-201754
+  Category: panamá
+  Candidates: 201754, 20175, 2017
+  → Matched SKU: 201754 (ID: 213212)
+  → Product: Chapéu Panama Soft Hat
+  → Photos: 6
+
+Folder: panama-201752
+  Category: panamá
+  Candidates: 201752, 20175, 2017
+  → Matched SKU: 201752 (ID: 213219)
+  → Product: Panama Soft Hat Aba Curta
+  → Photos: 6
+
+Folder: chapka-6064
+  Category: gorros
+  Candidates: 6064
+  → Matched SKU: 6064 (ID: 212810)
+  → Product: Gorro Ushanka
+  → Photos: 2
+
+Folder: chapeu-49171
+  Category: gorros
+  Candidates: 49171, 4917
+  → Matched SKU: 49171 (ID: 212812)
+  → Product: Gorro Chapka Impermeável
+  → Photos: 48
+
+Folder: bob-2018120
+  Category: chapéus em tecido
+  Candidates: 20181, 2018
+  → Matched SKU: 2018120 (ID: 213631)
+  → Product: Bob Safari
+  → Photos: 12
+
+Folder: bob-2018121
+  Category: chapéus em tecido
+  Candidates: 20181, 2018
+  → Matched SKU: 2018120 (ID: 213631)
+  → Product: Bob Safari
+  → Photos: 15
+
+Folder: bone-22134
+  Category: bonés
+  Candidates: 22134, 2213
+  → Matched SKU: 22134 (ID: 213188)
+  → Product: Baseball Cap Lã
+  → Photos: 15
+
+Folder: bone-12614-bone-15112
+  Category: bonés
+  Candidates: 12614, 15112, 1261, 1511
+  → Matched SKU: 12614 (ID: 214393)
+  → Product: Boné Cubano Algodão
+  → Photos: 27
+
+Folder: bone-12694
+  Category: bonés
+  Candidates: 12694, 1269
+  → Matched SKU: 12694 (ID: 213154)
+  → Product: Boné Cubano Ganga Lavada
+  → Photos: 17
+
+Folder: bone-15116
+  Category: bonés
+  Candidates: 15116, 1511
+  → Matched SKU: 15114 (ID: 212754)
+  → Product: Boina Jornaleiro Verão Algodão
+  → Photos: 22
+
+Folder: bone-12849
+  Category: bonés
+  Candidates: 12849, 1284
+  → Matched SKU: 12849 (ID: 213173)
+  → Product: Boné Che Linho
+  → Photos: 14
+
+Folder: bone-veludo-22138-ou-2019110
+  Category: bonés
+  Candidates: 22138, 2213, 20191, 2019
+  → Matched SKU: 22134 (ID: 213188)
+  → Product: Baseball Cap Lã
+  → Photos: 22
+
+Folder: palha-12512
+  Category: feminino
+  Candidates: 12512, 1251
+  → Matched SKU: 12511 (ID: 212427)
+  → Product: Chapéu Sisal Cloche
+  → Photos: 10
+
+Folder: bone-13156
+  Category: feminino
+  Candidates: 13156, 1315
+  → Matched SKU: 13156 (ID: 213359)
+  → Product: Boina Feminina Angorá
+  → Photos: 20
+
+Folder: gorro-5942f-bonnet-5942c
+  Category: feminino
+  Candidates: 5942
+  → Matched SKU: 5942F (ID: 212860)
+  → Product: Chapéu Feminino Lã
+  → Photos: 7
+
+Folder: bone-2018039
+  Category: feminino
+  Candidates: 20180, 2018
+  → Matched SKU: 2018016 (ID: 213407)
+  → Product: Boina Feminina Algodão
+  → Photos: 13
+
+Folder: casquette-12448
+  Category: feminino
+  Candidates: 12448, 1244
+  → Matched SKU: 12448 (ID: 213451)
+  → Product: Boina Feminina em Pele Ecológica
+  → Photos: 12
+
+Folder: bone-12463
+  Category: feminino
+  Candidates: 12463, 1246
+  → Matched SKU: 12463 (ID: 213361)
+  → Product: Boina Feminina Mescla
+  → Photos: 14
+
+Folder: casquette-22103
+  Category: feminino
+  Candidates: 22103, 2210
+  → Matched SKU: 22103 (ID: 213442)
+  → Product: Boina Feminina em Lã
+  → Photos: 19
+
+Folder: boina-classica-5020
+  Category: feminino
+  Candidates: 5020
+  → Matched SKU: 5020 (ID: 213284)
+  → Product: Boina Francesa
+  → Photos: 9
+
+Folder: palha-12517
+  Category: feminino
+  Candidates: 12517, 1251
+  → Matched SKU: 12517 (ID: 213727)
+  → Product: Chapéu Ráfia Aba Larga
+  → Photos: 12
+
+Folder: palha-12511
+  Category: feminino
+  Candidates: 12511, 1251
+  → Matched SKU: 12511 (ID: 212427)
+  → Product: Chapéu Sisal Cloche
+  → Photos: 10
+
+Folder: bone-12625
+  Category: feminino
+  Candidates: 12625, 1262
+  → Matched SKU: 12625 (ID: 213391)
+  → Product: Boina de Verão Feminina
+  → Photos: 14
+
+Folder: bone-22238
+  Category: feminino
+  Candidates: 22238, 2223
+  → Matched SKU: 22238 (ID: 214343)
+  → Product: Boina Feminina Pied-de-Poule
+  → Photos: 6
+
+Folder: viseira-23119
+  Category: feminino
+  Candidates: 23119, 2311
+  → Matched SKU: 23119 (ID: 213427)
+  → Product: Viseira
+  → Photos: 7
+
+Folder: palha-12673
+  Category: feminino
+  Candidates: 12673, 1267
+  → Matched SKU: 12673 (ID: 213379)
+  → Product: Chapéu Feminino Ráfia
+  → Photos: 9
+
+Folder: bone-12805
+  Category: boinas verão
+  Candidates: 12805, 1280
+  → Matched SKU: 12805 (ID: 212783)
+  → Product: Boina Jornaleiro Linho
+  → Photos: 18
+
+Folder: bone-18107-bone-18515
+  Category: boinas verão
+  Candidates: 18107, 18515, 1810, 1851
+  → Matched SKU: 18107 (ID: 213770)
+  → Product: Boina Linen Blend
+  → Photos: 20
+
+Folder: bone-18474
+  Category: boinas verão
+  Candidates: 18474, 1847
+  → Matched SKU: 18474 (ID: 213483)
+  → Product: Boina Sextavada Bic
+  → Photos: 16
+
+
+================================================================================
+UNMATCHED (26 folders - products not imported yet):
+--------------------------------------------------------------------------------
+Folder: tags-fabricado-na-italia-la-pura
+  Category: chapéus lã
+  Candidates: 
+  Photos: 19
+
+Folder: chapeu-art-970-pack-12
+  Category: chapéus lã
+  Candidates: 
+  Photos: 15
+
+Folder: gorro-miki-12601-gorro-640182503
+  Category: cowboy
+  Candidates: 12601, 1260
+  Photos: 22
+
+Folder: hologramme
+  Category: cowboy
+  Candidates: 
+  Photos: 4
+
+Folder: bone-18110ec
+  Category: cowboy
+  Candidates: 18110
+  Photos: 6
+
+Folder: produto
+  Category: cowboy
+  Candidates: 
+  Photos: 4
+
+Folder: algodao-4974
+  Category: cowboy
+  Candidates: 4974
+  Photos: 7
+
+Folder: palha-941216-couro
+  Category: palha
+  Candidates: 941216, 94121, 9412
+  Photos: 9
+
+Folder: bone-18161n-bone-18161m
+  Category: artigos em pele
+  Candidates: 18161
+  Photos: 10
+
+Folder: bone-18106mi-bone-18106k-bone-18106g-18106ma
+  Category: boinas inverno
+  Candidates: 18106
+  Photos: 49
+
+Folder: 18220mi
+  Category: boinas inverno
+  Candidates: 18220
+  Photos: 8
+
+Folder: boina-sextavada-pierre-cardin
+  Category: boinas inverno
+  Candidates: 
+  Photos: 4
+
+Folder: hologramme
+  Category: boinas inverno
+  Candidates: 
+  Photos: 4
+
+Folder: gorro-344974-gorro-de-la-estilo-bretao-miki-docker-com-aba-de-aperto-traseira
+  Category: boinas inverno
+  Candidates: 344974, 34497, 3449
+  Photos: 10
+
+Folder: bone-18500mi
+  Category: boinas inverno
+  Candidates: 18500
+  Photos: 8
+
+Folder: palha-937
+  Category: cerimónia
+  Candidates: 
+  Photos: 10
+
+Folder: panama-931
+  Category: panamá
+  Candidates: 
+  Photos: 7
+
+Folder: bonnet-pierre-cardin
+  Category: gorros
+  Candidates: 
+  Photos: 6
+
+Folder: bone-15263
+  Category: bonés
+  Candidates: 15263, 1526
+  Photos: 21
+
+Folder: bone-15165
+  Category: bonés
+  Candidates: 15165, 1516
+  Photos: 15
+
+Folder: velen
+  Category: cortiça
+  Candidates: 
+  Photos: 1
+
+Folder: hologramme
+  Category: boinas verão
+  Candidates: 
+  Photos: 16
+
+Folder: bone-18110ec-bone-18110ol
+  Category: boinas verão
+  Candidates: 18110
+  Photos: 22
+
+Folder: tag-fabricado-na-italia-linho
+  Category: boinas verão
+  Candidates: 
+  Photos: 3
+
+Folder: bone-15266f-bone-15266c
+  Category: boinas verão
+  Candidates: 15266
+  Photos: 68
+
+Folder: bone-18521a
+  Category: boinas verão
+  Candidates: 18521
+  Photos: 8
+

@@ -18,11 +18,36 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Configuration
+# Configuration / CLI flags
 DRY_RUN=false
-if [ "$1" == "--dry-run" ]; then
-    DRY_RUN=true
-fi
+EXPECTED_COUNT=766
+FORCE_CONTINUE=false
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --dry-run)
+            DRY_RUN=true
+            shift
+            ;;
+        --expected-count=*)
+            EXPECTED_COUNT="${1#*=}"
+            shift
+            ;;
+        --expected-count)
+            EXPECTED_COUNT="$2"
+            shift 2
+            ;;
+        --force|--skip-count-check)
+            FORCE_CONTINUE=true
+            shift
+            ;;
+        *)
+            echo "Unknown argument: $1"
+            echo "Usage: $0 [--dry-run] [--expected-count <number>] [--force]"
+            exit 1
+            ;;
+    esac
+done
 
 echo "================================================================================"
 echo "COMPLETE AI INTEGRATION PIPELINE"
@@ -38,18 +63,17 @@ echo ""
 echo -e "${BLUE}[1/7]${NC} Verifying AI processing completion..."
 echo ""
 
-EXPECTED_COUNT=766
 ACTUAL_COUNT=$(find wordpress/wp-content/uploads/products -name "*_pro.*" -type f 2>/dev/null | wc -l | tr -d ' ')
 
 echo "Expected images: $EXPECTED_COUNT"
 echo "Found images: $ACTUAL_COUNT"
 echo ""
 
-if [ "$ACTUAL_COUNT" -lt "$EXPECTED_COUNT" ]; then
+if [ "$ACTUAL_COUNT" -lt "$EXPECTED_COUNT" ] && [ "$FORCE_CONTINUE" = false ]; then
     echo -e "${YELLOW}⚠️  Warning: Only $ACTUAL_COUNT/$EXPECTED_COUNT images found${NC}"
     echo "   AI processing may still be running or incomplete"
     echo ""
-    read -p "Continue anyway? (y/N): " -n 1 -r
+    read -p "Continue anyway? (y/N) " -n 1 -r
     echo ""
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
         echo "Aborted."

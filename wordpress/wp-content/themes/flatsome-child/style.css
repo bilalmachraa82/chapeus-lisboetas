@@ -4200,3 +4200,19 @@ body input[type="submit"] {
 }
 
 /*************** FIM FASE 1 FIXES ***************/
+
+/* ==========================================================================
+   FIX: Menu Dropdown Z-Index - 13 Nov 2025
+   ========================================================================== */
+.nav-dropdown {
+    z-index: 10000 !important;
+}
+
+.header-nav-dropdown-wrapper {
+    z-index: 10001 !important;
+}
+
+.header-wrapper .nav-dropdown,
+.header-main .nav-dropdown {
+    z-index: 10000 !important;
+}
