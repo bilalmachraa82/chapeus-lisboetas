@@ -1,0 +1,46 @@
+
+FIXES APPLIED - Design Issues Resolved
+=====================================
+
+1. WCAG AA CONTRAST FIX ✓
+   - Changed orange text on brown background to WHITE
+   - Line 143: 'Loja física · Baixa de Lisboa' now white with 90% opacity
+   - Contrast ratio: White on Brown = 5.5:1 (was 1.8:1)
+   - All .has-primary-background-color text forced to white
+
+2. IMAGE DIMENSIONS ADDED ✓
+   - Hero image: width="1080" height="1350"
+   - Moment gallery (3 images): width="1080" height="1440" or "1350"
+   - Collection images: width="600" height="900"
+   - All images have loading="lazy" except hero (loading="eager")
+   - Hero has fetchpriority="high" for LCP optimization
+
+3. IMAGE OPTIMIZATION CSS ✓
+   - object-fit: cover prevents distortion
+   - aspect-ratio CSS prevents layout shift (CLS)
+   - Lazy loading transition (fade-in effect)
+   - Responsive scaling for mobile
+
+4. NEWSLETTER SECTION COLORS ✓
+   - Background: Cream #FAF7F2 (was terracotta)
+   - Text: Dark navy #2C323A (maximum contrast)
+   - Button: Terracotta #E07A31 with white text
+   - Border: 3px solid terracotta for brand identity
+
+5. MOBILE RESPONSIVE ✓
+   - Hero min-height: 500px on mobile
+   - Hero h1: 36px (was 64px)
+   - Columns stack vertically
+   - Newsletter form stacks vertically
+   - Proper padding for mobile
+
+FILES MODIFIED:
+- /Users/bilal/Programaçao/Tiago Andrado/full-chapeus-lisboetas (2)/wordpress/homepage_photos_updated.html
+- /Users/bilal/Programaçao/Tiago Andrado/full-chapeus-lisboetas (2)/wordpress/wp-content/themes/flatsome-child/style.css
+
+NEXT STEPS:
+1. Compress hero image: 159KB → target <120KB
+2. Test in browser: http://localhost:8080
+3. Run WCAG validator: https://wave.webaim.org/
+4. Test mobile: Chrome DevTools 375px width
+

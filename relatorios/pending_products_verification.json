@@ -1,0 +1,111 @@
+{
+  "verified": [],
+  "not_found": [
+    {
+      "slug": "bone-22174",
+      "name": "BOINA OITAVADA HARRINGBONE",
+      "price": 29.9,
+      "category": "BOINAS INVERNO",
+      "supplier_url": "https://hologrammeparis.com/product/casquette-22174/",
+      "reason": "URL returned 403",
+      "status_code": 403
+    },
+    {
+      "slug": "casquette-18534n",
+      "name": "Étiquette : verão, Fabriqué en Italie, Linho, algodão",
+      "price": 37.5,
+      "category": "BOINAS VERÃO",
+      "reason": "No supplier URL"
+    },
+    {
+      "slug": "chapeu-australiano",
+      "name": "CHAPEU AUSTRALIANO",
+      "price": 67.5,
+      "category": "ARTIGOS EM PELE",
+      "reason": "No supplier URL"
+    },
+    {
+      "slug": "chapeu-colonial-pith-helmet",
+      "name": "CHAPEU COLONIAL",
+      "price": 45.0,
+      "category": "DIVERSOS",
+      "reason": "No supplier URL"
+    },
+    {
+      "slug": "palha-12403",
+      "name": "CHAPÉUS DE PALHA FEMININOS",
+      "price": 3.0,
+      "category": "FEMININO",
+      "supplier_url": "https://hologrammeparis.com/product/paille-12403/",
+      "reason": "URL returned 403",
+      "status_code": 403
+    },
+    {
+      "slug": "bone-2018016",
+      "name": "BONÉS DE VERÃO PARA MULHERES",
+      "price": "Etiqueta: Fabricado na China",
+      "category": "CERIMÓNIA",
+      "supplier_url": "https://hologrammeparis.com/product/casquette-2018016/",
+      "reason": "URL returned 403",
+      "status_code": 403
+    },
+    {
+      "slug": "chapeu-cloche",
+      "name": "CHAPEU CLOCHE",
+      "price": 35.0,
+      "category": "FEMININO",
+      "reason": "No supplier URL"
+    },
+    {
+      "slug": "casquete",
+      "name": "CASQUETE",
+      "price": 1.0,
+      "category": "CERIMÓNIA",
+      "reason": "No supplier URL"
+    },
+    {
+      "slug": "chapeu-cerimonia-perolas",
+      "name": "CHAPÉU CERIMÓNIA PERÓLAS",
+      "price": 2.0,
+      "category": "CERIMÓNIA",
+      "reason": "No supplier URL"
+    },
+    {
+      "slug": "chapeu-cerimonia-flores",
+      "name": "CHAPÉU CERIMÓNIA FLORES",
+      "price": 3.0,
+      "category": "CERIMÓNIA",
+      "reason": "No supplier URL"
+    },
+    {
+      "slug": "solid",
+      "name": "CHAPÉU UV",
+      "price": 19.9,
+      "category": "PROTEÇÃO SOLAR",
+      "reason": "No supplier URL"
+    },
+    {
+      "slug": "bucket-hat-reversivel",
+      "name": "BUCKET HAT REVERSIVEL",
+      "price": 19.9,
+      "category": "CHAPÉUS EM TECIDO",
+      "reason": "No supplier URL"
+    },
+    {
+      "slug": "chapeu-cowboy",
+      "name": "CHAPÉU COWBOY",
+      "price": 2.0,
+      "category": "COWBOY",
+      "reason": "No supplier URL"
+    }
+  ],
+  "images_found": [],
+  "summary": {
+    "total_verified": 13,
+    "images_found": 0,
+    "no_images": 13,
+    "not_in_catalog": 0,
+    "url_404": 0,
+    "no_supplier_url": 10
+  }
+}

@@ -488,7 +488,7 @@ final class WC_IfthenPay_Webdados {
 			$this->log = wc_get_logger(); // Init log
 		}
 		$this->log->$level( $message, array( 'source' => $gateway_id ) );
-		if ( $debug_email ) {
+		if ( ! empty( $debug_email ) ) {
 			if ( empty( $email_message ) ) {
 				$email_message = $message;
 			}
@@ -1689,6 +1689,11 @@ final class WC_IfthenPay_Webdados {
 	 * @return array or string with error.
 	 */
 	public function multibanco_get_ref( $order_id, $force_change = false, $throw_exception = false ) {
+		$debug       = $this->multibanco_settings['debug'] === 'yes';
+		$debug_email = false;
+		if ( $debug ) {
+			$debug_email = trim( $this->multibanco_settings['debug_email'] ) !== '' ? trim( $this->multibanco_settings['debug_email'] ) : false;
+		}
 		// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$order = wc_get_order( $order_id );
 		$this->debug_log_extra( $this->multibanco_id, 'multibanco_get_ref - Force change: ' . ( $force_change ? 'true' : 'false' ) . ' - Order ' . $order->get_id() );
@@ -1770,7 +1775,7 @@ final class WC_IfthenPay_Webdados {
 					if ( is_wp_error( $response ) ) {
 						$debug_msg       = '- Error contacting the ifthenpay servers - Order ' . $order->get_id() . ' - ' . $response->get_error_message();
 						$debug_msg_email = $debug_msg . ' - Args: ' . wp_json_encode( $args ) . ' - Response: ' . wp_json_encode( $response );
-						$this->debug_log( $this->multibanco_id, $debug_msg, 'error', true, $debug_msg_email );
+						$this->debug_log( $this->multibanco_id, $debug_msg, 'error', $debug_email, $debug_msg_email );
 						return false;
 					} elseif ( isset( $response['response']['code'] ) && intval( $response['response']['code'] ) === 200 && isset( $response['body'] ) && trim( $response['body'] ) !== '' ) {
 						$body = json_decode( $response['body'] );
@@ -1813,7 +1818,7 @@ final class WC_IfthenPay_Webdados {
 							} else {
 								$debug_msg       = '- Error: ' . trim( $body->Message ) . ' - Order ' . $order->get_id();
 								$debug_msg_email = $debug_msg . ' - Args: ' . wp_json_encode( $args ) . ' - Response: ' . wp_json_encode( $response );
-								$this->debug_log( $this->multibanco_id, $debug_msg, 'error', true, $debug_msg_email );
+								$this->debug_log( $this->multibanco_id, $debug_msg, 'error', $debug_email, $debug_msg_email );
 								if ( $throw_exception ) {
 									throw new Exception(
 										sprintf(
@@ -1828,7 +1833,7 @@ final class WC_IfthenPay_Webdados {
 						} else {
 							$debug_msg       = '- Response body is not JSON - Order ' . $order->get_id();
 							$debug_msg_email = $debug_msg . ' - Args: ' . wp_json_encode( $args ) . ' - Response: ' . wp_json_encode( $response );
-							$this->debug_log( $this->multibanco_id, $debug_msg, 'error', true, $debug_msg_email );
+							$this->debug_log( $this->multibanco_id, $debug_msg, 'error', $debug_email, $debug_msg_email );
 							if ( $throw_exception ) {
 								throw new Exception(
 									sprintf(
@@ -1843,7 +1848,7 @@ final class WC_IfthenPay_Webdados {
 					} else {
 						$debug_msg       = '- Error contacting the ifthenpay servers - Order ' . $order->get_id() . ' - Incorrect response code: ' . $response['response']['code'];
 						$debug_msg_email = $debug_msg . ' - Args: ' . wp_json_encode( $args ) . ' - Response: ' . wp_json_encode( $response );
-						$this->debug_log( $this->multibanco_id, $debug_msg, 'error', true, $debug_msg_email );
+						$this->debug_log( $this->multibanco_id, $debug_msg, 'error', $debug_email, $debug_msg_email );
 						if ( $throw_exception ) {
 							throw new Exception(
 								sprintf(
@@ -2193,7 +2198,7 @@ final class WC_IfthenPay_Webdados {
 				} else {
 					$debug_msg       = '- Error: ' . trim( $body->Status ) . ' ' . trim( $body->Message ) . ' - Order ' . $order->get_id();
 					$debug_msg_email = $debug_msg . ' - Args: ' . wp_json_encode( $args ) . ' - Response: ' . wp_json_encode( $response );
-					$this->debug_log( $this->mbway_id, $debug_msg, 'error', true, $debug_msg_email );
+					$this->debug_log( $this->mbway_id, $debug_msg, 'error', $debug_email, $debug_msg_email );
 					if ( $throw_exception ) {
 						throw new Exception(
 							sprintf(
@@ -2216,7 +2221,7 @@ final class WC_IfthenPay_Webdados {
 			} else {
 				$debug_msg       = '- Response body is not JSON - Order ' . $order->get_id();
 				$debug_msg_email = $debug_msg . ' - Args: ' . wp_json_encode( $args ) . ' - Response: ' . wp_json_encode( $response );
-				$this->debug_log( $this->mbway_id, $debug_msg, 'error', true, $debug_msg_email );
+				$this->debug_log( $this->mbway_id, $debug_msg, 'error', $debug_email, $debug_msg_email );
 				if ( $throw_exception ) {
 					throw new Exception(
 						sprintf(
@@ -2231,7 +2236,7 @@ final class WC_IfthenPay_Webdados {
 		} else {
 			$debug_msg       = '- Error contacting the ifthenpay servers - Order ' . $order->get_id() . ' - Incorrect response code: ' . $response['response']['code'];
 			$debug_msg_email = $debug_msg . ' - Args: ' . wp_json_encode( $args ) . ' - Response: ' . wp_json_encode( $response );
-			$this->debug_log( $this->mbway_id, $debug_msg, 'error', true, $debug_msg_email );
+			$this->debug_log( $this->mbway_id, $debug_msg, 'error', $debug_email, $debug_msg_email );
 			if ( $throw_exception ) {
 				throw new Exception(
 					sprintf(

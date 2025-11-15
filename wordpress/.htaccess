@@ -13,3 +13,39 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+# BEGIN Security Headers - ISSUE-007 (2025-10-30)
+<IfModule mod_headers.c>
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+
+    # Prevent clickjacking
+    Header set X-Frame-Options "SAMEORIGIN"
+
+    # Enable XSS protection (legacy browsers)
+    Header set X-XSS-Protection "1; mode=block"
+
+    # Hide PHP version
+    Header unset X-Powered-By
+
+    # Strict Transport Security (HSTS) - Only after SSL is enabled!
+    # Uncomment after deploy with SSL certificate:
+    # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+</IfModule>
+
+# BEGIN File Protection
+# Protect .htaccess
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Protect wp-config.php
+<Files wp-config.php>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Disable directory browsing
+Options -Indexes
+# END File Protection

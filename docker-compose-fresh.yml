@@ -4,8 +4,8 @@ services:
   # Database MySQL
   db:
     image: mysql:8.0
-    platform: linux/amd64
-    container_name: chapeus_db
+    platform: linux/arm64/v8
+    container_name: chapeus2_db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: chapeus_root_2024
@@ -13,18 +13,19 @@ services:
       MYSQL_USER: chapeus_user
       MYSQL_PASSWORD: chapeus_pass_2024
     volumes:
-      - db_data:/var/lib/mysql
+      - db2_data:/var/lib/mysql
     networks:
       - chapeus_network
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      timeout: 20s
-      retries: 10
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -p$MYSQL_ROOT_PASSWORD || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
 
   # WordPress
   wordpress:
     image: wordpress:latest
-    container_name: chapeus_wordpress
+    container_name: chapeus2_wordpress
     restart: always
     depends_on:
       db:
@@ -36,14 +37,14 @@ services:
       WORDPRESS_DB_PASSWORD: chapeus_pass_2024
       WORDPRESS_DEBUG: 1
       WORDPRESS_CONFIG_EXTRA: |
-        define('WP_HOME', 'http://localhost:8080');
-        define('WP_SITEURL', 'http://localhost:8080');
+        define('WP_HOME', 'http://localhost:8084');
+        define('WP_SITEURL', 'http://localhost:8084');
         define('FS_METHOD', 'direct');
     volumes:
-      - wordpress_data:/var/www/html
+      - wordpress2_data:/var/www/html
       - ./processed_images:/var/www/html/wp-content/uploads/produtos
     ports:
-      - "8080:80"
+      - "8084:80"
     networks:
       - chapeus_network
     healthcheck:
@@ -55,12 +56,12 @@ services:
   # WP-CLI (para automação)
   wpcli:
     image: wordpress:cli
-    container_name: chapeus_wpcli
+    container_name: chapeus2_wpcli
     depends_on:
       wordpress:
         condition: service_healthy
     volumes:
-      - wordpress_data:/var/www/html
+      - wordpress2_data:/var/www/html
       - ./setup-scripts:/scripts
     networks:
       - chapeus_network
@@ -73,24 +74,10 @@ services:
     command: -c "sleep 30 && sh /scripts/setup-wordpress.sh"
 
   # phpMyAdmin (opcional - para debug)
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: chapeus_phpmyadmin
-    restart: always
-    depends_on:
-      - db
-    environment:
-      PMA_HOST: db
-      PMA_PORT: 3306
-      MYSQL_ROOT_PASSWORD: chapeus_root_2024
-    ports:
-      - "8081:80"
-    networks:
-      - chapeus_network
 
 volumes:
-  db_data:
-  wordpress_data:
+  db2_data:
+  wordpress2_data:
 
 networks:
   chapeus_network:

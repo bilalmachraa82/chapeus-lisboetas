@@ -1,0 +1,360 @@
+# Prometheus Alert Rules for Chapéus Lisboeta
+# Critical e-commerce alerts for WordPress + WooCommerce
+
+groups:
+  # Critical Infrastructure Alerts
+  - name: infrastructure_critical
+    interval: 30s
+    rules:
+      - alert: SiteDown
+        expr: up{job="blackbox-http", instance=~"https://chapeuslisboeta.pt.*"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "Website is DOWN"
+          description: "{{ $labels.instance }} has been down for more than 2 minutes. IMMEDIATE ACTION REQUIRED!"
+          impact: "Customers cannot access the website. Revenue loss occurring."
+          action: "Check nginx, PHP-FPM, and MySQL services. Check backup logs."
+
+      - alert: DatabaseDown
+        expr: up{job="mysql"} == 0
+        for: 1m
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "Database is DOWN"
+          description: "MySQL database is unreachable"
+          impact: "Complete site outage. No transactions possible."
+          action: "SSH to server, check: systemctl status mysql, check disk space"
+
+      - alert: HighResponseTime
+        expr: probe_duration_seconds{job="blackbox-http"} > 3
+        for: 5m
+        labels:
+          severity: warning
+          team: devops
+          priority: P2
+        annotations:
+          summary: "High response time detected"
+          description: "{{ $labels.instance }} response time is {{ $value | humanizeDuration }} (threshold: 3s)"
+          impact: "Poor user experience, potential cart abandonment"
+          action: "Check server load, PHP-FPM processes, database slow queries"
+
+      - alert: SSLCertificateExpiringSoon
+        expr: probe_ssl_earliest_cert_expiry - time() < 7 * 24 * 3600
+        for: 1h
+        labels:
+          severity: warning
+          team: devops
+          priority: P2
+        annotations:
+          summary: "SSL certificate expiring soon"
+          description: "SSL certificate for {{ $labels.instance }} expires in {{ $value | humanizeDuration }}"
+          impact: "Browser warnings will appear, customer trust affected"
+          action: "Renew Let's Encrypt certificate: certbot renew"
+
+      - alert: SSLCertificateExpired
+        expr: probe_ssl_earliest_cert_expiry - time() < 0
+        for: 5m
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "SSL certificate EXPIRED"
+          description: "SSL certificate for {{ $labels.instance }} has EXPIRED"
+          impact: "Site inaccessible to users with strict SSL browsers"
+          action: "URGENT: Renew certificate immediately"
+
+  # WordPress/WooCommerce Alerts
+  - name: woocommerce_critical
+    interval: 60s
+    rules:
+      - alert: WordPressAPIDown
+        expr: probe_success{job="blackbox-wordpress-health"} == 0
+        for: 3m
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "WordPress API is DOWN"
+          description: "WordPress REST API at {{ $labels.instance }} is not responding"
+          impact: "Admin panel, WooCommerce, and plugins may be broken"
+          action: "Check WordPress errors, PHP errors, .htaccess, permalinks"
+
+      - alert: WooCommerceAPIDown
+        expr: probe_success{job="blackbox-woocommerce"} == 0
+        for: 3m
+        labels:
+          severity: critical
+          team: business
+          priority: P1
+        annotations:
+          summary: "WooCommerce API is DOWN"
+          description: "WooCommerce API is not responding"
+          impact: "Checkout broken, NO SALES POSSIBLE"
+          action: "Check WooCommerce status, payment gateways, database"
+
+      - alert: CheckoutPageSlow
+        expr: probe_duration_seconds{instance=~".*checkout.*"} > 5
+        for: 5m
+        labels:
+          severity: warning
+          team: business
+          priority: P2
+        annotations:
+          summary: "Checkout page is slow"
+          description: "Checkout page loading in {{ $value }}s (target: <2s)"
+          impact: "High cart abandonment risk"
+          action: "Check payment gateway APIs, database queries, cache"
+
+  # Server Resource Alerts
+  - name: server_resources
+    interval: 60s
+    rules:
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 10m
+        labels:
+          severity: warning
+          team: devops
+          priority: P2
+        annotations:
+          summary: "High CPU usage"
+          description: "CPU usage is {{ $value | humanizePercentage }} on {{ $labels.instance }}"
+          impact: "Site performance degradation"
+          action: "Check top processes, PHP-FPM workers, nginx connections"
+
+      - alert: CriticalCPUUsage
+        expr: 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 95
+        for: 5m
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "CRITICAL CPU usage"
+          description: "CPU usage is {{ $value | humanizePercentage }} on {{ $labels.instance }}"
+          impact: "Site may become unresponsive"
+          action: "URGENT: Check for DDoS, rogue processes, kill if needed"
+
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) > 0.85
+        for: 10m
+        labels:
+          severity: warning
+          team: devops
+          priority: P2
+        annotations:
+          summary: "High memory usage"
+          description: "Memory usage is {{ $value | humanizePercentage }} on {{ $labels.instance }}"
+          impact: "Risk of OOM killer, potential crashes"
+          action: "Check MySQL memory, PHP-FPM pools, restart services if needed"
+
+      - alert: CriticalMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) > 0.95
+        for: 5m
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "CRITICAL memory usage"
+          description: "Memory usage is {{ $value | humanizePercentage }} on {{ $labels.instance }}"
+          impact: "Imminent OOM crash risk"
+          action: "URGENT: Restart services, check memory leaks"
+
+      - alert: DiskSpaceWarning
+        expr: (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}) < 0.15
+        for: 10m
+        labels:
+          severity: warning
+          team: devops
+          priority: P2
+        annotations:
+          summary: "Low disk space"
+          description: "Only {{ $value | humanizePercentage }} disk space remaining on {{ $labels.instance }}"
+          impact: "Cannot save uploads, logs, backups"
+          action: "Clean old logs, uploads, backups. Check: df -h"
+
+      - alert: DiskSpaceCritical
+        expr: (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}) < 0.05
+        for: 5m
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "CRITICAL disk space"
+          description: "Only {{ $value | humanizePercentage }} disk space remaining on {{ $labels.instance }}"
+          impact: "Site will crash when disk fills"
+          action: "URGENT: Delete files immediately, contact hosting support"
+
+      - alert: HighDiskIOWait
+        expr: rate(node_disk_io_time_seconds_total[5m]) > 0.5
+        for: 10m
+        labels:
+          severity: warning
+          team: devops
+          priority: P2
+        annotations:
+          summary: "High disk I/O wait"
+          description: "Disk I/O wait is {{ $value | humanizePercentage }}"
+          impact: "Slow database queries, page loads"
+          action: "Check slow queries, optimize database, check disk health"
+
+  # Backup Alerts
+  - name: backup_alerts
+    interval: 3600s  # Check hourly
+    rules:
+      - alert: BackupFailed
+        expr: time() - backup_last_success_timestamp_seconds > 86400
+        for: 1h
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "Backup has not completed in 24 hours"
+          description: "Last successful backup was {{ $value | humanizeDuration }} ago"
+          impact: "DATA LOSS RISK - client's #1 priority violated"
+          action: "URGENT: Check backup script, S3 access, disk space"
+
+      - alert: BackupSizeAnomaly
+        expr: abs(backup_size_bytes - backup_size_bytes offset 7d) / backup_size_bytes > 0.3
+        for: 1h
+        labels:
+          severity: warning
+          team: devops
+          priority: P2
+        annotations:
+          summary: "Backup size changed significantly"
+          description: "Backup size changed by {{ $value | humanizePercentage }} compared to last week"
+          impact: "Potential data corruption or missing files"
+          action: "Verify backup integrity, check for deletions"
+
+  # Traffic & Business Alerts
+  - name: business_metrics
+    interval: 300s  # Check every 5 minutes
+    rules:
+      - alert: NoTrafficDetected
+        expr: rate(probe_http_status_code{job="blackbox-http"}[1h]) == 0
+        for: 15m
+        labels:
+          severity: warning
+          team: business
+          priority: P2
+        annotations:
+          summary: "No traffic detected"
+          description: "No HTTP requests detected for {{ $labels.instance }} in the last hour"
+          impact: "Potential SEO penalty, revenue loss"
+          action: "Check analytics, CDN, DNS, marketing campaigns"
+
+      - alert: HighErrorRate
+        expr: rate(probe_http_status_code{job="blackbox-http", code=~"5.."}[5m]) / rate(probe_http_status_code{job="blackbox-http"}[5m]) > 0.05
+        for: 10m
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "High error rate detected"
+          description: "{{ $value | humanizePercentage }} of requests returning 5xx errors"
+          impact: "Poor user experience, lost sales"
+          action: "Check error logs, PHP errors, database errors"
+
+  # Portuguese Market Specific
+  - name: portuguese_market
+    interval: 300s
+    rules:
+      - alert: MBWayPaymentGatewayDown
+        expr: probe_success{instance=~".*ifthenpay.*"} == 0
+        for: 5m
+        labels:
+          severity: critical
+          team: business
+          priority: P1
+        annotations:
+          summary: "MB Way payment gateway DOWN"
+          description: "IfthenPay (MB Way/Multibanco) gateway is not responding"
+          impact: "70% of Portuguese customers cannot pay - CRITICAL REVENUE LOSS"
+          action: "URGENT: Contact IfthenPay support, enable alternative payment"
+
+      - alert: CTTShippingIntegrationDown
+        expr: probe_success{instance=~".*ctt.*"} == 0
+        for: 10m
+        labels:
+          severity: warning
+          team: business
+          priority: P2
+        annotations:
+          summary: "CTT shipping integration issues"
+          description: "CTT Expresso integration not responding"
+          impact: "Cannot generate shipping labels, delayed shipments"
+          action: "Check CTT API, manual label generation may be needed"
+
+  # Security Alerts
+  - name: security_alerts
+    interval: 60s
+    rules:
+      - alert: TooManyLoginAttempts
+        expr: rate(wordpress_login_attempts_total[5m]) > 10
+        for: 5m
+        labels:
+          severity: warning
+          team: devops
+          priority: P2
+        annotations:
+          summary: "High login attempt rate"
+          description: "{{ $value }} login attempts per second detected"
+          impact: "Potential brute force attack"
+          action: "Check fail2ban, Cloudflare security, block IPs"
+
+      - alert: WAFBlocking
+        expr: rate(cloudflare_waf_blocks_total[5m]) > 50
+        for: 10m
+        labels:
+          severity: warning
+          team: devops
+          priority: P2
+        annotations:
+          summary: "High WAF block rate"
+          description: "Cloudflare WAF blocking {{ $value }} requests/second"
+          impact: "Potential DDoS attack or false positives"
+          action: "Review WAF logs, adjust rules if legitimate traffic blocked"
+
+  # Monitoring Health
+  - name: monitoring_health
+    interval: 60s
+    rules:
+      - alert: PrometheusDown
+        expr: up{job="prometheus"} == 0
+        for: 5m
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "Prometheus is DOWN"
+          description: "Monitoring system is not working"
+          impact: "Cannot detect other issues"
+          action: "Restart Prometheus container, check logs"
+
+      - alert: AlertmanagerDown
+        expr: up{job="alertmanager"} == 0
+        for: 5m
+        labels:
+          severity: critical
+          team: devops
+          priority: P1
+        annotations:
+          summary: "Alertmanager is DOWN"
+          description: "Alert notification system is not working"
+          impact: "Not receiving alerts"
+          action: "Restart Alertmanager, check Telegram/email config"

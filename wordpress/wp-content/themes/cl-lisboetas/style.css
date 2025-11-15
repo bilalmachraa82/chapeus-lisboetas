@@ -1,0 +1,36 @@
+/*
+ Theme Name: CL Lisboetas Child
+ Template: twentytwentythree
+ Version: 1.0.0
+*/
+
+/* Import parent */
+@import url('../twentytwentythree/style.css');
+
+/* Custom Design */
+/* The following CSS adapts modern tokens and fixes menu dropdown behavior */
+
+/* Header on top */
+#masthead,
+.header-wrapper {
+  position: relative;
+  z-index: 10000;
+}
+
+.nav-dropdown,
+.nav-dropdown-has-arrow,
+.ux-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10001;
+}
+
+.header-nav .has-dropdown:hover > .nav-dropdown,
+.header-nav .has-dropdown.is-active > .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.momentos-gallery__item img { object-fit: cover; object-position: 50% 15%; }

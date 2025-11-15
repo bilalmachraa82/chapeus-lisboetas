@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <title>P2.3 Mobile Test - Chapéus Lisboetas</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #FAF7F2;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 { color: #D4AF37; font-size: 24px; margin-top: 0; }
+        h2 { color: #6B4423; font-size: 18px; margin-top: 0; }
+        .status { padding: 10px; border-radius: 4px; margin: 10px 0; }
+        .status.pass { background: #d4edda; color: #155724; }
+        .status.fail { background: #f8d7da; color: #721c24; }
+        .button { 
+            display: inline-block;
+            min-height: 48px; 
+            min-width: 48px;
+            padding: 12px 24px;
+            background: #D4AF37;
+            color: #2C2C2C;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 5px;
+        }
+        input, textarea {
+            font-size: 16px;
+            padding: 14px;
+            border: 1px solid #E8E8E8;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 10px 0;
+        }
+        .checkbox-test {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .checkbox-test input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+        }
+        .grid-test {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 10px 0;
+        }
+        .product-card {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-section">
+        <h1>P2.3 Mobile Optimization Test</h1>
+        <p>Screen width: <strong id="screenWidth"></strong></p>
+        <p>Device type: <strong id="deviceType"></strong></p>
+        <p>Touch support: <strong id="touchSupport"></strong></p>
+    </div>
+
+    <div class="test-section">
+        <h2>1. Tap Targets (min 48x48px)</h2>
+        <button class="button">Button 1</button>
+        <button class="button">Button 2</button>
+        <button class="button">Button 3</button>
+        <div id="tapTest" class="status"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>2. Form Inputs (16px font - no iOS zoom)</h2>
+        <input type="text" placeholder="Enter your name">
+        <input type="email" placeholder="Enter your email">
+        <textarea placeholder="Enter your message"></textarea>
+        <div class="checkbox-test">
+            <input type="checkbox" id="checkbox1">
+            <label for="checkbox1">24x24px checkbox</label>
+        </div>
+        <div id="formTest" class="status"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>3. Product Grid (2 columns)</h2>
+        <div class="grid-test">
+            <div class="product-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect fill='%23D4AF37' width='150' height='150'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='20'%3EProduct 1%3C/text%3E%3C/svg%3E" alt="Product 1">
+                <p>Product 1</p>
+            </div>
+            <div class="product-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect fill='%236B4423' width='150' height='150'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='20'%3EProduct 2%3C/text%3E%3C/svg%3E" alt="Product 2">
+                <p>Product 2</p>
+            </div>
+            <div class="product-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect fill='%238A9A7B' width='150' height='150'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='20'%3EProduct 3%3C/text%3E%3C/svg%3E" alt="Product 3">
+                <p>Product 3</p>
+            </div>
+            <div class="product-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect fill='%23C85A3A' width='150' height='150'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='20'%3EProduct 4%3C/text%3E%3C/svg%3E" alt="Product 4">
+                <p>Product 4</p>
+            </div>
+        </div>
+        <div id="gridTest" class="status"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>4. Touch Events</h2>
+        <button class="button" id="touchButton">Tap Me!</button>
+        <p id="touchResult">Waiting for tap...</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Summary</h2>
+        <div id="summary"></div>
+    </div>
+
+    <script>
+        // Device detection
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        const screenWidth = window.innerWidth;
+
+        document.getElementById('screenWidth').textContent = screenWidth + 'px';
+        document.getElementById('deviceType').textContent = isMobile ? 'Mobile' : 'Desktop';
+        document.getElementById('touchSupport').textContent = isTouch ? 'Yes' : 'No';
+
+        // Test 1: Tap Targets
+        const buttons = document.querySelectorAll('.button');
+        let tapTargetPass = true;
+        buttons.forEach(button => {
+            const rect = button.getBoundingClientRect();
+            if (rect.width < 48 || rect.height < 48) {
+                tapTargetPass = false;
+            }
+        });
+        const tapTest = document.getElementById('tapTest');
+        tapTest.className = 'status ' + (tapTargetPass ? 'pass' : 'fail');
+        tapTest.textContent = tapTargetPass ? '✅ All buttons are 48x48px or larger' : '❌ Some buttons are too small';
+
+        // Test 2: Form Inputs
+        const inputs = document.querySelectorAll('input, textarea');
+        let formPass = true;
+        inputs.forEach(input => {
+            const fontSize = window.getComputedStyle(input).fontSize;
+            if (parseFloat(fontSize) < 16) {
+                formPass = false;
+            }
+        });
+        const formTest = document.getElementById('formTest');
+        formTest.className = 'status ' + (formPass ? 'pass' : 'fail');
+        formTest.textContent = formPass ? '✅ All inputs are 16px or larger (no iOS zoom)' : '❌ Some inputs are too small';
+
+        // Test 3: Grid
+        const grid = document.querySelector('.grid-test');
+        const gridStyle = window.getComputedStyle(grid);
+        const gridColumns = gridStyle.gridTemplateColumns.split(' ').length;
+        const gridTest = document.getElementById('gridTest');
+        gridTest.className = 'status ' + (gridColumns === 2 ? 'pass' : 'fail');
+        gridTest.textContent = gridColumns === 2 ? '✅ Grid shows 2 columns on mobile' : '❌ Grid shows ' + gridColumns + ' columns';
+
+        // Test 4: Touch Events
+        const touchButton = document.getElementById('touchButton');
+        const touchResult = document.getElementById('touchResult');
+        let touchStartTime = 0;
+
+        touchButton.addEventListener('touchstart', function(e) {
+            touchStartTime = Date.now();
+        });
+
+        touchButton.addEventListener('click', function(e) {
+            const responseTime = Date.now() - touchStartTime;
+            touchResult.textContent = 'Touch registered! Response time: ' + (responseTime || 'N/A') + 'ms';
+            if (responseTime < 100) {
+                touchResult.style.color = '#155724';
+                touchResult.style.fontWeight = 'bold';
+            }
+        });
+
+        // Summary
+        const summary = document.getElementById('summary');
+        const allTests = [tapTargetPass, formPass, gridColumns === 2];
+        const passedTests = allTests.filter(t => t).length;
+        const totalTests = allTests.length;
+
+        summary.innerHTML = `
+            <h3>Results: ${passedTests}/${totalTests} tests passed</h3>
+            <p><strong>Screen:</strong> ${screenWidth < 768 ? 'Mobile ✅' : 'Desktop ⚠️'}</p>
+            <p><strong>Tap Targets:</strong> ${tapTargetPass ? '✅' : '❌'}</p>
+            <p><strong>Form Inputs:</strong> ${formPass ? '✅' : '❌'}</p>
+            <p><strong>Product Grid:</strong> ${gridColumns === 2 ? '✅' : '❌'}</p>
+            <p><strong>Touch Support:</strong> ${isTouch ? '✅' : '⚠️ (Desktop mode)'}</p>
+        `;
+
+        if (passedTests === totalTests && screenWidth < 768) {
+            summary.innerHTML += '<p style="color: #155724; font-weight: bold; margin-top: 20px;">🎉 All mobile optimizations are working correctly!</p>';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 Preview Editorial Test - Chapéus Lisboeta</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+            padding: 20px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .product {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #eee;
+        }
+        .product:last-child {
+            border-bottom: none;
+        }
+        .product-header {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .product-header h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+        .product-header .sku {
+            color: #667eea;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+        }
+        .shots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .shot {
+            background: #f9f9f9;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .shot:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        .shot-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background: #e0e0e0;
+        }
+        .shot-info {
+            padding: 20px;
+        }
+        .shot-type {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .shot-details {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .scenario-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .next-steps {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        .next-steps h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .next-steps ol {
+            margin-left: 20px;
+            line-height: 2;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Preview Editorial Test</h1>
+        <div class="subtitle">Fotos AI com Cenários de Lisboa</div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Produtos</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">9</div>
+                <div class="stat-label">Fotos AI</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">$0.35</div>
+                <div class="stat-label">Custo</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">3 min</div>
+                <div class="stat-label">Tempo</div>
+            </div>
+        </div>
+
+        <!-- Produto 1 -->
+        <div class="product">
+            <div class="product-header">
+                <h2>1️⃣ BOINA JORNALEIRO PURE WOOL</h2>
+                <div class="sku">SKU: tags-fabricado-na-italia-la-pura</div>
+            </div>
+            <div class="shots">
+                <div class="shot">
+                    <img src="../wordpress/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_01_editorial_test.jpg"
+                         class="shot-image" alt="Editorial">
+                    <div class="shot-info">
+                        <div class="shot-type">📸 Editorial (3:4)</div>
+                        <div class="shot-details">
+                            Portrait com modelo português<br>
+                            Fundo studio cream/ivory<br>
+                            Massimo Dutti aesthetic<br>
+                            1.6 MB
+                        </div>
+                    </div>
+                </div>
+                <div class="shot">
+                    <img src="../wordpress/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_01_angle_test.jpg"
+                         class="shot-image" alt="Angle">
+                    <div class="shot-info">
+                        <div class="shot-type">📐 Angle (1:1)</div>
+                        <div class="shot-details">
+                            Perfil 3/4 profile<br>
+                            Composição quadrada<br>
+                            Optimizado para thumbnails<br>
+                            1.8 MB
+                        </div>
+                    </div>
+                </div>
+                <div class="shot">
+                    <img src="../wordpress/wp-content/uploads/products/chapéus lã/tags-fabricado-na-italia-la-pura/img_01_lifestyle_cafe_test.jpg"
+                         class="shot-image" alt="Lifestyle">
+                    <div class="shot-info">
+                        <div class="shot-type">🌆 Lifestyle (16:9)</div>
+                        <div class="shot-details">
+                            Cinematic widescreen<br>
+                            Rule of thirds composition<br>
+                            2.6 MB
+                        </div>
+                        <div class="scenario-badge">☕ Café Esplanada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="product">
+            <div class="product-header">
+                <h2>2️⃣ CHAPÉU FEMININO RÁFIA</h2>
+                <div class="sku">SKU: chapeu-art-970-pack-12</div>
+            </div>
+            <div class="shots">
+                <div class="shot">
+                    <img src="../wordpress/wp-content/uploads/products/chapéus lã/chapeu-art-970-pack-12/img_01_editorial_test.jpg"
+                         class="shot-image" alt="Editorial">
+                    <div class="shot-info">
+                        <div class="shot-type">📸 Editorial (3:4)</div>
+                        <div class="shot-details">
+                            Portrait elegante feminino<br>
+                            Destaque textura ráfia<br>
+                            Chiado heritage aesthetic<br>
+                            1.8 MB
+                        </div>
+                    </div>
+                </div>
+                <div class="shot">
+                    <img src="../wordpress/wp-content/uploads/products/chapéus lã/chapeu-art-970-pack-12/img_01_angle_test.jpg"
+                         class="shot-image" alt="Angle">
+                    <div class="shot-info">
+                        <div class="shot-type">📐 Angle (1:1)</div>
+                        <div class="shot-details">
+                            Perfil 3/4 detalhado<br>
+                            Textura ráfia preservada<br>
+                            Square composition<br>
+                            1.8 MB
+                        </div>
+                    </div>
+                </div>
+                <div class="shot">
+                    <img src="../wordpress/wp-content/uploads/products/chapéus lã/chapeu-art-970-pack-12/img_01_lifestyle_eletrico_test.jpg"
+                         class="shot-image" alt="Lifestyle">
+                    <div class="shot-info">
+                        <div class="shot-type">🌆 Lifestyle (16:9)</div>
+                        <div class="shot-details">
+                            Calçada portuguesa<br>
+                            Golden hour light<br>
+                            2.5 MB
+                        </div>
+                        <div class="scenario-badge">🚋 Elétrico 28</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="product">
+            <div class="product-header">
+                <h2>3️⃣ CHAPÉU IMPERMEÁVEL</h2>
+                <div class="sku">SKU: chapeu-impermeavel-art-181056</div>
+            </div>
+            <div class="shots">
+                <div class="shot">
+                    <img src="../wordpress/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_01_editorial_test.jpg"
+                         class="shot-image" alt="Editorial">
+                    <div class="shot-info">
+                        <div class="shot-type">📸 Editorial (3:4)</div>
+                        <div class="shot-details">
+                            Portrait profissional<br>
+                            Iluminação suave<br>
+                            Material impermeável destacado<br>
+                            2.0 MB
+                        </div>
+                    </div>
+                </div>
+                <div class="shot">
+                    <img src="../wordpress/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_01_angle_test.jpg"
+                         class="shot-image" alt="Angle">
+                    <div class="shot-info">
+                        <div class="shot-type">📐 Angle (1:1)</div>
+                        <div class="shot-details">
+                            Perfil detalhado<br>
+                            Impermeável texture visible<br>
+                            Square thumbnail ready<br>
+                            1.9 MB
+                        </div>
+                    </div>
+                </div>
+                <div class="shot">
+                    <img src="../wordpress/wp-content/uploads/products/chapéus lã/chapeu-impermeavel-art-181056-tags-fabricado-na-italia-la-esmagavel-impermeavel/img_01_lifestyle_cafe_test.jpg"
+                         class="shot-image" alt="Lifestyle">
+                    <div class="shot-info">
+                        <div class="shot-type">🌆 Lifestyle (16:9)</div>
+                        <div class="shot-details">
+                            Atmosfera Lisboa autêntica<br>
+                            Soft daylight diffused<br>
+                            2.4 MB
+                        </div>
+                        <div class="scenario-badge">☕ Café Esplanada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-steps">
+            <h3>🚀 Próximos Passos</h3>
+            <ol>
+                <li><strong>Validar qualidade</strong> - Rever as 9 imagens geradas acima</li>
+                <li><strong>Aprovar prompts</strong> - Confirmar que os cenários Lisboa estão corretos</li>
+                <li><strong>Lançar geração completa</strong> - Processar 67 produtos restantes (~€7.80)</li>
+                <li><strong>Importar para WordPress</strong> - Usar script de import via Media API</li>
+            </ol>
+            <p style="margin-top: 20px; color: #333;">
+                <strong>Custo Estimado Coleção Completa:</strong> 72 produtos × 3 shots = 216 imagens × $0.039 = <strong>$8.42 USD</strong> (~€7.80)
+            </p>
+        </div>
+    </div>
+</body>
+</html>

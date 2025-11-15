@@ -16,7 +16,7 @@ if ! wp core is-installed --allow-root 2>/dev/null; then
     echo "📦 Instalando WordPress..."
     
     wp core install \
-        --url="http://localhost:8080" \
+        --url="http://localhost:8084" \
         --title="Chapéus Lisboetas" \
         --admin_user="admin" \
         --admin_password="ChapeusAdmin2024!" \
@@ -75,9 +75,8 @@ echo "✅ WORDPRESS CONFIGURADO COM SUCESSO!"
 echo "════════════════════════════════════════════════════════════"
 echo ""
 echo "🌐 URLs:"
-echo "   WordPress: http://localhost:8080"
-echo "   Admin:     http://localhost:8080/wp-admin"
-echo "   phpMyAdmin: http://localhost:8081"
+echo "   WordPress: http://localhost:8084"
+echo "   Admin:     http://localhost:8084/wp-admin"
 echo ""
 echo "🔑 Credenciais Admin:"
 echo "   Username: admin"

@@ -1,0 +1,200 @@
+# Chapéus Lisboeta - Cron Job Schedule
+# Copy these entries to your crontab: crontab -e
+# PTisp server cron jobs for backup, monitoring, and optimization
+
+# Environment variables
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=admin@chapeuslisboeta.pt
+
+# WordPress paths
+WP_PATH=/home/ptisp/public_html
+DEVOPS_PATH=/home/ptisp/devops
+BACKUP_PATH=/home/ptisp/backups
+
+# ============================================================================
+# BACKUPS (3-2-1 Strategy)
+# ============================================================================
+
+# Hourly database backup (RPO: 1 hour)
+0 * * * * $DEVOPS_PATH/scripts/backup-3-2-1.sh hourly >> /var/log/backup-hourly.log 2>&1
+
+# Daily full backup (database + files) at 2 AM
+0 2 * * * $DEVOPS_PATH/scripts/backup-3-2-1.sh daily >> /var/log/backup-daily.log 2>&1
+
+# Weekly backup + database optimization (Sundays at 3 AM)
+0 3 * * 0 $DEVOPS_PATH/scripts/backup-3-2-1.sh weekly >> /var/log/backup-weekly.log 2>&1
+
+# Monthly full backup + WooCommerce export (1st of month at 4 AM)
+0 4 1 * * $DEVOPS_PATH/scripts/backup-3-2-1.sh monthly >> /var/log/backup-monthly.log 2>&1
+
+# ============================================================================
+# COST OPTIMIZATION
+# ============================================================================
+
+# Daily cost optimization at 5 AM
+0 5 * * * /usr/bin/python3 $DEVOPS_PATH/scripts/cost-optimizer.py >> /var/log/cost-optimizer.log 2>&1
+
+# Weekly image optimization (Saturdays at 6 AM)
+0 6 * * 6 cd $WP_PATH && wp media regenerate --yes >> /var/log/media-optimize.log 2>&1
+
+# ============================================================================
+# WORDPRESS MAINTENANCE
+# ============================================================================
+
+# Clear transients daily at 1 AM
+0 1 * * * cd $WP_PATH && wp transient delete --all >> /var/log/wp-transients.log 2>&1
+
+# Optimize database weekly (Sundays at 4 AM)
+0 4 * * 0 cd $WP_PATH && wp db optimize >> /var/log/wp-db-optimize.log 2>&1
+
+# Clear object cache daily at 1:30 AM
+30 1 * * * cd $WP_PATH && wp cache flush >> /var/log/wp-cache.log 2>&1
+
+# Update plugins/themes (security only) - Tuesdays at 3 AM
+0 3 * * 2 cd $WP_PATH && wp plugin update --all --minor && wp theme update --all --minor >> /var/log/wp-updates.log 2>&1
+
+# Check core updates - Daily at 7 AM
+0 7 * * * cd $WP_PATH && wp core check-update >> /var/log/wp-core-check.log 2>&1
+
+# ============================================================================
+# WOOCOMMERCE MAINTENANCE
+# ============================================================================
+
+# Clear WooCommerce sessions daily at 2:30 AM
+30 2 * * * cd $WP_PATH && wp wc tool run clear_expired_transients >> /var/log/wc-sessions.log 2>&1
+
+# Clean expired download permissions daily at 3 AM
+0 3 * * * cd $WP_PATH && wp wc tool run clear_expired_download_permissions >> /var/log/wc-downloads.log 2>&1
+
+# Regenerate product lookup tables weekly (Sundays at 5 AM)
+0 5 * * 0 cd $WP_PATH && wp wc tool run regenerate_product_lookup_tables >> /var/log/wc-lookup.log 2>&1
+
+# ============================================================================
+# MONITORING & ALERTS
+# ============================================================================
+
+# Health check every 5 minutes
+*/5 * * * * curl -sf https://chapeuslisboeta.pt/wp-json/ > /dev/null || echo "WordPress API down!" | mail -s "ALERT: API Down" admin@chapeuslisboeta.pt
+
+# Check SSL certificate expiry daily at 8 AM
+0 8 * * * echo | openssl s_client -servername chapeuslisboeta.pt -connect chapeuslisboeta.pt:443 2>/dev/null | openssl x509 -noout -checkend 604800 || echo "SSL expires in <7 days!" | mail -s "ALERT: SSL Expiring" admin@chapeuslisboeta.pt
+
+# Check disk space every hour
+0 * * * * df -h / | awk '$5 > 85' && echo "Disk usage >85%: $(df -h /)" | mail -s "ALERT: Disk Space" admin@chapeuslisboeta.pt
+
+# ============================================================================
+# SECURITY
+# ============================================================================
+
+# Update fail2ban rules daily at 6 AM
+0 6 * * * /usr/bin/fail2ban-client reload >> /var/log/fail2ban-reload.log 2>&1
+
+# Scan for malware weekly (Wednesdays at 2 AM) - if using Wordfence CLI
+# 0 2 * * 3 cd $WP_PATH && wp wordfence scan >> /var/log/wordfence-scan.log 2>&1
+
+# Check file permissions weekly (Saturdays at 7 AM)
+0 7 * * 6 find $WP_PATH -type f ! -perm 644 -o -type d ! -perm 755 >> /var/log/permission-check.log 2>&1
+
+# ============================================================================
+# LOG ROTATION & CLEANUP
+# ============================================================================
+
+# Rotate logs weekly (Sundays at 6 AM)
+0 6 * * 0 find /var/log -name "*.log" -mtime +30 -delete >> /var/log/log-cleanup.log 2>&1
+
+# Clean old WordPress logs monthly (1st at 7 AM)
+0 7 1 * * find $WP_PATH/wp-content/debug.log* -mtime +30 -delete >> /var/log/wp-log-cleanup.log 2>&1
+
+# Clean WooCommerce logs monthly (1st at 7:30 AM)
+30 7 1 * * find $WP_PATH/wp-content/uploads/wc-logs -name "*.log" -mtime +30 -delete >> /var/log/wc-log-cleanup.log 2>&1
+
+# ============================================================================
+# TESTING & VALIDATION
+# ============================================================================
+
+# Monthly recovery drill (1st at 6 AM)
+0 6 1 * * $DEVOPS_PATH/scripts/test-recovery.sh >> /var/log/recovery-test.log 2>&1
+
+# Weekly backup verification (Sundays at 8 AM)
+0 8 * * 0 for f in $BACKUP_PATH/chapeus-db-*.sql.gz.enc; do openssl enc -aes-256-cbc -d -pbkdf2 -pass file:/home/ptisp/.backup-key -in "$f" 2>/dev/null | gzip -t && echo "✓ $f" || echo "✗ $f FAILED"; done >> /var/log/backup-verify.log 2>&1
+
+# ============================================================================
+# REPORTING
+# ============================================================================
+
+# Daily status report at 9 AM
+0 9 * * * cat << 'EOF' | mail -s "Daily Status - Chapéus Lisboeta" admin@chapeuslisboeta.pt
+Server: $(hostname)
+Uptime: $(uptime)
+Disk: $(df -h / | tail -1)
+Memory: $(free -h | grep Mem)
+Load: $(cat /proc/loadavg)
+Last Backup: $(ls -lt $BACKUP_PATH | head -2 | tail -1)
+WordPress Version: $(cd $WP_PATH && wp core version)
+Active Users: $(cd $WP_PATH && wp user list --role=administrator --format=count)
+Products: $(cd $WP_PATH && wp post list --post_type=product --format=count)
+Orders (24h): $(cd $WP_PATH && wp wc order list --after="$(date -d '1 day ago' +%Y-%m-%d)" --format=count)
+EOF
+
+# Weekly performance report (Mondays at 10 AM)
+0 10 * * 1 $DEVOPS_PATH/scripts/generate-performance-report.sh | mail -s "Weekly Performance Report" admin@chapeuslisboeta.pt
+
+# Monthly cost report (1st at 11 AM)
+0 11 1 * * cat cost-report-$(date +%Y%m).json | mail -s "Monthly Cost Report" admin@chapeuslisboeta.pt
+
+# ============================================================================
+# CDN & CACHE
+# ============================================================================
+
+# Purge Cloudflare cache weekly (Sundays at 1 AM)
+0 1 * * 0 curl -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache" -H "Authorization: Bearer $CF_API_TOKEN" -H "Content-Type: application/json" --data '{"purge_everything":true}' >> /var/log/cf-purge.log 2>&1
+
+# Warm up cache daily at 8:30 AM (before business hours)
+30 8 * * * for url in / /shop/ /boinas-inverno/ /boinas-verao/ /panama/; do curl -s "https://chapeuslisboeta.pt$url" > /dev/null; sleep 2; done >> /var/log/cache-warmup.log 2>&1
+
+# ============================================================================
+# PORTUGUESE MARKET SPECIFIC
+# ============================================================================
+
+# Check IfthenPay status every 30 minutes during business hours (10h-20h)
+*/30 10-20 * * * curl -sf "https://ifthenpay.com/api/status" > /dev/null || echo "IfthenPay API down!" | mail -s "ALERT: Payment Gateway Down" admin@chapeuslisboeta.pt
+
+# Update EUR/BRL exchange rate daily at 9 AM (for Brazilian customers)
+0 9 * * * cd $WP_PATH && wp option update woocommerce_currency_eur_brl "$(curl -s https://api.exchangerate-api.com/v4/latest/EUR | jq -r '.rates.BRL')" >> /var/log/exchange-rate.log 2>&1
+
+# ============================================================================
+# DEVELOPMENT & TESTING
+# ============================================================================
+
+# Sync staging with production weekly (Saturdays at 11 PM)
+# 0 23 * * 6 $DEVOPS_PATH/scripts/sync-staging.sh >> /var/log/staging-sync.log 2>&1
+
+# Run automated tests on staging (Sundays at midnight)
+# 0 0 * * 0 cd $DEVOPS_PATH && ./run-tests.sh >> /var/log/automated-tests.log 2>&1
+
+# ============================================================================
+# NOTIFICATIONS
+# ============================================================================
+
+# Send weekly summary to client (Fridays at 5 PM)
+0 17 * * 5 $DEVOPS_PATH/scripts/send-weekly-summary.sh >> /var/log/weekly-summary.log 2>&1
+
+# Send monthly invoice reminder (28th at 10 AM)
+0 10 28 * * echo "Monthly invoice due for hosting/services" | mail -s "Invoice Reminder - Chapéus Lisboeta" billing@chapeuslisboeta.pt
+
+# ============================================================================
+# END OF CRON JOBS
+# ============================================================================
+
+# To install these cron jobs:
+# 1. Copy this file to server: scp crontab.txt ptisp@chapeuslisboeta.pt:/tmp/
+# 2. Install: crontab /tmp/crontab.txt
+# 3. Verify: crontab -l
+# 4. Check logs: tail -f /var/log/cron.log
+
+# To test a single cron job manually:
+# /home/ptisp/devops/scripts/backup-3-2-1.sh daily
+
+# To view cron job execution:
+# grep CRON /var/log/syslog | tail -50

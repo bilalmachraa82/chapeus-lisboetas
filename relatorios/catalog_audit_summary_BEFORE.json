@@ -1,0 +1,24 @@
+{
+  "sheet_total": 114,
+  "sheet_with_price": 80,
+  "sheet_without_price": 34,
+  "site_total": 86,
+  "wc_total": 73,
+  "status_counts": {
+    "Completo": 23,
+    "Parcial": 57,
+    "Ignorar (sem preço)": 34
+  },
+  "issue_counts": {
+    "image_filtered": 29,
+    "image_none": 16,
+    "missing_in_wc": 16,
+    "tags_diff": 19,
+    "price_diff": 17,
+    "image_partial": 1,
+    "specs_missing": 4,
+    "sheet_no_price": 34
+  },
+  "sheet_missing_in_site": [],
+  "site_only": []
+}

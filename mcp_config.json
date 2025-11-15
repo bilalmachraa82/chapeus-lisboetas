@@ -17,6 +17,41 @@
         "GOOGLE_SERVICE_ACCOUNT_FILE": "config/google-service-account.json",
         "GOOGLE_SHEETS_TAB": "worksheet"
       }
+    },
+    "chrome-devtools": {
+      "command": "chrome-devtools-mcp",
+      "args": ["--isolated", "--profile-dir", "/tmp/chapeus-devtools"]
+    },
+    "playwright": {
+      "command": "playwright-mcp",
+      "args": ["--project-root", "."]
+    },
+    "wp-cli": {
+      "command": "docker",
+      "args": ["exec", "-i", "chapeus_wordpress", "wp", "--allow-root"]
+    },
+    "mysql": {
+      "command": "sh",
+      "args": ["-c", "docker exec -i chapeus_mysql mysql -u lisboetas -p'e$$4rU9h8' lisboetas_web"],
+      "description": "MySQL direct queries - fast database operations"
+    },
+    "woocommerce": {
+      "command": "npx",
+      "args": ["-y", "@lockon0927/woocommerce-mcp"],
+      "env": {
+        "WC_API_URL": "http://localhost:8080/wp-json/wc/v3"
+      },
+      "description": "WooCommerce operations - products, orders, customers (configure keys in .env.mcp)"
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase"],
+      "description": "Supabase MCP (20+ tools) - configure PROJECT_REF and ACCESS_TOKEN in .env.mcp"
+    },
+    "github": {
+      "command": "sh",
+      "args": ["-c", "echo 'GitHub MCP managed endpoint - configure GITHUB_TOKEN in .env.mcp'"],
+      "description": "GitHub MCP - repos, issues, PRs, CI/CD (requires token setup)"
     }
   }
 }
